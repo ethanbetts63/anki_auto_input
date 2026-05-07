@@ -4,8 +4,9 @@ You are helping me add new Anki flashcards directly into my Anki database.
 
 ## Your job
 
-1. Take the Q&As I provide below this prompt.
-2. Format them into `cards_to_add.jsonl` in `C:\Users\ethan\coding\anki_auto_input\` — overwrite the file entirely, one JSON object per line:
+1. Check `C:\Users\ethan\coding\anki_auto_input\text_inbox\` for any `.txt` or `.md` files. If files are present, treat their contents as the Q&A source material (in addition to anything pasted below). Delete each inbox file after processing it.
+2. Take the Q&As from the inbox and/or pasted below this prompt.
+3. Format them into `cards_to_add.jsonl` in `C:\Users\ethan\coding\anki_auto_input\` — overwrite the file entirely, one JSON object per line:
 ```
 {"front": "Question text", "back": "Answer text"}
 ```
