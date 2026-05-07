@@ -54,9 +54,38 @@ Anchor new items to concepts already known. Reduces interference and simplifies 
 **14. Personalize and provide examples**
 Personal references are highly interference-resistant. A specific, concrete example you actually remember beats a generic definition.
 
+> Weak: Q: What is a soft bed without arms or back? A: divan
+> Better: Q: What is a soft bed without arms or back? (like the one at Robert's parents') A: divan
+> The personal anchor makes the card nearly impossible to confuse with anything else.
+
 **15. Rely on emotional states**
 Vivid, striking, or emotionally charged examples are remembered far longer than neutral ones. Bizarre is fine — these cards are for you.
 
 **17. Redundancy does not contradict the minimum information principle**
 Active and passive word pairs, alternate phrasings, derivation steps — these add items but each remains simple. Viewing the same fact from multiple angles is valuable.
+
+> Q: phone (Esperanto) → A: telefono
+> Q: telefono → A: phone
+> Two cards, each simple. Together they build both active and passive recall — which don't automatically transfer to each other.
+
+---
+
+## Card Quality Checks
+
+**Avoid binary questions**
+Yes/no and this/that questions require little effort and produce shallow understanding. Rephrase as open-ended.
+
+> Bad: Q: Does chicken stock make vegetables taste like chicken? A: No
+> Good: Q: How does chicken stock affect the flavor of vegetable dishes? A: Makes them taste more "complete"
+
+**Watch for false positives and false negatives**
+Before finalising a card, check both failure modes:
+- *False positive* — can you answer it from pattern matching or surface cues alone, without actually knowing the fact? If yes, the question gives too much away or is too mechanical.
+- *False negative* — does the question have multiple reasonable correct answers besides the one you intend? If yes, add enough context to rule them out, or reframe the question.
+
+> Bad: Q: What's the first step to cook an omelette? (ambiguous — many valid answers)
+> Good: Q: When making an omelette, how must the pan be prepared before adding the eggs? (precise, one correct answer)
+
+**Write more prompts than feels natural**
+Each prompt costs roughly 10–30 seconds of review across an entire year. If a card can be split, split it — you are not saving effort by cramming two facts into one card, you are making both harder to retain.
 
