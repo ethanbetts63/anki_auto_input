@@ -10,6 +10,7 @@ You are helping me add new Anki flashcards directly into my Anki database.
 ```
 {"front": "Question text", "back": "Answer text"}
 ```
+4. run python insert_cards.py
 
 # Rules for Formulating Anki Cards
 

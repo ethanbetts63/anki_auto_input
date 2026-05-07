@@ -1,0 +1,23 @@
+{"front": "IDS stands for?", "back": "Intrusion Detection System"}
+{"front": "IPS stands for?", "back": "Intrusion Prevention System"}
+{"front": "What does an IDS do?", "back": "Monitors network traffic and system activity for malicious behavior or policy violations"}
+{"front": "What does an IPS do that an IDS does not?", "back": "Takes proactive action (blocks/quarantines) to prevent threats, not just detect them"}
+{"front": "How does an IDS respond to threats?", "back": "Passively — alerts, logs, notifies"}
+{"front": "How does an IPS respond to threats (beyond what an IDS does)?", "back": "Actively drops/blocks the malicious packets"}
+{"front": "Two deployment types of IDS?", "back": "Host-based and network-based"}
+{"front": "What is a host-based IDS installed on?", "back": "Individual local devices, for per-device protection"}
+{"front": "What is a honeypot?", "back": "A decoy system that mimics a real one to lure and trap attackers in an isolated, monitored environment"}
+{"front": "What do researchers extract from a honeypot?", "back": "Anomaly signatures (attacker behavior patterns)"}
+{"front": "Where can a network-based IDS sit relative to a switch, and why?", "back": "Beside the switch — it works on replicated traffic since it only needs to observe"}
+{"front": "Where must a network-based IPS sit, and why?", "back": "In the root of the traffic flow — it must respond in real time, not on a copy"}
+{"front": "Why does IPS require stricter configuration than IDS?", "back": "It actively blocks traffic, so misconfiguration disrupts legitimate communication"}
+{"front": "Connection-vs-security priority: how does a firewall differ from a physical separation hub?", "back": "Firewall puts connection first, security best-effort. Physical separation hub puts security first, connection second"}
+{"front": "What is the default-deny principle in firewall configuration?", "back": "Only traffic matching an explicit allow rule passes; everything else is blocked"}
+{"front": "Three techniques used in firewalls?", "back": "Packet filtering, stateful inspection, proxy firewall"}
+{"front": "Firewall technique: blocks based on predefined rules like source/destination IP?", "back": "Packet filtering"}
+{"front": "Firewall technique: makes decisions based on the state/history of the traffic?", "back": "Stateful inspection"}
+{"front": "Firewall technique: acts as a single point of contact with the outside, hiding internal IPs?", "back": "Proxy firewall"}
+{"front": "How does a proxy firewall protect internal machines from being targeted?", "back": "It hides their IP addresses behind itself, so attackers cannot address them directly"}
+{"front": "What attack is blocked when a proxy firewall only forwards completed 3-way handshakes?", "back": "SYN flood / half-open-handshake attacks"}
+{"front": "Main performance trade-off of running a firewall?", "back": "Slows network throughput; some legitimate traffic may be blocked"}
+{"front": "Downside of firewall configuration in practice?", "back": "Complex — needs an experienced network administrator; misconfiguration causes false positives"}

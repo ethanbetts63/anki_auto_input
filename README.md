@@ -1,6 +1,6 @@
 # anki_auto_input
 
-Feed plain text Q&As to a CLI AI and have it insert new cards directly into your Anki database.
+Feed plain text to a CLI AI and have it insert new cards directly into your Anki database. Prompt includes a condensed instruction set of palm card creation best practises. 
 
 ---
 
