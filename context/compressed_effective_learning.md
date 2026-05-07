@@ -22,11 +22,23 @@ Fill-in-the-blank is fast to create and highly effective. Keep the surrounding c
 **9. Avoid sets**
 Unordered lists of 5+ items are nearly impossible to memorize reliably. Convert to enumerations or break into individual facts linked by context (e.g. chronological, causal).
 
+> Bad: Q: What are the main greenhouse gases? A: CO₂, methane, nitrous oxide, water vapor, ozone
+> Good: Q: Which greenhouse gas dominates human emissions? A: CO₂ | Q: Which gas has ~25× the warming power of CO₂? A: Methane
+> Each card teaches a meaningful fact rather than demanding rote list recall.
+
 **10. Avoid enumerations**
 Ordered lists are better than sets but still hard. Break them up with overlapping cloze deletions: A→B→C, then B→C→D, etc.
 
+> Q: Fill in: A … … … E → A: B, C, D
+> Q: Fill in: B … … … F → A: C, D, E
+> The overlap (C, D appear in both) reinforces middle elements from multiple angles without violating the minimum information principle.
+
 **11. Combat interference**
 Similar items confuse memory. Make items unambiguous; use examples and context to distinguish them. When you spot interference, fix it immediately.
+
+> Weak: Q: derog adj: shamelessly conscious of one's failings, asking in a begging way → A: cringing
+> Better: Q: derog adj: shamelessly humble and supplicant → A: cringing
+> Using known anchor words ("humble", "supplicant") locks in the correct meaning and prevents confusion with similar words.
 
 **12. Optimize wording**
 Ruthlessly trim. Every redundant word slows recall.
