@@ -1,23 +1,80 @@
-{"front": "IDS stands for?", "back": "Intrusion Detection System"}
-{"front": "IPS stands for?", "back": "Intrusion Prevention System"}
-{"front": "What does an IDS do?", "back": "Monitors network traffic and system activity for malicious behavior or policy violations"}
-{"front": "What does an IPS do that an IDS does not?", "back": "Takes proactive action (blocks/quarantines) to prevent threats, not just detect them"}
-{"front": "How does an IDS respond to threats?", "back": "Passively — alerts, logs, notifies"}
-{"front": "How does an IPS respond to threats (beyond what an IDS does)?", "back": "Actively drops/blocks the malicious packets"}
-{"front": "Two deployment types of IDS?", "back": "Host-based and network-based"}
-{"front": "What is a host-based IDS installed on?", "back": "Individual local devices, for per-device protection"}
-{"front": "What is a honeypot?", "back": "A decoy system that mimics a real one to lure and trap attackers in an isolated, monitored environment"}
-{"front": "What do researchers extract from a honeypot?", "back": "Anomaly signatures (attacker behavior patterns)"}
-{"front": "Where can a network-based IDS sit relative to a switch, and why?", "back": "Beside the switch — it works on replicated traffic since it only needs to observe"}
-{"front": "Where must a network-based IPS sit, and why?", "back": "In the root of the traffic flow — it must respond in real time, not on a copy"}
-{"front": "Why does IPS require stricter configuration than IDS?", "back": "It actively blocks traffic, so misconfiguration disrupts legitimate communication"}
-{"front": "Connection-vs-security priority: how does a firewall differ from a physical separation hub?", "back": "Firewall puts connection first, security best-effort. Physical separation hub puts security first, connection second"}
-{"front": "What is the default-deny principle in firewall configuration?", "back": "Only traffic matching an explicit allow rule passes; everything else is blocked"}
-{"front": "Three techniques used in firewalls?", "back": "Packet filtering, stateful inspection, proxy firewall"}
-{"front": "Firewall technique: blocks based on predefined rules like source/destination IP?", "back": "Packet filtering"}
-{"front": "Firewall technique: makes decisions based on the state/history of the traffic?", "back": "Stateful inspection"}
-{"front": "Firewall technique: acts as a single point of contact with the outside, hiding internal IPs?", "back": "Proxy firewall"}
-{"front": "How does a proxy firewall protect internal machines from being targeted?", "back": "It hides their IP addresses behind itself, so attackers cannot address them directly"}
-{"front": "What attack is blocked when a proxy firewall only forwards completed 3-way handshakes?", "back": "SYN flood / half-open-handshake attacks"}
-{"front": "Main performance trade-off of running a firewall?", "back": "Slows network throughput; some legitimate traffic may be blocked"}
-{"front": "Downside of firewall configuration in practice?", "back": "Complex — needs an experienced network administrator; misconfiguration causes false positives"}
+{"front": "What does the OSI session layer coordinate?", "back": "Data exchange between two communicating processes"}
+{"front": "What does the session layer establish, maintain, and synchronize?", "back": "The interaction session between communicating processes"}
+{"front": "In the session layer, what is dialogue control?", "back": "Managing whether communication is half-duplex or full-duplex"}
+{"front": "What does duplex describe in communication?", "back": "Directionality"}
+{"front": "What is full-duplex communication?", "back": "Two-way communication at the same time"}
+{"front": "What is half-duplex communication?", "back": "Two-way communication, but only one direction at a time"}
+{"front": "What is simplex communication?", "back": "One-way-only communication"}
+{"front": "In the session layer, what is synchronization used for?", "back": "Creating checkpoints so transfer can resume from the last checkpoint"}
+{"front": "How do session-layer checkpoints improve recovery after a failure?", "back": "They avoid restarting the whole transfer"}
+{"front": "What does the OSI presentation layer format data for?", "back": "Interoperability, security, and transmission efficiency"}
+{"front": "Which OSI layer handles syntax and semantics of exchanged information?", "back": "Presentation layer"}
+{"front": "In the presentation layer, what does translation do?", "back": "Converts between machine-specific and generic character sets"}
+{"front": "Why might the presentation layer encrypt data?", "back": "To prevent plaintext reading by unauthorized parties"}
+{"front": "Why might the presentation layer compress data before transmission?", "back": "To reduce data size and network load"}
+{"front": "What is the OSI application layer?", "back": "The interface between users or software and the network"}
+{"front": "Which OSI layer do people usually interact with through network programs?", "back": "Application layer"}
+{"front": "What application-layer protocol sends email?", "back": "SMTP"}
+{"front": "What application-layer protocol provides secure remote login?", "back": "SSH"}
+{"front": "What application-layer protocol provides insecure remote login?", "back": "Telnet"}
+{"front": "What application-layer protocol transfers files?", "back": "FTP"}
+{"front": "What is the secure version of FTP?", "back": "SFTP"}
+{"front": "What application-layer protocol supports the World Wide Web?", "back": "HTTP"}
+{"front": "What is the secure version of HTTP?", "back": "HTTPS"}
+{"front": "What application-layer service translates human-readable names to IP addresses?", "back": "DNS"}
+{"front": "What application-layer protocol automatically configures host network settings?", "back": "DHCP"}
+{"front": "In the client-server model, communication over the internet is considered to occur between what?", "back": "Applications"}
+{"front": "What is a client in the client-server model?", "back": "An application that requests information or resources"}
+{"front": "What is a server in the client-server model?", "back": "An application that provides information or resources"}
+{"front": "Where is a client usually running in the client-server model?", "back": "On the local computer"}
+{"front": "Where is a server usually running in the client-server model?", "back": "On a remote host"}
+{"front": "How many clients can access one server?", "back": "Many clients"}
+{"front": "When does a client usually run?", "back": "Only when needed"}
+{"front": "How often is a server usually running?", "back": "Continuously"}
+{"front": "What does DNS do?", "back": "Resolves domain names to numerical IP addresses"}
+{"front": "Why do people use DNS names instead of IP addresses?", "back": "Names are easier for humans to remember"}
+{"front": "Why do computers and routers use IP addresses instead of DNS names?", "back": "IP addresses are easier for machines to route"}
+{"front": "How are DNS names structured?", "back": "Hierarchically"}
+{"front": "In what direction are DNS names read for hierarchy?", "back": "Right to left"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the machine?", "back": "`finance`"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the organization?", "back": "`griffith`"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the organization type?", "back": "`edu`"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the country code?", "back": "`au`"}
+{"front": "What kind of database is DNS based on?", "back": "A distributed database of names and addresses"}
+{"front": "What does a local DNS server do if it cannot resolve a name?", "back": "Queries higher-level DNS servers"}
+{"front": "What does DHCP stand for?", "back": "Dynamic Host Configuration Protocol"}
+{"front": "What does DHCP automatically configure?", "back": "Network settings for a host"}
+{"front": "What network setting identifies a host on a TCP/IP network?", "back": "Its IP address"}
+{"front": "What DHCP-provided setting identifies which network a host is on?", "back": "Subnet mask"}
+{"front": "What DHCP-provided setting lets a host leave its local network?", "back": "Nearest router IP address"}
+{"front": "What DHCP-provided setting lets a host resolve names?", "back": "DNS server IP address"}
+{"front": "In DHCP, what happens in fixed-address mode?", "back": "A host receives the same configured values each time"}
+{"front": "In DHCP, what happens in dynamic-address mode?", "back": "A host receives the next available IP address"}
+{"front": "In DHCP, what happens to a dynamic IP address after the host leaves?", "back": "It returns to the address pool"}
+{"front": "Why is DHCP useful on large or public networks?", "back": "Manual network configuration becomes impractical"}
+{"front": "What is a VPN?", "back": "A way to use the internet as if connected to a private network"}
+{"front": "Why do organizations use VPNs?", "back": "To protect private data over the public internet"}
+{"front": "What does a VPN use to protect data in transit?", "back": "Encryption"}
+{"front": "What does a VPN make packets seem to travel through?", "back": "The protected environment of the organization's private network"}
+{"front": "What does SMTP stand for?", "back": "Simple Mail Transfer Protocol"}
+{"front": "What port does SMTP use?", "back": "25"}
+{"front": "What does MIME stand for?", "back": "Multipurpose Internet Mail Extension"}
+{"front": "Why is MIME needed with SMTP?", "back": "To encode non-basic data types for email"}
+{"front": "What protocol is preferred over Telnet for remote login?", "back": "SSH"}
+{"front": "Why is SSH preferred over Telnet?", "back": "SSH is encrypted"}
+{"front": "What does Telnet send over the network?", "back": "Plaintext"}
+{"front": "What does FTP separate into two streams?", "back": "Control commands and file data"}
+{"front": "Why does FTP separate control and data streams?", "back": "To allow transfer control such as cancelling operations"}
+{"front": "What is the most common content format on the web?", "back": "HTML"}
+{"front": "What does HTML stand for?", "back": "Hypertext Markup Language"}
+{"front": "Which OSI layer is responsible for end-to-end delivery between software processes?", "back": "Transport layer"}
+{"front": "What does the transport layer deliver reliably?", "back": "The entire message from source process to destination process"}
+{"front": "What is transport-layer segmentation?", "back": "Breaking a message into smaller packets"}
+{"front": "What is transport-layer reassembly?", "back": "Putting packets back together at the destination"}
+{"front": "Why does the transport layer number packets?", "back": "So the message can be reconstructed correctly"}
+{"front": "What is service point addressing?", "back": "Using port numbers to identify communicating programs"}
+{"front": "At the transport layer, what does a port number identify?", "back": "A program or process on a machine"}
+{"front": "What does an IP address identify?", "back": "A machine or host"}
+{"front": "Which OSI layer handles IP addresses?", "back": "Network layer"}
+{"front": "What kind of error control does the transport layer provide?", "back": "End-to-end error control between sender and receiver"}
+{"front": "How does data-link-layer error control differ from transport-layer error control?", "back": "Data link checks neighbor-to-neighbor; transport checks end-to-end"}
