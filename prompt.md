@@ -11,6 +11,7 @@ You are helping me add new Anki flashcards directly into my Anki database.
 {"front": "Question text", "back": "Answer text"}
 ```
 4. run python insert_cards.py
+5. read the next file. do not read multiple files at once. read. write. insert. read next. repeat. 
 
 # Rules for Formulating Anki Cards
 

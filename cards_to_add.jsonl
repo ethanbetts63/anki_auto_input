@@ -1,80 +1,54 @@
-{"front": "What does the OSI session layer coordinate?", "back": "Data exchange between two communicating processes"}
-{"front": "What does the session layer establish, maintain, and synchronize?", "back": "The interaction session between communicating processes"}
-{"front": "In the session layer, what is dialogue control?", "back": "Managing whether communication is half-duplex or full-duplex"}
-{"front": "What does duplex describe in communication?", "back": "Directionality"}
-{"front": "What is full-duplex communication?", "back": "Two-way communication at the same time"}
-{"front": "What is half-duplex communication?", "back": "Two-way communication, but only one direction at a time"}
-{"front": "What is simplex communication?", "back": "One-way-only communication"}
-{"front": "In the session layer, what is synchronization used for?", "back": "Creating checkpoints so transfer can resume from the last checkpoint"}
-{"front": "How do session-layer checkpoints improve recovery after a failure?", "back": "They avoid restarting the whole transfer"}
-{"front": "What does the OSI presentation layer format data for?", "back": "Interoperability, security, and transmission efficiency"}
-{"front": "Which OSI layer handles syntax and semantics of exchanged information?", "back": "Presentation layer"}
-{"front": "In the presentation layer, what does translation do?", "back": "Converts between machine-specific and generic character sets"}
-{"front": "Why might the presentation layer encrypt data?", "back": "To prevent plaintext reading by unauthorized parties"}
-{"front": "Why might the presentation layer compress data before transmission?", "back": "To reduce data size and network load"}
-{"front": "What is the OSI application layer?", "back": "The interface between users or software and the network"}
-{"front": "Which OSI layer do people usually interact with through network programs?", "back": "Application layer"}
-{"front": "What application-layer protocol sends email?", "back": "SMTP"}
-{"front": "What application-layer protocol provides secure remote login?", "back": "SSH"}
-{"front": "What application-layer protocol provides insecure remote login?", "back": "Telnet"}
-{"front": "What application-layer protocol transfers files?", "back": "FTP"}
-{"front": "What is the secure version of FTP?", "back": "SFTP"}
-{"front": "What application-layer protocol supports the World Wide Web?", "back": "HTTP"}
-{"front": "What is the secure version of HTTP?", "back": "HTTPS"}
-{"front": "What application-layer service translates human-readable names to IP addresses?", "back": "DNS"}
-{"front": "What application-layer protocol automatically configures host network settings?", "back": "DHCP"}
-{"front": "In the client-server model, communication over the internet is considered to occur between what?", "back": "Applications"}
-{"front": "What is a client in the client-server model?", "back": "An application that requests information or resources"}
-{"front": "What is a server in the client-server model?", "back": "An application that provides information or resources"}
-{"front": "Where is a client usually running in the client-server model?", "back": "On the local computer"}
-{"front": "Where is a server usually running in the client-server model?", "back": "On a remote host"}
-{"front": "How many clients can access one server?", "back": "Many clients"}
-{"front": "When does a client usually run?", "back": "Only when needed"}
-{"front": "How often is a server usually running?", "back": "Continuously"}
-{"front": "What does DNS do?", "back": "Resolves domain names to numerical IP addresses"}
-{"front": "Why do people use DNS names instead of IP addresses?", "back": "Names are easier for humans to remember"}
-{"front": "Why do computers and routers use IP addresses instead of DNS names?", "back": "IP addresses are easier for machines to route"}
-{"front": "How are DNS names structured?", "back": "Hierarchically"}
-{"front": "In what direction are DNS names read for hierarchy?", "back": "Right to left"}
-{"front": "In `finance.griffith.edu.au`, which part identifies the machine?", "back": "`finance`"}
-{"front": "In `finance.griffith.edu.au`, which part identifies the organization?", "back": "`griffith`"}
-{"front": "In `finance.griffith.edu.au`, which part identifies the organization type?", "back": "`edu`"}
-{"front": "In `finance.griffith.edu.au`, which part identifies the country code?", "back": "`au`"}
-{"front": "What kind of database is DNS based on?", "back": "A distributed database of names and addresses"}
-{"front": "What does a local DNS server do if it cannot resolve a name?", "back": "Queries higher-level DNS servers"}
-{"front": "What does DHCP stand for?", "back": "Dynamic Host Configuration Protocol"}
-{"front": "What does DHCP automatically configure?", "back": "Network settings for a host"}
-{"front": "What network setting identifies a host on a TCP/IP network?", "back": "Its IP address"}
-{"front": "What DHCP-provided setting identifies which network a host is on?", "back": "Subnet mask"}
-{"front": "What DHCP-provided setting lets a host leave its local network?", "back": "Nearest router IP address"}
-{"front": "What DHCP-provided setting lets a host resolve names?", "back": "DNS server IP address"}
-{"front": "In DHCP, what happens in fixed-address mode?", "back": "A host receives the same configured values each time"}
-{"front": "In DHCP, what happens in dynamic-address mode?", "back": "A host receives the next available IP address"}
-{"front": "In DHCP, what happens to a dynamic IP address after the host leaves?", "back": "It returns to the address pool"}
-{"front": "Why is DHCP useful on large or public networks?", "back": "Manual network configuration becomes impractical"}
-{"front": "What is a VPN?", "back": "A way to use the internet as if connected to a private network"}
-{"front": "Why do organizations use VPNs?", "back": "To protect private data over the public internet"}
-{"front": "What does a VPN use to protect data in transit?", "back": "Encryption"}
-{"front": "What does a VPN make packets seem to travel through?", "back": "The protected environment of the organization's private network"}
-{"front": "What does SMTP stand for?", "back": "Simple Mail Transfer Protocol"}
-{"front": "What port does SMTP use?", "back": "25"}
-{"front": "What does MIME stand for?", "back": "Multipurpose Internet Mail Extension"}
-{"front": "Why is MIME needed with SMTP?", "back": "To encode non-basic data types for email"}
-{"front": "What protocol is preferred over Telnet for remote login?", "back": "SSH"}
-{"front": "Why is SSH preferred over Telnet?", "back": "SSH is encrypted"}
-{"front": "What does Telnet send over the network?", "back": "Plaintext"}
-{"front": "What does FTP separate into two streams?", "back": "Control commands and file data"}
-{"front": "Why does FTP separate control and data streams?", "back": "To allow transfer control such as cancelling operations"}
-{"front": "What is the most common content format on the web?", "back": "HTML"}
-{"front": "What does HTML stand for?", "back": "Hypertext Markup Language"}
-{"front": "Which OSI layer is responsible for end-to-end delivery between software processes?", "back": "Transport layer"}
-{"front": "What does the transport layer deliver reliably?", "back": "The entire message from source process to destination process"}
-{"front": "What is transport-layer segmentation?", "back": "Breaking a message into smaller packets"}
-{"front": "What is transport-layer reassembly?", "back": "Putting packets back together at the destination"}
-{"front": "Why does the transport layer number packets?", "back": "So the message can be reconstructed correctly"}
-{"front": "What is service point addressing?", "back": "Using port numbers to identify communicating programs"}
-{"front": "At the transport layer, what does a port number identify?", "back": "A program or process on a machine"}
-{"front": "What does an IP address identify?", "back": "A machine or host"}
-{"front": "Which OSI layer handles IP addresses?", "back": "Network layer"}
-{"front": "What kind of error control does the transport layer provide?", "back": "End-to-end error control between sender and receiver"}
-{"front": "How does data-link-layer error control differ from transport-layer error control?", "back": "Data link checks neighbor-to-neighbor; transport checks end-to-end"}
+{"front": "What is the main purpose of a Privacy Impact Assessment (PIA)?", "back": "Identify privacy impacts and recommend ways to manage, minimize, or eliminate them."}
+{"front": "When should a PIA be built into a project?", "back": "During the project planning stage."}
+{"front": "In a PIA, what Australian law is the main privacy compliance reference?", "back": "The Privacy Act."}
+{"front": "How many Australian Privacy Principles (APPs) are in the Privacy Act?", "back": "13."}
+{"front": "What does APP stand for in Australian privacy law?", "back": "Australian Privacy Principle."}
+{"front": "What does the Notifiable Data Breaches scheme require businesses to do?", "back": "Report eligible data breaches involving personal data."}
+{"front": "When was Australia's Notifiable Data Breaches scheme announced/enacted?", "back": "2018."}
+{"front": "Which sector was highlighted as having especially significant data breaches?", "back": "Health service providers."}
+{"front": "Which breach sources were highlighted in the NDB reporting context?", "back": "Human error and malicious/criminal attack."}
+{"front": "Why can phishing and ransomware statistics point to an awareness problem?", "back": "Better human cyber awareness can reduce many such incidents."}
+{"front": "When was GDPR adopted?", "back": "2016."}
+{"front": "When did GDPR become enforceable?", "back": "2018."}
+{"front": "When can GDPR apply to an Australian organization?", "back": "When it handles data about European customers or residents covered by GDPR."}
+{"front": "If an Australian company serves European customers, what privacy regimes may it need to satisfy?", "back": "Australian Privacy Act/APPs and GDPR."}
+{"front": "Why should a security officer compare APP requirements with GDPR?", "back": "GDPR includes some rights and obligations not present in the APPs."}
+{"front": "What is the Brussels effect in privacy regulation?", "back": "Strict EU-style regulation influencing other jurisdictions' laws."}
+{"front": "Which US privacy law was described as influenced by GDPR?", "back": "California Consumer Privacy Act."}
+{"front": "In a PIA, what should be checked about personal data collection?", "back": "What is collected and why."}
+{"front": "In a PIA, what should be checked about personal data sharing?", "back": "Who the data will be shared with."}
+{"front": "In a PIA, what should be checked about opting out?", "back": "Whether users can opt out of collection or use."}
+{"front": "What does data at rest mean?", "back": "Data stored somewhere and not actively moving."}
+{"front": "What does data in transit mean?", "back": "Data being transmitted or shared between systems or parties."}
+{"front": "What should a PIA check for data at rest?", "back": "How stored data is secured."}
+{"front": "What should a PIA check for data in transit?", "back": "How transmitted or shared data is protected."}
+{"front": "What should a PIA check when data is being processed?", "back": "Whether access control is properly designed."}
+{"front": "Why can app design projects benefit from a PIA?", "back": "They may collect or process personal data."}
+{"front": "Why can loyalty programs benefit from a PIA?", "back": "They commonly collect customer personal data."}
+{"front": "What happens in the PIA privacy impact analysis/compliance check step?", "back": "Each relevant APP is checked for compliance."}
+{"front": "Which APP was linked to anonymity and pseudonymity options?", "back": "APP 2."}
+{"front": "Which APP was linked to securing personal information?", "back": "APP 11."}
+{"front": "For APP 11, what technical controls might appear in a privacy policy?", "back": "Encryption and authentication/access control."}
+{"front": "What is privacy-preserving computing (PPC)?", "back": "Computing that produces useful outputs while protecting privacy."}
+{"front": "What is the goal of PPC on sensitive data?", "back": "Generate meaningful results without leaking individual privacy."}
+{"front": "Why is removing names alone not enough for privacy protection?", "back": "Other fields can be combined to re-identify people."}
+{"front": "What are examples of personally identifiable information?", "back": "Birthdate, gender, zip code, name, Medicare number, passport number."}
+{"front": "What are examples of sensitive information?", "back": "Disease, religious belief, and family history."}
+{"front": "Why can gender plus zip code be risky in a shared dataset?", "back": "Together they may help identify a specific person."}
+{"front": "What did the medical-data linkage example show?", "back": "Public records can be linked with de-identified health data to re-identify people."}
+{"front": "What did the Netflix data-sharing example show?", "back": "Removing names may still allow sensitive customer data to be re-identified."}
+{"front": "In secure bidding, what privacy is being protected?", "back": "Each bidder's bid amount."}
+{"front": "In secure bidding, what result should still be computed?", "back": "Who has the highest bid."}
+{"front": "What is homomorphic encryption?", "back": "Encryption that allows computation on ciphertext without decryption."}
+{"front": "What is the core idea of computing on ciphertext?", "back": "Derive an encrypted result without seeing the original data."}
+{"front": "What does additive homomorphic encryption enable?", "back": "Computing an encrypted sum from encrypted inputs."}
+{"front": "Why is homomorphic encryption useful for privacy-preserving computing?", "back": "It supports meaningful computation without revealing raw data."}
+{"front": "What is de-identification in medical data sharing?", "back": "Replacing direct identifiers with another value, such as a hash."}
+{"front": "In the medical PPC example, what replaces original personal identifiers?", "back": "A hash value."}
+{"front": "Why store only a hash plus disease information?", "back": "A stolen table would not directly reveal who has which disease."}
+{"front": "What extra protection can be applied over hashed medical data?", "back": "Encryption."}
+{"front": "When assessing a medical company under APP 11, what storage question should be asked?", "back": "Whether patient data is anonymized and encrypted properly."}
+{"front": "Besides PPC and encryption, what system control can protect personal data?", "back": "Authentication and access control."}
+{"front": "What should security recommendations in a PIA be based on?", "back": "Identified risks and relevant technical controls."}
+{"front": "Why does a security officer need cybersecurity standards knowledge?", "back": "To choose appropriate countermeasures for specific risks."}
+{"front": "What kind of report section should include PIA countermeasures?", "back": "The recommendations section."}
