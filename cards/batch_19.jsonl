@@ -1,0 +1,10 @@
+{"front": "how many bits / bytes is in a MAC address?", "back": "48 bits / 6 bytes"}
+{"front": "What is Medium Access Control?", "back": "Medium Access Control (MAC) is a set of protocols that determine how devices on a shared network take turns using the same communication channel."}
+{"front": "What does Medium Access Control Prevent?", "back": "Packet collisions on a shared communication medium."}
+{"front": "What are the three types of controlled access protocols? (Common medium)", "back": "Reservation, polling and token passing."}
+{"front": "How does reservation based access control work?", "back": "Time is divided into slots, devices reserve a slot in advance and can only transmit during their reserved slot."}
+{"front": "How does polling work? In access control.", "back": "A primary device controls all communication, polling each device in turn to ask if it has data to send. Devices can only transmit when authorised by the primary."}
+{"front": "How does token passing work?", "back": "A unique token is passed around the network, only the device holding the token can transmit. When finished it passes the token to the next device."}
+{"front": "What are the two failure risks of token passing?", "back": "The token can be lost if a device crashes, or duplicated causing multiple devices to transmit simultaneously."}
+{"front": "What is the main weakness of all controlled access protocols?", "back": "They can be slow due to bottlenecks — devices may have to wait a long time before getting their turn."}
+{"front": "How does CSMA/CD detect a collision?", "back": "While transmitting, if the voltage read back on the wire differs from what was sent, a collision has occurred."}

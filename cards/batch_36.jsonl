@@ -1,0 +1,10 @@
+{"front": "In federated identity, does the target service need to see the user's password?", "back": "No, it receives confirmation from the identity provider."}
+{"front": "Why are driver's licenses poor secrets for authentication?", "back": "If exposed, they are hard and costly to change."}
+{"front": "How does authorization differ from authentication?", "back": "Authentication proves identity; authorization controls what that identity can access."}
+{"front": "What kinds of resources can an access control policy cover?", "back": "Information, data, programs, and other system resources."}
+{"front": "How can a student access policy be reused?", "back": "Apply the same student access rights to each newly enrolled student."}
+{"front": "What is an access control list (ACL)?", "back": "A table linking users or groups to resources and permitted actions."}
+{"front": "Where are ACLs commonly used?", "back": "File systems, database systems, and networking."}
+{"front": "What is encryption?", "back": "Making data unreadable by applying an algorithmic transformation."}
+{"front": "In encryption, what is encrypted text?", "back": "The transformed unreadable version of the plaintext."}
+{"front": "Why is modern encryption considered practical rather than absolute?", "back": "It may be infeasible to crack now but crackable with future technology."}

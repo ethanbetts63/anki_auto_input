@@ -1,0 +1,10 @@
+{"front": "What are the four types of channelisation/multiplexing?", "back": "Frequency Division Multiplexing (FDM), Wave Division Multiplexing (WDM), Time Division Multiplexing (TDM) and Code Division Multiple Access (CDMA)."}
+{"front": "How does FDM work?", "back": "The total bandwidth is split into smaller channels each using a different carrier frequency, allowing multiple signals to transmit simultaneously without interfering."}
+{"front": "What is a real world example of FDM?", "back": "Radio stations — each station broadcasts at a different frequency simultaneously and you tune to the frequency you want."}
+{"front": "How does WDM differ from FDM?", "back": "Wavelength division multiplexing is the same concept as FDM but uses light instead of radio frequencies, typically over optical fibre."}
+{"front": "How does TDM work?", "back": "The channel is divided into time slots and each device is allocated a specific slot. Slots rotate among devices in sequence."}
+{"front": "How does CDMA work?", "back": "Code Division Multiple Access. All devices transmit simultaneously on the same frequency but each is assigned a unique code so their signals can be distinguished from each other."}
+{"front": "What is the key difference between CDMA and FDM/TDM?", "back": "FDM separates by frequency, TDM separates by time, CDMA allows everyone to transmit at the same time on the same frequency using unique codes."}
+{"front": "What does WLAN stand for in networking?", "back": "Wireless Local Area Network"}
+{"front": "What are four reasons you might want to interconnect networks?", "back": "To connect networks with different protocols, connect a LAN to the internet, segment a network to reduce congestion, or create security boundaries between users."}
+{"front": "What are the two main devices used to interconnect networks?", "back": "Switches and routers."}

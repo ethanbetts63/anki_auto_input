@@ -1,0 +1,10 @@
+{"front": "Which key is used to verify a CA's certificate signature?", "back": "The CA's public key."}
+{"front": "Why does TLS combine asymmetric and symmetric encryption?", "back": "Asymmetric encryption establishes trust and a shared key; symmetric encryption efficiently protects later traffic."}
+{"front": "In TLS, what does the server send to the client to prove identity?", "back": "A digital certificate."}
+{"front": "In TLS setup, why are long random numbers generated?", "back": "They are used to derive a shared symmetric session key."}
+{"front": "In TLS setup, what does the client do with the server's public key?", "back": "Encrypts client-generated key material or random data for the server."}
+{"front": "In TLS setup, why can only the server decrypt data encrypted with the server's public key?", "back": "Only the server has the matching private key."}
+{"front": "After TLS setup, what key do client and server compute?", "back": "A shared symmetric session key."}
+{"front": "Why does TLS not need to send the final symmetric key across the network?", "back": "Both sides independently compute it from shared handshake values."}
+{"front": "After the TLS session key is established, how is traffic encrypted?", "back": "Using symmetric encryption."}
+{"front": "Why use symmetric encryption for the main TLS data exchange?", "back": "It is efficient once a shared session key exists."}

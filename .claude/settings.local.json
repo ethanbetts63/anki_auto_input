@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python insert_cards.py)",
+      "Bash(del *)",
+      "Bash(python export_cards.py)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

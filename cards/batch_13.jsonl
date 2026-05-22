@@ -1,0 +1,10 @@
+{"front": "What is the kernel?", "back": "The kernel is the core of the OS that directly controls hardware, managing processes, memory, devices and system calls."}
+{"front": "What takes care of process management? What does it do?", "back": "The kernel. Creates processes, schedules resource access, deletes processes, deallocates resources etc."}
+{"front": "Why is multitasking in a cpu necessary?", "back": "Waiting for I/O devices leaves the CPU doing nothing. To take advantage of this downtime multitasking has it completing other activities whilst it waits."}
+{"front": "What is time slicing in a CPU?", "back": "A scheduling technique where the OS divides CPU time into small fixed chunks called time slices and allocates them to each process in turn to allow multitasking."}
+{"front": "What are the three main types of CPU scheduling?", "back": "- First Come First Served - Explicit Priority - Shortest Remaining Time"}
+{"front": "In CPU scheduling how does First Come First Served Work?", "back": "Schedular dispatches the READY process that has been waiting longest."}
+{"front": "In CPU scheduling how does explicit priority system work?", "back": "Processes are given priority levels. The schedular runs the READY process with the highest priority."}
+{"front": "In CPU scheduling how does Shortest Remaining Time system work?", "back": "Schedular dispatches the READY process with the shortest estimated CPU time."}
+{"front": "What is the difference between preemptive and non preemptive scheduling?", "back": "Non-preemptive: The process holds the CPU until the process voluntarily gives it up. Preemptive: The OS can forcibly take the CPU away from a process at any time."}
+{"front": "How does time sharing on the CPU work? 4 steps", "back": "A timer interrupt interrupts the CPU at fixed intervals.\nThe dispatcher saves the state of the current process to memory.\nThe scheduler selects the next process to run.\nThe dispatcher gives the CPU to the selected process."}

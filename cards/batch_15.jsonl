@@ -1,0 +1,10 @@
+{"front": "What are the three types of memory?", "back": "Register memory - cpu registers Primary/main memory - RAM Secondary memory - disks"}
+{"front": "Explain the difference between the following memory types: DRAM, SRAM, ROM, EEPROM", "back": "DRAM – Writeable, needs to be refreshed, slow, small (main) SRAM – Writeable, faster, larger (cache) ROM – Read-Only-Memory EEPROM – Electrically Erasable Programmable Read Only Memory for persistent storage of temporary information (settings)"}
+{"front": "Briefly describe how data is stored in DVD-ROM.", "back": "A DVD-ROM stores data as a series of pits burnt into a flat medium, similar to a CD."}
+{"front": "Explain briefly how it is possible to detect and correct errors on a retrieved data from storage.", "back": "By adding extra bits and performing a computation to check for invalid sequences."}
+{"front": "What are the 2 types of RAM?", "back": "SRAM (Static RAM) — faster, more expensive, used for cache DRAM (Dynamic RAM) — slower, cheaper, used for main memory"}
+{"front": "What are the three main different types of ROM?", "back": "PROM — programmable once EPROM — erasable and reprogrammable EEPROM — electrically erasable, more flexible"}
+{"front": "What are the three main types of secondary memory?", "back": "- Magnetic (Hard Disk Drive/magnetic tape) - Optical (CD, DVD, BluRay) - Solid State Storage (SSD, USB, SD cards)"}
+{"front": "What are the 7 layers of the OSI model?", "back": "7. Application 6. Presentation 5. Session 4. Transport 3. Network 2. Datalink 1. Physical"}
+{"front": "What are the three main things that two computers needs to communicate?", "back": "- Physical Connection - Agreed data representation - transfer procedure"}
+{"front": "What is a computer network?", "back": "A collection of computers that use network PROTOCOLS to exchange data with each other over a network MEDIUM."}

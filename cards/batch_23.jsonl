@@ -1,0 +1,10 @@
+{"front": "What are packets called at the network layer?", "back": "Datagrams."}
+{"front": "What is the purpose of the Time To Live (TTL) field in an IP datagram?", "back": "It decrements at each hop and when it reaches zero the packet is discarded, preventing packets from looping infinitely through the network."}
+{"front": "What are the three levels of addressing in a TCP/IP network?", "back": "Application layer address (e.g. web/email address), network layer address (IP address) and data link layer address (MAC address)."}
+{"front": "What is the key difference between an IP address and a MAC address?", "back": "IP addresses uniquely identify machines anywhere in the world, MAC addresses only identify machines on the local network."}
+{"front": "Why are two addresses reserved in every network?", "back": ""}
+{"front": "Why are two addresses reserved in every network?", "back": "The network address (all host bits = 0) and the broadcast address (all host bits = 255) are reserved and cannot be assigned to actual hosts."}
+{"front": "Given the IP address 130.11.3.31 — what class is it and what are the network and host parts?", "back": "130 is in range 128-191 so it's Class B. Network = 130.11.0.0, Host = 3.31."}
+{"front": "Given the IP address 54.39.12.61 — what class is it and what are the network and host parts?", "back": "54 is in range 0-127 so it's Class A. Network = 54.0.0.0, Host = 39.12.61."}
+{"front": "Given the IP address 203.106.61.55 — what class is it and what are the network and host parts?", "back": "203 is in range 192-223 so it's Class C. Network = 203.106.61.0, Host = 55."}
+{"front": "How are the network and host bits divided in each class?", "back": "Class A — 8 network bits, 24 host bits (few networks, enormous number of hosts) Class B — 16 network bits, 16 host bits (equal split) Class C — 24 network bits, 8 host bits (many networks, few hosts)"}

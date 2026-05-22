@@ -1,0 +1,10 @@
+{"front": "Why might quantum computing threaten current internet encryption?", "back": "Quantum computers may solve some cryptographic problems much faster."}
+{"front": "What is asymmetric encryption?", "back": "Encryption where different keys are used for encryption and decryption."}
+{"front": "In symmetric encryption, what key is used for encryption and decryption?", "back": "The same key."}
+{"front": "Alice and Bob example: what must both people have for symmetric encryption?", "back": "A copy of the same encryption key."}
+{"front": "What is the fundamental problem in symmetric encryption?", "back": "Securely sharing the encryption key."}
+{"front": "What is the Caesar cipher?", "back": "A simple alphabetic substitution cipher."}
+{"front": "Why is the Caesar cipher symmetric?", "back": "The same shift value is used to encrypt and decrypt."}
+{"front": "Besides confidentiality, what else can asymmetric encryption support?", "back": "Authenticating the sender."}
+{"front": "How can a sender prove control of a private key?", "back": "Encrypt or sign a message with the private key."}
+{"front": "What key is used to verify a message created with Bob's private key?", "back": "Bob's public key."}

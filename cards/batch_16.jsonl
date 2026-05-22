@@ -1,0 +1,10 @@
+{"front": "What are the 4 layers of the TCP/IP model?", "back": "Application Transport Internet Link"}
+{"front": "Which layers correspond to which layers for TCP/IP to OSI?", "back": "TCP/IP / OSI 4. Application / Application, Presentation, Session 3. Transport / Transport 2. Internet / Network 1. Link / Data link, Physical"}
+{"front": "What is a protocol in computer networks?", "back": "A protocol in computer networks is a set of agreed rules that devices follow to communicate with each other, such as how data is formatted, sent, received, and acknowledged."}
+{"front": "What is source encoding?", "back": "Source encoding refers to the way data is represented before it is transmitted across a network, often by converting it into a more efficient or compressed form."}
+{"front": "What does the physical layer do?", "back": "Converts binary into a stream of bits carried over some physical medium."}
+{"front": "What is referred to by the bit rate in the physical layer and why is it important?", "back": "Bit rate is the number of time blocks per second that determines how often the receiver samples the signal amplitude to decode a 1 or 0 and hence the speed of transmission."}
+{"front": "Which OSI layers are responsible for error detection? At what level does each check for errors?", "back": "Data link layer. Between each node on the path. Transport layer. From start to end node."}
+{"front": "Which OSI layer is responsible for routing packets between networks?", "back": "Network layer"}
+{"front": "Which OSI layer is responsible for end to end communication and reliability (TCP lives here)?", "back": "Transport layer"}
+{"front": "Which OSI layer is responsible for converting data into bits and transmitting them over a physical medium?", "back": "Physical layer"}

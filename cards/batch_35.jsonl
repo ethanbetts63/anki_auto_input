@@ -1,0 +1,10 @@
+{"front": "What is authentication?", "back": "Ensuring a system user is who they claim to be."}
+{"front": "What is a common example of knowledge-based authentication?", "back": "A password."}
+{"front": "What are examples of possession-based authentication?", "back": "A USB dongle, mobile device, or authenticator app."}
+{"front": "What are examples of attribute-based authentication?", "back": "A fingerprint or retina scan."}
+{"front": "MFA example: what two factors might be combined?", "back": "A password and a device."}
+{"front": "How does MFA make authentication more robust?", "back": "An attacker needs to compromise more than one factor."}
+{"front": "What is a downside of possession-based authentication?", "back": "The device can be lost, stolen, or taken over."}
+{"front": "What is federated identity?", "back": "Authentication through an external trusted identity service."}
+{"front": "What are common examples of federated identity login?", "back": "Log in with Google or Facebook."}
+{"front": "In federated identity, who verifies the user's credentials?", "back": "The trusted identity provider."}

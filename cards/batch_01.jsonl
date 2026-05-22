@@ -1,0 +1,10 @@
+{"front": "What is twos complement and how does it work?", "back": "To represent a number as a negative. you flip the bits and add 1."}
+{"front": "What voltages represent a 0 and 1?", "back": "Exact voltage is system dependent. But low voltage = 0. High voltage = 1. And there is always a noise margin inbetween of invalid voltages."}
+{"front": "What is ROM? What does it store?", "back": "Read only memory. Long term low level instructions."}
+{"front": "What is moores law?", "back": "The number of transistors on a computer chip doubles about every 2 years, making computers more powerful and cheaper over time.\nProposed by Gordon Moore in 1965."}
+{"front": "What is a Mechanical vs electro-mechanical vs electronic computer?", "back": "Mechanical uses moving physical parts. Electro-mechanical uses electrically controlled switches. Electronic computers uses electronic components like transistors."}
+{"front": "What is an Integrated Circuit (IC)?", "back": "A small chip that contains many electronic components (like transistors and resistors) built into a single piece of semiconductor material."}
+{"front": "What happens to RAM and DRAM when power is turned off?", "back": "Both RAM and DRAM are volatile, so all data is lost when power is turned off."}
+{"front": "What is Quantum vs Optical vs Nano-Computing?", "back": "Quantum uses qubits. Optical uses photons. Nano uses atoms/molecules."}
+{"front": "What is the processor memory gap?", "back": "The difference between CPU speed and RAM speed."}
+{"front": "What is the name for the difference between CPU speed and RAM speed?", "back": "Processor Memory Gap"}

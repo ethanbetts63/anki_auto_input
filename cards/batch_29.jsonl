@@ -1,0 +1,10 @@
+{"front": "What word would you use to describe the structure of DNS addresses?", "back": "Hierarchical"}
+{"front": "In what direction are DNS names read for hierarchy?", "back": "Right to left"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the machine?", "back": "`finance`"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the organization?", "back": "`griffith`"}
+{"front": "In `finance.griffith.edu.au`, which part identifies the organization type?", "back": "`edu`"}
+{"front": "What does a local DNS server do if it cannot resolve a name?", "back": "Queries higher-level DNS servers"}
+{"front": "What does DHCP stand for?", "back": "Dynamic Host Configuration Protocol"}
+{"front": "What does DHCP automatically configure?", "back": "Network settings for a host"}
+{"front": "What DHCP-provided setting identifies which network a host is on?", "back": "Subnet mask"}
+{"front": "In DHCP, what happens in fixed-address mode?", "back": "A host receives the same configured values each time"}

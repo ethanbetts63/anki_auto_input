@@ -1,0 +1,10 @@
+{"front": "Why can't MAC addresses be used across interconnected networks?", "back": "MAC addresses only work on the local network — IP addresses are needed to uniquely identify machines globally."}
+{"front": "What are the four key considerations when interconnecting networks?", "back": "Frame format, payload size, data rate and address bit order."}
+{"front": "What is the frame format consideration when interconnecting networks?", "back": "Different protocols have different frame formats so the connecting device may need to convert between them."}
+{"front": "What is the payload size consideration?", "back": "Different networks have different minimum and maximum packet sizes so packets may need to be padded or fragmented when crossing networks."}
+{"front": "What is the data rate consideration?", "back": "If a faster network sends to a slower one, frames must be buffered temporarily so the slower network can keep up."}
+{"front": "What is the address bit order consideration?", "back": "Different protocols may represent binary addresses differently (e.g. little vs big endian) so conversion may be needed."}
+{"front": "What is the network layer responsible for?", "back": "Getting an individual packet of data from the source computer to the destination computer. Which means logical addressing and routing."}
+{"front": "What is the responsibility of the network layer?", "back": "Getting individual packets from the source computer to the destination computer using logical addressing and routing."}
+{"front": "What are the two main jobs of the network layer?", "back": "Logical addressing — uniquely identifying machines using IP addresses, and routing — determining which path packets take through the network."}
+{"front": "What does it mean that IP is unreliable and connectionless?", "back": "Internet protocolsdoesn't handle errors and doesn't require a continuous connection between endpoints — error handling is left to other layers. It only handles addressing and routing. Network layer."}

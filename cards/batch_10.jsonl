@@ -1,0 +1,10 @@
+{"front": "What is GPR architecture?", "back": "General purpose register architecture is where the ALU has a bank of register to write its output to. Allowing it to track multiple values between operations. Accumulator architecture is the more basic version of this where the ALU has a single output register called the \"accumulator\"."}
+{"front": "What is a stack based architecture?", "back": "A stack follows a last-in, first-out (LIFO) structure, meaning the most recently stored value is the first one retrieved:data is stored by being pushed onto the top of the stackdata is retrieved by popping it from the top of the stack"}
+{"front": "What is the hamming distance between two bit strings ?", "back": "The number of bits that are different between to bit strings."}
+{"front": "Contrast even and odd paritys in hamming codes", "back": "if the parity of a subsection is even = parity bit is 1 if bits total to an odd number odd = parity bit is 1 if bits total to an even number"}
+{"front": "What is a combinational logic gate?", "back": "Gates built from multiple basic logic gates. For example NAND, NOR, XOR, XNOR etc."}
+{"front": "What is a decoder?", "back": "A circuit that takes n input lines and activates one of 2ⁿ output lines based on the input combination."}
+{"front": "What is a selector?", "back": "The concept of choosing between multiple input options. In reality is normally just a MUX."}
+{"front": "What is a MUX?", "back": "Multiplexors take a number of data inputs and some select lines and output a single output given the select lines."}
+{"front": "Which gates make up a full adder?", "back": "A AND and XOR gate to add the previous carry and A. (SUM) A AND and XOR gate to add A and B. An OR gate to combine the output of each AND gate."}
+{"front": "What is a ripple carry adder?", "back": "A series of full adders chained together."}

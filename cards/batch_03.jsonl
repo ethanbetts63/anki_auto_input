@@ -1,0 +1,10 @@
+{"front": "What is the HEX equivalent of a decimal 15?", "back": "F"}
+{"front": "What does 0x denote?", "back": "a hexadecimal number."}
+{"front": "What denotes a Hexadecimal Number?", "back": "0x"}
+{"front": "To convert binary to octal what do you do?", "back": "1. split into groups of 3 binary values. 2. convert each set of three to a decimal. 3. concatinate the decimals"}
+{"front": "When reading ascii chart to binary, do you write the column or the row first?", "back": "Column."}
+{"front": "What is an integer word size?", "back": "refers to the number of bits a computer uses to store an integer."}
+{"front": "What is the advantage of hex over octal or just binary?", "back": "Its shorter and more human readable."}
+{"front": "What are the differences between “positional number systems” and “non-positional number systems”? Give an example for each of them.", "back": "Positional number systems use a base and exponents to determine a digit’s value by position (e.g., binary). \nNon-positional systems don’t; digit value isn’t based on position (e.g., Roman numerals)."}
+{"front": "What is refered to as an exponent?", "back": "the power the base is raised to, showing a digit’s positional value.\n\n\nExample: in decimal 345 → 3×10² + 4×10¹ + 5×10⁰ → exponents: 2, 1, 0."}
+{"front": "What is the 2 steps of twos complement?", "back": "1. flip the bits 2. add 1 (0000 0001)"}

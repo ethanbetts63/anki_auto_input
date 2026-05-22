@@ -1,0 +1,10 @@
+{"front": "What is the key difference between random access and controlled access protocols?", "back": "Random access has no centralised control — any device can transmit when ready."}
+{"front": "What are the four problems a random access protocol must solve?", "back": "- When can a station access the medium? - What if medium is busy? - How to know transmission success? - What to do if collision?"}
+{"front": "How does the original ALOHA protocol work?", "back": "Any station can transmit when ready, then waits for an acknowledgement. If no ACK is received within twice the propagation delay it retransmits."}
+{"front": "What does CSMA stand for and what does it add over ALOHA?", "back": "Carrier Sense Multiple Access — it adds listening before transmitting to reduce collisions."}
+{"front": "Why doesn't CSMA eliminate collisions completely?", "back": "Because two devices can both listen, hear nothing, and transmit simultaneously since the signal takes time to propagate between them."}
+{"front": "What is CSMA/CD and where is it used?", "back": "Carrier Sense Multiple Access with Collision Detection — detects collisions after they happen and retransmits. Used in traditional Ethernet."}
+{"front": "What is CSMA/CA and where is it used?", "back": "Carrier Sense Multiple Access with Collision Avoidance — devices wait a random amount of time before transmitting to stagger responses and avoid collisions. Used in WiFi."}
+{"front": "Why can't WiFi use CSMA/CD instead of CSMA/CA?", "back": "Because wireless devices typically can't transmit and detect collisions simultaneously, and hidden terminals can cause undetectable collisions."}
+{"front": "What is the hidden terminal problem?", "back": "When a physical obstruction prevents two devices from hearing each other, causing collisions that neither device can detect."}
+{"front": "What is channelisation?", "back": "Instead of using a shared medium as a single channel, it is split into multiple sub-channels allowing simultaneous transmission."}

@@ -1,54 +1,7 @@
-{"front": "What is the main purpose of a Privacy Impact Assessment (PIA)?", "back": "Identify privacy impacts and recommend ways to manage, minimize, or eliminate them."}
-{"front": "When should a PIA be built into a project?", "back": "During the project planning stage."}
-{"front": "In a PIA, what Australian law is the main privacy compliance reference?", "back": "The Privacy Act."}
-{"front": "How many Australian Privacy Principles (APPs) are in the Privacy Act?", "back": "13."}
-{"front": "What does APP stand for in Australian privacy law?", "back": "Australian Privacy Principle."}
-{"front": "What does the Notifiable Data Breaches scheme require businesses to do?", "back": "Report eligible data breaches involving personal data."}
-{"front": "When was Australia's Notifiable Data Breaches scheme announced/enacted?", "back": "2018."}
-{"front": "Which sector was highlighted as having especially significant data breaches?", "back": "Health service providers."}
-{"front": "Which breach sources were highlighted in the NDB reporting context?", "back": "Human error and malicious/criminal attack."}
-{"front": "Why can phishing and ransomware statistics point to an awareness problem?", "back": "Better human cyber awareness can reduce many such incidents."}
-{"front": "When was GDPR adopted?", "back": "2016."}
-{"front": "When did GDPR become enforceable?", "back": "2018."}
-{"front": "When can GDPR apply to an Australian organization?", "back": "When it handles data about European customers or residents covered by GDPR."}
-{"front": "If an Australian company serves European customers, what privacy regimes may it need to satisfy?", "back": "Australian Privacy Act/APPs and GDPR."}
-{"front": "Why should a security officer compare APP requirements with GDPR?", "back": "GDPR includes some rights and obligations not present in the APPs."}
-{"front": "What is the Brussels effect in privacy regulation?", "back": "Strict EU-style regulation influencing other jurisdictions' laws."}
-{"front": "Which US privacy law was described as influenced by GDPR?", "back": "California Consumer Privacy Act."}
-{"front": "In a PIA, what should be checked about personal data collection?", "back": "What is collected and why."}
-{"front": "In a PIA, what should be checked about personal data sharing?", "back": "Who the data will be shared with."}
-{"front": "In a PIA, what should be checked about opting out?", "back": "Whether users can opt out of collection or use."}
-{"front": "What does data at rest mean?", "back": "Data stored somewhere and not actively moving."}
-{"front": "What does data in transit mean?", "back": "Data being transmitted or shared between systems or parties."}
-{"front": "What should a PIA check for data at rest?", "back": "How stored data is secured."}
-{"front": "What should a PIA check for data in transit?", "back": "How transmitted or shared data is protected."}
-{"front": "What should a PIA check when data is being processed?", "back": "Whether access control is properly designed."}
-{"front": "Why can app design projects benefit from a PIA?", "back": "They may collect or process personal data."}
-{"front": "Why can loyalty programs benefit from a PIA?", "back": "They commonly collect customer personal data."}
-{"front": "What happens in the PIA privacy impact analysis/compliance check step?", "back": "Each relevant APP is checked for compliance."}
-{"front": "Which APP was linked to anonymity and pseudonymity options?", "back": "APP 2."}
-{"front": "Which APP was linked to securing personal information?", "back": "APP 11."}
-{"front": "For APP 11, what technical controls might appear in a privacy policy?", "back": "Encryption and authentication/access control."}
-{"front": "What is privacy-preserving computing (PPC)?", "back": "Computing that produces useful outputs while protecting privacy."}
-{"front": "What is the goal of PPC on sensitive data?", "back": "Generate meaningful results without leaking individual privacy."}
-{"front": "Why is removing names alone not enough for privacy protection?", "back": "Other fields can be combined to re-identify people."}
-{"front": "What are examples of personally identifiable information?", "back": "Birthdate, gender, zip code, name, Medicare number, passport number."}
-{"front": "What are examples of sensitive information?", "back": "Disease, religious belief, and family history."}
-{"front": "Why can gender plus zip code be risky in a shared dataset?", "back": "Together they may help identify a specific person."}
-{"front": "What did the medical-data linkage example show?", "back": "Public records can be linked with de-identified health data to re-identify people."}
-{"front": "What did the Netflix data-sharing example show?", "back": "Removing names may still allow sensitive customer data to be re-identified."}
-{"front": "In secure bidding, what privacy is being protected?", "back": "Each bidder's bid amount."}
-{"front": "In secure bidding, what result should still be computed?", "back": "Who has the highest bid."}
-{"front": "What is homomorphic encryption?", "back": "Encryption that allows computation on ciphertext without decryption."}
-{"front": "What is the core idea of computing on ciphertext?", "back": "Derive an encrypted result without seeing the original data."}
-{"front": "What does additive homomorphic encryption enable?", "back": "Computing an encrypted sum from encrypted inputs."}
-{"front": "Why is homomorphic encryption useful for privacy-preserving computing?", "back": "It supports meaningful computation without revealing raw data."}
-{"front": "What is de-identification in medical data sharing?", "back": "Replacing direct identifiers with another value, such as a hash."}
-{"front": "In the medical PPC example, what replaces original personal identifiers?", "back": "A hash value."}
-{"front": "Why store only a hash plus disease information?", "back": "A stolen table would not directly reveal who has which disease."}
-{"front": "What extra protection can be applied over hashed medical data?", "back": "Encryption."}
-{"front": "When assessing a medical company under APP 11, what storage question should be asked?", "back": "Whether patient data is anonymized and encrypted properly."}
-{"front": "Besides PPC and encryption, what system control can protect personal data?", "back": "Authentication and access control."}
-{"front": "What should security recommendations in a PIA be based on?", "back": "Identified risks and relevant technical controls."}
-{"front": "Why does a security officer need cybersecurity standards knowledge?", "back": "To choose appropriate countermeasures for specific risks."}
-{"front": "What kind of report section should include PIA countermeasures?", "back": "The recommendations section."}
+{"front": "Who proposed the 6 Principles of Persuasion (2007)?", "back": "Dr. Robert B. Cialdini"}
+{"front": "Cialdini principle: desire to give back when you receive a gift/favor", "back": "Reciprocity"}
+{"front": "Cialdini principle: staying consistent with things you've already said or done", "back": "Commitment"}
+{"front": "Cialdini principle: following the actions of similar others", "back": "Social proof"}
+{"front": "Cialdini principle: agreeing more with people you like or share interests with", "back": "Liking"}
+{"front": "Cialdini principle: trusting/obeying perceived experts or figures with status", "back": "Authority"}
+{"front": "Cialdini principle: valuing things more when limited, rare, or hard to obtain", "back": "Scarcity"}

@@ -1,0 +1,10 @@
+{"front": "What are the two operations for a stack based processor?", "back": "Push and pop."}
+{"front": "Where is the program counter located and what is it?", "back": "It is located in the control unit and it is a register that stores the address of the next instruction to be executed."}
+{"front": "what is another word for RAM?", "back": "Main memory"}
+{"front": "What is another word for main memory?", "back": "RAM"}
+{"front": "What is an operand?", "back": "The data or the address of the data that the operation will use."}
+{"front": "What does the PC store?", "back": "It holds the memory address of the next instruction the CPU will execute."}
+{"front": "What does RISC stand for?", "back": "Reduced Instruction Set Computer"}
+{"front": "How many of what does a 8 bit register have?", "back": "8 latches"}
+{"front": "What makes up a machine instruction?", "back": "Opcode + Mode + Operand"}
+{"front": "What are the 7 steps of the Fetch-Decode-Execute Cycle?", "back": "1. Fetch Instruction 2. Increment PC 3. Decode Instruction 4. Fetch operand if necessary 5. Execute ALU or control logic 6. Store in register or RAM 7. Repeat"}

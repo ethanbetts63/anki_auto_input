@@ -1,0 +1,10 @@
+{"front": "In networks what does LAN, MAN, and WAN stand for?", "back": "Local Area Network\nMetropolitan Area Network\nWide Area Network"}
+{"front": "What is a backbone network? Give examples.", "back": "A high speed central network that connects smaller networks together and carries the bulk of network traffic. Examples: private company networks, campus networks."}
+{"front": "What is a MAN in networking?", "back": "A Metropolitan Area Network. Covers a distance the size of a city. Often used by local governments, universities, or businesses with multiple sites across a city."}
+{"front": "What is a WAN in networking?", "back": "Wide Area Network. Country / global scale networks like the internet."}
+{"front": "Provide a brief definition for: Bandwidth and Data rate.", "back": "Bandwidth is the theoretical maximum transfer speed (bps). Data rate is the real-world achieved speed — always equal to or less than bandwidth due to noise, interference, and congestion."}
+{"front": "What is the datalink layer responsible for?", "back": "Ensuring that a frame of data is successfully transmitted between two adjacent nodes (node to node)."}
+{"front": "What does the OSI session layer coordinate?", "back": "Data exchange between two communicating processes"}
+{"front": "In the session layer, what is dialogue control?", "back": "Managing whether communication is half-duplex or full-duplex"}
+{"front": "What does duplex describe in communication?", "back": "Directionality"}
+{"front": "What is full-duplex communication?", "back": "Two-way communication at the same time"}

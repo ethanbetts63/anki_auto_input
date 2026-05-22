@@ -4,12 +4,14 @@ You are helping me add new Anki flashcards directly into my Anki database.
 
 ## Your job
 
-1. Check `C:\Users\ethan\coding\anki_auto_input\text_inbox\` for any `.txt` or `.md` files. If files are present, treat their contents as the Q&A source material (in addition to anything pasted below). Delete each inbox file after processing it.
+1. Check `C:\Users\ethan\coding\anki_auto_input\text_inbox\` for any `.txt` or `.md` files. If files are present, treat their contents as the Q&A source material (in addition to anything pasted below). Turn them into palm cards. Delete each inbox file after processing it.
 2. Take the Q&As from the inbox and/or pasted below this prompt.
 3. Format them into `cards_to_add.jsonl` in `C:\Users\ethan\coding\anki_auto_input\` — overwrite the file entirely, one JSON object per line:
 ```
 {"front": "Question text", "back": "Answer text"}
 ```
+Only make as many cards as you think are necessary. Less is more. 
+
 4. run python insert_cards.py
 5. read the next file. do not read multiple files at once. read. write. insert. read next. repeat. 
 
@@ -103,4 +105,7 @@ Before finalising a card, check both failure modes:
 
 **Write more prompts than feels natural**
 Each prompt costs roughly 10–30 seconds of review across an entire year. If a card can be split, split it — you are not saving effort by cramming two facts into one card, you are making both harder to retain.
+
+**Split definitions into two cards**
+Often you will want to make a card saying what is "X term" or what does  "X term" mean? That is fine card. But it also needs to be paired with the opposite card which would be given "X definition" what term are we talking about. 
 
