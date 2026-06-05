@@ -1,91 +1,43 @@
 # Social Engineering and Human Factors
 
-## Human Error and Social Engineering
+## Human Error - wrong recipient, no BCC, careless sensitive-data handling.
 
-- Human-error breaches: wrong recipient, no BCC, careless sensitive-data handling.
-- Awareness training reduces human cyber risk.
-- **Social engineering:** deception/psychology to make people click, disclose, grant access, or act unsafely.
+## Awareness Training - reduces human cyber risk.
 
-## Phishing Types
+## Social Engineering - psychological deception to make people click, disclose, grant access, or act unsafely.
 
-- **Phishing:** broad deceptive message.
-- **Spear phishing:** targeted at specific employees/roles.
-- **Whaling:** targeted at executives/high-value users.
-- **Smishing:** SMS phishing.
-- **Vishing:** voice-call phishing.
+## Phishing - broad deceptive message.
 
-## Phishing Email Indicators
+## Spear Phishing - targeted at specific people/roles.
 
-- Generic salutation.
-- Suspicious/mismatched sender domain.
-- Hover link differs from shown link.
-- Fake brand/lookalike URL.
-- Awkward grammar/phrasing.
-- Urgent/intimidating wording.
-- Missing legitimate contact info.
-- Spoofed logos/branding.
-- Check sender, links, writing, urgency, branding, contact details.
+## Whaling - targeted at executives/high-value users.
 
-## Watering Hole Attacks
+## Smishing / Vishing - SMS phishing / voice-call phishing.
 
-- Attacker compromises a trusted site used by the target group.
-- Hard to detect because victims visit expected sites.
-- Defenses: secure websites, limit social-media oversharing, avoid personal social media on work devices.
+## Phishing Indicators - generic greeting, odd sender, mismatched hover link, fake URL, bad grammar, urgency, missing contacts, spoofed branding.
 
-## Physical and In-Person Social Engineering
+## Watering Hole - compromise trusted site used by target group.
 
-### Tailgating, Piggybacking, and Mantraps
+## Watering Hole Defense - secure websites, limit oversharing, avoid personal social media on work devices.
 
-- **Tailgating:** unauthorized person follows unnoticed.
-- **Piggybacking:** authorized person knowingly allows entry.
-- Policies should prohibit both.
-- **Mantrap:** two-door access control; stops unauthorized following.
+## Tailgating - unauthorized person follows unnoticed.
 
-### Shimming
+## Piggybacking - authorized person knowingly allows entry.
 
-- Payment-terminal/card attack stealing money or card data.
-- Targets: ATMs, gas stations, convenience stores, payment terminals.
+## Mantrap - two-door access control stopping unauthorized following.
 
-### Impersonation
+## Shimming - payment-terminal/card attack stealing money/card data.
 
-- Attacker pretends to be someone else to gain access/info.
-- Examples: inspector, pentester, employee, contractor, service provider.
-- Often supports later attacks through reconnaissance/access.
+## Impersonation - pretending to be inspector, pentester, employee, contractor, provider, etc.
 
-### Dumpster Diving
+## Dumpster Diving - collecting discarded info: IPs, invoices, processes, vendors, suppliers.
 
-- Collecting useful info from discarded materials.
-- Useful data: IPs, invoices, orders, processes, vendors, supplier info.
-- Information gathered can strengthen phishing/impersonation.
+## Shoulder Surfing - observing passwords, PINs, codes, sensitive info.
 
-### Shoulder Surfing
+## USB Dropping - malicious USB left for victim; never plug in unknown USBs.
 
-- Observing passwords, PINs, codes, or sensitive info.
-- Can use cameras/recording glasses.
+## Hoaxing - fake warnings/messages spreading misinformation.
 
-## USB Key Dropping / Dead Dropping
+## Persuasion Principles - reciprocity, commitment/consistency, social proof, liking, authority, scarcity.
 
-- Attackers leave malicious USB drives for victims to plug in.
-- Risks: spyware, malware, compromise.
-- Defense: never plug in unknown USBs; scan first if checking is required.
-
-## Hoaxing
-
-- Fake warnings/messages that spread misinformation.
-- Effects: wasted attention, misinformation, support for later attacks.
-
-## Six Persuasion Principles
-
-1. **Reciprocity:** people respond to expected rewards/returns.
-2. **Commitment / consistency:** people follow prior promises/actions.
-3. **Social proof:** people follow what others appear to do.
-4. **Liking:** people trust those they like/identify with.
-5. **Authority:** people trust experts/official cues.
-6. **Scarcity:** people react to limited time/availability.
-
-## Persuasion in Phishing
-
-- Phishing may use one or multiple persuasion principles.
-- Official-looking requests use **authority**.
-- Reward/community claims use **reciprocity** and **social proof**.
-- Takeaway: legitimate-looking persuasive emails can drive unsafe clicks.
+## Phishing Persuasion - authority, rewards/community, urgency/scarcity drive unsafe clicks.

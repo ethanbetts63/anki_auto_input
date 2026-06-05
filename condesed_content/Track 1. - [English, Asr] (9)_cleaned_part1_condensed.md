@@ -1,85 +1,45 @@
 # Network Security: Physical and Data Link Layers
 
-## TCP/IP Layer Model
+## TCP/IP Layers - physical, data link, network, transport, application.
 
-1. Physical
-2. Data link
-3. Network
-4. Transport
-5. Application
+## Layer Security - handle problems/countermeasures layer by layer.
 
-- 5-layer model groups 7-layer top layers into application.
-- Security problems/countermeasures are handled layer by layer.
+## Physical Security - shielding, physical separation, redundancy, service/security controls.
 
-## Physical Layer Security
+## Link Shielding - protects cables from leakage, interference, tapping.
 
-- Strategies: link shielding, physical separation, redundancy, service/security controls.
+## Shielded Cable - conductor, dielectric, foil, braid, outer rubber.
 
-## Transmission Link Shielding
+## Shielded Rooms - reduce wireless/electromagnetic leakage.
 
-- Protects cables from leakage/interference/tapping.
-- Cable parts: conductor, dielectric, foil shield, braided shield, outer rubber.
-- Purpose: reduce electromagnetic leakage and physical penetration.
-- Shielded rooms can reduce wireless/electromagnetic leakage.
+## Physical Separation - no direct connection between Internet and intranet.
 
-## Physical Separation
+## Internet / Intranet - external network vs internal/private network.
 
-- Prevents direct connection between networks.
-- **Internet:** external network.
-- **Intranet:** internal/private network.
-- **Air gap / separation switch:** physically separates networks.
+## Air Gap / Separation Switch - physically separates networks.
 
-## Separation Switch vs Firewall
+## Firewall vs Separation - firewall keeps connection with controls; separation prioritizes no direct connection.
 
-- **Firewall:** keeps connection; applies security controls.
-- **Physical separation:** prioritizes security; no direct Internet-intranet connection.
-- Use cases: e-government, stock trading, high-confidentiality systems.
+## Separation Use Cases - e-government, stock trading, high-confidentiality systems.
 
-## E-Government Separation Example
+## E-Government Flow - external/internal data moves through checked storage, never direct network link.
 
-- External data goes to storage first, is checked, then loaded inward if safe.
-- Internal data goes to storage, disconnects from intranet, then connects outward.
-- Result: external network and intranet are never directly connected.
+## Data Link Security - link encryption, WLAN/SSID, WEP/WPA, spoofing, ARP/MAC, anti-sniffing.
 
-## Data Link Layer Security
+## Link-Layer Encryption - encrypts whole frame including headers/trailers.
 
-- Topics: link encryption, WLAN, SSID, WEP/WPA, spoofing prevention, ARP/MAC mapping, anti-sniffing.
+## Link-Layer Weakness - switches may decrypt/re-encrypt and see plaintext.
 
-## Link-Layer Encryption
+## End-to-End Encryption - encrypts content before lower-layer headers; devices route but cannot read body.
 
-- Encrypts whole frame/package, including headers/trailers.
-- Advantage: protects metadata on the link.
-- Weakness: intermediate switches may decrypt/re-encrypt and see plaintext.
+## Layered Encryption - app encryption protects content even if link layer is decrypted.
 
-## End-to-End / Application-Layer Encryption
+## WLAN / SSID - wireless LAN; SSID = Wi-Fi name up to 32 chars.
 
-- Encrypts message content before lower-layer headers are added.
-- Intermediate devices can route but cannot read message body.
+## Hidden SSID - weak protection; devices may still reveal/reconnect.
 
-## Combining Encryption Layers
+## Default SSID/Password - change both; defaults may reveal model or be known online.
 
-- Use application-layer encryption for content + link-layer encryption for frames.
-- If a switch decrypts link layer, message body remains ciphertext.
+## Wi-Fi Key Length - 13+ characters minimum; 20+ better.
 
-## Wireless LAN and SSID
-
-- **WLAN = Wireless Local Area Network.**
-- **SSID = Service Set Identifier:** Wi-Fi network name; up to 32 characters.
-- Users must identify correct SSID before connecting.
-
-## Broadcasting and Hiding SSID
-
-- Broadcasting announces the network name.
-- Hiding SSID is weak security; devices may still reconnect.
-- Do not rely on hidden SSID as protection.
-
-## Default SSID and Password Risks
-
-- Change default SSID; it may reveal router model.
-- Change default password/key; defaults may be known online.
-- Use long keys: at least 13 characters; around 20+ better.
-
-## Wireless Security Types
-
-- Open network = least secure.
-- Use strongest available security/encryption options.
+## Wireless Security - avoid open networks; use strongest available encryption.

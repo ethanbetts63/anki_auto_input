@@ -1,67 +1,37 @@
 # Persuasion, Mobile Awareness, URL Hijacking, and Security Awareness
 
-## Persuasion for Security Behavior
+## Security Persuasion - social proof and commitment/consistency encourage secure behavior.
 
-- **Social proof:** show peers following secure behavior.
-- **Commitment / consistency:** require signed AUP.
-- **AUP:** rules for email, passwords, online behavior, security practices, risks.
+## AUP - acceptable use policy for email, passwords, online behavior, security practices, risks.
 
-## Mobile Device Attack Surface
+## Mobile Attack Surface - NFC, Bluetooth, Wi-Fi, SIM, storage cards, sensors.
 
-- Phones expose many interfaces: NFC, Bluetooth, Wi-Fi, SIM, storage cards, sensors.
-- **NFC = Near Field Communication:** tap-to-pay; not Bluetooth/Wi-Fi.
-- More interfaces = more attack surface.
+## NFC - Near Field Communication; tap-to-pay; not Bluetooth/Wi-Fi.
 
-## Mobile Permission Timing
+## Permission Timing - install-time permissions persist; runtime permissions request when needed.
 
-- **Installation-time permission:** granted at install; may stay active.
-- **Runtime permission:** requested when app/feature needs it; supports "while using app."
+## Network Permission - internet access can exfiltrate data.
 
-## Mobile Permission Categories and Risks
+## Personal Info Permission - contacts plus internet can exfiltrate contacts.
 
-1. **Network communication:** internet access; can exfiltrate data.
-2. **Personal information:** contact access; with internet can exfiltrate contacts.
-3. **SMS:** can read verification codes; avoid unless necessary.
-4. **Location:** grant only when needed; disable unnecessary constant access.
+## SMS Permission - can read verification codes; avoid unless necessary.
 
-## URL Hijacking
+## Location Permission - grant only when needed; avoid constant access.
 
-- Names: direct linking, cybersquatting, typosquatting, URL hijacking, fake URL, brandjacking.
-- Method: attacker uses lookalike domains: typos, wrong extension, hyphen changes, altered spelling, brand imitation.
+## URL Hijacking - lookalike domains via typos, extensions, hyphens, spelling changes, brand imitation.
 
-## URL Hijacking Defenses
+## URL Hijacking Names - direct linking, cybersquatting, typosquatting, fake URL, brandjacking.
 
-- Use trusted sites.
-- Confirm URLs before pressing Enter.
-- Search official site if unsure.
-- Never click suspicious links.
-- Use separate computer/VLAN for casual browsing where possible.
-- Register likely typo domains first.
+## URL Defenses - use trusted sites, verify URLs, search official site, avoid suspicious links.
 
-### VLAN
+## Separate Browsing - use separate computer/VLAN for casual browsing where possible.
 
-- **VLAN = Virtual Local Area Network.**
-- Limits malware spread between network segments.
-- Separate casual browsing from work systems.
+## VLAN - virtual LAN limiting malware spread between segments.
 
-### Defensive Domain Registration - register typo versions of domains.
+## Defensive Domain Registration - register typo versions of domains.
 
-## Why Email and Web-Based Attacks Succeed
+## Email/Web Attack Causes - no AUP, no training, no buy-in, poor link/site awareness, weak endpoint protection.
 
-- **No AUP:** no formal security rules/commitment.
-- **No awareness training:** users miss phishing/persuasion signs.
-- **No employee buy-in:** users do not see security relevance.
-- **Poor email/web awareness:** users trust unsafe links/sites.
-- **Poor endpoint protection:** outdated/missing AV, anti-spam, BYOD controls.
+## Awareness Plan - enforce AUP, train phishing/social engineering, build buy-in, improve endpoint/BYOD controls.
 
-## Awareness Plan Guideline
-
-- Create/enforce AUP.
-- Run awareness training.
-- Teach phishing indicators.
-- Explain social engineering/persuasion.
-- Build employee buy-in.
-- Improve email/web-risk awareness.
-- Improve endpoint protection.
-- Keep AV/anti-spam updated.
-- Manage BYOD risk.
+## Endpoint Protection - keep AV and anti-spam updated.

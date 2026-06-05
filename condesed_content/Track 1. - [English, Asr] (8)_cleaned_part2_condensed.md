@@ -1,70 +1,31 @@
 # SetUID, SetGID, Sticky Bit, and Access-Control Vulnerabilities
 
-## SetUID Numeric Representation
+## SetUID - `4755`; leading `4`; owner execute shows `s`; runs with owner/root EUID.
 
-- Normal: `0755`.
-- SetUID: `4755`.
-- Leading `4` = SetUID bit (`100` binary).
-- Symbolic `s` in owner execute position, e.g. `rws`.
-- Root-owned SetUID program runs with root EUID.
+## SetGID - `2755`; leading `2`; group execute shows `s`; runs with file group or inherits directory group.
 
-## SetGID
+## Sticky Bit - `1755`; leading `1`; other execute shows `t`; shared dirs like `/tmp`.
 
-- **SetGID = set group ID.**
-- Example: `2755`.
-- Leading `2` = SetGID bit (`010` binary).
-- Symbolic `s` in group execute position.
-- File: runs with file group privilege.
-- Directory: new files/folders inherit parent directory group.
+## Sticky Bit Purpose - users can create files but not delete/modify others' files.
 
-## Sticky Bit
+## Special Bits - SetUID owner privilege; SetGID group privilege/inheritance; sticky restricts deletion.
 
-- Example: `1755`.
-- Leading `1` = sticky bit (`001` binary).
-- Symbolic `t` often in other execute position, e.g. `rwt`.
-- Used in shared directories like `/tmp`.
-- Users can create files but cannot delete/modify others' files.
+## SetUID Principle - privilege goes to program, not user; user can only do program-coded actions.
 
-## Special Permission Bits
+## SetUID Safety - safer than broad root only when program is tightly constrained.
 
-- **SetUID:** run with file owner privilege.
-- **SetGID:** run with file group privilege or inherit directory group.
-- **Sticky bit:** restrict shared-directory deletion/modification to owner.
+## Bad SetUID Design - flawed logic/environment assumptions expose protected files/actions.
 
-## SetUID Security Principle
+## Root SetUID Editors - `vi`, `nano`, `pico` should not be SetUID root; can edit protected files.
 
-- Privilege is granted to the program, not directly to the user.
-- User can only perform actions implemented by the SetUID program.
-- RUID stays normal; EUID becomes program owner.
-- Safer than broad superuser delegation only if program is constrained.
+## Race Condition - timing bug where check/update order changes outcome.
 
-## Bad SetUID Program Design
+## Race Example - two withdrawals accepted before balance update.
 
-- Flawed SetUID logic can expose protected files/actions.
-- Attackers exploit the program or environment assumptions.
-- SetUID programs must tightly constrain behavior.
+## Privileged Race Risk - exploit before privilege is dropped.
 
-## Editor with Incorrect SetUID Permission
+## Dirty COW - 2016 copy-on-write race exploit modifying protected read-only files.
 
-- Editors like `vi`, `nano`, `pico` should not be SetUID root.
-- Root-EUID editor can modify many protected files.
-- Remove/restrict broad SetUID permissions.
+## Accountability - logs show what happened and where.
 
-## Race Condition Vulnerability
-
-- **Race condition:** timing of operations changes outcome.
-- Example: two withdrawals accepted before balance update.
-- Cause: unsynchronized check/update.
-- Privileged programs can be exploited before privilege is dropped.
-
-## Dirty COW
-
-- **Dirty COW = dirty copy on write.**
-- Famous 2016 race-condition-style exploit.
-- Allowed protected files to be modified despite read-only access.
-
-## Access Control and Accountability
-
-- **AAA:** Authentication, Access control/Authorization, Accountability.
-- Accountability uses logs to show what happened and where.
-- Misconfigured permissions, flawed privileged programs, and race conditions create security problems.
+## Access-Control Risk - misconfigured permissions, flawed privileged programs, race conditions.

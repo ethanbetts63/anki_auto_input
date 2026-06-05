@@ -1,108 +1,39 @@
 # Authentication, AAA, and Password-Based Authentication
 
-## AAA
+## AAA - authentication, authorization, accountability.
 
-- **AAA = Authentication, Authorization, Accountability.**
+## Identification - subject claims identity.
 
-## Identification
+## Authentication - verifies claimed identity; one-way or two-way.
 
-- Subject claims an identity before authentication.
+## Authorization / Access Control - grants permissions/resources after authentication.
 
-## Authentication
+## Accountability - logs actions such as login time, duration, transactions; costs storage/resources.
 
-- Verifies claimed identity.
-- Can be client-to-server or server-to-client.
-- Two-way authentication verifies both sides.
+## Auth Flow - initiation, challenge, proof, validation, decision.
 
-## Authorization / Access Control
+## Auth Zones - client secrets, transmission interception, server credential storage.
 
-- Grants permissions/resources after authentication.
+## Auth Factors - know: password; have: certificate/OTP/token; are: biometric.
 
-## Accountability
+## Password Auth - cheap/familiar/interoperable but weak alone and vulnerable in all zones.
 
-- Records actions after login.
-- Examples: last login, duration, transactions.
-- Adds storage/resource cost; not required everywhere.
+## Client-Zone Attacks - local exposure, brute force, phishing.
 
-## Basic Authentication Flow
+## Transmission-Zone Attacks - sniffing/interception.
 
-1. Initiation.
-2. Challenge.
-3. Proof generation.
-4. Validation.
-5. Decision.
+## Server-Zone Attacks - insider access, compromise, dictionary attacks.
 
-## Authentication Zones
+## Password Managers - encrypted storage for many passwords.
 
-- **Client zone:** secrets may leak locally.
-- **Transmission zone:** data may be intercepted.
-- **Server zone:** stored credentials may leak.
-- Strong authentication protects all three.
+## Plain Passwords - never store/send; leak via insiders, compromise, sniffing.
 
-## Authentication Factors
+## Encrypted Password Issues - stolen key exposes data; same passwords/lengths may leak.
 
-- **What you know:** ID/password.
-- **What you have:** certificate, OTP/token/code device.
-- **What you are:** fingerprint, eye/retina, face.
+## Password Hashing - fixed-length, deterministic, one-way, no key; store/compare hashes.
 
-## Password-Based Authentication
+## Hash Reset Caveat - original password cannot be recovered; reset instead.
 
-- Proves identity by password knowledge.
-- Advantages: cheap, popular, familiar, interoperable, easy to implement.
-- Disadvantages: weak alone, hard to manage many passwords, vulnerable in all zones.
+## Rainbow Table - precomputed password-hash lookup; cracks weak/common hashes.
 
-## Zone 1 Password Attacks
-
-- Client-side storage/exposure.
-- Brute force: try all combinations.
-- Phishing: trick user into entering credentials.
-
-## Zone 2 Password Attacks
-
-- Sniffing/interception during transmission.
-
-## Zone 3 Password Attacks
-
-- Insider password-file access.
-- Server compromise.
-- Dictionary attacks using likely words/patterns.
-- Never store/send plaintext passwords.
-
-## Password Managers
-
-- Store/manage many passwords, often encrypted.
-- Reduce memorization burden.
-
-## Plain Passwords
-
-- Plain passwords should not be stored or sent.
-- Plaintext leaks through insiders, compromise, or sniffing.
-
-## Encrypted Password Problems
-
-- Encryption needs a key.
-- Stolen key exposes passwords.
-- Same password may produce same ciphertext.
-- Ciphertext length may reveal password length.
-
-## Hashing Passwords
-
-- Hash output is fixed-length, deterministic, one-way, no key.
-- Store/compare password hashes instead of plaintext.
-- Compromised hash database does not directly reveal passwords.
-
-## Hashing Caveat
-
-- Hashes cannot recover original passwords.
-- Users reset passwords instead.
-
-## Rainbow Table Attack
-
-- Precomputed password-to-hash lookup table.
-- Attacker steals hash and looks up matching plaintext.
-- Not mathematical hash reversal.
-
-## Simple Password Risk
-
-- Common/simple passwords are likely in rainbow tables.
-- Use long, complex, uncommon passwords.
+## Password Rule - long, complex, uncommon passwords.

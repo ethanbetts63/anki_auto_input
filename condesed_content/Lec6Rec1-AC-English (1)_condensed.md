@@ -1,270 +1,63 @@
 # Access Control Models
 
-## Overview
+## Access Control Models - frameworks controlling resource/data access for security, privacy, compliance.
 
-Access control models are frameworks that determine how resources and information are accessed and managed within a system.
+## Environments - corporate networks, cloud, PCs, social media, government/military.
 
-They are important for:
+## Four Models - DAC, MAC, RBAC, ABAC.
 
-- Security
-- Privacy
-- Compliance
+## DAC - resource owner decides who can access.
 
-They are used in many environments, including:
+## DAC Basis - permissions assigned by user identity and modifiable by owner.
 
-- Corporate networks
-- Cloud services
-- Personal computers
-- Social media platforms
-- High-security government or military systems
+## DAC Examples - personal OS files, shared documents, app permissions, social-media visibility.
 
-## Four Access Control Models
+## DAC Pros - flexible and user friendly.
 
-The lecture covers four access control models:
+## DAC Risk - users may grant unauthorized access.
 
-- Discretionary Access Control (DAC)
-- Mandatory Access Control (MAC)
-- Role-Based Access Control (RBAC)
-- Attribute-Based Access Control (ABAC)
+## MAC - central authority enforces predefined classification/clearance policy.
 
-## Discretionary Access Control (DAC)
+## MAC Rule - users cannot freely change permissions.
 
-Discretionary Access Control is an access control model where the owner of a resource has authority to decide who can access that resource.
+## MAC Environments - military/government/high-security systems.
 
-Permissions are assigned based on user identity and can be modified by the resource owner.
+## MAC Labels - unclassified, confidential, secret, top secret.
 
-### DAC Examples
+## MAC Clearance Example - Secret user accesses Secret/Confidential/Unclassified, not Top Secret.
 
-Examples of DAC include:
+## MAC Pros - stronger security and less human error.
 
-- Personal computers running Linux, Windows, or macOS
-- Sharing a file with someone and setting permission so others can edit it
-- Allowing an application to access your location
-- Granting applications access on platforms such as Facebook or Instagram
-- Controlling who can see, comment on, or share social media posts
+## MAC Cons - complex implementation and high admin overhead.
 
-### DAC Advantages
+## RBAC - permissions assigned to roles; users assigned to roles.
 
-DAC is:
+## RBAC Benefit - simpler management than per-user permissions.
 
-- Flexible
-- User friendly
+## RBAC Examples - CEO all resources; accountant financial database.
 
-### DAC Risks
+## RBAC Limit - complex when many non-role attributes matter.
 
-DAC can create security risks if not managed properly because users may grant access to unauthorized individuals.
+## ABAC - access based on user/resource/environment attributes and policies.
 
-## Mandatory Access Control (MAC)
+## ABAC Aliases - policy-based or rule-based access control.
 
-Mandatory Access Control is a stricter access control model where access rights are regulated by a central authority according to predefined policies.
+## ABAC Attributes - user attributes, resource attributes, environment, role, classification, context.
 
-In MAC:
+## ABAC Example - send email only if size under 5 MB.
 
-- Users cannot freely change access permissions.
-- Access is determined by information classification and user security clearance.
-- A central authority enforces the access rules.
+## ABAC Pros - adaptable, fine-grained, flexible, secure, distributed-environment friendly.
 
-MAC is often used in high-security environments such as:
+## ABAC Cons - complex implementation and policy management.
 
-- Military systems
-- Government systems
+## Movie RBAC - roles by age: adult, juvenile, child.
 
-### MAC Clearance Example
+## Movie ABAC - age plus rating rules: `>17`, `13-17`, `<13`.
 
-A system access control policy may define security clearance levels and associate system objects with those levels.
+## Extra Attributes - membership level and release date.
 
-Example object labels:
+## RBAC Attribute Growth - adding attributes multiplies roles/permissions.
 
-- Unclassified
-- Confidential
-- Secret
-- Top Secret
+## ABAC Attribute Growth - add rules while preserving existing rules.
 
-Access is granted or denied based on the subject's clearance level.
-
-Example:
-
-- A senior engineer with Secret clearance can access Secret, Confidential, and Unclassified objects.
-- The same engineer cannot access Top Secret objects.
-
-### MAC Advantages
-
-MAC provides:
-
-- Higher security than DAC
-- Reduced risk of human error
-
-### MAC Disadvantages
-
-MAC involves:
-
-- Complex implementation
-- Higher administrative overhead
-
-## Role-Based Access Control (RBAC)
-
-Role-Based Access Control assigns permissions based on the roles users have within an organization.
-
-Instead of assigning permissions directly to each individual user:
-
-- Permissions are associated with roles.
-- Users are assigned to roles.
-- Users receive access based on their assigned roles.
-
-RBAC simplifies management and improves security by ensuring users access only the information needed for their job functions.
-
-### RBAC Examples
-
-Examples:
-
-- A CEO can access all resources.
-- An accountant can access only the financial database.
-- A user is granted access according to their actual role in the company.
-
-## Attribute-Based Access Control (ABAC)
-
-Attribute-Based Access Control is also called:
-
-- Policy-Based Access Control
-- Rule-Based Access Control
-
-ABAC evaluates attributes of users, resources, and the environment to make access decisions.
-
-It is dynamic and fine grained.
-
-### ABAC Attribute Types
-
-ABAC policies may consider:
-
-- User attributes
-- Resource attributes
-- Environmental conditions
-- User roles
-- Resource classification
-- Context
-
-### ABAC Example
-
-An example rule:
-
-- Only send an email when the email size is less than 5 MB.
-
-### ABAC Advantages
-
-ABAC provides:
-
-- High adaptability
-- Fine-grained policy control
-- Flexibility
-- Strong security
-- Suitability for distributed or rapidly changing environments
-
-### ABAC Disadvantages
-
-ABAC requires:
-
-- More complex implementation
-- More challenging policy management
-
-## Case Study: Movie Database Management System
-
-The lecture compares RBAC and ABAC using a movie database management system.
-
-### RBAC Version
-
-In the RBAC model, users are assigned roles based on age:
-
-- Adult
-- Juvenile
-- Child
-
-Access is granted based on these roles.
-
-### ABAC Version
-
-In the ABAC model, access is granted based on detailed attribute rules involving user age and movie rating.
-
-Rules:
-
-- If age is greater than 17 and the movie rating belongs to the allowed rating group, access is granted.
-- If age is between 13 and 17 and the movie rating is PG-13 or G, access is granted.
-- If age is less than 13 and the movie rating is G, access is granted.
-
-The ABAC model uses explicit conditions rather than only broad roles.
-
-## Adding More Attributes
-
-The lecture then adds two more attributes to the movie database:
-
-- User membership level
-- Movie release date
-
-This shows how RBAC and ABAC respond differently when the access policy must consider more information.
-
-### Effect on RBAC
-
-In RBAC, adding new attributes causes the number of roles and permissions to grow.
-
-The original three roles must be expanded to include membership level:
-
-- Adult with premium membership
-- Adult with regular membership
-- Juvenile with premium membership
-- Juvenile with regular membership
-- Child with premium membership
-- Child with regular membership
-
-The permissions grow rapidly as the number of attributes increases.
-
-The lecture describes this growth as exponential when more attributes are added.
-
-### Effect on ABAC
-
-In ABAC, the original age and rating rule does not need to be changed.
-
-New rules can be added for the new attributes.
-
-Example added rules:
-
-- Access is allowed if membership is premium.
-- Access is allowed if membership is regular and the movie has been released.
-- Access is granted when the original rule and the new attribute rules are satisfied together.
-
-ABAC adapts by adding new rules while preserving the original rule.
-
-This illustrates ABAC's finer-grained and more flexible policy structure.
-
-## Comparison Summary
-
-### DAC
-
-- Resource owner controls access.
-- Flexible and user friendly.
-- Risky if users grant access carelessly.
-
-### MAC
-
-- Central authority controls access.
-- Uses classifications and clearances.
-- Strong security.
-- More complex and administratively heavy.
-
-### RBAC
-
-- Access is based on organizational roles.
-- Easier to manage than assigning permissions user by user.
-- Works well when roles map cleanly to job functions.
-- Can become complicated when many attributes must be considered.
-
-### ABAC
-
-- Access is based on attributes and policies.
-- More dynamic and fine grained than RBAC.
-- Handles changing or complex environments well.
-- Requires more complex implementation and policy management.
-
-## Final Takeaway
-
-Access control models are fundamental for maintaining security and managing access to resources.
-
-Understanding DAC, MAC, RBAC, and ABAC helps organizations choose an access control model that fits their security needs, protects sensitive information, and supports compliance requirements.
+## Comparison - DAC owner-driven; MAC authority-driven; RBAC role-driven; ABAC attribute/rule-driven.

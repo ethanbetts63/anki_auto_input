@@ -1,68 +1,33 @@
 # Access Control in Operating Systems
 
-## Access Control Models
+## OS Access Models - DAC, MAC, RBAC, rule/attribute-based access.
 
-- **DAC = Discretionary Access Control:** owners/privileged users control permissions; traditional Unix/Linux.
-- **MAC = Mandatory Access Control:** mandatory restrictions; SELinux adds MAC over DAC.
-- **RBAC = Role-Based Access Control:** permissions by role.
-- **Rule-Based / ABAC:** decisions by rules/attributes.
+## DAC - owners/privileged users set permissions; traditional Unix/Linux.
 
-## Operating System Access Control
+## MAC / SELinux - mandatory restrictions over DAC; enforces least privilege.
 
-- **Subjects:** users, commands, programs.
-- **Objects:** files, pipes, sockets, resources.
-- Permissions: read, write, execute.
-- Linux/Unix permission triplets: owner, group, others.
-- `777` = read/write/execute for all.
+## Subjects / Objects - subjects: users/commands/programs; objects: files/pipes/sockets/resources.
 
-## Unix DAC vs SELinux
+## Permissions - read, write, execute for owner/group/others; `777` = full access for all.
 
-- DAC lets root grant broad permissions, e.g. `chmod 777`.
-- Overbroad permissions create security risk.
-- SELinux MAC limits dangerous grants and enforces least privilege.
+## DAC Risk - root can grant dangerous broad permissions like `chmod 777`.
 
-## Malware and User Privilege
+## Malware Privilege - malware inherits current user privilege; admin/root login increases damage.
 
-- Malware runs with the current user's privilege.
-- Normal-user login limits malware impact.
-- Admin/root login lets malware inherit high privileges.
+## Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
 
-## Password File Dilemma
+## Two-Tier Approach - user calls privileged program that performs only restricted action.
 
-- Shadow password file is protected.
-- Normal users need to change their own password.
-- Direct write access would let users modify others' passwords.
-- File permissions are too coarse for per-field control.
+## SetUID - program runs with owner privilege, not launcher privilege.
 
-## Two-Tier Protected Resource Approach
+## passwd - root-owned SetUID program updates only user's password field.
 
-- User invokes privileged program.
-- Program performs restricted action.
-- Example: `passwd` updates only the user's own password field.
+## RUID / EUID - RUID = launcher; EUID = identity used for permissions.
 
-## SetUID
+## SetUID RUID/EUID - RUID stays normal user; EUID becomes program owner.
 
-- **SetUID = set user ID.**
-- Program runs with owner's privilege, not launcher's privilege.
-- `passwd` is root-owned; normal user runs it with temporary root EUID.
-- User still cannot directly edit shadow file.
+## SetUID Display - `s` in owner execute position.
 
-## Real User ID vs Effective User ID
+## SetUID Numeric - normal `0755`; SetUID `4755`; leading `4` = SetUID bit.
 
-- **RUID:** actual launching user.
-- **EUID:** identity whose privileges are used.
-- SetUID keeps RUID normal but changes EUID to program owner.
-- Symbolic `s` in owner execute position shows SetUID.
-
-## Reading SetUID Permission
-
-- Normal: `0755`.
-- SetUID: `4755`.
-- Leading `4` = SetUID bit (`100` binary).
-- `rws` indicates owner execute + SetUID.
-
-## Delegation vs Service Approach
-
-- **SetUID/delegation:** temporary specific privilege through a program.
-- **Daemon/service:** privileged background service performs tasks.
-- Linux uses SetUID for tasks like `passwd`.
+## Delegation vs Service - SetUID grants temporary program privilege; daemon service performs privileged tasks.
