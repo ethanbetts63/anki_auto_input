@@ -1,8 +1,4 @@
-# RSA Algorithm
-
 ## RSA - public-key cryptography for secure transmission, signatures, key exchange.
-
-## RSA Keys - public key shared; private key secret.
 
 ## RSA Security - hard to factor large `n = p * q`.
 
@@ -26,20 +22,10 @@
 
 ## Size Example - `2^1000 ≈ 10^300`; huge factorization problem.
 
-## Workshop Size Caveat - 32 hex digits each = 128-bit primes; smaller than real RSA security.
-
 ## Legitimate User - knows `p`, `q`; derives `n` and private `d`.
 
 ## Attacker - knows `n` but cannot feasibly recover large `p`, `q`, or `d`.
 
-## RSA Confidentiality - anyone encrypts with public key; only private-key owner decrypts.
-
-## eBay Example - customer encrypts card data with eBay public key; eBay decrypts privately.
-
 ## Encryption Formula - `ciphertext = message^e mod n`; example `2^5 mod 14 = 4`.
 
 ## Decryption Formula - `message = ciphertext^d mod n`; example `4^11 mod 14 = 2`.
-
-## Key Use - public encrypts; private decrypts; public cannot decrypt in this flow.
-
-## RSA Applications - secure communication, digital signatures, key exchange.

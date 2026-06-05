@@ -1,5 +1,3 @@
-# SSH Public Key Authentication
-
 ## SSH - secure remote connection over unsecured networks.
 
 ## SSH Protects - encryption against eavesdropping, leakage, tampering.
@@ -39,5 +37,3 @@
 ## Security Reasoning - only private-key holder can decrypt challenge and sign correct response.
 
 ## MITM View - attacker sees traffic but lacks private key and cannot prove possession.
-
-## Key Concept - server challenges; client proves private key; server verifies with public key.

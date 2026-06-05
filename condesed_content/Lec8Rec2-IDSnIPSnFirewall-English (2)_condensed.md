@@ -1,5 +1,3 @@
-# Lecture 8 Recording 2: IDS, IPS, and Firewalls
-
 ## IDS/IPS - tools for malicious activity detection/prevention.
 
 ## IDS - passive monitor of network/system activity; logs and alerts.
