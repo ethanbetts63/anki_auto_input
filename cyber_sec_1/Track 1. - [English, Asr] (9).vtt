@@ -1,0 +1,2264 @@
+WEBVTT
+
+00:00:04.070 --> 00:00:08.739
+Uh, as you can see, uh, we have finished module 2.
+
+00:00:10.369 --> 00:00:14.529
+And Uh, uh, crypto algorithm
+
+00:00:14.789 --> 00:00:18.780
+authentication method that control modeling,
+
+00:00:18.940 --> 00:00:23.399
+right? And then that's how people design the system or
+
+00:00:24.360 --> 00:00:28.979
+You give them so that they can guarantee um the system secure
+
+00:00:29.440 --> 00:00:34.180
+and this week and next week we will. Security,
+
+00:00:34.540 --> 00:00:38.240
+which actually we use all of them from module.
+
+00:00:38.540 --> 00:00:42.090
+And you can see there is a combination from module 2.
+
+00:00:42.340 --> 00:00:47.319
+And then for network security guarantee the network design can be
+
+00:00:47.319 --> 00:00:52.090
+secure. Uh-huh, yeah.
+
+00:00:52.490 --> 00:00:54.909
+That, that's probably what happened with,
+
+00:00:54.919 --> 00:00:57.889
+um, I don't know, with the internet issue,
+
+00:00:58.250 --> 00:01:03.169
+but hopefully I'm keepinging clear. And then I'll check the
+
+00:01:03.169 --> 00:01:07.010
+quality of the recording. If there's still some issue like this,
+
+00:01:07.089 --> 00:01:10.550
+uh, I will probably have to make an offline one.
+
+00:01:14.580 --> 00:01:19.370
+When I move my mouse. I, it doesn't work
+
+00:01:19.370 --> 00:01:22.879
+properly. Oh, really?
+
+00:01:26.660 --> 00:01:30.389
+I don't know, there there's a. There shouldn't be
+
+00:01:30.389 --> 00:01:34.580
+a an issue. I'll try not move that one then.
+
+00:01:35.110 --> 00:01:39.790
+I'll just uh use my arrow um from my keyboard up and
+
+00:01:39.790 --> 00:01:42.970
+down, see whether there is some voice issue.
+
+00:01:43.309 --> 00:01:48.279
+OK. OK, then. Um, so in,
+
+00:01:48.430 --> 00:01:53.220
+in network security part, we will, we will see how do we use those
+
+00:01:53.220 --> 00:01:58.120
+crypto, how do we design this authentication and use those
+
+00:01:58.120 --> 00:02:02.239
+access control. Um, combine those methods,
+
+00:02:02.489 --> 00:02:06.480
+and then we can make sure the network communication better than before.
+
+00:02:06.639 --> 00:02:09.520
+Of course, those are people, how the experts,
+
+00:02:09.610 --> 00:02:14.169
+they have designed their protocol, um, and to consider different
+
+00:02:14.169 --> 00:02:19.130
+features to be added into our network protocol design so that we have a
+
+00:02:19.130 --> 00:02:24.110
+better, uh, and a secure Um, network communication,
+
+00:02:24.380 --> 00:02:29.270
+OK? And then we will, sorry. Sure, yeah.
+
+00:02:30.270 --> 00:02:35.190
+And we have discussed this um TCP IP protocol suite
+
+00:02:35.190 --> 00:02:39.350
+in our pre-le recording, um, because I know some people,
+
+00:02:39.389 --> 00:02:44.179
+if you haven't learned computer system on computer networks before,
+
+00:02:44.550 --> 00:02:48.669
+and you may have no idea about what TCP IP is,
+
+00:02:49.029 --> 00:02:52.869
+um, then that's, that's included in the pre-elect recording.
+
+00:02:53.149 --> 00:02:56.630
+And we discussed, um, and also I used the to,
+
+00:02:57.070 --> 00:03:01.860
+to video from another professor. And then he has made some
+
+00:03:01.860 --> 00:03:06.820
+popular YouTube video and he discussed how TCPIP uh
+
+00:03:06.820 --> 00:03:11.580
+modeling uh was used in the 7 layer and then 4 layer and then
+
+00:03:11.580 --> 00:03:15.130
+5 layers, right? And then you, we are actually in the lecture,
+
+00:03:15.179 --> 00:03:17.770
+we just discussed, OK, for these layers,
+
+00:03:18.220 --> 00:03:22.929
+there are these issues and how this issue can be fixed and how
+
+00:03:22.929 --> 00:03:26.919
+people were trying to fix them, right? The different security issue.
+
+00:03:27.539 --> 00:03:32.119
+OK? So these are the objectives for these two weeks.
+
+00:03:32.559 --> 00:03:36.839
+Uh, I wish you understand the basic operation in our network
+
+00:03:36.839 --> 00:03:41.080
+communication. And then there are some popular protocols.
+
+00:03:41.389 --> 00:03:46.279
+Uh, we will actually focus on, um, the learning for
+
+00:03:46.279 --> 00:03:51.070
+this, for this network. communication and we'll
+
+00:03:51.070 --> 00:03:55.789
+discuss what's the problem with those protocols and how
+
+00:03:55.789 --> 00:04:00.550
+those protocols were updated or uh upgraded,
+
+00:04:00.669 --> 00:04:04.259
+right? To, to be a better one, right? And then people,
+
+00:04:04.429 --> 00:04:08.059
+how people fix those issues existed in those protocols,
+
+00:04:08.389 --> 00:04:13.000
+right? And then, yeah, so we, we will, we will discuss this
+
+00:04:13.000 --> 00:04:17.920
+security issue layer by layer. And then we identify what's
+
+00:04:17.920 --> 00:04:20.480
+the possible countermeasure for each layer,
+
+00:04:20.799 --> 00:04:25.440
+right? So, this is a very um famous model
+
+00:04:25.440 --> 00:04:29.390
+and when people think uh there are some issues there,
+
+00:04:29.640 --> 00:04:32.589
+right, in those seven-layer model, but of course,
+
+00:04:32.720 --> 00:04:37.260
+people now more talk about five layer, which is physical layer
+
+00:04:37.519 --> 00:04:42.290
+from the very bottom, layer one. Right? And data link
+
+00:04:42.290 --> 00:04:46.769
+layer, network layer, transport layer which is the 4th layer,
+
+00:04:47.029 --> 00:04:51.649
+and on the top, the 3 layers in green, they are
+
+00:04:51.649 --> 00:04:55.250
+recognized as one layer. We call them application layer,
+
+00:04:55.630 --> 00:05:00.269
+right? So, in these different layers, Um,
+
+00:05:00.510 --> 00:05:05.190
+people were trying to add this security goal to guarantee
+
+00:05:05.510 --> 00:05:09.149
+this layer are more secure than before, right?
+
+00:05:10.079 --> 00:05:14.320
+So you can see different security goal were added to those
+
+00:05:14.320 --> 00:05:19.040
+layers so that we have something more secure in our internet
+
+00:05:19.040 --> 00:05:21.480
+connection, in our internet communication.
+
+00:05:21.970 --> 00:05:26.760
+OK? Um, And then, so, in this
+
+00:05:26.760 --> 00:05:31.040
+week, we talked about the 1st 3 layers, from the bottom,
+
+00:05:31.239 --> 00:05:34.600
+physical layer, link layer, and the network layer,
+
+00:05:34.890 --> 00:05:39.839
+right? And then for next week, we will talk about transport layer and application layer.
+
+00:05:40.160 --> 00:05:45.119
+We will discuss the main protocol in each layer and their problems and,
+
+00:05:45.230 --> 00:05:49.869
+and how people have designed something new to fix those issues,
+
+00:05:50.200 --> 00:05:54.640
+right? OK. So the very first one would be the physical layer,
+
+00:05:54.869 --> 00:05:58.760
+OK, very bottom layer. And then, in the physical layer,
+
+00:05:58.920 --> 00:06:03.799
+people have already had those transmission link shielding
+
+00:06:03.799 --> 00:06:07.309
+to make it safer and also physical separation.
+
+00:06:07.519 --> 00:06:12.459
+Or people can make equipment and cable redundancy um to make
+
+00:06:12.459 --> 00:06:17.440
+the physical layer um better, OK. Always provide some alternative option
+
+00:06:17.440 --> 00:06:20.359
+for people to fix the physical connection.
+
+00:06:20.910 --> 00:06:23.440
+And of course, the service and the countersecurity.
+
+00:06:23.510 --> 00:06:27.070
+So, number 3 and 4 are quite obvious, straightforward.
+
+00:06:27.399 --> 00:06:30.480
+So we, we only focus on the number 1 and 2.
+
+00:06:30.769 --> 00:06:35.640
+OK, for, yeah, to give a bit introduction how physical layer security were
+
+00:06:35.640 --> 00:06:40.399
+guaranteed. And then the very first one is the trans uh
+
+00:06:40.399 --> 00:06:44.179
+transmission link shielding. And in that shelling,
+
+00:06:44.220 --> 00:06:48.779
+and when you look at the right top, the figure here,
+
+00:06:49.100 --> 00:06:53.700
+right? So there's a center conductor which is copper
+
+00:06:53.700 --> 00:06:57.850
+wire and then the signal will go through that copper,
+
+00:06:58.059 --> 00:07:02.279
+cop copper wire. And then dielectric
+
+00:07:02.470 --> 00:07:07.070
+um will wrap those copper, um, yeah, the,
+
+00:07:07.160 --> 00:07:10.869
+the, the copper wire, right? Then signal,
+
+00:07:10.920 --> 00:07:15.679
+yeah, will wrapped in, in those so that there won't be some
+
+00:07:15.679 --> 00:07:19.600
+conduction from the very center to external.
+
+00:07:20.000 --> 00:07:25.000
+And then there's a foil shell, OK? Those very uh like aluminum
+
+00:07:25.000 --> 00:07:29.779
+um foil. And then that layer actually stops
+
+00:07:29.779 --> 00:07:34.760
+the signal to be, um, to be leaked
+
+00:07:35.140 --> 00:07:39.839
+from the center conductor because there is always electro
+
+00:07:39.839 --> 00:07:44.450
+electromagnetic uh leaking, OK? Uh,
+
+00:07:44.459 --> 00:07:47.859
+around the copper wire. And then that's why,
+
+00:07:47.980 --> 00:07:50.470
+uh, that's what this foil shelding is doing.
+
+00:07:50.579 --> 00:07:54.480
+It try to Prevent those electro uh
+
+00:07:54.480 --> 00:07:58.769
+electromagnetic leaking from the signal transmission.
+
+00:07:59.279 --> 00:08:04.279
+And then those braided shelding is actually trying to um
+
+00:08:04.279 --> 00:08:08.179
+put another layer uh of those protections for the
+
+00:08:08.179 --> 00:08:12.399
+electromagnetic leaking. And also, um,
+
+00:08:12.440 --> 00:08:16.420
+it's protecting the external um
+
+00:08:17.079 --> 00:08:20.940
+like break in to the center conductor.
+
+00:08:21.559 --> 00:08:26.519
+Because when people try to use knife or the needle to go through
+
+00:08:26.519 --> 00:08:31.519
+this, um, this transmission line, it's
+
+00:08:31.519 --> 00:08:36.349
+very hard because it's protected by those braided shelding and the
+
+00:08:36.349 --> 00:08:40.250
+foil shelding and also the dielectric, um,
+
+00:08:40.599 --> 00:08:45.250
+those, those kind of protection, right? And then there's a rubber outside,
+
+00:08:45.669 --> 00:08:49.590
+right? So, this is the actual transmission line shelding,
+
+00:08:49.669 --> 00:08:54.570
+which is to keep this physical layers transmission better than
+
+00:08:54.789 --> 00:08:59.049
+uh not having them, right? So, you can see all this
+
+00:08:59.270 --> 00:09:03.570
+cable and switches, um, yeah, this cable were
+
+00:09:04.030 --> 00:09:07.010
+doing this protection. And of course, sometimes,
+
+00:09:07.989 --> 00:09:12.650
+When we, uh, when we wish to have, uh, prevent those
+
+00:09:12.650 --> 00:09:17.510
+electromagnetic, uh, signal leaking, we can wrap the
+
+00:09:17.510 --> 00:09:21.669
+whole signal in, uh, uh, in, in the
+
+00:09:21.669 --> 00:09:25.650
+enclosed environment such as sometimes you would see,
+
+00:09:25.919 --> 00:09:30.489
+um, if we have some transmission and we
+
+00:09:30.559 --> 00:09:35.460
+wish those Wi Fi, those wireless communication signal wouldn't
+
+00:09:35.460 --> 00:09:40.429
+be Um, going out and then you can put every equipment
+
+00:09:40.429 --> 00:09:44.729
+in one. Um, in one. Room
+
+00:09:45.260 --> 00:09:49.799
+which were wrapped by aluminum foil or some
+
+00:09:49.799 --> 00:09:53.859
+iron material, right? So that actually can,
+
+00:09:54.280 --> 00:09:59.119
+um, that is a similar thing to, to this at some shelling on
+
+00:09:59.119 --> 00:10:03.919
+those transmission line. So which is to prevent those physical
+
+00:10:03.919 --> 00:10:08.760
+layers, uh, disclosure. And another physical layer strategy
+
+00:10:08.760 --> 00:10:13.380
+is this separation hub. So the picture just show you some
+
+00:10:13.679 --> 00:10:16.349
+idea about how this hub or how this switch,
+
+00:10:16.549 --> 00:10:20.059
+we call that separation switch, uh, looks like.
+
+00:10:20.320 --> 00:10:24.719
+So it has this two internet connection and
+
+00:10:24.719 --> 00:10:29.640
+to internet connection, and it, it also has this switch here in
+
+00:10:29.640 --> 00:10:33.609
+the middle. Um, of those boards, right? So,
+
+00:10:33.719 --> 00:10:37.049
+the switch can be switched left and right,
+
+00:10:37.059 --> 00:10:40.130
+so that it allows either to connect to the internet,
+
+00:10:40.489 --> 00:10:43.250
+and then if we don't want that internet connection,
+
+00:10:43.299 --> 00:10:48.260
+we just switch to the right. So which makes sure this separation hub
+
+00:10:48.580 --> 00:10:53.440
+only uh breaks, I mean, cut off those connection to the internet.
+
+00:10:53.820 --> 00:10:56.380
+So we have 12 words here. One is internet,
+
+00:10:56.460 --> 00:11:01.210
+which means external network. And intranet means internal
+
+00:11:01.210 --> 00:11:06.049
+network. So, in a lot of cases, we actually wish to have this
+
+00:11:06.049 --> 00:11:09.869
+kind of separation. The reason is,
+
+00:11:10.450 --> 00:11:13.609
+um, there's a case study here, e-government,
+
+00:11:13.770 --> 00:11:16.849
+right? In the, in this page. And you can see there's a,
+
+00:11:17.250 --> 00:11:20.349
+sometimes confidential data in private network.
+
+00:11:20.650 --> 00:11:25.359
+And we, we wish to protect this confidential data in this private network.
+
+00:11:25.890 --> 00:11:30.770
+So, we don't do any direct connection from this private network
+
+00:11:30.770 --> 00:11:35.270
+to internet, right? And then we always apply this
+
+00:11:35.450 --> 00:11:38.750
+separation switch, OK, to put in the middle.
+
+00:11:39.130 --> 00:11:42.289
+And then, the function of this separation.
+
+00:11:43.989 --> 00:11:47.809
+Switch, OK. Very similar to isolation hub or air gap.
+
+00:11:48.190 --> 00:11:53.150
+So, which is actually We talk about the function and the difference between this,
+
+00:11:53.570 --> 00:11:58.090
+this separation hub and the firewall is the
+
+00:11:58.090 --> 00:12:02.969
+firewall always put the connection as the first priority and it still
+
+00:12:02.969 --> 00:12:06.440
+works on the security, but security is its second goal,
+
+00:12:06.729 --> 00:12:09.700
+right? The connection is the first goal for firewall.
+
+00:12:09.969 --> 00:12:14.489
+But for the separation hub, this physical separation switch,
+
+00:12:14.809 --> 00:12:17.869
+and then their first priority is security.
+
+00:12:18.140 --> 00:12:22.580
+Because they think that security is the very first goal and they have to
+
+00:12:22.580 --> 00:12:27.340
+guarantee, so they physically separate the intranet and the internet,
+
+00:12:27.429 --> 00:12:29.820
+which is external network and internal network,
+
+00:12:30.179 --> 00:12:35.179
+right? So they physically separate. They only allow connection with the best
+
+00:12:35.179 --> 00:12:40.140
+effort. So, they think it's 100% safe, they connect them um
+
+00:12:40.140 --> 00:12:43.020
+through some way, right? Rather than direct connection.
+
+00:12:43.869 --> 00:12:48.619
+Right? So that's the function, um, difference between firewall and
+
+00:12:48.619 --> 00:12:52.099
+the physical separation switch. So in reality,
+
+00:12:52.429 --> 00:12:56.969
+we use quite a lot, um, in a lot of very
+
+00:12:57.400 --> 00:13:02.070
+high confidential case. For example, e-government or stock trading
+
+00:13:02.070 --> 00:13:06.010
+system. So here is one case where you can see,
+
+00:13:06.510 --> 00:13:10.869
+uh, we have the physical separation hub here in the bottom.
+
+00:13:12.630 --> 00:13:16.340
+It's here, right? And then
+
+00:13:17.299 --> 00:13:22.210
+It actually physically separate that internet and
+
+00:13:22.210 --> 00:13:25.869
+internal server. We call that internet network,
+
+00:13:26.289 --> 00:13:31.289
+right? And then when there's a um external data we
+
+00:13:31.289 --> 00:13:36.130
+wish to transmit to the internet, we will go through this
+
+00:13:36.130 --> 00:13:40.090
+physical switch and to the storage equipment first.
+
+00:13:40.559 --> 00:13:44.840
+And then after that storage equipment, probably have done some
+
+00:13:44.840 --> 00:13:49.020
+analysis and see there's no security alarm and then,
+
+00:13:49.359 --> 00:13:53.739
+and then it will have another, um, the switch would
+
+00:13:53.960 --> 00:13:58.760
+now connect this storage equipment to the internet.
+
+00:13:59.280 --> 00:14:02.669
+And then, and then the data can be loaded to the intranet.
+
+00:14:03.140 --> 00:14:08.039
+And then after that one, and then if there's something the internet
+
+00:14:08.039 --> 00:14:12.510
+which, which to give to um the external network,
+
+00:14:12.590 --> 00:14:16.030
+it will load the data back to the storage equipment,
+
+00:14:16.349 --> 00:14:19.780
+OK? Do that way. And then after that one,
+
+00:14:19.989 --> 00:14:24.489
+and then the network will be disconnected and then the switch hub,
+
+00:14:24.830 --> 00:14:29.750
+the physical separation control system can then just allow the connection from
+
+00:14:29.750 --> 00:14:32.409
+the storage equipment to the external network.
+
+00:14:33.309 --> 00:14:37.609
+OK? So that doesn't allow direct connection between
+
+00:14:37.609 --> 00:14:42.429
+the internet to the intranet. So, when you see in
+
+00:14:42.429 --> 00:14:47.229
+the right top, and I have this um explanation
+
+00:14:47.229 --> 00:14:51.690
+here. So, right. So when there's a harm to
+
+00:14:52.390 --> 00:14:57.169
+internet, external server, right? And then it won't affect
+
+00:14:57.429 --> 00:15:02.349
+the internet because there's a separation switch which physically separate
+
+00:15:02.349 --> 00:15:06.195
+them, right? So we, this can protect those internet.
+
+00:15:06.955 --> 00:15:09.765
+So, we, we use this physical separation to,
+
+00:15:10.275 --> 00:15:14.174
+to, to do this physical layer security, um,
+
+00:15:14.594 --> 00:15:18.174
+sometimes warranty. And we, we, we, we got to make sure,
+
+00:15:18.635 --> 00:15:22.330
+um, To use that one. But of course, as I said,
+
+00:15:22.450 --> 00:15:27.369
+this is putting that security at the first priority and then
+
+00:15:27.530 --> 00:15:32.169
+only connect when, when some analysis is done and
+
+00:15:32.169 --> 00:15:36.429
+then those connection is second priority in those networks.
+
+00:15:37.239 --> 00:15:41.010
+OK. Um, and then we look at the data link layer,
+
+00:15:41.049 --> 00:15:43.929
+which is the second layer. And then data link layer,
+
+00:15:43.969 --> 00:15:47.289
+we can do, what we can do is to do an encryption.
+
+00:15:47.690 --> 00:15:52.369
+And, and the wireless communication, and then that,
+
+00:15:53.440 --> 00:15:58.330
+that WLAN means wireless uh Local Area Network and
+
+00:15:58.539 --> 00:16:03.390
+SSID that we have those, um, Set,
+
+00:16:03.590 --> 00:16:08.260
+uh, identifier, right? A service set identifier and then that,
+
+00:16:08.330 --> 00:16:13.229
+yes, that is short for that name. So which is actually identifier with
+
+00:16:13.229 --> 00:16:18.150
+some hotspot identifier, right? We, we always give a name for the hotspot or for the access
+
+00:16:18.150 --> 00:16:23.090
+point, right? And then, so how do we guarantee um those
+
+00:16:23.820 --> 00:16:28.489
+security settings? And then what are the difference between this
+
+00:16:28.489 --> 00:16:33.349
+WEP and WPA and we have different options for our wireless
+
+00:16:33.349 --> 00:16:36.520
+communication and data link layer strategy,
+
+00:16:36.729 --> 00:16:40.729
+and we'll discuss that one. And also with uh address
+
+00:16:41.330 --> 00:16:45.070
+spoof prevention. So there's some strategy as well,
+
+00:16:45.289 --> 00:16:49.619
+um, to prevent the physical layer and, um,
+
+00:16:49.840 --> 00:16:53.510
+I'm sorry, the data link layer and network layers.
+
+00:16:54.900 --> 00:16:59.000
+address translation, like, I mean, IP address to MAC address,
+
+00:16:59.450 --> 00:17:04.199
+right? And also, there's anti-sniffing uh techniques which we can
+
+00:17:04.199 --> 00:17:07.109
+use to prevent this data link layer, um,
+
+00:17:07.119 --> 00:17:11.750
+sniffing issue. OK. So firstly, look at
+
+00:17:11.750 --> 00:17:16.680
+this uh data encryption. Um, so data
+
+00:17:16.680 --> 00:17:21.349
+link layer encryption means we can encrypt the data at the link layer,
+
+00:17:21.640 --> 00:17:26.420
+OK? And then, which I mean, OK, so this is
+
+00:17:26.420 --> 00:17:31.000
+uh, the bottom one is a link layer
+
+00:17:31.280 --> 00:17:35.859
+encryption. And the top one is uh end to end
+
+00:17:35.859 --> 00:17:40.500
+encryption. So then you can see in the end to end encryption,
+
+00:17:40.979 --> 00:17:44.819
+we can still see those header and the trailer information,
+
+00:17:44.939 --> 00:17:49.140
+right? 1010 and 1011. So those are the header and
+
+00:17:49.140 --> 00:17:54.060
+trailer information which normally uh were attached to the original signal.
+
+00:17:54.119 --> 00:17:58.849
+So you can imagine your email, right? When you send an email to,
+
+00:17:59.540 --> 00:18:03.750
+to a receiver. And your email will be attached to,
+
+00:18:04.109 --> 00:18:07.969
+uh, will be attached by some header information.
+
+00:18:08.069 --> 00:18:12.750
+For example, where the email was from, from which IP
+
+00:18:12.750 --> 00:18:16.709
+address. And the destination is where, right?
+
+00:18:16.989 --> 00:18:20.689
+So those kind of information will be attached to this email.
+
+00:18:21.579 --> 00:18:24.550
+We call them header and trailer and information,
+
+00:18:24.910 --> 00:18:29.150
+right? So, we, we, we have them. And you can imagine whether your email,
+
+00:18:29.310 --> 00:18:34.060
+OK? We can encrypt in data link layer, which is the bottom solution,
+
+00:18:34.160 --> 00:18:38.750
+right? We encrypt the whole message where you can't see those
+
+00:18:38.750 --> 00:18:41.300
+header and the trailer information anymore.
+
+00:18:41.510 --> 00:18:45.180
+Of course, the whole email will also be protected,
+
+00:18:45.520 --> 00:18:48.550
+right? So that's the data link layer encryption option.
+
+00:18:49.180 --> 00:18:53.520
+Um, but in this way, that also means
+
+00:18:54.949 --> 00:18:59.689
+When your email was forward from one router to another
+
+00:18:59.689 --> 00:19:03.949
+router, And then that router and maybe the next switch,
+
+00:19:04.089 --> 00:19:08.670
+right? We normally have the switch at the second layer uh device to
+
+00:19:08.670 --> 00:19:12.810
+forward your um whole package to the next switch,
+
+00:19:13.189 --> 00:19:18.189
+right? So the switch needs to read your uh header and the
+
+00:19:18.189 --> 00:19:22.630
+trailer information so that switch knows where this email was from.
+
+00:19:22.910 --> 00:19:27.180
+And then the switch needs to decrypt the whole encrypted
+
+00:19:27.550 --> 00:19:31.939
+package. To read, to be able to read the header and trailer information,
+
+00:19:32.300 --> 00:19:36.819
+right? In that case, the switch got to have a decryption key,
+
+00:19:37.140 --> 00:19:40.250
+right? Decryption key. And then if we, every,
+
+00:19:40.420 --> 00:19:44.650
+every hop in the middle, the switch, every switch needs to read.
+
+00:19:44.780 --> 00:19:49.199
+Of course, in the transmission line, the encrypted message may be safe,
+
+00:19:49.449 --> 00:19:53.979
+right? However, the switch got to be able to decrypt the
+
+00:19:53.979 --> 00:19:58.869
+message and then encrypt it again, and then Trust me to the
+
+00:19:58.869 --> 00:20:03.560
+next hope. But in that way, it means. In
+
+00:20:03.560 --> 00:20:08.439
+those switch place, the switch has access to your
+
+00:20:08.439 --> 00:20:13.319
+email address, uh email content which uh was in
+
+00:20:13.319 --> 00:20:16.939
+plain text, right? So because he can decrypt your message,
+
+00:20:17.560 --> 00:20:20.839
+then that makes your email not safe, right?
+
+00:20:21.000 --> 00:20:26.000
+Because the, the encryption at link layer um encrypt
+
+00:20:26.000 --> 00:20:30.020
+the header and trailer information but also encrypt your message,
+
+00:20:30.229 --> 00:20:34.849
+your email. But, but that switch in the middle got to
+
+00:20:34.849 --> 00:20:38.010
+decrypt that each packet at each switch,
+
+00:20:38.329 --> 00:20:42.119
+right? And then, that makes it not so safe.
+
+00:20:42.380 --> 00:20:46.650
+And then uh people say, say, OK, we can also consider end to end encryption,
+
+00:20:46.729 --> 00:20:51.510
+which means at higher layer, you can imagine at your application
+
+00:20:51.510 --> 00:20:56.329
+layer, OK? When you write your email, and when you do end to
+
+00:20:56.329 --> 00:21:00.949
+end encryption, you just encrypt your email itself by
+
+00:21:02.099 --> 00:21:07.099
+Some, um. Like triple desk. OK. You have a key and you just do
+
+00:21:07.099 --> 00:21:11.979
+a simple command, and you encrypt your email into a ciphertext,
+
+00:21:11.989 --> 00:21:16.030
+and then you send to your, uh, to, to send to the internet,
+
+00:21:16.390 --> 00:21:20.390
+right? And in that way, your message itself is encrypted.
+
+00:21:20.469 --> 00:21:24.290
+We call that. Uh, application layer encryption,
+
+00:21:24.750 --> 00:21:29.729
+right? And then, Of course, if we can have both,
+
+00:21:29.989 --> 00:21:34.589
+input the message and header and the trailer information attached,
+
+00:21:34.619 --> 00:21:38.839
+and then we encrypt again, right, we encrypt it 2 times.
+
+00:21:39.130 --> 00:21:42.660
+And that makes your transmission really safe.
+
+00:21:42.890 --> 00:21:46.209
+Even if in the middle, the switch decrypt.
+
+00:21:46.560 --> 00:21:48.790
+Uh, to read the header and trailer information,
+
+00:21:48.839 --> 00:21:52.689
+the switch still doesn't get access to the plain text of your email.
+
+00:21:53.040 --> 00:21:57.420
+Because email itself, the message in the very top here,
+
+00:21:57.680 --> 00:22:02.550
+and It has been encrypted, right? So
+
+00:22:02.550 --> 00:22:05.750
+those header information when it goes to transport layer,
+
+00:22:06.099 --> 00:22:08.719
+network layer, link layer, and a different header were added.
+
+00:22:08.790 --> 00:22:12.449
+And in the link layer, those three header can also be,
+
+00:22:12.680 --> 00:22:16.449
+uh, together with the ciphertext together would be encrypted again.
+
+00:22:16.810 --> 00:22:21.189
+So that's some better strategy we can have during our
+
+00:22:21.189 --> 00:22:25.219
+transmission, right? Um, of course, every
+
+00:22:25.219 --> 00:22:28.780
+strategy sometimes has different cost that we have to consider.
+
+00:22:29.739 --> 00:22:34.219
+Um, yeah. So, that's the data
+
+00:22:34.219 --> 00:22:37.140
+encryption option for our data link layer.
+
+00:22:38.000 --> 00:22:41.680
+And then for the wire wireless communication,
+
+00:22:41.959 --> 00:22:46.560
+OK? Uh, as we said, uh, the wireless communication,
+
+00:22:46.680 --> 00:22:49.079
+this also belongs to data link layer things.
+
+00:22:49.119 --> 00:22:53.390
+We put it here. And then, with wireless communication,
+
+00:22:53.630 --> 00:22:58.339
+right? And our phone can set ourselves to be a hotspot,
+
+00:22:58.630 --> 00:23:03.550
+right? And your home router can set itself to provide service to
+
+00:23:03.550 --> 00:23:08.209
+a lot of devices, right? And there's also some access point.
+
+00:23:08.630 --> 00:23:13.060
+Um, for example, in Griffiths campus, there are a lot of
+
+00:23:13.060 --> 00:23:17.920
+different, uh, Wi Fi access points allowing you to connect through Griffith's
+
+00:23:17.920 --> 00:23:22.579
+Wi Fi. Right? So, for all these access point,
+
+00:23:22.739 --> 00:23:26.689
+we have to have a unique service set identifier.
+
+00:23:26.739 --> 00:23:30.109
+We normally call the SSID number. Right?
+
+00:23:31.069 --> 00:23:35.699
+And then this number uh can be 32 characters at the most,
+
+00:23:36.050 --> 00:23:39.839
+right? And should be a unique number which was
+
+00:23:39.839 --> 00:23:42.819
+recognizable by those different devices,
+
+00:23:43.040 --> 00:23:46.500
+right? Sometimes we call that, you can see the airport Wi Fi,
+
+00:23:46.780 --> 00:23:51.579
+1, airport Wi Fi, 2, and you got to recognize which one is the right one to
+
+00:23:51.579 --> 00:23:56.390
+access, right? And then, there are some options for this.
+
+00:23:57.420 --> 00:24:01.640
+Hotspot or access point, right? And you can,
+
+00:24:01.810 --> 00:24:06.810
+when you set up, you can allow to process this Wi
+
+00:24:06.810 --> 00:24:09.729
+Fi, oh sorry, this SSID by default.
+
+00:24:11.530 --> 00:24:15.420
+Which means, uh, you just allow them to broadcast them,
+
+00:24:15.819 --> 00:24:19.660
+right? And make this setting here. Um,
+
+00:24:20.640 --> 00:24:25.300
+Right? So you, you allow them to broadcast themselves
+
+00:24:25.479 --> 00:24:28.119
+and say, OK, I'm here, I'm providing this service.
+
+00:24:28.199 --> 00:24:32.839
+This is my SSID if you want to connect me and you can try to provide the
+
+00:24:32.839 --> 00:24:37.380
+right, like keywords, right? And password and you can connect through me.
+
+00:24:37.729 --> 00:24:40.880
+And, so that's a broadcasting SSID. Normally,
+
+00:24:41.000 --> 00:24:45.569
+the SSID um, is broadcasted uh by
+
+00:24:45.569 --> 00:24:50.270
+default, right? Of course, you can, uh, hide SSID.
+
+00:24:51.229 --> 00:24:55.969
+And you think, OK, you always let all people know there's a service here,
+
+00:24:56.189 --> 00:24:59.530
+which is not safe. You try to hide your SSID.
+
+00:24:59.709 --> 00:25:03.329
+But sometimes this doesn't keep you, uh,
+
+00:25:04.030 --> 00:25:08.609
+access points safer. Because if there were some devices,
+
+00:25:08.849 --> 00:25:12.699
+um, Connected to you before and then they will,
+
+00:25:12.739 --> 00:25:17.680
+next time they still can find you, and then still can um connect through you,
+
+00:25:17.910 --> 00:25:22.260
+um, I mean, automatically. And you can see there's some option like this,
+
+00:25:22.339 --> 00:25:26.619
+OK, in the right. Bottom corner.
+
+00:25:28.349 --> 00:25:33.010
+There's some option, uh, of course, by clicking this option doesn't put your network,
+
+00:25:33.449 --> 00:25:38.109
+uh, very safe, but there is some option by default if you don't
+
+00:25:38.109 --> 00:25:42.859
+carefully untick them. So it allows the connection,
+
+00:25:42.939 --> 00:25:45.380
+even if the network is not broadcasting,
+
+00:25:45.630 --> 00:25:50.155
+if there's some devices Connected to you before and then they can still
+
+00:25:50.775 --> 00:25:55.035
+uh connect through you, right? So, with this hiding
+
+00:25:55.035 --> 00:25:59.895
+SSID doesn't mean you're making your um access point very
+
+00:25:59.895 --> 00:26:04.275
+safe because maybe there was some default setting like this,
+
+00:26:04.535 --> 00:26:09.415
+and then there was still some uh devices able to connect to
+
+00:26:09.415 --> 00:26:13.415
+you, OK? Uh, by default automatically, right?
+
+00:26:14.550 --> 00:26:19.229
+And then, uh, with this SSID setting, and we probably
+
+00:26:19.229 --> 00:26:23.410
+should consider those, um, default
+
+00:26:23.670 --> 00:26:28.650
+SSID set by manufacturer should be changed because those
+
+00:26:28.650 --> 00:26:32.689
+default names can be recognized by attackers.
+
+00:26:33.060 --> 00:26:37.760
+And also, the attacker can then Um, analyze,
+
+00:26:37.900 --> 00:26:42.800
+OK, through the SSID default names to analyze your router's make
+
+00:26:42.800 --> 00:26:47.520
+and model information, right? And, and there's a default
+
+00:26:47.520 --> 00:26:51.420
+password as well, normally kept online and then,
+
+00:26:51.520 --> 00:26:56.250
+or sometimes kept by a manufacturer. And then those attacker can
+
+00:26:56.250 --> 00:26:59.069
+guess uh if you haven't changed your key,
+
+00:26:59.449 --> 00:27:04.170
+right? And then those key, automatic key can be stolen or can be uh
+
+00:27:04.170 --> 00:27:08.930
+grabbed by those attacker automatically through simple
+
+00:27:08.930 --> 00:27:13.619
+analysis, which is why People should never
+
+00:27:13.619 --> 00:27:16.699
+use default password set up by the router.
+
+00:27:16.780 --> 00:27:20.040
+You should change them, right? And when you change them,
+
+00:27:20.280 --> 00:27:24.979
+also make sure your key, OK, in this right bottom picture.
+
+00:27:26.869 --> 00:27:31.829
+Should be really long and longer than 13 at
+
+00:27:31.829 --> 00:27:35.339
+least, or sometimes 20, the longer the better,
+
+00:27:35.589 --> 00:27:38.260
+right? More combination put you safer as well.
+
+00:27:39.310 --> 00:27:41.949
+And then you use a default one. I think in,
+
+00:27:42.390 --> 00:27:45.780
+in our 1 weeks, um I think week 6, right?
+
+00:27:45.790 --> 00:27:50.589
+Activity, you've already seen those default passwords can be just uh
+
+00:27:51.430 --> 00:27:55.140
+seen from online, from some company and they just keep them,
+
+00:27:55.469 --> 00:28:00.109
+right? And then there are also some options for you to choose about the
+
+00:28:00.109 --> 00:28:05.089
+security type and the encryption type. And I've put one error
+
+00:28:05.390 --> 00:28:09.750
+uh from down to the top and very top one would be the
+
+00:28:09.750 --> 00:28:14.430
+most secure one. And then least secure one would be open network,
+
+00:28:14.479 --> 00:28:19.189
+of course, from 1 to 6, right? The first one gives you the top
+
+00:28:19.189 --> 00:28:22.810
+security level. Um, which is the option you should choose.
+
+00:28:23.280 --> 00:28:26.969
+Which means the security type should be WP WPA2.
+
+00:28:27.859 --> 00:28:32.579
+Um, and then never choose WEP, right? like
+
+00:28:32.579 --> 00:28:37.130
+number 5. And there are options here. You can see from your drop-down box,
+
+00:28:37.219 --> 00:28:41.939
+when you set up your own home router, your home router gives you this option.
+
+00:28:42.900 --> 00:28:47.810
+OK, like this. This strong box. And you
+
+00:28:47.810 --> 00:28:52.089
+can see those WEP, WPA and
+
+00:28:52.089 --> 00:28:56.109
+WPA2, right? And you're using that one for your personal,
+
+00:28:56.119 --> 00:29:01.109
+uh, home, and you can choose WPA 2, personal,
+
+00:29:01.650 --> 00:29:05.849
+um, right, or, or WPA2
+
+00:29:05.849 --> 00:29:09.010
+enterprise, right? So that's the option.
+
+00:29:09.609 --> 00:29:14.209
+We should have. And then the incurring type is AES.
+
+00:29:14.530 --> 00:29:18.729
+You, if you, if you use your drop-down box in your home router,
+
+00:29:18.810 --> 00:29:22.170
+you would be able to see triple DES, DES,
+
+00:29:22.479 --> 00:29:26.209
+AES. OK, these options. Among these three options,
+
+00:29:26.250 --> 00:29:31.010
+you know that AES is faster than triple DES and also more
+
+00:29:31.010 --> 00:29:34.150
+secure than triple DES and the DES, right?
+
+00:29:34.170 --> 00:29:36.609
+So that's the option we should choose. Uh,
+
+00:29:36.650 --> 00:29:41.439
+we should set for our home router. That actually gives
+
+00:29:41.439 --> 00:29:46.280
+our home router, um, all the traffic through our home
+
+00:29:46.280 --> 00:29:50.280
+router a very secured protection, right?
+
+00:29:50.520 --> 00:29:55.079
+If we're choosing some weaker protocol and a weak encryption
+
+00:29:55.079 --> 00:29:59.699
+type, and that actually can be easily broken
+
+00:30:00.000 --> 00:30:04.510
+by Those attacker because those have been
+
+00:30:04.510 --> 00:30:07.469
+proven to have some security flaw, right?
+
+00:30:07.790 --> 00:30:10.270
+Those protocol and those encryption type,
+
+00:30:10.630 --> 00:30:15.390
+right? OK. So, this is how we, how we should set up our home
+
+00:30:15.390 --> 00:30:19.140
+router to make it safer. And then, of course,
+
+00:30:19.180 --> 00:30:23.199
+something um extend here is just to, to,
+
+00:30:23.500 --> 00:30:28.400
+just about some practice thing. And then with everyone,
+
+00:30:28.680 --> 00:30:31.359
+everyone probably has used this public Wi Fi hotspot,
+
+00:30:31.459 --> 00:30:36.060
+right? So when we use this hotspot, um, from
+
+00:30:36.060 --> 00:30:39.040
+our computer, we should enable firewall.
+
+00:30:39.489 --> 00:30:43.930
+And there's some network setting in our computer.
+
+00:30:44.089 --> 00:30:47.869
+We should turn on the Windows firewall, uh,
+
+00:30:47.890 --> 00:30:52.849
+and we should turn on the sharing, and you should be able to see a screenshot
+
+00:30:52.849 --> 00:30:56.650
+like my one here in the right bottom corner.
+
+00:30:57.030 --> 00:31:01.290
+And then there's turn off option for your networks discovery,
+
+00:31:01.550 --> 00:31:05.869
+for your file and the printer sharing, and then for your public folder sharing,
+
+00:31:06.109 --> 00:31:10.260
+you should turn off of them if you are using a public Wi Fi hotspot.
+
+00:31:10.780 --> 00:31:14.010
+And you should use the right public Wi Fi connection.
+
+00:31:14.630 --> 00:31:18.790
+Always check the SSID. Make sure you're using a
+
+00:31:18.790 --> 00:31:23.770
+legitimate official one to connect. Because there are
+
+00:31:24.069 --> 00:31:28.829
+many cases in the airport. I actually, I have um seen one
+
+00:31:28.829 --> 00:31:33.750
+before. Airport. Some people, they can just pretend their
+
+00:31:33.750 --> 00:31:37.569
+phone to be the, or they just use some access point,
+
+00:31:37.939 --> 00:31:41.949
+um, to be a hotspot and then they name their hotspot.
+
+00:31:42.410 --> 00:31:47.260
+Airport, Wi Fi, free, right? So just name that
+
+00:31:47.260 --> 00:31:52.060
+one, and then if you accidentally connect to the
+
+00:31:52.060 --> 00:31:56.979
+internet through their hotspot, which means every packet you're sending from your
+
+00:31:56.979 --> 00:32:01.500
+phone is through their hotspot, and they can sniff every packet,
+
+00:32:01.780 --> 00:32:06.579
+right? They can then try analyze if you happen to use your credit card to pay
+
+00:32:06.579 --> 00:32:11.140
+something, they can try to grab those information from your traffic
+
+00:32:11.140 --> 00:32:15.699
+flow, right? Which is why when we try to connect the public Wi Fi,
+
+00:32:15.819 --> 00:32:18.979
+you got to make sure you are using an official connection.
+
+00:32:20.180 --> 00:32:24.680
+And always use HTPS NSL. That gives you
+
+00:32:25.020 --> 00:32:29.869
+a better uh protection on your laptop. Because in our internet setting,
+
+00:32:29.979 --> 00:32:33.979
+we have this option here. So, browser connection,
+
+00:32:34.219 --> 00:32:38.800
+you can see here, right? And it has always used
+
+00:32:38.859 --> 00:32:43.439
+HTPS. So you do not allow any other um
+
+00:32:43.459 --> 00:32:47.719
+HTTP connection. Um, in our, um,
+
+00:32:48.569 --> 00:32:52.420
+uh, sorry, uh, uh, workshop, uh, sniffing,
+
+00:32:52.709 --> 00:32:57.630
+um, activity this week, you will see why HTPS is
+
+00:32:57.630 --> 00:33:02.489
+better than HTP. And then When we
+
+00:33:02.489 --> 00:33:07.020
+have to use public Wi Fi to do an online transaction or
+
+00:33:07.020 --> 00:33:11.469
+bank service, we got to make sure we use
+
+00:33:11.969 --> 00:33:16.829
+the private. VPN first. OK? We connect through
+
+00:33:16.829 --> 00:33:21.530
+the VPN first and then we go to the bank site to do online transaction.
+
+00:33:22.040 --> 00:33:26.930
+Otherwise, this, OK, using public Wi Fi to do bank
+
+00:33:26.930 --> 00:33:31.170
+transaction always put yourself at a huge risk,
+
+00:33:31.459 --> 00:33:35.180
+right? And then disabled Wi Fi when not in use.
+
+00:33:35.540 --> 00:33:39.140
+If you don't want um any Wi Fi connection,
+
+00:33:39.180 --> 00:33:43.579
+you think Wi Fi connection is not safe and just use your mobile network connection.
+
+00:33:44.069 --> 00:33:48.630
+I use 6G and that's better actually. And then just disable your Wi Fi.
+
+00:33:48.869 --> 00:33:53.530
+Because otherwise, you're always are broadcasting message and try to connect with some local
+
+00:33:54.010 --> 00:33:58.910
+um available access point. And that actually gives your
+
+00:33:59.189 --> 00:34:03.589
+um neighbor and any attacker nearby,
+
+00:34:03.869 --> 00:34:08.709
+um, some message, oh, this device appears in this zone and then try
+
+00:34:08.709 --> 00:34:11.610
+to connect through some Um, access point.
+
+00:34:11.959 --> 00:34:16.679
+So, and if you don't want to appear or attract their eye and you just uh
+
+00:34:16.679 --> 00:34:20.398
+disable your Wi Fi, right? And there are a lot of,
+
+00:34:20.499 --> 00:34:22.979
+uh several other, you can disable your Bluetooth,
+
+00:34:23.059 --> 00:34:27.948
+you can disable your an NFC um near field communication
+
+00:34:27.948 --> 00:34:32.618
+and all that kind of uh protocol, you can disable them from your
+
+00:34:32.618 --> 00:34:37.310
+local phone. And then keep your Windows antivirus software
+
+00:34:37.310 --> 00:34:41.709
+updated and use the best judgment. With this best judgment,
+
+00:34:41.790 --> 00:34:44.899
+I mean, um, when you're in a coffee shop,
+
+00:34:45.229 --> 00:34:50.020
+and if you Talk to their manager, you know how they set up
+
+00:34:50.020 --> 00:34:53.639
+their home router, their, their public uh Wi Fi router.
+
+00:34:54.060 --> 00:34:58.939
+And they, they've chosen WPA2 and AES and you know they
+
+00:34:58.939 --> 00:35:01.520
+set up their router properly. Otherwise,
+
+00:35:01.919 --> 00:35:06.739
+OK, if they're using a weak combination and that actually put every customer who is
+
+00:35:06.739 --> 00:35:11.149
+using their Wi Fi at risk, right? OK.
+
+00:35:12.280 --> 00:35:17.219
+And then with the link layer, we also have this um MAC address
+
+00:35:17.479 --> 00:35:21.030
+and IP address translation protocol, OK?
+
+00:35:21.439 --> 00:35:26.399
+Which actually means when we have some message to a computer in this
+
+00:35:26.399 --> 00:35:31.040
+local network, right? There's an ARP protocol which
+
+00:35:31.040 --> 00:35:34.370
+translates from the IP address. To McAddress.
+
+00:35:34.649 --> 00:35:37.469
+MACAddresses, their physical, uh, unique,
+
+00:35:37.689 --> 00:35:41.530
+um, universally, a universally, um, unique address,
+
+00:35:41.610 --> 00:35:44.750
+right? So every device has a MAC address.
+
+00:35:45.010 --> 00:35:48.389
+And then they translate from IP address to that,
+
+00:35:48.709 --> 00:35:53.689
+um, MAC address. And then, and then this computer would respond to that IP.
+
+00:35:53.879 --> 00:35:57.860
+Request and then, and then the computer on the top would just,
+
+00:35:57.899 --> 00:36:02.780
+uh, OK, new, oh, here is a device which
+
+00:36:02.780 --> 00:36:06.979
+has this MAC address, which has been allocated this IP address.
+
+00:36:07.199 --> 00:36:12.020
+So IP will be translated to a particular MAC address and you can see from
+
+00:36:12.020 --> 00:36:16.580
+this computer, from this page. Yeah. And there's a
+
+00:36:16.580 --> 00:36:20.500
+mapping, um, 1 to 1 mapping translation,
+
+00:36:20.800 --> 00:36:25.310
+uh, which was added dynamically because the
+
+00:36:25.419 --> 00:36:30.419
+computer here is always learning from all the messages and then
+
+00:36:30.419 --> 00:36:35.060
+he will keep a record who is who, who has this IP address,
+
+00:36:35.260 --> 00:36:39.959
+uh, which is that Mac computer. That MAC address has this
+
+00:36:40.060 --> 00:36:44.020
+IP address. So it has all this table maintained.
+
+00:36:44.830 --> 00:36:49.810
+And then, this protocol uh maintains such a table so that it
+
+00:36:49.810 --> 00:36:53.229
+can dive uh it can forward the message to the right computer.
+
+00:36:53.389 --> 00:36:58.370
+And now you can imagine if there's a computer who is
+
+00:36:58.370 --> 00:37:02.790
+a hacker, and then he doesn't behave well.
+
+00:37:03.169 --> 00:37:07.919
+So he can always um cheat,
+
+00:37:08.100 --> 00:37:12.600
+right, on those, on those Mac address and he would tell the
+
+00:37:12.600 --> 00:37:17.020
+other computer the wrong message. And if this record is
+
+00:37:17.040 --> 00:37:21.840
+added to this record table, and which actually could cause trouble
+
+00:37:21.840 --> 00:37:24.879
+and where the message won't go to the right computer,
+
+00:37:25.000 --> 00:37:28.379
+will go to the fake computer, right? So,
+
+00:37:29.639 --> 00:37:34.030
+Mm. Thanks for the sharing, uh, Tricia. So,
+
+00:37:34.360 --> 00:37:38.610
+that's some way people try to fix this issue with
+
+00:37:38.610 --> 00:37:43.360
+ARP protocol. And of course, we can always try maintain
+
+00:37:43.360 --> 00:37:48.280
+a correct ARP record table, and we can use a fixed ARP table
+
+00:37:48.280 --> 00:37:52.100
+but doesn't offer flexibility. And, but with a fixed one,
+
+00:37:52.110 --> 00:37:55.610
+and no one can replace original uh record,
+
+00:37:56.110 --> 00:38:00.949
+right? Or people thinking about that we don't use this ARP anymore
+
+00:38:00.949 --> 00:38:05.389
+and then those are some, some strategy people are thinking about this ARP
+
+00:38:05.989 --> 00:38:08.739
+issue. And then, are there any better way,
+
+00:38:08.969 --> 00:38:12.010
+right? And then there are always some, something,
+
+00:38:12.080 --> 00:38:17.060
+um, the people are considering to, to do better in this
+
+00:38:17.060 --> 00:38:21.510
+ARP uh translation. And another thing about
+
+00:38:21.510 --> 00:38:26.379
+sniffing. You can think um the sniffing is actually
+
+00:38:26.379 --> 00:38:31.060
+a program, right? And then that can monitor and analyze network
+
+00:38:31.060 --> 00:38:36.000
+traffic. And the, it can be used for good purpose because people
+
+00:38:36.000 --> 00:38:40.360
+can detect the bottleneck and can detect the problems in the
+
+00:38:40.929 --> 00:38:45.800
+network transmission. And, however, it can also be used by bad
+
+00:38:45.800 --> 00:38:50.760
+people and try to analyze the traffic and try to intercept and uh steal
+
+00:38:50.760 --> 00:38:54.340
+some information and valuable, right? So,
+
+00:38:54.800 --> 00:38:59.500
+um, We can always diagnose how and
+
+00:38:59.500 --> 00:39:03.000
+also whether there's a sniffing uh happening,
+
+00:39:03.250 --> 00:39:08.129
+right? And of course, anyone can sniff. Sometimes they sniff
+
+00:39:08.129 --> 00:39:12.689
+for good purpose. For example, the ISP which means internet
+
+00:39:12.689 --> 00:39:15.489
+service providers such as Telstra, Optus,
+
+00:39:15.889 --> 00:39:19.780
+and then they can also sniff, right? So they are internet service provider.
+
+00:39:20.260 --> 00:39:25.139
+And then the government can also sniff because it sometimes is put surveillance
+
+00:39:25.139 --> 00:39:29.979
+on all traffic flow. And then they also try to do
+
+00:39:29.979 --> 00:39:33.419
+some capacity plan at a very high level,
+
+00:39:33.780 --> 00:39:38.139
+right? And those advertisement um company also sniff,
+
+00:39:38.360 --> 00:39:43.199
+right? And they do some analysis, and the bad guy can also sniff and then
+
+00:39:43.199 --> 00:39:48.010
+try to steal useful information. And this is a sniffer
+
+00:39:48.010 --> 00:39:52.969
+tool, uh, which can, uh, identify whether
+
+00:39:52.969 --> 00:39:57.409
+sniff, OK, uh, sniffing tool, and then there are also anti-sniffing tool,
+
+00:39:57.810 --> 00:40:01.199
+right? So, the wild shark is a very, uh,
+
+00:40:01.209 --> 00:40:05.159
+famous free tool which allows everyone to use and the
+
+00:40:05.159 --> 00:40:10.010
+sniff, the packets. So, we will use wild shark
+
+00:40:10.010 --> 00:40:14.479
+in our workshop and then you, you can see how to use wild shark to sniff to
+
+00:40:14.479 --> 00:40:17.489
+analyze the packets. And then there, of course,
+
+00:40:17.570 --> 00:40:20.290
+also some anti, anti-sniffing tool, right?
+
+00:40:20.370 --> 00:40:23.969
+And then, then people can identify and stop them.
+
+00:40:24.629 --> 00:40:28.149
+And this is just one interface and you will see that one,
+
+00:40:28.629 --> 00:40:31.419
+how to use this one in our workshop. OK?
+
+00:40:31.750 --> 00:40:36.050
+And then in the one layer. Above which is network layer.
+
+00:40:36.310 --> 00:40:41.129
+OK? So there are a lot of vulnerability as well in this network layer.
+
+00:40:41.469 --> 00:40:45.459
+The IP address is what normally used in network layer,
+
+00:40:45.689 --> 00:40:48.370
+right? It's kind of like the post address,
+
+00:40:48.669 --> 00:40:53.429
+right? So we have unique, uh global unique IP
+
+00:40:53.429 --> 00:40:58.429
+address given to um this internet. And then the,
+
+00:40:58.709 --> 00:41:03.290
+and then the router or sometimes the transmission and
+
+00:41:04.050 --> 00:41:08.070
+They know how to send your message to a different IP address.
+
+00:41:08.169 --> 00:41:11.830
+It's just like sending the mail and we send to a particular,
+
+00:41:12.090 --> 00:41:17.060
+uh, Location, right? And which has a city name,
+
+00:41:17.389 --> 00:41:22.239
+which has a post, postcode, right? Which represented
+
+00:41:22.239 --> 00:41:26.169
+a city or a specific uh specific suburb,
+
+00:41:26.459 --> 00:41:31.159
+right? And the IP address same thing and which happens in this network layer and the
+
+00:41:31.159 --> 00:41:35.979
+people recognize that um package to be sent to either
+
+00:41:35.979 --> 00:41:40.949
+America or a different country, right? So those IP address has
+
+00:41:40.949 --> 00:41:44.110
+those kind of connection to the physical location,
+
+00:41:44.550 --> 00:41:49.350
+right? And then, we have this IP address a lot of issue,
+
+00:41:49.399 --> 00:41:54.350
+uh, happening in this layer, and we'll mainly talk about routing table vulnerability and
+
+00:41:54.350 --> 00:41:57.850
+IP address vulnerability. Firstly, about routing table.
+
+00:41:58.199 --> 00:42:03.189
+And because routing table always uh dynamic learning table um
+
+00:42:03.189 --> 00:42:08.080
+during the transmission. And then, there are a lot of
+
+00:42:08.080 --> 00:42:12.739
+voting algorithm um in this transmission.
+
+00:42:13.169 --> 00:42:17.719
+And sometimes, um, when Uh, attack,
+
+00:42:18.090 --> 00:42:21.939
+OK? Uh, launches to a specific router, OK,
+
+00:42:22.020 --> 00:42:25.780
+in the middle, and that can cause DOS attack.
+
+00:42:26.060 --> 00:42:29.379
+We call that denial of service attack because,
+
+00:42:29.699 --> 00:42:33.129
+um, that router doesn't respond and, uh,
+
+00:42:33.139 --> 00:42:36.969
+or some server, which is in the end of the,
+
+00:42:37.270 --> 00:42:40.520
+the, the internet on the other end and it doesn't respond.
+
+00:42:41.060 --> 00:42:45.280
+So that causes a denial of service. And so that's what we call
+
+00:42:46.209 --> 00:42:51.159
+DOS attack. So when there's a routing, a router
+
+00:42:51.159 --> 00:42:55.679
+in the middle which has been attacked and which just doesn't work
+
+00:42:55.679 --> 00:43:00.679
+properly with forwarding your packets and the router can just uh
+
+00:43:00.679 --> 00:43:05.260
+stop working and then can cut off the the route
+
+00:43:05.459 --> 00:43:09.330
+to, from the source to the destination, right?
+
+00:43:09.639 --> 00:43:13.020
+So there can be this kind of attack to a router.
+
+00:43:13.340 --> 00:43:18.020
+And then it can be a poisoned table, which means some
+
+00:43:18.020 --> 00:43:22.639
+phase routing records were um given
+
+00:43:23.100 --> 00:43:28.050
+to this router and the router cannot do a proper routing
+
+00:43:28.050 --> 00:43:32.860
+for a packet, OK, to the destination. So there are some forged
+
+00:43:32.860 --> 00:43:37.310
+routing records. And then there can be a flooding table,
+
+00:43:37.320 --> 00:43:42.030
+which means the the routing table has been flooded with fake records,
+
+00:43:42.360 --> 00:43:46.469
+and then there's no proper routing could happen during that.
+
+00:43:46.800 --> 00:43:50.419
+And then sometimes a valid routing records will be,
+
+00:43:50.719 --> 00:43:55.540
+um, will be learned, but because the, the
+
+00:43:55.639 --> 00:43:58.810
+fake records has, has been flooded in that routing table,
+
+00:43:58.919 --> 00:44:03.679
+so the routing table doesn't Doesn't learn a new item and doesn't do
+
+00:44:03.949 --> 00:44:08.679
+a proper routing. So we call that flooding table and can happen to the routing
+
+00:44:08.679 --> 00:44:12.290
+table. And also we can have routing path spoof.
+
+00:44:12.830 --> 00:44:16.830
+Um, normally, the routing algorithm are calculating the short,
+
+00:44:17.070 --> 00:44:21.510
+shortest path. To save time, right? To, to,
+
+00:44:21.629 --> 00:44:24.870
+to, to shorten the delay in communication.
+
+00:44:25.189 --> 00:44:29.790
+But the shortest path can be um attacked and
+
+00:44:29.790 --> 00:44:33.770
+cheated. OK, right? So that short routing path spoofing can happen.
+
+00:44:34.320 --> 00:44:38.469
+And QS um we here in this here.
+
+00:44:38.790 --> 00:44:43.620
+QS first path is to A QS means quality of
+
+00:44:43.620 --> 00:44:48.020
+service. So, which, OK, in the routing different algorithm,
+
+00:44:48.100 --> 00:44:52.340
+we can calculate shortest path, we can calculate the quality of service best,
+
+00:44:52.459 --> 00:44:57.060
+which is the best reliable path, right? But that path can be
+
+00:44:57.060 --> 00:45:02.030
+calculated, however, The algorithm could go wrong and then there can be
+
+00:45:02.030 --> 00:45:05.739
+some spoofing happening about my own service,
+
+00:45:06.030 --> 00:45:10.750
+right? And then the other router thought this router uh works
+
+00:45:10.750 --> 00:45:14.030
+better than the other one. And then, so they go through.
+
+00:45:14.139 --> 00:45:18.620
+This router rather than the other one. So then this cheating happens and then the
+
+00:45:18.620 --> 00:45:22.500
+routing path is spoofed again, right? So then finally,
+
+00:45:22.580 --> 00:45:26.300
+it can result in poor routing and slow routing,
+
+00:45:26.379 --> 00:45:29.600
+and very high expensive route uh expensive routing,
+
+00:45:30.020 --> 00:45:33.709
+right? So, these are the routing tables issue.
+
+00:45:34.070 --> 00:45:38.550
+And another issue, very, very famous vulnerability is
+
+00:45:38.550 --> 00:45:41.929
+address issue with IP address. And then,
+
+00:45:42.229 --> 00:45:47.070
+with IP address, the issue is because there's no authentication for IP
+
+00:45:47.070 --> 00:45:51.909
+address user. Uh, for example, when we have to use uh uh a SIM
+
+00:45:51.909 --> 00:45:56.350
+card for our phone, right? We have to register our name and our address,
+
+00:45:56.750 --> 00:46:01.719
+email, our ID. So that they know, OK, this person has this
+
+00:46:01.719 --> 00:46:05.489
+phone number, right? So that phone number belongs to a particular ID.
+
+00:46:06.709 --> 00:46:11.520
+However, online, our computer were given an IP
+
+00:46:11.520 --> 00:46:14.659
+address. That IP address doesn't need to,
+
+00:46:15.320 --> 00:46:20.260
+doesn't need you to um present your ID to be given
+
+00:46:20.260 --> 00:46:23.780
+to you. Which is why when something happened,
+
+00:46:24.090 --> 00:46:28.929
+And then the person can claim, oh, that's not my IP and then there's no proof,
+
+00:46:29.050 --> 00:46:33.909
+right? Sometimes, because there's no authentication uh needed for IP
+
+00:46:34.040 --> 00:46:37.439
+use. And then that actually caused a lot of issues.
+
+00:46:38.199 --> 00:46:42.760
+Um, the fake I address, um, yeah. So,
+
+00:46:42.770 --> 00:46:47.159
+people will sometimes they, they, they, they load something to the internet and then
+
+00:46:47.159 --> 00:46:51.260
+there's no connection, uh, from that IP to their
+
+00:46:51.260 --> 00:46:54.929
+ID information. So people can never, uh,
+
+00:46:54.939 --> 00:46:58.989
+know who did that, right? Because there's no authentication here.
+
+00:46:59.600 --> 00:47:04.360
+And then, um, also some other issues such as the fake
+
+00:47:04.360 --> 00:47:08.969
+address text, block uh uh text. Uh, which means,
+
+00:47:09.209 --> 00:47:13.939
+OK, this different case can happen. So,
+
+00:47:14.250 --> 00:47:19.070
+for example, if you have a particular IP and attacker
+
+00:47:20.080 --> 00:47:24.639
+Works in the same domain. And then attacker can set up
+
+00:47:24.639 --> 00:47:28.750
+their computer to use exactly the same IP address as you,
+
+00:47:28.959 --> 00:47:33.739
+right? And then, well, they don't know the IP they just uh
+
+00:47:33.979 --> 00:47:37.899
+know there are some particular IP will be allocated in this network.
+
+00:47:37.969 --> 00:47:42.879
+And so they just uh set up their own IP address to be something which can
+
+00:47:43.199 --> 00:47:46.060
+uh cause conflicts in the local network.
+
+00:47:46.280 --> 00:47:51.239
+And then that makes the communication wouldn't be properly going on,
+
+00:47:51.320 --> 00:47:55.689
+right? So the um right message won't go to the actual
+
+00:47:56.439 --> 00:48:00.239
+Computer which has that conflicting IP address,
+
+00:48:00.540 --> 00:48:04.260
+right? So, it will stop the right user receiving packets.
+
+00:48:04.840 --> 00:48:09.840
+And also, that can also stop the communication to the user
+
+00:48:09.840 --> 00:48:14.800
+with the same IP. And then you can also think about when your attacker's
+
+00:48:14.800 --> 00:48:18.620
+IP is configured the same as the router's IP,
+
+00:48:19.000 --> 00:48:23.790
+then all the communication between the router and the All
+
+00:48:23.790 --> 00:48:28.790
+nodes within the same subnet or same network will be blocked because
+
+00:48:28.800 --> 00:48:33.510
+the router's IP uh has some conflicts with attacker's IP
+
+00:48:33.510 --> 00:48:37.389
+address. And then there's also fake release attack,
+
+00:48:37.590 --> 00:48:42.350
+fake release attack here in the DHCP protocol.
+
+00:48:42.709 --> 00:48:47.209
+DHCP protocol is managing to grab back
+
+00:48:47.209 --> 00:48:52.100
+the Uh, idle IP address, which is not used by other people
+
+00:48:52.100 --> 00:48:56.899
+and it will, um, dynamically, um, collect them and
+
+00:48:56.899 --> 00:49:01.409
+then allocate to the new computer. And then now you can think
+
+00:49:01.409 --> 00:49:06.290
+if we have fake release uh given a message
+
+00:49:06.290 --> 00:49:09.770
+going around and this DHCP protocol thinks,
+
+00:49:09.850 --> 00:49:14.770
+oh, this IP address is released, so it will just allocate to a new computer.
+
+00:49:15.010 --> 00:49:19.469
+But that can also cause conflicts because we can't have the two same IP
+
+00:49:19.919 --> 00:49:23.449
+working properly in the same subnet, OK,
+
+00:49:23.540 --> 00:49:28.449
+same small network. Right? So, That fake release attack can
+
+00:49:28.449 --> 00:49:32.189
+happen, OK, to this dynamic host of configuration protocol.
+
+00:49:32.790 --> 00:49:37.570
+And then there's also flooding, ICMP flooding issue and uh we will
+
+00:49:37.570 --> 00:49:40.669
+try to simulating this kind of flooding,
+
+00:49:40.969 --> 00:49:44.969
+uh, in, in our workshop. And then, of course,
+
+00:49:45.090 --> 00:49:49.840
+that happens like this. So, um,
+
+00:49:50.219 --> 00:49:55.120
+ICMP is a protocol which can check whether the other computer
+
+00:49:55.120 --> 00:49:59.850
+is alive or is working online, uh, or not,
+
+00:50:00.149 --> 00:50:04.040
+right? So when they send a, uh, checking message,
+
+00:50:04.229 --> 00:50:07.780
+and then the other computer can just reply to this computer,
+
+00:50:07.860 --> 00:50:11.090
+oh I'm alive, I'm working online right now.
+
+00:50:11.379 --> 00:50:14.250
+So, the computer, between the computer and they know,
+
+00:50:14.340 --> 00:50:17.219
+they knew the status. So the ICMP is doing that.
+
+00:50:17.709 --> 00:50:22.520
+So then you can imagine the attacker can send a lot of
+
+00:50:22.780 --> 00:50:27.010
+checking message to. And a bunch of computers,
+
+00:50:27.229 --> 00:50:30.949
+and a bunch of computers. And then with a fake IP address.
+
+00:50:31.229 --> 00:50:35.949
+And then when the other computer try to respond to this source
+
+00:50:35.949 --> 00:50:40.949
+IP address, where This request message will
+
+00:50:40.949 --> 00:50:45.790
+put a wrong victim's IP address. And then so this bunch of
+
+00:50:45.790 --> 00:50:48.750
+computer wouldn't reply to this attacker.
+
+00:50:50.300 --> 00:50:54.370
+They would all reply to the victim's IP address,
+
+00:50:54.739 --> 00:50:57.379
+right? So all message will come to this victim.
+
+00:50:57.540 --> 00:51:02.500
+We call that flooding. Right? This flooding attack can make this
+
+00:51:02.500 --> 00:51:07.050
+vic uh victim's computer down, OK, not responding to any other
+
+00:51:07.050 --> 00:51:11.469
+messages. If this victim is a server, and the server will definitely
+
+00:51:11.729 --> 00:51:15.330
+um not be able to respond to other customer's request,
+
+00:51:15.689 --> 00:51:20.169
+right? So this is how uh we can launch this denial of
+
+00:51:20.169 --> 00:51:24.469
+service attack to a server through ICMP flooding
+
+00:51:24.889 --> 00:51:27.949
+attacks. We, we also call that Smurf attacks.
+
+00:51:28.550 --> 00:51:32.149
+Uh That can cause the, the denial of service.
+
+00:51:32.389 --> 00:51:34.500
+So I'll just keep going with this recording.
+
+00:51:34.830 --> 00:51:39.830
+And if you are busy and please feel free to leave and because we started a
+
+00:51:39.830 --> 00:51:42.290
+bit late due to the network issue, I'll keep this,
+
+00:51:42.310 --> 00:51:47.270
+um, just my last page. Um, so, there are some
+
+00:51:47.270 --> 00:51:50.909
+countermeasure in this network layer. And of course,
+
+00:51:51.030 --> 00:51:55.280
+we have the protocol itself which try to fix all this issue.
+
+00:51:55.310 --> 00:51:59.750
+And we call that IPV4 V6, OK?
+
+00:51:59.989 --> 00:52:04.760
+IPV6 is a new Um, protoc design suit, which was
+
+00:52:04.760 --> 00:52:09.560
+different from IPV4 and which has used a different lengths of IP
+
+00:52:09.560 --> 00:52:13.580
+address in IPV 6, right? But IPV6 is a new
+
+00:52:14.040 --> 00:52:18.739
+next generation IP protocol where our current
+
+00:52:18.739 --> 00:52:23.139
+equipment still, not every type of equipment supports
+
+00:52:23.199 --> 00:52:27.590
+IPV 6, which is why we're still using IPV 4.
+
+00:52:27.879 --> 00:52:32.850
+And we need something extra to Um, fix the
+
+00:52:32.850 --> 00:52:37.000
+issue in IPV4, which is why we have IPsec,
+
+00:52:37.360 --> 00:52:41.800
+OK? Which is, uh, um, Fixing
+
+00:52:42.580 --> 00:52:47.100
+protocol suit to fix IPV4. Of course, people were trying to
+
+00:52:47.100 --> 00:52:51.580
+upgrade to IPV 6, but that's not happening in probably the next 10
+
+00:52:51.580 --> 00:52:56.300
+years, which is why, um, yeah, IPV 6 is there already,
+
+00:52:56.379 --> 00:52:59.610
+but not every equipment can support and uh so that we,
+
+00:52:59.699 --> 00:53:03.699
+people are still using IPEC to fix some issue in IPV 4.
+
+00:53:03.929 --> 00:53:08.020
+That's from the protocol, uh, point of view to fix this security issue.
+
+00:53:08.389 --> 00:53:13.310
+But then, another strategy we can have is to uh disable
+
+00:53:13.310 --> 00:53:16.959
+ICMP because a lot of surveys, they actually disable ICMP.
+
+00:53:17.020 --> 00:53:20.729
+They just, they don't respond to, um, to the,
+
+00:53:21.270 --> 00:53:25.870
+to the um ICMP request to check whether they are alive.
+
+00:53:25.929 --> 00:53:30.129
+They just don't respond. And then they can also do IP filtering.
+
+00:53:31.639 --> 00:53:36.280
+So, through some uh firewall, OK, they can do
+
+00:53:36.280 --> 00:53:40.760
+IP filtering and through some special system like,
+
+00:53:41.120 --> 00:53:46.090
+um, like, um, IPS IDS, this kind of intrusion detection
+
+00:53:46.090 --> 00:53:49.159
+system, and they also try to filter out some IP address.
+
+00:53:49.409 --> 00:53:53.060
+They think those IP were not legitimate and they were just,
+
+00:53:53.560 --> 00:53:58.520
+um, behaving badly. So they just filled out those IP of course,
+
+00:53:58.639 --> 00:54:03.260
+that can work efficiently. And another way is to uh
+
+00:54:03.260 --> 00:54:08.060
+assign some private address for local network uh by using this kind of
+
+00:54:08.060 --> 00:54:12.750
+server, we call that NAT server, uh, which is Network Address
+
+00:54:12.750 --> 00:54:16.449
+Translation server. And this is the one,
+
+00:54:16.780 --> 00:54:20.560
+and then it will try to protect internal privacy.
+
+00:54:21.899 --> 00:54:26.860
+So then you can imagine when there's a request from Computer C
+
+00:54:27.179 --> 00:54:31.659
+to web server, and then internally, it has an
+
+00:54:31.659 --> 00:54:36.159
+IP address. But this IP address is just used for internal
+
+00:54:36.340 --> 00:54:40.820
+purpose. It won't present this internal IP address to external that
+
+00:54:40.820 --> 00:54:45.455
+actually provide some privacy for this. Computers within this
+
+00:54:45.455 --> 00:54:50.415
+internal network. And then, NAT server in the middle
+
+00:54:50.594 --> 00:54:54.794
+will translate and will forward any message from computer CAB,
+
+00:54:55.594 --> 00:55:00.155
+OK, this com different computer to the external um web
+
+00:55:00.155 --> 00:55:04.875
+server. And also from the web server, the message when it's sent
+
+00:55:04.875 --> 00:55:08.784
+back, this NAT because it's a network address translate,
+
+00:55:09.195 --> 00:55:13.909
+translator, it will, um, Come to find the right computer
+
+00:55:13.909 --> 00:55:18.169
+and forward them to the right computer. This is NAT server.
+
+00:55:18.370 --> 00:55:23.330
+It is doing this. OK. So that's actually all what we can do
+
+00:55:23.330 --> 00:55:28.030
+in the network layer to protect um the network layer
+
+00:55:28.030 --> 00:55:32.610
+um to be better, right? So we'll discuss more next week,
+
+00:55:32.889 --> 00:55:36.110
+um, how the other layer can work, right?
+
+00:55:36.610 --> 00:55:39.729
+Um, and then, yeah, so that's all for today.
+
+00:55:39.929 --> 00:55:44.879
+Thank you. Uh, we'll move to the transport layer and other solutions,
+
+00:55:44.939 --> 00:55:48.300
+and we'll talk about the protocol solution as well.
+
+00:55:48.620 --> 00:55:52.120
+OK? So which covers those different layers design.
+
+00:55:52.600 --> 00:55:54.479
+OK. Thank you for all.
+
+00:55:57.800 --> 00:55:58.919
+I'll see you next time.
+

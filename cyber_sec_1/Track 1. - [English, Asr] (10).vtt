@@ -1,0 +1,2243 @@
+WEBVTT
+
+00:00:00.259 --> 00:00:04.840
+That 3. So good morning, everyone. Uh, I think
+
+00:00:05.179 --> 00:00:09.920
+due to our canvas, um, breakdown and then
+
+00:00:11.100 --> 00:00:15.659
+And uh actually, the course material were uploaded uh
+
+00:00:15.659 --> 00:00:20.139
+on Saturday. So you should be able to see all the stuff in
+
+00:00:20.139 --> 00:00:24.780
+our website. However, I also realized there's
+
+00:00:24.780 --> 00:00:29.559
+no preview can be obtained if you click those.
+
+00:00:29.899 --> 00:00:34.619
+Maybe because some functionality were affected after this
+
+00:00:34.619 --> 00:00:38.529
+breakdown. And if you see that one here,
+
+00:00:38.669 --> 00:00:43.669
+um, you can download, OK, you can download and you can open that
+
+00:00:43.669 --> 00:00:47.889
+one to, speak the preview
+
+00:00:49.419 --> 00:00:54.029
+or the leading or and update the links, um.
+
+00:00:54.909 --> 00:00:59.419
+In the learning activity. But just in the slides,
+
+00:00:59.470 --> 00:01:03.630
+I don't think you can preview, but you can definitely download,
+
+00:01:03.950 --> 00:01:07.010
+OK? Um, and this one should work as well.
+
+00:01:09.260 --> 00:01:13.620
+So, yes, so, yeah, so this question from,
+
+00:01:13.900 --> 00:01:18.680
+from this class, uh, yeah, so, Kevin, so yeah,
+
+00:01:18.989 --> 00:01:22.889
+uh, hopefully everyone can, can find it,
+
+00:01:22.980 --> 00:01:27.529
+it is working properly right now. OK.
+
+00:01:27.650 --> 00:01:31.870
+Um, so today, our comment is about the 4.2.
+
+00:01:32.209 --> 00:01:35.760
+Uh, as I said, we have 4.1, 4.2, and 4.3,
+
+00:01:35.800 --> 00:01:40.209
+and then the course is done. OK? So all these three week study
+
+00:01:40.730 --> 00:01:43.949
+around policy and the people, right? And uh,
+
+00:01:43.970 --> 00:01:48.190
+as we said, all these three parts are equally important.
+
+00:01:48.809 --> 00:01:52.190
+Although we focused most of our time in technology,
+
+00:01:52.529 --> 00:01:57.319
+um, but It doesn't mean it's more important than people because
+
+00:01:57.319 --> 00:02:00.680
+we found if we read the cyber incident report,
+
+00:02:00.760 --> 00:02:05.639
+you would say, oh, the people are actually the main cause and even caused
+
+00:02:05.639 --> 00:02:09.679
+more than 80% of incidents which were because people's error,
+
+00:02:09.759 --> 00:02:14.529
+human error. Which is why we, we have to focus on
+
+00:02:14.529 --> 00:02:19.410
+human aspect in this week. OK, we'll talk about social engineering and why the
+
+00:02:19.410 --> 00:02:24.330
+bad people can always trick trick good people to do the bad things,
+
+00:02:24.619 --> 00:02:29.529
+right? So we'll talk about those psychological influence and to talk about that
+
+00:02:29.529 --> 00:02:34.529
+one. And I'll also will list some social engineering techniques that people
+
+00:02:34.529 --> 00:02:39.479
+are using to, to, um, To
+
+00:02:39.690 --> 00:02:43.899
+get through the system, OK, via people, right?
+
+00:02:45.559 --> 00:02:48.970
+And then we will, we will talk about the cyberwareness improvement.
+
+00:02:49.050 --> 00:02:53.929
+Mobile device, internet use, and I'll cover the two aspects
+
+00:02:53.929 --> 00:02:58.770
+because these are the main parts and people are interacting every
+
+00:02:58.770 --> 00:03:03.250
+day, right? So, what are the awareness we should have,
+
+00:03:03.449 --> 00:03:08.440
+right? OK. So, And then here, I just use this
+
+00:03:08.440 --> 00:03:13.320
+one as one example, um, just show you how many of them were caused
+
+00:03:13.320 --> 00:03:15.479
+by a human being, right? All this shape,
+
+00:03:15.559 --> 00:03:19.979
+jaded color uh because of people. Either it's an employee
+
+00:03:20.880 --> 00:03:25.710
+or careless employee or the three-party contractor that all through people,
+
+00:03:25.830 --> 00:03:30.580
+OK? They will happen. They will happen. And then with this um
+
+00:03:30.710 --> 00:03:35.360
+notifiable data breaches report, Um, maintained
+
+00:03:35.360 --> 00:03:40.070
+by Australian government. And if you go to the link,
+
+00:03:40.389 --> 00:03:42.949
+you should be able to see, unfortunately,
+
+00:03:43.029 --> 00:03:47.279
+they haven't uploaded their 2025 reports.
+
+00:03:47.350 --> 00:03:49.309
+And what you can see is the first, yeah,
+
+00:03:49.470 --> 00:03:53.660
+the latest one is the second half of 2024 years
+
+00:03:54.149 --> 00:03:57.490
+report. Right? When you, this is a report,
+
+00:03:57.710 --> 00:04:02.410
+um, yeah, I, I'm reading now. And you can see that these are how
+
+00:04:02.410 --> 00:04:06.830
+many uh notification which have been
+
+00:04:07.009 --> 00:04:09.199
+there. It should be the newest one.
+
+00:04:15.320 --> 00:04:17.910
+Yeah, this one only gives this data, right?
+
+00:04:18.040 --> 00:04:20.510
+So, which is, uh, which is the newest one.
+
+00:04:20.679 --> 00:04:23.380
+OK. And then you can see the top 5 sector,
+
+00:04:23.720 --> 00:04:28.630
+we have all this sector, um, In those data breaches.
+
+00:04:28.910 --> 00:04:33.709
+So, the most uh uh affected one is the health and the government and
+
+00:04:33.709 --> 00:04:38.390
+finance, and then legal, accounting and management services and then
+
+00:04:38.390 --> 00:04:42.820
+retail, right? And then if we look at the cyber incidents,
+
+00:04:43.190 --> 00:04:47.859
+and you can see how many of them are caused by phishing and then by ransomware,
+
+00:04:48.109 --> 00:04:51.869
+by compromised uh or stolen credentials.
+
+00:04:52.070 --> 00:04:54.609
+And all this one actually involves human,
+
+00:04:55.179 --> 00:05:00.000
+humans mistakes. Right? And then, of course,
+
+00:05:00.119 --> 00:05:03.350
+with the brute force attack, compromise the credential,
+
+00:05:03.359 --> 00:05:08.140
+if human can have enough awareness and make sure they have set up their password
+
+00:05:08.640 --> 00:05:13.059
+properly and also turn on their second factor
+
+00:05:13.059 --> 00:05:17.029
+authentication, and then the brute force attack wouldn't work,
+
+00:05:17.279 --> 00:05:21.309
+right? So we are, we now know that, right?
+
+00:05:21.640 --> 00:05:26.170
+So, and And basically, human error breaches,
+
+00:05:26.579 --> 00:05:30.980
+um, you can see that top calls can be unauthorized
+
+00:05:30.980 --> 00:05:35.420
+disclosure or the emails sent to the wrong people and the failure to
+
+00:05:35.420 --> 00:05:39.679
+BCC, uh, use, uh, failure to use BCC. So,
+
+00:05:39.739 --> 00:05:43.170
+these are just the human's, uh, mistakes,
+
+00:05:43.380 --> 00:05:47.720
+right? So, from the report, I can see how human
+
+00:05:48.320 --> 00:05:51.799
+are vulnerable in this cyberspace, right?
+
+00:05:51.920 --> 00:05:56.799
+And we've got to make sure as a, like this
+
+00:05:56.799 --> 00:06:01.760
+course student, and we got to understand what are the social engineering techniques
+
+00:06:01.760 --> 00:06:06.559
+that people are using and then how human should prevent
+
+00:06:06.559 --> 00:06:10.220
+those, right? And then this is just the one
+
+00:06:11.040 --> 00:06:14.320
+category. Uh, you can see all these different names.
+
+00:06:14.399 --> 00:06:18.779
+I'll probably walk through very many different names today.
+
+00:06:19.040 --> 00:06:24.040
+And then just let you aware and then we have this many
+
+00:06:24.040 --> 00:06:28.940
+different things, OK, in this um domain relevant to people.
+
+00:06:31.010 --> 00:06:33.329
+And firstly, about fishing, spear fishing,
+
+00:06:33.369 --> 00:06:37.269
+and wing, um, so normally the phishing, uh,
+
+00:06:37.410 --> 00:06:40.679
+they're all similar. Just trick people to believing something,
+
+00:06:40.970 --> 00:06:43.839
+right? So those phishing email, um, it's just,
+
+00:06:43.850 --> 00:06:47.570
+uh, um, like fishing used to target to any,
+
+00:06:48.040 --> 00:06:51.390
+anyone. And spear fishing target certain employees,
+
+00:06:51.529 --> 00:06:56.309
+such as HR officer or finance officer. And willing to
+
+00:06:56.309 --> 00:07:01.200
+target more higher employees, right? So with the phishing email,
+
+00:07:01.630 --> 00:07:06.230
+and there are some key indicators, uh, such as
+
+00:07:06.709 --> 00:07:11.079
+the Salutation here is very vague
+
+00:07:11.459 --> 00:07:15.070
+and the suspicious domain here, right? The company,
+
+00:07:15.079 --> 00:07:18.739
+uh, if we have, uh, like, oh, the domain here as well,
+
+00:07:18.820 --> 00:07:20.720
+right? So when you see that email domain,
+
+00:07:20.980 --> 00:07:25.510
+that's not Bank of America's domain. And this link,
+
+00:07:25.630 --> 00:07:30.470
+if we hover over the link, and we probably see a different URL linked,
+
+00:07:31.350 --> 00:07:35.309
+uh which looks like a Bank of America, but which is actually not.
+
+00:07:35.670 --> 00:07:39.649
+And we can also see awkward grammar in here,
+
+00:07:40.029 --> 00:07:44.579
+and then we see some urgent Uh, with this
+
+00:07:44.579 --> 00:07:49.179
+one, it doesn't have any urgent title, but sometimes we see that
+
+00:07:49.179 --> 00:07:52.329
+urgent and warning, intimidating phrases,
+
+00:07:52.940 --> 00:07:57.720
+um, included in that, in that subject, and we should be aware that might be just a
+
+00:07:57.720 --> 00:08:02.459
+phishing email. And then no legitimate contact information at the
+
+00:08:02.459 --> 00:08:06.279
+end. And there's a spoofed the logo and header,
+
+00:08:06.769 --> 00:08:11.510
+OK, like this, right? So, we just have to uh be aware of this key
+
+00:08:11.510 --> 00:08:16.470
+indicator and then we know that might be very likely to be a phishing
+
+00:08:16.470 --> 00:08:20.750
+email. And then there are variation from fishing,
+
+00:08:20.940 --> 00:08:25.380
+such as smashing, fishing, and watering hole attacks.
+
+00:08:26.489 --> 00:08:31.359
+OK. The smishing and fishing are just very easy to understand.
+
+00:08:32.030 --> 00:08:34.969
+And then that watering hole attacks, uh,
+
+00:08:34.979 --> 00:08:39.609
+which is different from the fishing. The fishing is kind of
+
+00:08:39.609 --> 00:08:44.080
+giving you some allure, lure, right? So that you,
+
+00:08:44.309 --> 00:08:47.650
+um, be tricked to do something. And then,
+
+00:08:47.789 --> 00:08:50.270
+however, the watering hole attack is to,
+
+00:08:50.570 --> 00:08:54.770
+more like um, uh, we poison the whole water
+
+00:08:54.770 --> 00:08:58.679
+pool and then just wait until
+
+00:08:59.830 --> 00:09:04.770
+another person to come to the place and then get the water and then get poisoned.
+
+00:09:05.030 --> 00:09:09.609
+So that's a watering hole attacks. With that watering hole attack
+
+00:09:09.929 --> 00:09:14.309
+can happen online such as uh we
+
+00:09:14.650 --> 00:09:19.309
+compromise a web server and then we know the website
+
+00:09:19.820 --> 00:09:24.179
+uh maintained by that server, right, will be used by a
+
+00:09:24.710 --> 00:09:29.469
+special group of people, uh, which can be their members
+
+00:09:29.650 --> 00:09:34.289
+or can be, um, uh, certain, any, yeah,
+
+00:09:34.450 --> 00:09:37.080
+certain group of people, right? So, you,
+
+00:09:37.159 --> 00:09:41.840
+you can imagine if you have a conference and then only um the
+
+00:09:41.840 --> 00:09:45.809
+conference register, uh who have registered the conference,
+
+00:09:46.159 --> 00:09:51.080
+um, and then those people would go to the conference and pay the money to
+
+00:09:51.080 --> 00:09:55.859
+register the conference, right? And then only those members who are paying
+
+00:09:56.070 --> 00:10:00.909
+will be attacked. And it's very hard to identify um this
+
+00:10:00.909 --> 00:10:05.750
+kind of watering hole attacks through traffic analysis because there
+
+00:10:05.750 --> 00:10:10.429
+is no abnormal traffic pattern in this
+
+00:10:10.440 --> 00:10:14.070
+internet, right? So, that's why we call this,
+
+00:10:14.229 --> 00:10:18.820
+this is hard to identify. Um, but, We just have to maintain
+
+00:10:18.820 --> 00:10:21.559
+the website clean, as clean as possible,
+
+00:10:22.099 --> 00:10:25.900
+so that there's no watering hole attack to our users,
+
+00:10:26.140 --> 00:10:29.969
+right? So, what to do, of course, we, uh,
+
+00:10:29.979 --> 00:10:34.940
+we wish Uh, you won't be targeted. So that
+
+00:10:34.940 --> 00:10:39.770
+when you're using your social media and you're not oversharing,
+
+00:10:40.140 --> 00:10:44.059
+and you also don't use your social media,
+
+00:10:44.260 --> 00:10:46.599
+don't visit your social media site on your,
+
+00:10:46.869 --> 00:10:51.820
+um, com company equipments, right? Cause sometimes when you visit
+
+00:10:51.820 --> 00:10:55.700
+your social media using your, your, uh, company equipments,
+
+00:10:56.059 --> 00:11:01.010
+then, uh, you might, you might. Get attacked
+
+00:11:01.010 --> 00:11:05.530
+through this watering hole attack. Because the social media site can be
+
+00:11:05.530 --> 00:11:08.340
+something which will not maintained very well,
+
+00:11:08.570 --> 00:11:13.369
+and the bad people can just put some bad links
+
+00:11:13.369 --> 00:11:16.650
+to some advertisements through those social media sites.
+
+00:11:16.969 --> 00:11:20.330
+And then once you click those links, and you will get hacked.
+
+00:11:21.119 --> 00:11:25.849
+Your computer can have problem, right? So because the watering hole attacks
+
+00:11:25.849 --> 00:11:30.770
+can happen to those social media sites. They target at you and then they know you are a
+
+00:11:30.770 --> 00:11:35.289
+member of that social media site and, and then they would just
+
+00:11:35.289 --> 00:11:39.109
+poison the whole site. OK, like this, put the water,
+
+00:11:39.369 --> 00:11:42.830
+put a poison to the water, right? And then,
+
+00:11:43.130 --> 00:11:47.909
+um, So we should not oversharing because that can
+
+00:11:47.909 --> 00:11:52.409
+help bad people to identify those targeted
+
+00:11:52.409 --> 00:11:57.280
+specific group of people. And then know you work and you have a particular kind
+
+00:11:57.280 --> 00:12:00.979
+of work. And if you're sharing your business activity,
+
+00:12:01.159 --> 00:12:04.099
+and you attend a conference through the social media,
+
+00:12:04.599 --> 00:12:09.479
+and then they wanted you to click something
+
+00:12:09.479 --> 00:12:12.929
+in that website of that, of that conference,
+
+00:12:13.200 --> 00:12:17.299
+so then they can just try to find the vulnerability in that conference website,
+
+00:12:17.799 --> 00:12:20.179
+right? And then, yeah, through that way,
+
+00:12:20.239 --> 00:12:24.190
+and then the watering hole attack can, can just uh Um,
+
+00:12:24.530 --> 00:12:28.940
+reach you, your computer, right? OK.
+
+00:12:29.099 --> 00:12:33.739
+So, these are the way not to, um, yeah, not
+
+00:12:33.739 --> 00:12:38.390
+get targeted. And then there's a name for tail
+
+00:12:38.390 --> 00:12:42.770
+tailgating and piggybacking, OK, piggybacking,
+
+00:12:42.960 --> 00:12:47.150
+right? So, of course, uh, we should say no tailgating,
+
+00:12:47.229 --> 00:12:51.669
+no piggybacking. And the difference between these two is tailgating in the first
+
+00:12:51.669 --> 00:12:55.929
+person doesn't, uh, uh, is not aware there's people behind him.
+
+00:12:56.849 --> 00:13:01.469
+But, and then the piggybacking means the first one,
+
+00:13:02.809 --> 00:13:06.969
+consciously carry the second person to go through the security door,
+
+00:13:07.330 --> 00:13:11.719
+right? And then, so, these are the tailgating and the
+
+00:13:11.719 --> 00:13:15.679
+piggybacking difference. And then with the main trap configuration,
+
+00:13:15.929 --> 00:13:20.549
+basically mean we have a double door and then the first door allow
+
+00:13:21.109 --> 00:13:24.219
+Uh, multiple people to get through. And second door,
+
+00:13:24.510 --> 00:13:28.309
+just, uh, one person can get through. So,
+
+00:13:28.630 --> 00:13:32.510
+those tailgated people and piggybackbacked people,
+
+00:13:32.729 --> 00:13:35.669
+and then they will be trapped between two doors.
+
+00:13:35.789 --> 00:13:40.150
+So we said the main trap configuration uh can be very
+
+00:13:40.150 --> 00:13:43.070
+effectively uh uh uh applied, deployed here.
+
+00:13:43.960 --> 00:13:46.659
+So, yeah, so, of course, we wish there's,
+
+00:13:46.679 --> 00:13:50.859
+uh, yeah, the tailgating and the piggybacking can be addressed by some,
+
+00:13:51.119 --> 00:13:56.070
+um, the security, um, Physical security
+
+00:13:56.070 --> 00:13:59.909
+when like some kind of policy right there.
+
+00:14:00.580 --> 00:14:04.570
+And then shimming, uh, shimming is a stealing money from the card,
+
+00:14:04.900 --> 00:14:08.780
+right? So it can happen through all this ATM or gas station,
+
+00:14:09.210 --> 00:14:13.250
+the community store, and so on. So you call that shimming because there's a special name there.
+
+00:14:13.619 --> 00:14:18.260
+And impersonation means, um, a
+
+00:14:18.260 --> 00:14:23.039
+person impersonate another one and then just want to get through,
+
+00:14:23.260 --> 00:14:28.179
+um, some building or sometimes get access to a special
+
+00:14:28.179 --> 00:14:32.700
+resources, right? So, um, it can happen
+
+00:14:32.700 --> 00:14:35.820
+physically, it can also happen online, right?
+
+00:14:36.140 --> 00:14:39.900
+So we saw a lot of impersonations or spoofing happening,
+
+00:14:40.140 --> 00:14:44.760
+right? And then, So through online behavior and then finally,
+
+00:14:44.809 --> 00:14:48.280
+the, the, they got access or they got some information,
+
+00:14:48.330 --> 00:14:53.169
+they gathered some information and then they can now um do that one in
+
+00:14:53.169 --> 00:14:57.090
+person, physically. So, that's what impersonate
+
+00:14:57.489 --> 00:15:01.030
+impersonation normally happen, right? And then,
+
+00:15:01.039 --> 00:15:04.320
+they, they, with this, if, for example, they,
+
+00:15:04.440 --> 00:15:08.760
+they, they, they do some spoofing and then they check some image,
+
+00:15:09.520 --> 00:15:13.239
+email, and they found you're expecting a
+
+00:15:13.919 --> 00:15:18.820
+fire inspection on Monday. And then there's a person
+
+00:15:19.289 --> 00:15:23.840
+with a fire um suits, OK? Right? And then coming to
+
+00:15:23.840 --> 00:15:28.390
+inspect. And then, and then you saw that uh official person
+
+00:15:28.390 --> 00:15:32.109
+sent from the, from the office. However,
+
+00:15:32.190 --> 00:15:34.940
+it, it may not be the right one, right? So,
+
+00:15:35.270 --> 00:15:39.830
+so that's an impersonation. And then they can be through many
+
+00:15:39.830 --> 00:15:44.489
+different, um, different ways, right? Like penetration
+
+00:15:44.489 --> 00:15:47.789
+tester, and new hired employees, and so on,
+
+00:15:47.869 --> 00:15:50.609
+right? All these different types of impersonation can happen,
+
+00:15:51.030 --> 00:15:55.159
+uh, in reality. And, and there's also dumpster diving.
+
+00:15:55.330 --> 00:15:59.929
+Uh the name here means a person can um just
+
+00:15:59.929 --> 00:16:02.450
+collect useful information from the rubbish bin.
+
+00:16:02.570 --> 00:16:06.929
+OK, very easy concepts here. But what, what can be
+
+00:16:07.169 --> 00:16:11.830
+um stolen from the rubbish bin can uh include all these
+
+00:16:12.049 --> 00:16:16.989
+things, OK? Um, there's some of them are very valuable information for bad
+
+00:16:16.989 --> 00:16:21.390
+people, such as the, uh, IP addresses, maybe some invoices,
+
+00:16:21.469 --> 00:16:24.380
+and then they know what products you are buying,
+
+00:16:24.630 --> 00:16:27.729
+right, uh, ordered from, for your company.
+
+00:16:27.989 --> 00:16:32.469
+And then they impersonate first as the pest control or as a
+
+00:16:32.469 --> 00:16:37.229
+cleaner, and then they do dumpster diving later and then try to collect or
+
+00:16:37.229 --> 00:16:40.390
+gather all the information from you, right?
+
+00:16:41.390 --> 00:16:43.489
+So these are what happening here and then the,
+
+00:16:43.659 --> 00:16:46.320
+the, all these different behavior are linked together,
+
+00:16:46.539 --> 00:16:51.299
+uh, maybe to launch some uh later very uh relevant phishing
+
+00:16:51.299 --> 00:16:54.219
+email to you and then you saw those are very,
+
+00:16:54.340 --> 00:16:57.330
+very relevant to your life and then, uh,
+
+00:16:57.340 --> 00:17:02.140
+there's a, um, this must be a real email
+
+00:17:02.140 --> 00:17:05.040
+or real request and then you just, uh, um,
+
+00:17:05.219 --> 00:17:08.750
+handle that quickly. But, but those bad people,
+
+00:17:08.790 --> 00:17:11.780
+they have done through this impersonation,
+
+00:17:11.829 --> 00:17:14.839
+dumpster diving, and then they have done a lot,
+
+00:17:14.989 --> 00:17:18.810
+a lot of analysis on your, um, daily duty.
+
+00:17:19.099 --> 00:17:23.910
+And then, and then they send you a phishing email and then you tend to believe that's true,
+
+00:17:24.189 --> 00:17:28.020
+right? So, You know, there are some events you're organizing,
+
+00:17:28.319 --> 00:17:31.540
+and then maybe there's some invoice you have to pay,
+
+00:17:32.119 --> 00:17:37.079
+and then, and then they would probably invoice you as a finance officer and then you just
+
+00:17:37.079 --> 00:17:41.839
+thought that if you're not aware of not have very like high
+
+00:17:41.839 --> 00:17:46.500
+awareness in this kind of space, and you probably just
+
+00:17:46.599 --> 00:17:50.359
+tend to believe that that email invoice is correct,
+
+00:17:50.400 --> 00:17:54.560
+and you just pay that. It is that very bad thing can happen in this way,
+
+00:17:54.640 --> 00:17:59.410
+right? So all these are linked. And then the shooter surfing and very
+
+00:17:59.410 --> 00:18:04.329
+easy concepts here. Um, so all these are examples of
+
+00:18:04.329 --> 00:18:09.329
+shoulder surfing and then a very interesting thing to know here is
+
+00:18:09.329 --> 00:18:13.010
+that there are some high-tech glasses, right,
+
+00:18:13.290 --> 00:18:17.949
+which can actually, um, memory, memorize a lot of stuff
+
+00:18:18.280 --> 00:18:21.599
+or sending those information online, right?
+
+00:18:21.930 --> 00:18:25.130
+And, and then just to do this through this,
+
+00:18:25.250 --> 00:18:30.229
+through the surfing. And then there's also a name called USB key dropping,
+
+00:18:30.530 --> 00:18:32.569
+or sometimes we call that dead dropping.
+
+00:18:33.680 --> 00:18:37.060
+With this one, those USB key are malicious,
+
+00:18:37.489 --> 00:18:42.160
+right? They can be available in gift package or in some foyer and
+
+00:18:42.160 --> 00:18:47.040
+some conference center, right? And then maybe some people deliberately just uh
+
+00:18:47.040 --> 00:18:51.670
+drop that there and then next day, other people can get
+
+00:18:51.670 --> 00:18:55.680
+them. And then normally when you pick up one USB,
+
+00:18:56.160 --> 00:19:01.160
+probably what, what most people would do is to go home and plug into your
+
+00:19:01.160 --> 00:19:04.680
+computer and check what's inside. If it's a very big one,
+
+00:19:04.880 --> 00:19:08.680
+like, Uh, 128 gigabytes and you think, oh you,
+
+00:19:08.739 --> 00:19:13.550
+you got something useful. And however, what you don't know
+
+00:19:13.550 --> 00:19:18.530
+is that USB can be um something um
+
+00:19:18.530 --> 00:19:22.449
+attached by a malicious software, right?
+
+00:19:22.839 --> 00:19:26.979
+And then your computer would be probably installed as spyware,
+
+00:19:27.160 --> 00:19:31.119
+and some people can do a remote spy on your computer and so on.
+
+00:19:31.180 --> 00:19:33.810
+So, all these things can happen, right? So,
+
+00:19:34.000 --> 00:19:38.780
+just be aware when we, when we got some USB lost somewhere
+
+00:19:38.780 --> 00:19:42.880
+by other people, don't just plug into your own computer.
+
+00:19:43.729 --> 00:19:47.469
+OK. Even with those uh gift package one,
+
+00:19:49.010 --> 00:19:52.469
+Yeah, we got to make sure there's nothing bad in that USB.
+
+00:19:52.630 --> 00:19:55.079
+If you have the updated antivirus software,
+
+00:19:55.180 --> 00:19:59.949
+just scan them first, right? Um, yeah, do not just trust that
+
+00:19:59.959 --> 00:20:04.500
+that's uh, uh, innocent USB and dropped by another person.
+
+00:20:04.839 --> 00:20:07.599
+OK? And then there's a hoaxing online. So,
+
+00:20:07.640 --> 00:20:12.500
+the hoaxing, um, Probably you have been hoaxed before,
+
+00:20:12.770 --> 00:20:17.550
+right? And when you receive a message, ask you to spread to 5 of
+
+00:20:17.550 --> 00:20:22.250
+your friends, and then you will get a good fortune and that kind of
+
+00:20:22.510 --> 00:20:26.790
+um thing is an example of hoaxing, right?
+
+00:20:26.989 --> 00:20:30.430
+And sometimes it also can, this is just one example here.
+
+00:20:30.680 --> 00:20:35.530
+It can also, um, sometimes you receive some fake
+
+00:20:35.750 --> 00:20:40.380
+news and the fake warning of virus. OK,
+
+00:20:40.500 --> 00:20:44.890
+those can all be an example of hoaxing. OK.
+
+00:20:45.729 --> 00:20:50.430
+And then, this is a very famous six persuasion
+
+00:20:50.430 --> 00:20:55.209
+principles, OK, um, found by Robert,
+
+00:20:55.569 --> 00:21:00.209
+um, In 2007, and which has been used in
+
+00:21:00.209 --> 00:21:04.959
+many different domains. OK. It, if you are in the
+
+00:21:04.959 --> 00:21:07.280
+business domain, you probably have heard this one.
+
+00:21:07.520 --> 00:21:09.959
+And if you're learning some marketing rule,
+
+00:21:10.219 --> 00:21:14.140
+um, or if you are a sales, and then you actually,
+
+00:21:14.520 --> 00:21:19.390
+this rule have been used by those people a lot in
+
+00:21:19.939 --> 00:21:23.979
+Persuading people to buy their products.
+
+00:21:24.260 --> 00:21:29.060
+OK? And then, in cyberspace, you would also see a lot
+
+00:21:29.060 --> 00:21:33.660
+of this persuasion rule have been used by those social
+
+00:21:33.660 --> 00:21:38.285
+engineer, OK? Social Yeah, they try to use this
+
+00:21:38.285 --> 00:21:43.104
+rule in their social engineering techniques and then trick people
+
+00:21:43.324 --> 00:21:47.724
+to do the wrong thing, OK? So, they will use all these six persuasion rule.
+
+00:21:48.114 --> 00:21:52.885
+So, this is um to create a psychological influence um
+
+00:21:52.885 --> 00:21:56.864
+on human, OK? Because human has those nature,
+
+00:21:57.135 --> 00:22:01.805
+um, and then the persuasion rule were designed around this human nature.
+
+00:22:02.550 --> 00:22:05.599
+OK. So, these are the six rules. The first one,
+
+00:22:05.640 --> 00:22:10.550
+reciprocity, which means, um, They ask
+
+00:22:10.550 --> 00:22:14.219
+you to do something, and they will give you something for return,
+
+00:22:14.430 --> 00:22:17.969
+OK? I'll give you some reward. And then,
+
+00:22:18.030 --> 00:22:22.290
+in that way, you would think that request is reasonable,
+
+00:22:22.300 --> 00:22:26.349
+and you will just, uh, uh, do that, what they have requested.
+
+00:22:26.630 --> 00:22:30.530
+So we call that reciprocity rule, OK? So,
+
+00:22:30.989 --> 00:22:35.380
+um, you can see that sometimes we also call that rewarding rule,
+
+00:22:35.550 --> 00:22:40.550
+OK? Um, And then that's the first one. And the second one is a
+
+00:22:40.550 --> 00:22:45.349
+commitment rule. So which means you would
+
+00:22:45.349 --> 00:22:50.069
+like to maintain a consistency in what you have already said
+
+00:22:50.069 --> 00:22:54.569
+or done or promised before, right? So that's a commitment rule.
+
+00:22:55.349 --> 00:22:58.839
+The human nature, they, they tend to keep the consistency,
+
+00:22:58.959 --> 00:23:02.109
+OK? And with what they have promised. So,
+
+00:23:02.119 --> 00:23:05.920
+that's a commitment rule. Sometimes we also call that consistency,
+
+00:23:06.079 --> 00:23:10.949
+consistent rule, consistency rule. And the third one is
+
+00:23:10.949 --> 00:23:15.609
+social proof. The social proof means um if
+
+00:23:15.609 --> 00:23:20.130
+a uh if Sometimes you would see
+
+00:23:20.130 --> 00:23:24.150
+uh an, an advertisement saying, especially online,
+
+00:23:24.229 --> 00:23:27.829
+OK. Internet, internet advertisement saying,
+
+00:23:28.119 --> 00:23:31.469
+oh, there have been 100 million, uh sorry,
+
+00:23:31.910 --> 00:23:34.030
+probably, yeah, 1 million people, let's say.
+
+00:23:34.150 --> 00:23:38.339
+OK, 1 million uh customers use this product and the,
+
+00:23:38.390 --> 00:23:42.670
+and 97% of them think their skin is a skin product.
+
+00:23:42.750 --> 00:23:47.449
+The skin has been um uh improved. OK.
+
+00:23:47.949 --> 00:23:52.630
+So, that's actually using this social proof rule um to
+
+00:23:52.630 --> 00:23:55.569
+persuade you to believe in their product.
+
+00:23:55.829 --> 00:24:00.369
+OK? So that's a social proof. And then the liking is to,
+
+00:24:00.599 --> 00:24:03.270
+for example, some, some skin product. Again,
+
+00:24:03.420 --> 00:24:07.260
+that's proof skin product. I will invite some uh movie star to,
+
+00:24:07.349 --> 00:24:10.250
+to, to do the marketing for them, right,
+
+00:24:10.270 --> 00:24:12.839
+to do the promotion for the product. And then,
+
+00:24:12.939 --> 00:24:17.459
+that's actually using this liking persuasion rule because you like that
+
+00:24:17.459 --> 00:24:22.219
+star, and then you think, her skin, her skin is really
+
+00:24:22.219 --> 00:24:25.609
+nice, and then, and then you just buy the same product as her.
+
+00:24:25.780 --> 00:24:30.060
+So this is a liking persuasion rule used in sales and marketing,
+
+00:24:30.459 --> 00:24:34.910
+right? It's the liking persuasion rule. And the authority means
+
+00:24:35.209 --> 00:24:38.719
+um the people as a, as a human, right? So,
+
+00:24:38.869 --> 00:24:43.229
+the human nature is to trust and agree with an expert based on
+
+00:24:43.229 --> 00:24:46.869
+visual, uh, visual, um,
+
+00:24:48.060 --> 00:24:52.359
+Cues, right? Like some, um, police, police officer,
+
+00:24:52.540 --> 00:24:55.199
+police officer, sorry, police officer, and,
+
+00:24:55.239 --> 00:24:58.640
+and some doctor, right? And then they're wearing a suit,
+
+00:24:58.880 --> 00:25:03.280
+and then they looks like very uh authorized person
+
+00:25:03.280 --> 00:25:06.420
+to say something, and you tend to trust them.
+
+00:25:06.800 --> 00:25:09.099
+Right? So that's authority persuasion rule.
+
+00:25:09.439 --> 00:25:14.000
+And then the scarcity is the last one. so that one
+
+00:25:14.000 --> 00:25:18.719
+means That one means, um, if
+
+00:25:18.719 --> 00:25:22.619
+you receive some advertisement saying,
+
+00:25:23.660 --> 00:25:28.000
+Saying, OK, um, Saying
+
+00:25:29.280 --> 00:25:31.729
+There's a very limited time of this offer,
+
+00:25:31.920 --> 00:25:34.280
+and if you don't be quick, you, you miss,
+
+00:25:34.400 --> 00:25:37.949
+you miss that one and only 500 left, right?
+
+00:25:38.239 --> 00:25:42.880
+And then, and then it's only available until probably midnight
+
+00:25:42.880 --> 00:25:47.660
+today. So, and then that's just to create some scarcity,
+
+00:25:48.199 --> 00:25:52.160
+um, meaning there, right? So, um,
+
+00:25:53.819 --> 00:25:57.300
+So that's a, that's a scarcity persuasion rule.
+
+00:25:57.579 --> 00:26:01.780
+And then in cyberspace, you often would get some
+
+00:26:01.780 --> 00:26:06.760
+phishing email using this persuasion rule to trick you
+
+00:26:07.020 --> 00:26:10.739
+to click their links, OK? And some examples are here,
+
+00:26:10.819 --> 00:26:13.930
+right? So these are the six persuasion rules you can see,
+
+00:26:14.219 --> 00:26:19.099
+right? We have sometimes received an email like
+
+00:26:19.099 --> 00:26:22.050
+this. And first, let's look at this, OK,
+
+00:26:22.170 --> 00:26:26.890
+the, the, the one here. The National Criminal History
+
+00:26:26.890 --> 00:26:31.310
+Check. Um, and it has some logo,
+
+00:26:31.650 --> 00:26:36.489
+right? And has some signed name, um, looks
+
+00:26:36.489 --> 00:26:40.410
+like very legitimate, right? National crime check.
+
+00:26:40.739 --> 00:26:45.569
+And what persuasion rule this phishing email has applied so that
+
+00:26:45.569 --> 00:26:48.510
+people tend to think, oh, this is probably something true.
+
+00:26:48.900 --> 00:26:52.829
+And I should click here um to, and then enter this.
+
+00:26:53.630 --> 00:26:57.930
+Right. So, begin my criminal history check.
+
+00:26:58.469 --> 00:27:03.150
+So, which persuasion rule has been used
+
+00:27:03.150 --> 00:27:06.479
+here in this phishing email? Can you type your answer in the chat?
+
+00:27:14.650 --> 00:27:17.069
+Whether it has used any persuasion rule.
+
+00:27:21.790 --> 00:27:26.599
+Actually, there's one rule used here, which is authority,
+
+00:27:27.020 --> 00:27:31.420
+authority. So, authority has been used and because it looks
+
+00:27:31.420 --> 00:27:36.099
+like from a legitimate officer or office,
+
+00:27:36.219 --> 00:27:39.380
+right, which is doing this national crime check and,
+
+00:27:39.420 --> 00:27:42.800
+and it has this logo and looks like very,
+
+00:27:43.099 --> 00:27:48.040
+um, yeah, legitimate. So, it's an authority rule used
+
+00:27:48.040 --> 00:27:52.829
+in this phishing email. Um, yeah, so we'd better be
+
+00:27:52.829 --> 00:27:56.109
+aware of this kind of rule used in phishing email.
+
+00:27:56.390 --> 00:27:59.369
+Another one here, I will read out the text.
+
+00:27:59.459 --> 00:28:04.290
+It's hard to, to, to, to see them. It says,
+
+00:28:05.300 --> 00:28:09.670
+Did you know that you can earn an extra 16 gigabytes of
+
+00:28:09.670 --> 00:28:13.780
+Dropbox uh space by inviting your friends?
+
+00:28:13.989 --> 00:28:16.050
+And there's a link to invite your friend.
+
+00:28:16.670 --> 00:28:20.469
+And every time the friend installs Dropbox,
+
+00:28:20.589 --> 00:28:25.280
+we'll give both of you 500 megabytes of space for free.
+
+00:28:25.750 --> 00:28:30.550
+So far, more than 100,000 existing
+
+00:28:30.550 --> 00:28:35.229
+users and more than 220,000 new users
+
+00:28:35.229 --> 00:28:39.930
+have received extra space. There are some
+
+00:28:40.390 --> 00:28:43.109
+persuasion rule used for this phishing email.
+
+00:28:43.709 --> 00:28:48.449
+So what is that? Can you identify that? Which
+
+00:28:48.449 --> 00:28:52.489
+persuasion rule have been used in this phishing email?
+
+00:28:53.790 --> 00:28:58.719
+Of course, the link, um, yeah, probably is not true,
+
+00:28:59.040 --> 00:29:04.040
+right? So we, we'd better be aware and we'd better be aware some persuasion
+
+00:29:04.040 --> 00:29:08.630
+rule have been used in this phishing email and we'd better not just click the link,
+
+00:29:09.079 --> 00:29:13.930
+right? Um, but If we're not aware,
+
+00:29:14.099 --> 00:29:17.589
+and we might think that it's very reasonable if we just invite our friend,
+
+00:29:17.670 --> 00:29:22.229
+we'll get some free space, um, as a reward,
+
+00:29:22.709 --> 00:29:27.489
+right? So here, that reciprocity rule
+
+00:29:27.910 --> 00:29:32.770
+has been, has been used. And there's another rule has
+
+00:29:32.770 --> 00:29:37.560
+been used, which is social proof, social proof,
+
+00:29:37.939 --> 00:29:42.939
+OK? Because it says more than that many user and more than this
+
+00:29:42.939 --> 00:29:46.520
+new user have been granted those extra space,
+
+00:29:46.900 --> 00:29:51.359
+right? So, that's a social proof. OK? So,
+
+00:29:51.500 --> 00:29:56.040
+true persuasion rules have been used in this phishing email and looks so
+
+00:29:56.260 --> 00:29:59.390
+real, right? Uh, which is actually a social,
+
+00:29:59.650 --> 00:30:04.630
+um, sorry, phishing email. And then we should be
+
+00:30:04.630 --> 00:30:09.510
+aware all those 6 persuasion rule can be used by the bad people and
+
+00:30:09.510 --> 00:30:13.939
+they're doing. The bad thing to trick people
+
+00:30:13.939 --> 00:30:18.089
+to believe in them, right? And then, of course,
+
+00:30:18.160 --> 00:30:23.079
+in the, the other side, this persuasion rule can also be used for
+
+00:30:23.079 --> 00:30:26.260
+good purpose. And here are some example.
+
+00:30:26.880 --> 00:30:31.380
+Um, when we, when, this is one AGEA example,
+
+00:30:31.560 --> 00:30:35.930
+they actually Um, use their vocal proponent,
+
+00:30:36.390 --> 00:30:39.709
+um, culture, OK? And then they would say,
+
+00:30:40.030 --> 00:30:43.689
+those proponents will change their password regularly.
+
+00:30:43.989 --> 00:30:48.790
+And 90 of your colleagues don't click attachments from untrusted source,
+
+00:30:49.189 --> 00:30:53.790
+right? So, and then they're using this statement actually to
+
+00:30:53.790 --> 00:30:58.530
+utilize this social proof, persuasion rule to
+
+00:30:58.910 --> 00:31:02.089
+lead people to do the right thing in their company.
+
+00:31:03.250 --> 00:31:05.369
+Can lead their employee to the right thing.
+
+00:31:05.729 --> 00:31:10.310
+And then also another, um, another example for that
+
+00:31:10.550 --> 00:31:15.209
+commitment rule used is to um set up
+
+00:31:15.209 --> 00:31:19.849
+some acceptable use policy. OK? A lot of big company,
+
+00:31:19.930 --> 00:31:24.619
+they actually For their employee to sign their
+
+00:31:24.619 --> 00:31:29.400
+AUP. Why they are forcing their employee to sign this AUP
+
+00:31:30.020 --> 00:31:33.300
+is they actually are using this commitment rule,
+
+00:31:33.939 --> 00:31:36.780
+because they believe if you sign on the document,
+
+00:31:36.859 --> 00:31:41.560
+you become serious of following that document or following what you have signed,
+
+00:31:42.140 --> 00:31:47.099
+because human nature tends to show the consistency with
+
+00:31:47.099 --> 00:31:51.930
+what they have promised, right? So, And then that AUP
+
+00:31:51.930 --> 00:31:56.890
+normally uh would include um some good practice you
+
+00:31:56.890 --> 00:32:00.469
+should do, you should follow when you are using your email,
+
+00:32:00.930 --> 00:32:03.130
+and how should you manage your password,
+
+00:32:03.530 --> 00:32:07.800
+and the, the behavior you should do when you go online,
+
+00:32:08.050 --> 00:32:12.750
+and what you should be, I mean, paying, pay attention.
+
+00:32:13.170 --> 00:32:16.040
+Right? So that's a commitment rule used here.
+
+00:32:17.770 --> 00:32:21.569
+And then the liking rule can be used to lead,
+
+00:32:21.770 --> 00:32:25.689
+to guide people to follow their leader if they like them,
+
+00:32:26.010 --> 00:32:28.989
+or some good example set up by the company.
+
+00:32:29.410 --> 00:32:34.410
+I mean, if they like them, and then they should just uh um probably follow them to
+
+00:32:34.410 --> 00:32:39.130
+do the right thing. And also, authority rule is used when
+
+00:32:39.130 --> 00:32:43.939
+the company Uh, set up some regulation and policy and let all
+
+00:32:43.939 --> 00:32:46.689
+people follow them, right? And then, uh,
+
+00:32:46.699 --> 00:32:51.199
+be aware of them and then they're using this authority rule to
+
+00:32:51.900 --> 00:32:54.699
+influence people to do the right thing. OK.
+
+00:32:55.760 --> 00:33:00.550
+So they are, and they're more uh can be designed around this six persuasion
+
+00:33:00.550 --> 00:33:04.910
+rule, OK? As a good practice for people to do the right thing.
+
+00:33:06.000 --> 00:33:10.910
+And then, um, the last part is about um the
+
+00:33:11.390 --> 00:33:16.079
+mobile device use and internet use. I wish everyone can be
+
+00:33:16.079 --> 00:33:20.849
+aware of these two, probably, um, The
+
+00:33:20.849 --> 00:33:25.569
+most popular behavior we would, uh, we would be doing every day,
+
+00:33:25.689 --> 00:33:28.800
+right? And then, the most popular devices we're using,
+
+00:33:29.089 --> 00:33:34.020
+right, the mobile phone. And then, we should be aware how many attack
+
+00:33:34.020 --> 00:33:38.930
+surface each mobile phone has. And uh what are the permission we
+
+00:33:38.930 --> 00:33:43.189
+have control on the mobile device, and uh how should we control them,
+
+00:33:43.569 --> 00:33:48.449
+right? So for the mobile device, and we
+
+00:33:48.449 --> 00:33:52.979
+should know it has more attack surface than the normal laptop
+
+00:33:53.130 --> 00:33:57.310
+or computer, right? It has so many different
+
+00:33:57.410 --> 00:34:01.890
+interface. We can use the phone, such as the
+
+00:34:01.890 --> 00:34:06.689
+NFC one and probably it's not something included in your laptop
+
+00:34:07.050 --> 00:34:11.280
+or in your computer. Right. NFC is a near field
+
+00:34:11.280 --> 00:34:15.919
+communication protocol, and when we use our phone to
+
+00:34:15.919 --> 00:34:20.510
+pay um through those post machine, OK,
+
+00:34:21.239 --> 00:34:24.520
+in those supermarket, right, when we just tap our phone on the,
+
+00:34:24.600 --> 00:34:29.260
+on the machine, uh, post machine. And we actually ask through this near
+
+00:34:29.260 --> 00:34:32.110
+field communication protocol to pay, right,
+
+00:34:32.199 --> 00:34:35.639
+which is not through Bluetooth or, or Wi Fi,
+
+00:34:36.070 --> 00:34:38.909
+right? So, it has more interface, definitely.
+
+00:34:38.989 --> 00:34:42.550
+It has all this SIM card, if we have the,
+
+00:34:42.709 --> 00:34:46.429
+the extra extendable card, and so on, right?
+
+00:34:46.760 --> 00:34:51.259
+So they're all Uh, kind of create actual attack
+
+00:34:51.259 --> 00:34:55.879
+surface, OK, to this phone. And then, for
+
+00:34:55.879 --> 00:35:00.689
+the phone, it has a lot of function and the sensitive function include these
+
+00:35:00.689 --> 00:35:05.469
+three types. One is the internet banking and location-based
+
+00:35:05.570 --> 00:35:10.449
+apps like our GPS, um, map, right? And also,
+
+00:35:10.729 --> 00:35:15.179
+um, sorry, healthcare. I think it, Uh,
+
+00:35:15.290 --> 00:35:20.149
+or sometimes we call that healthcare software because it provides
+
+00:35:20.479 --> 00:35:24.770
+the medical, um, information to access the
+
+00:35:24.770 --> 00:35:29.610
+patient's profile, right? So, it had these three types of
+
+00:35:29.610 --> 00:35:34.370
+the, uh, sensitive function and we have to
+
+00:35:34.370 --> 00:35:38.850
+be aware of, right? And with those three types
+
+00:35:38.850 --> 00:35:43.669
+of sensitive function, And what we can control is
+
+00:35:43.669 --> 00:35:48.399
+these 4 types of control. We can sometimes um
+
+00:35:48.399 --> 00:35:52.840
+grant the full permission and sometimes we can just uh cautiously
+
+00:35:52.840 --> 00:35:56.939
+probably um not grant that permission, right?
+
+00:35:57.169 --> 00:36:01.659
+So these are 4 types of permission we can grant or we can control,
+
+00:36:01.929 --> 00:36:06.909
+right? However, they are through different systems and they
+
+00:36:06.909 --> 00:36:11.659
+are allowing users to control them. Uh,
+
+00:36:11.780 --> 00:36:16.610
+at different time. We can grant permission at
+
+00:36:16.610 --> 00:36:20.879
+either installation time or runtime, which means,
+
+00:36:21.010 --> 00:36:25.750
+OK? If we. And grant the permission
+
+00:36:26.260 --> 00:36:30.810
+at the installation time. And then, every time when we use the
+
+00:36:30.810 --> 00:36:34.629
+app, and we always have that permission,
+
+00:36:34.649 --> 00:36:36.989
+which were granted at installation time.
+
+00:36:37.719 --> 00:36:41.669
+And then the iOS, which is iPhone, uh, that,
+
+00:36:42.239 --> 00:36:46.959
+that system, right? Always gather the permission at runtime,
+
+00:36:47.320 --> 00:36:51.840
+which means an installation, OK, doesn't care and doesn't ask for the
+
+00:36:51.840 --> 00:36:56.439
+permission probably to access to your location or to access to your message,
+
+00:36:56.840 --> 00:37:00.899
+right? It doesn't ask that one. But every time when you run the app,
+
+00:37:01.919 --> 00:37:06.800
+You were asked to whether you want to give that permission to the location when you
+
+00:37:06.800 --> 00:37:10.290
+run this app or not, right? So you have that option.
+
+00:37:10.520 --> 00:37:15.520
+You can either grant the permission at installation time or you just uh grant the permission only
+
+00:37:15.520 --> 00:37:20.439
+when you're using that app. Run, run the app uh in your mobile device.
+
+00:37:20.840 --> 00:37:25.379
+Of course, uh, I would say, grant the permission at installation
+
+00:37:25.379 --> 00:37:30.300
+time, sometimes cause more risks because once we installed and
+
+00:37:30.300 --> 00:37:32.760
+we, we grant the permission to our location,
+
+00:37:33.459 --> 00:37:38.389
+when we install that app, and we probably just forget to close that
+
+00:37:38.860 --> 00:37:42.639
+um permission later, right? If we're not using that one,
+
+00:37:43.340 --> 00:37:45.600
+and then that permission is always granted,
+
+00:37:45.699 --> 00:37:50.479
+and then the app. Whether or not running in your mobile device
+
+00:37:50.479 --> 00:37:55.379
+has access to your app, and maybe would send some location
+
+00:37:55.379 --> 00:37:57.979
+information behind you or without your awareness,
+
+00:37:58.189 --> 00:38:02.300
+right, to another remote server. Right. So,
+
+00:38:02.580 --> 00:38:07.100
+with the installation time um granted permission,
+
+00:38:07.280 --> 00:38:12.110
+um, a user normally wouldn't probably change it later or,
+
+00:38:12.399 --> 00:38:16.979
+uh, or maybe turn off that permission later and then which cause more
+
+00:38:16.979 --> 00:38:21.580
+risks to our mobile phone, right? OK? So,
+
+00:38:21.879 --> 00:38:26.389
+and also, there's some situation there um we really
+
+00:38:26.389 --> 00:38:31.389
+don't, um, as a user, don't have that enough information
+
+00:38:31.389 --> 00:38:35.909
+to make the right choice. So when we don't know whether we should grant the
+
+00:38:35.909 --> 00:38:40.909
+permission or not, um, we should always turn off the permission.
+
+00:38:41.310 --> 00:38:46.310
+Right? If that stops us using that app, and then we should
+
+00:38:46.310 --> 00:38:49.260
+consider whether that app is a really good one,
+
+00:38:49.550 --> 00:38:54.070
+and should we just use that one. If, without giving it
+
+00:38:54.070 --> 00:38:58.540
+permission to access to my location and I can't use other function,
+
+00:38:58.949 --> 00:39:01.889
+whether that location permission really necessary.
+
+00:39:02.360 --> 00:39:06.649
+If you don't think the location permission is necessary to use their apps,
+
+00:39:06.669 --> 00:39:11.320
+other function. And you should probably question that app is very,
+
+00:39:12.270 --> 00:39:16.929
+maybe not a very good one because it probably try to just to track your location.
+
+00:39:18.120 --> 00:39:22.850
+And force you to agree on their, um, on their
+
+00:39:22.879 --> 00:39:26.239
+permission request, right? So, it's just the,
+
+00:39:26.280 --> 00:39:31.199
+um, we, we got to be aware, um, of what permission we're granting
+
+00:39:31.199 --> 00:39:35.885
+to a particular app. And then there are 4 types of information we
+
+00:39:35.885 --> 00:39:39.764
+have control as a user. And we should very,
+
+00:39:40.004 --> 00:39:44.764
+be very cautious when we grant any of them to an
+
+00:39:44.764 --> 00:39:48.195
+app, OK? When we install that one or when we run that app,
+
+00:39:48.205 --> 00:39:51.125
+and should we, should we grant that access or not,
+
+00:39:51.445 --> 00:39:55.485
+right? So, and then, so the first type is the network
+
+00:39:55.485 --> 00:39:58.864
+communication permission, right? So we can,
+
+00:39:59.114 --> 00:40:03.165
+we can have the control um to grant the full internet access.
+
+00:40:05.179 --> 00:40:10.060
+Um, and, and with that one, of course, the
+
+00:40:10.060 --> 00:40:14.939
+malicious app may send sensitive information from the phone to a malicious server if
+
+00:40:14.939 --> 00:40:17.810
+a full internet access permission has been granted,
+
+00:40:18.139 --> 00:40:23.080
+right? And then there's a personal information like the contact data permission,
+
+00:40:23.459 --> 00:40:28.020
+um, is controllable by a user, right? By a phone
+
+00:40:28.020 --> 00:40:32.679
+owner, right? And then if we grant a
+
+00:40:32.679 --> 00:40:36.280
+full internet access to an app. At the same time,
+
+00:40:36.360 --> 00:40:41.040
+we also grant the contact data uh access
+
+00:40:41.040 --> 00:40:45.919
+permission to that app, OK? That, what that app can
+
+00:40:45.919 --> 00:40:50.800
+do is it can send the whole contact
+
+00:40:50.800 --> 00:40:54.919
+information to a remote server because it has this both permissions,
+
+00:40:55.120 --> 00:40:58.199
+OK, which have been granted by you to that app.
+
+00:40:58.479 --> 00:41:03.459
+So if that app is not a very good one, And it can just do this,
+
+00:41:03.659 --> 00:41:08.370
+right? And then also the message, um,
+
+00:41:08.820 --> 00:41:11.020
+so normally when we're using the bank app,
+
+00:41:11.229 --> 00:41:16.100
+we probably will allow the bank app to access to our SMS as a
+
+00:41:16.100 --> 00:41:20.750
+verification code, right? So the bank can log in or can do the
+
+00:41:20.750 --> 00:41:25.629
+transaction for you, right? Or, or we can just not allow the bank app
+
+00:41:25.629 --> 00:41:30.504
+to access to your SMS at all. And then we just type our six digit
+
+00:41:30.504 --> 00:41:35.344
+code by ourselves because we can read the message and we can then come back to the
+
+00:41:35.344 --> 00:41:39.824
+bank app to, to type by ourselves. So that's a safer way
+
+00:41:39.824 --> 00:41:44.235
+actually. If we are concerned about some bank app,
+
+00:41:44.254 --> 00:41:49.024
+or if we're concerned about the bank app can be compromised by the bad
+
+00:41:49.024 --> 00:41:53.929
+people, we, we can just stop it. Um. The permission to allow
+
+00:41:53.929 --> 00:41:58.080
+this bank app to read my uh SMS. OK, I can do that.
+
+00:41:58.129 --> 00:42:01.530
+I have that control. And if it's not bank app,
+
+00:42:01.649 --> 00:42:05.629
+it can be some other online shopping um app,
+
+00:42:05.729 --> 00:42:09.870
+like Amazon or like eBay, right? And
+
+00:42:10.330 --> 00:42:14.209
+we probably, it's better not allow them to read the message,
+
+00:42:14.429 --> 00:42:18.229
+to have the access to our SMS. Because of course,
+
+00:42:18.510 --> 00:42:23.370
+sometimes it saves time for you to, to copy your six digit SMS
+
+00:42:23.370 --> 00:42:26.550
+and back to your app and to do the login.
+
+00:42:27.449 --> 00:42:31.570
+Uh, you never know that app can be compromised or not,
+
+00:42:31.689 --> 00:42:35.469
+right? If it's compromised, it can read all your SMS,
+
+00:42:35.889 --> 00:42:38.969
+right? And then that means when next time when you,
+
+00:42:39.129 --> 00:42:43.159
+when you log into a bank account, you will receive a verification code.
+
+00:42:43.409 --> 00:42:47.530
+And that code can also be readable, OK, by that
+
+00:42:47.770 --> 00:42:52.570
+Amazon or eBay app. If that app, uh, OK,
+
+00:42:52.689 --> 00:42:57.610
+some, someone like, um, That app has been compromised
+
+00:42:57.610 --> 00:43:01.959
+and someone then can also read your bank verification code,
+
+00:43:02.250 --> 00:43:06.350
+right? So, which is really, really uh not good because
+
+00:43:07.520 --> 00:43:11.679
+We are not supposed to give our bank verification code to anyone else,
+
+00:43:11.800 --> 00:43:16.800
+right? However, some app be, because they have access to your SMS and then they
+
+00:43:16.800 --> 00:43:21.310
+can just read your SMS all the time without your awareness.
+
+00:43:21.649 --> 00:43:26.439
+And uh if, uh, if we, that app has also full
+
+00:43:26.439 --> 00:43:30.979
+internet access, and then that Amazon or eBay app can send your
+
+00:43:31.560 --> 00:43:36.389
+bank verification code to the remote. Server
+
+00:43:36.669 --> 00:43:40.860
+and the remote server, if there's an attacker there and then they can.
+
+00:43:41.939 --> 00:43:46.530
+They, they can just log into your bank account if they already have your password,
+
+00:43:46.860 --> 00:43:51.860
+OK, um, obtained and then they can just use your verification code at this
+
+00:43:51.860 --> 00:43:53.919
+time and just log into your bank account,
+
+00:43:54.179 --> 00:43:56.409
+right? So that's what happened in reality.
+
+00:43:56.860 --> 00:43:58.899
+When, when, when we grant the permission,
+
+00:43:58.969 --> 00:44:03.780
+we should really be aware what we are granting and should
+
+00:44:03.780 --> 00:44:07.699
+we just let this app to read our SMS or not.
+
+00:44:08.199 --> 00:44:12.919
+If we, we think it's safer not to, uh, or we
+
+00:44:12.919 --> 00:44:17.899
+just don't bother us to. OK, we don't think it's bothering to copy and
+
+00:44:17.899 --> 00:44:21.620
+paste and just don't grant that. Don't grant that permission at all,
+
+00:44:21.770 --> 00:44:26.679
+right? And then the location wise, uh, location is
+
+00:44:26.679 --> 00:44:29.540
+another permission we have control over.
+
+00:44:30.479 --> 00:44:33.679
+But I'd say if you don't think the location,
+
+00:44:33.959 --> 00:44:38.520
+uh, I mean, for myself, I actually turn off my location
+
+00:44:38.520 --> 00:44:43.159
+permission to some of my map, um, GPS
+
+00:44:43.159 --> 00:44:47.659
+map. Because I only, OK, when I use that one,
+
+00:44:47.750 --> 00:44:50.790
+I, I allow that one access to my location.
+
+00:44:50.830 --> 00:44:54.500
+I turn on my location permission every time when I use them.
+
+00:44:54.790 --> 00:44:59.229
+Once I don't use them, I do not allow that app to track
+
+00:44:59.229 --> 00:45:03.449
+my location. OK. So, but for you and
+
+00:45:03.909 --> 00:45:07.929
+sometimes some online social media app, they also track your location.
+
+00:45:08.070 --> 00:45:10.889
+It's not necessary. You don't have to grant their permission.
+
+00:45:11.439 --> 00:45:15.139
+Uh, grant them your permission and to track your location.
+
+00:45:15.679 --> 00:45:20.399
+Why? It's not necessary, right? So, we can turn off those
+
+00:45:20.399 --> 00:45:24.679
+location, uh, permission. For our goodness,
+
+00:45:24.840 --> 00:45:27.419
+for our goodness, right? So, for our privacy.
+
+00:45:28.409 --> 00:45:33.050
+Um, and, OK, so that's the 4th type of permission we should be aware
+
+00:45:33.050 --> 00:45:37.850
+of and we have control over. We should always be cautious when we grant any permission.
+
+00:45:38.229 --> 00:45:41.260
+And one last page about the internet use,
+
+00:45:41.550 --> 00:45:45.939
+right? So this is often something people are not aware of,
+
+00:45:46.260 --> 00:45:50.949
+right? And then that's why I'm, I'm putting this one and which is also
+
+00:45:50.949 --> 00:45:55.570
+very critical one. And we have also some um
+
+00:45:55.830 --> 00:46:00.409
+anti-cybersquating Consumer Protection Act to prevent this
+
+00:46:00.870 --> 00:46:05.429
+URL hijacking. What this means is when you log
+
+00:46:05.429 --> 00:46:10.330
+into, uh, when you go to some website and you type your URL link,
+
+00:46:10.590 --> 00:46:14.929
+uh, wrongly, and then it can, these are what can happen,
+
+00:46:15.229 --> 00:46:20.100
+right? Which really, really, um, are not something you
+
+00:46:20.100 --> 00:46:23.399
+wish to have, have happened, right, to your computer.
+
+00:46:23.830 --> 00:46:28.129
+And then so these are hijacking, which, um,
+
+00:46:28.350 --> 00:46:32.189
+when we have, when we heard different names like direct linking,
+
+00:46:32.270 --> 00:46:34.870
+cybersquatting, sting, cybersquat, I'm sorry,
+
+00:46:34.989 --> 00:46:38.429
+typosquatting, cybersquatting, they all mean the same thing,
+
+00:46:38.540 --> 00:46:42.330
+URL hijacking. The fake URL and brandjacking.
+
+00:46:42.590 --> 00:46:46.409
+So these names all mean the same thing. Basically,
+
+00:46:46.570 --> 00:46:51.479
+it's just a typo in your URL link, or sometimes you put a
+
+00:46:51.479 --> 00:46:55.719
+different extension, like Google.net. OK?
+
+00:46:56.399 --> 00:47:00.120
+Do not just try that one because you don't know what,
+
+00:47:00.290 --> 00:47:05.270
+what's in that site. Cause it, it's just uh wish people can type wrong,
+
+00:47:05.520 --> 00:47:10.159
+right? And uh it just wait there and for you to go to their website without even
+
+00:47:10.159 --> 00:47:14.790
+clicking any links on that alternate website and your computer
+
+00:47:14.790 --> 00:47:19.139
+may get hacked, OK? Get some uh malware
+
+00:47:19.280 --> 00:47:23.679
+attached. OK. And sometimes there's a hyphen and you
+
+00:47:23.679 --> 00:47:28.320
+forgot, uh, and sometimes a different spelling and you
+
+00:47:28.320 --> 00:47:32.959
+just, uh, do not pay attention, and then you will be directed to a wrong place.
+
+00:47:33.199 --> 00:47:37.169
+And then that can All this bad thing could happen to you,
+
+00:47:37.379 --> 00:47:42.300
+right? So, which is why there are some um good
+
+00:47:42.300 --> 00:47:47.219
+practice we should follow. Uh, we should always use a trusted or we are sure
+
+00:47:47.219 --> 00:47:50.229
+about the website and then, then we go, OK,
+
+00:47:50.300 --> 00:47:55.300
+we return, uh, enter and go, right? If we don't know,
+
+00:47:55.320 --> 00:47:59.439
+and we should always use um Google to search for the right one
+
+00:47:59.760 --> 00:48:03.629
+because everyone probably won't make wrong um to go to Google,
+
+00:48:03.959 --> 00:48:08.580
+right? And just use Google to search the right name of the official
+
+00:48:09.040 --> 00:48:14.030
+um URL of a website. And then,
+
+00:48:14.199 --> 00:48:17.199
+and then use a different computer in a different VLAN.
+
+00:48:17.590 --> 00:48:22.590
+So, VLAN is a virtual, virtual, a virtual local area
+
+00:48:22.590 --> 00:48:26.100
+network. Virtual local network, um, local area network.
+
+00:48:26.479 --> 00:48:31.270
+Actually, um, Will, will restrict some malware if
+
+00:48:31.270 --> 00:48:35.729
+it has been downloaded by a computer. We'll just restrict that malware
+
+00:48:35.729 --> 00:48:40.229
+to spread within that virtual land, OK, virtual local area network
+
+00:48:40.610 --> 00:48:44.250
+will not spread quickly to, to a different VLAN.
+
+00:48:44.520 --> 00:48:49.370
+So that's some networking technique which to prevent the faster spreading of the
+
+00:48:49.370 --> 00:48:52.770
+malware, OK, which is why when we are doing launch surfing,
+
+00:48:52.850 --> 00:48:57.580
+lunchtime web surfing, And we can just use a different computer in a different
+
+00:48:57.580 --> 00:49:02.020
+VLAN um to protect. Because when we're going web surfing,
+
+00:49:02.100 --> 00:49:06.300
+if we got URL hijacking happened to my computer,
+
+00:49:06.379 --> 00:49:11.020
+at least this computer is affected but not the working computer in a
+
+00:49:11.020 --> 00:49:13.500
+different VLAN, right? Different virtual land.
+
+00:49:14.399 --> 00:49:17.679
+OK? And then, so also never click the link.
+
+00:49:18.219 --> 00:49:22.780
+And if we own a domain, which means if we are a
+
+00:49:22.780 --> 00:49:25.570
+business provider and we own the domain,
+
+00:49:25.810 --> 00:49:30.620
+we should also register the typo before attacker because that protect
+
+00:49:30.620 --> 00:49:35.379
+our customer. And uh if they make some um unconscious
+
+00:49:35.379 --> 00:49:39.320
+mistake, and then they won't, OK, go to some
+
+00:49:39.899 --> 00:49:44.340
+really, um, Bad one and get some
+
+00:49:44.340 --> 00:49:47.020
+ransomware or malware installed in their computer,
+
+00:49:47.100 --> 00:49:51.939
+in your customer's computer, right? So, these are all because of URL
+
+00:49:51.939 --> 00:49:54.620
+hijack hijacking. And if you hear all these names,
+
+00:49:54.659 --> 00:49:59.399
+you know what's, what does that mean and also for yourself.
+
+00:50:00.159 --> 00:50:02.790
+When you are not sure what is the web link,
+
+00:50:03.070 --> 00:50:07.629
+OK, URL name for your website, and you should always
+
+00:50:07.629 --> 00:50:12.340
+search for the official one. Do not just type by yourself,
+
+00:50:12.629 --> 00:50:17.280
+because by typing wrongly, and you might get URL hijack
+
+00:50:17.280 --> 00:50:21.330
+hijacked, OK? A very important part. So,
+
+00:50:21.530 --> 00:50:25.550
+finally, with the cyber uh security awareness improvement,
+
+00:50:25.850 --> 00:50:30.189
+as an officer, and what we should do is to teach
+
+00:50:30.889 --> 00:50:34.389
+what is the security, but not how of the security.
+
+00:50:34.489 --> 00:50:38.270
+That's some definition from America's um national,
+
+00:50:38.389 --> 00:50:43.330
+um, I mean, N um Association. So, they're managing the whole
+
+00:50:43.330 --> 00:50:48.169
+cybersecurity side of thing. Um, so they have a lot of standard as
+
+00:50:48.169 --> 00:50:52.659
+well, right? So, Um, as a cybersecurity officer,
+
+00:50:52.840 --> 00:50:56.500
+and we should teach people and we should improve people's awareness,
+
+00:50:56.760 --> 00:51:01.560
+right? And then we should be aware why the email and
+
+00:51:01.560 --> 00:51:04.979
+web-based attacks always be successful, and these are the reasons.
+
+00:51:05.239 --> 00:51:09.919
+And we can use this as a, as a very good guideline to
+
+00:51:09.919 --> 00:51:14.750
+make an improvement plan. OK. So we
+
+00:51:14.750 --> 00:51:19.729
+should know, um, no AUP poli policy is a reason
+
+00:51:19.989 --> 00:51:24.350
+why people sometimes make mistake because there's no acceptable user,
+
+00:51:24.629 --> 00:51:29.229
+um, policy, mm, and then not set up and then people
+
+00:51:29.229 --> 00:51:34.219
+haven't signed and people don't follow and people are not aware what are the right
+
+00:51:34.219 --> 00:51:38.169
+thing to do. OK? So AUP normally would include everything,
+
+00:51:38.600 --> 00:51:42.149
+um, the people should follow when they go online.
+
+00:51:42.479 --> 00:51:46.439
+Right? And also, there's no proper cyber awareness training.
+
+00:51:46.560 --> 00:51:50.860
+So now, I think many companies they actually run this cyber awareness training,
+
+00:51:51.120 --> 00:51:53.340
+uh, in their company. They actually, uh,
+
+00:51:53.360 --> 00:51:58.340
+provide a lot of Google, um, phishing email photo so that
+
+00:51:58.399 --> 00:52:01.449
+the people are, are aware of these are phishing emails,
+
+00:52:01.639 --> 00:52:03.919
+and this can happen through this or that.
+
+00:52:04.000 --> 00:52:06.760
+And then these six persuasion rules are there.
+
+00:52:07.080 --> 00:52:10.129
+And then, Everyone should be aware of them,
+
+00:52:10.389 --> 00:52:14.389
+of them, and then should not click any links in those phishing emails.
+
+00:52:15.229 --> 00:52:19.850
+OK. And then maybe there's no buy-in from employees and then
+
+00:52:19.949 --> 00:52:24.030
+that's an issue and people should, um, OK,
+
+00:52:24.149 --> 00:52:26.780
+the and security officer, you should let them know,
+
+00:52:27.030 --> 00:52:31.989
+and this is for all's benefit, right? And then people have buy-in in this domain
+
+00:52:32.270 --> 00:52:33.949
+and then they should do the right thing.
+
+00:52:34.310 --> 00:52:38.270
+And also with the, with the email service and
+
+00:52:38.270 --> 00:52:42.469
+HTTP those uh poor security are not aware about,
+
+00:52:42.709 --> 00:52:47.419
+by, by, by people, right? And then there's a poor
+
+00:52:47.419 --> 00:52:52.229
+endpoint protection. For example, um, people don't um
+
+00:52:52.840 --> 00:52:57.550
+protect their device very well, OK? And then the people also bring your
+
+00:52:57.550 --> 00:53:01.689
+own device like their mobile device and go to the same Wi Fi.
+
+00:53:02.229 --> 00:53:06.129
+And go to the same um local network. And then,
+
+00:53:07.070 --> 00:53:09.679
+Those devices were not properly protected.
+
+00:53:10.030 --> 00:53:14.850
+And then those antivirus and anti-spa um to their email service
+
+00:53:14.949 --> 00:53:18.979
+and antivirus software were not properly installed or updated,
+
+00:53:19.350 --> 00:53:23.570
+right? So, um, these are the reasons. So when we do a
+
+00:53:23.629 --> 00:53:27.929
+cyber improvement awareness plan, uh, as a security officer,
+
+00:53:28.510 --> 00:53:30.989
+maybe that's your job in, in the future,
+
+00:53:31.100 --> 00:53:35.209
+right, in this domain. And then probably you got to think about,
+
+00:53:35.310 --> 00:53:39.790
+to make a good plan and you can use this one as a guideline to improve the
+
+00:53:39.790 --> 00:53:43.649
+awareness. OK? So, that's actually all today.
+
+00:53:43.750 --> 00:53:48.649
+Um, sorry to go over a few minutes. And if you have any question,
+
+00:53:48.889 --> 00:53:53.719
+um, yeah, please text me, uh, in chat, or you can always,
+
+00:53:53.729 --> 00:53:58.429
+uh, Uh, approach me through Teams. I'm, uh,
+
+00:53:58.479 --> 00:54:02.000
+constantly I check the messages there. OK.
+
+00:54:02.520 --> 00:54:06.239
+Um, if not, uh, please feel free to leave.
+
+00:54:06.320 --> 00:54:09.919
+I don't think the concepts here in this week is easy,
+
+00:54:10.010 --> 00:54:13.899
+uh, sorry, it's hard to to, it's hard to understand,
+
+00:54:13.959 --> 00:54:16.840
+OK? So that's fine. And if you don't have any question,
+
+00:54:16.959 --> 00:54:19.479
+but anytime later, if you have any question,
+
+00:54:20.030 --> 00:54:22.600
+please let me know. OK? Thank you. Thank you,
+
+00:54:22.840 --> 00:54:24.199
+everyone. Bye.
+

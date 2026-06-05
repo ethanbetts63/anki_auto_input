@@ -1,0 +1,2111 @@
+WEBVTT
+
+00:00:00.009 --> 00:00:04.860
+Yeah, OK, thank you. So now today we actually
+
+00:00:04.860 --> 00:00:07.630
+are learning something really important,
+
+00:00:08.029 --> 00:00:11.670
+important, OK, um, technical countermeasure.
+
+00:00:11.899 --> 00:00:16.540
+So cryptography algorithm, OK, uh, from
+
+00:00:16.540 --> 00:00:21.500
+today. And then so we will discuss a different scenario and
+
+00:00:21.500 --> 00:00:26.479
+you will see how each different crypto algorithm
+
+00:00:26.479 --> 00:00:31.040
+can help in different scenarios, right? And then I
+
+00:00:31.040 --> 00:00:35.520
+have included those classic crypto and the basics for the
+
+00:00:35.520 --> 00:00:38.279
+symmetric encryption in my pre-le recording.
+
+00:00:38.360 --> 00:00:40.939
+If you haven't watched them, please watch them,
+
+00:00:41.000 --> 00:00:45.720
+otherwise it may be hard for you to understand why we are
+
+00:00:45.720 --> 00:00:50.529
+here today, right? And then, so the
+
+00:00:50.529 --> 00:00:55.330
+objective is to understand how confidentiality can be
+
+00:00:55.330 --> 00:00:59.060
+guaranteed through our crypto algorithm,
+
+00:00:59.369 --> 00:01:03.569
+OK? And also other features, other security goals.
+
+00:01:03.729 --> 00:01:08.629
+We have 5 goals in total, right, CIA and
+
+00:01:08.809 --> 00:01:11.290
+authenticity and non-repudiation, right?
+
+00:01:11.489 --> 00:01:15.750
+And if you read that 5 goals, right, um,
+
+00:01:16.830 --> 00:01:20.599
+We have some algorithm which can guarantee confidentiality,
+
+00:01:21.069 --> 00:01:23.849
+including all the algorithm I'm discussing today.
+
+00:01:24.510 --> 00:01:26.919
+And, but to guarantee the other feature,
+
+00:01:27.069 --> 00:01:29.819
+other goals like integrity, authenticity,
+
+00:01:29.860 --> 00:01:34.089
+and non-repudiation, we have to combine some algorithm together
+
+00:01:34.510 --> 00:01:39.050
+and mostly would be some content we will learn next week,
+
+00:01:39.190 --> 00:01:44.169
+OK. And you can see how those secret goals can be guaranteed.
+
+00:01:44.569 --> 00:01:48.269
+So the case we will discuss today is the,
+
+00:01:48.650 --> 00:01:53.650
+for example, the first one is someone wished to send a secret message to his
+
+00:01:53.650 --> 00:01:57.370
+partner online by seeing this description.
+
+00:01:58.000 --> 00:02:02.410
+The confidentiality is the focus for that person right here,
+
+00:02:02.569 --> 00:02:06.730
+right? And then so the confidentiality means one
+
+00:02:06.730 --> 00:02:11.330
+secrecy during the transmission and this algorithm can guarantee
+
+00:02:11.330 --> 00:02:15.449
+that, right? And if we want to have the app developer.
+
+00:02:16.520 --> 00:02:21.039
+Prove the software is a clean software, no malicious code was
+
+00:02:21.039 --> 00:02:25.880
+attached to that software. So the case for this app
+
+00:02:25.880 --> 00:02:30.759
+developer is to To have the integrity embedded in
+
+00:02:30.759 --> 00:02:35.619
+those uh app, right, in those software. So the integrity
+
+00:02:35.619 --> 00:02:39.410
+was very important. And then, so in different scenario,
+
+00:02:39.500 --> 00:02:43.369
+always want to achieve maybe sometimes different goals,
+
+00:02:43.460 --> 00:02:48.020
+right? So for the integrity, and we can consider another way to
+
+00:02:48.020 --> 00:02:52.589
+guarantee the integrity. And then for a bank
+
+00:02:52.589 --> 00:02:57.449
+system. Here for bank system and then you
+
+00:02:57.449 --> 00:03:01.889
+can imagine the message and you want to make sure it's not
+
+00:03:01.889 --> 00:03:05.889
+modified by a man in the middle, right? And then
+
+00:03:07.750 --> 00:03:11.500
+So man in the middle, which is sometimes will use this,
+
+00:03:11.720 --> 00:03:14.830
+this short term to mean the man in the middle attack,
+
+00:03:15.110 --> 00:03:19.190
+right? And you want, you want to make sure the message was not modified.
+
+00:03:19.309 --> 00:03:22.740
+If this is a focus, then this means integrity again.
+
+00:03:23.190 --> 00:03:26.389
+Right? But of course, sometimes in the bank system,
+
+00:03:26.429 --> 00:03:31.229
+you also want to make sure the transaction was from the true
+
+00:03:31.229 --> 00:03:34.259
+sender, right? And the true sender can't,
+
+00:03:34.470 --> 00:03:38.750
+can't deny he permitted to um
+
+00:03:39.509 --> 00:03:41.889
+Send out some money to another receiver,
+
+00:03:41.979 --> 00:03:46.850
+right, if he has clicked the transaction the confirm button,
+
+00:03:47.190 --> 00:03:51.949
+right? So we want to have the non-reputation here embedded in the
+
+00:03:51.949 --> 00:03:55.910
+bank system and also authenticity we want to
+
+00:03:55.910 --> 00:04:00.789
+authenticate real sender, right, verify the identity of that
+
+00:04:00.789 --> 00:04:05.470
+sender, right? So in this case, but of course if we want to have
+
+00:04:06.270 --> 00:04:09.139
+not modified then the focus is integrated,
+
+00:04:09.419 --> 00:04:11.570
+right? But depending on different scenario,
+
+00:04:11.619 --> 00:04:16.220
+we actually want to guarantee uh different security goal or
+
+00:04:16.220 --> 00:04:19.299
+combined the goal, right, for that system.
+
+00:04:19.959 --> 00:04:24.119
+And then HR officer wants to check if a digital
+
+00:04:24.119 --> 00:04:27.989
+certificate provided by a new employee is true or not,
+
+00:04:28.329 --> 00:04:32.149
+right? So this HR officer, maybe the new employee said,
+
+00:04:32.640 --> 00:04:35.709
+says, oh, he got the certificate from a university,
+
+00:04:35.720 --> 00:04:38.160
+and he also got a certificate from Cisco,
+
+00:04:38.279 --> 00:04:41.899
+from CISSP, a security certificate, right?
+
+00:04:42.519 --> 00:04:46.959
+Of course, we want to check whether that certificate is a real certificate or it's a fake,
+
+00:04:47.160 --> 00:04:51.890
+right? So how, what's the, what, what
+
+00:04:51.890 --> 00:04:56.510
+is the purpose or secret goal here for this HR
+
+00:04:56.510 --> 00:05:00.660
+officer? What's the secret goal if he wants to use the system to check,
+
+00:05:01.059 --> 00:05:05.260
+and his goal is to Check the
+
+00:05:05.260 --> 00:05:08.420
+authenticity, right, of that certificate.
+
+00:05:09.269 --> 00:05:13.410
+Right? So he wants to also probably, um,
+
+00:05:13.670 --> 00:05:18.570
+want to check the message. I mean, for that authenticity part of
+
+00:05:18.570 --> 00:05:22.609
+um certificate, we also want to have the
+
+00:05:22.910 --> 00:05:26.559
+integrity. So for example, uh the certificate of,
+
+00:05:26.890 --> 00:05:31.829
+I mean, issuer, issuing um body, they also want
+
+00:05:31.829 --> 00:05:35.269
+to have the integrity of the message, um.
+
+00:05:36.320 --> 00:05:41.119
+Guaranteed or signed by themselves so that this HR
+
+00:05:41.119 --> 00:05:45.140
+officer can know the information was correct,
+
+00:05:45.480 --> 00:05:49.239
+right, and also was issued by a
+
+00:05:51.070 --> 00:05:55.989
+Cisco or a university, right? So, we have those
+
+00:05:55.989 --> 00:06:00.670
+integrity and authenticity, um, wanted to
+
+00:06:00.670 --> 00:06:04.570
+embedded with this student certificate. And there's a way to do that.
+
+00:06:04.910 --> 00:06:09.829
+So we will actually explore how we can utilize different algorithms so that
+
+00:06:09.829 --> 00:06:14.140
+we have those purpose achieved, right? And also another case,
+
+00:06:14.149 --> 00:06:18.570
+which is to check an e-signed document.
+
+00:06:19.179 --> 00:06:23.940
+was actually from the true center. And from this description,
+
+00:06:23.950 --> 00:06:27.609
+it's actually to again to check the authenticity,
+
+00:06:27.989 --> 00:06:32.750
+right? And also the true sender can't deny actually from
+
+00:06:32.750 --> 00:06:36.619
+him right and we actually wanted to have the non
+
+00:06:36.619 --> 00:06:41.609
+reputation to be embedded with those documents because
+
+00:06:41.619 --> 00:06:45.130
+of course the true sender. Verified his identity,
+
+00:06:45.329 --> 00:06:48.769
+that's good. But also sometimes if he signed,
+
+00:06:48.890 --> 00:06:52.440
+he can't deny later he didn't sign that document,
+
+00:06:52.609 --> 00:06:56.049
+right? So we want non-repudiation as well,
+
+00:06:56.420 --> 00:07:01.190
+uh, in such scenario for like e-signature or that kind
+
+00:07:01.190 --> 00:07:06.130
+of um application, right? We want to have this authentication non-repudiation
+
+00:07:06.130 --> 00:07:09.649
+embedded. So, in different cases, we want,
+
+00:07:10.089 --> 00:07:13.950
+we want to use the right technology. To do,
+
+00:07:14.269 --> 00:07:16.950
+to achieve the, the, the right goal, right,
+
+00:07:17.079 --> 00:07:21.910
+for different scenario. So this is what we will focus on to learn in
+
+00:07:21.910 --> 00:07:26.010
+this week and next week, OK. Um
+
+00:07:27.690 --> 00:07:32.640
+Yeah, OK. I, Joyce said you can't see,
+
+00:07:32.720 --> 00:07:37.390
+it's inverted. I don't know, but you can see me and hear me clearly,
+
+00:07:37.480 --> 00:07:42.320
+right, for all students, OK, right? Yeah,
+
+00:07:42.440 --> 00:07:47.160
+that's good. OK, that's good. So now I want to show
+
+00:07:47.160 --> 00:07:51.559
+you the, the evolve, I mean the development of all this algorithm.
+
+00:07:51.679 --> 00:07:56.029
+OK, there's a history for everything to To be built up,
+
+00:07:56.160 --> 00:08:00.799
+OK, uh, for this cryptography world. And originally that's a classic
+
+00:08:00.799 --> 00:08:04.899
+cryptography, which was based on substitution and transposition.
+
+00:08:05.000 --> 00:08:08.940
+So we call that classic, and that's an actual branch.
+
+00:08:09.239 --> 00:08:13.920
+And now people don't use that more, use that anymore because it's
+
+00:08:13.920 --> 00:08:18.769
+not safe, um, enough, right? And then people moved to the modern
+
+00:08:18.769 --> 00:08:23.609
+one. And the classic was used maybe more than 100 years ago in the
+
+00:08:23.609 --> 00:08:27.109
+military field and based on the shifting and,
+
+00:08:27.450 --> 00:08:31.410
+and substitution so that they have some code book,
+
+00:08:31.529 --> 00:08:35.789
+right, and which was, found not, not safe anymore.
+
+00:08:36.020 --> 00:08:40.270
+Um, in my product recording, you can see there's a frequency analysis
+
+00:08:41.210 --> 00:08:45.070
+process and people found that the code book can be crackable.
+
+00:08:45.809 --> 00:08:50.450
+Right, so that's why symmetric and asymmetric was were
+
+00:08:50.450 --> 00:08:54.219
+developed later, right, for as a modern crypto.
+
+00:08:54.820 --> 00:08:59.030
+So symmetric was developed first and then
+
+00:08:59.030 --> 00:09:03.789
+asymmetric. So with symmetric, we will discuss all
+
+00:09:03.789 --> 00:09:07.869
+the three, but they are also similar, um,
+
+00:09:08.690 --> 00:09:12.119
+Basics for the stream cipher a different standard,
+
+00:09:12.479 --> 00:09:16.219
+but, but the basic idea was that XOR operation.
+
+00:09:16.919 --> 00:09:21.719
+OK, we explained in our pre-elect coding and we will use this to
+
+00:09:21.719 --> 00:09:24.750
+explain how those works, OK, in different scenario,
+
+00:09:25.239 --> 00:09:29.919
+and then we will move to asymmetry next week and this RSA and
+
+00:09:29.919 --> 00:09:32.599
+different Hillman algorithm or the main algorithm.
+
+00:09:32.960 --> 00:09:37.690
+I will put in my pre-lecture recording. I have already published
+
+00:09:37.690 --> 00:09:42.590
+online and if you can do some pre-learning for those
+
+00:09:42.590 --> 00:09:46.969
+algorithms, that would be great because on the lecture,
+
+00:09:47.130 --> 00:09:51.929
+we will focus on the applications rather than just explain those algorithms
+
+00:09:51.929 --> 00:09:55.489
+one more time. Um, yeah, I want to focus on application,
+
+00:09:55.609 --> 00:09:58.190
+how those algorithms was used in reality,
+
+00:09:58.570 --> 00:10:01.190
+and so that we can achieve different security goals.
+
+00:10:01.489 --> 00:10:06.239
+OK? So now, um, this is a bit, a
+
+00:10:06.239 --> 00:10:11.090
+bit probably, um. Recap
+
+00:10:11.090 --> 00:10:14.789
+from encryption decryption based XOR operation.
+
+00:10:15.270 --> 00:10:19.950
+So very quick and you know XOR operation would do this kind
+
+00:10:19.950 --> 00:10:23.340
+of operation. It, it's called exclusive or.
+
+00:10:23.909 --> 00:10:28.409
+So which means we have, if we have two A and B,
+
+00:10:28.429 --> 00:10:33.210
+like 01 as input. If these two digits are different,
+
+00:10:33.530 --> 00:10:38.349
+an output will always be a 1. If these two digits are the same,
+
+00:10:38.609 --> 00:10:41.599
+output will always be a zero, OK, like 11,
+
+00:10:41.690 --> 00:10:46.650
+0, and 000. OK, so the encryption will be based on the
+
+00:10:46.650 --> 00:10:51.349
+bitwise XOR operation. So this is how m message
+
+00:10:51.349 --> 00:10:55.650
+and key and XOR and we have a ciphertext.
+
+00:10:56.289 --> 00:11:00.929
+And for decryption, we would XOR one more time with the
+
+00:11:00.929 --> 00:11:03.270
+key and we can get the original message.
+
+00:11:03.849 --> 00:11:08.770
+And the reason why is this key will be used twice for XOR
+
+00:11:08.770 --> 00:11:13.409
+and which will generate a 0, so which means original message can
+
+00:11:13.409 --> 00:11:17.969
+be um can be deduced by using this
+
+00:11:17.969 --> 00:11:22.599
+key two times. So for encryption we do XRR
+
+00:11:22.599 --> 00:11:25.530
+once and for decryption we use the same key.
+
+00:11:26.010 --> 00:11:30.950
+Uh, for the ciphertext we do another type of XOR we got the original message,
+
+00:11:31.369 --> 00:11:35.969
+right? So, um, that's the basic, uh,
+
+00:11:35.979 --> 00:11:40.440
+fundamental knowledge for all symmetric encryption,
+
+00:11:40.739 --> 00:11:44.690
+all symmetric encryption. So I want you to know how that works,
+
+00:11:44.780 --> 00:11:49.760
+OK, XOR. And then now here is, uh, mode
+
+00:11:49.859 --> 00:11:54.719
+I explained in my product recording. And then I want you now
+
+00:11:54.719 --> 00:11:59.280
+to understand why it's simple, um, because it's based on just a simple
+
+00:11:59.280 --> 00:12:02.840
+encryption for each block message each block of message.
+
+00:12:03.109 --> 00:12:06.799
+Original message was chopped into identical blocks,
+
+00:12:06.960 --> 00:12:10.919
+right? And then they will use the key to do XOR and the
+
+00:12:10.919 --> 00:12:15.760
+site will be issued, right, if we have two
+
+00:12:15.760 --> 00:12:20.570
+blocks the same and because the key. Is the
+
+00:12:20.570 --> 00:12:25.530
+same, so the output will be the same because all this operation
+
+00:12:25.530 --> 00:12:30.250
+is XOR, right? If you have original two blocks are the same and the
+
+00:12:30.250 --> 00:12:34.270
+output should be the same. Then, um,
+
+00:12:35.070 --> 00:12:39.840
+Then it will make some pattern data pattern maintained after
+
+00:12:39.840 --> 00:12:44.400
+you do an XOR, right? And then for the decryption,
+
+00:12:44.440 --> 00:12:49.349
+the same thing we would do the key XOR one more time you have the original
+
+00:12:49.349 --> 00:12:54.119
+message obtained. So that's basically what you can see from my
+
+00:12:54.119 --> 00:12:58.219
+previous slides, right? We just do a simple XOR,
+
+00:12:58.760 --> 00:13:03.599
+but um. The pattern, the data pattern, if originally they are
+
+00:13:03.599 --> 00:13:07.320
+the same and output will be the same. So by looking at the ciphertext,
+
+00:13:07.409 --> 00:13:12.280
+maybe the ciphertext itself during the transmission is not perfectly
+
+00:13:12.280 --> 00:13:16.739
+safe because it may have identical uh blocks,
+
+00:13:16.880 --> 00:13:19.580
+and then we know original message will be identical.
+
+00:13:19.919 --> 00:13:23.159
+So this can be seen by that penguin picture,
+
+00:13:23.359 --> 00:13:27.500
+right? So this penguin picture shows um those
+
+00:13:28.119 --> 00:13:32.750
+white block. of message and after
+
+00:13:33.090 --> 00:13:36.489
+encrypted and these blocks are the same,
+
+00:13:36.729 --> 00:13:40.960
+right? These blocks are the same. So you can see this penguins
+
+00:13:41.289 --> 00:13:45.940
+pattern to be there, right? So, so it's
+
+00:13:46.130 --> 00:13:51.130
+It, it can't hide the data patterns. So unsuitable for
+
+00:13:51.130 --> 00:13:55.030
+long message if we're using this electronic code book mode,
+
+00:13:55.409 --> 00:14:00.210
+right? And also, it says, um, and this is actual advantage of
+
+00:14:00.210 --> 00:14:04.929
+this ECB mode. You can imagine the original message can be chopped into
+
+00:14:04.929 --> 00:14:09.849
+blocks, and all these blocks can be done this XOR operation in
+
+00:14:09.849 --> 00:14:14.469
+parallel. You're just in one time. And the cybertext is output.
+
+00:14:14.770 --> 00:14:18.969
+So, so very quick encryption and decryption also very quick.
+
+00:14:19.460 --> 00:14:24.210
+However, um, it's not 100% safe, right? So
+
+00:14:24.210 --> 00:14:29.090
+in this week's workshop, you will get to do this ECB encryption
+
+00:14:29.409 --> 00:14:33.789
+and try to see this uh encryption pattern
+
+00:14:33.789 --> 00:14:36.919
+actually. There is a pattern
+
+00:14:37.659 --> 00:14:40.659
+disclosed based on this penguin picture.
+
+00:14:40.940 --> 00:14:43.179
+They will just try that encryption method.
+
+00:14:43.809 --> 00:14:48.169
+And then We have to find some other way to encrypt.
+
+00:14:48.570 --> 00:14:53.479
+So you will also get to practice other modes like like CBC
+
+00:14:53.479 --> 00:14:56.909
+mode, OK, um, cipher blockchaining mode,
+
+00:14:57.330 --> 00:15:02.330
+um, and to see this secrecy of the original message was
+
+00:15:02.330 --> 00:15:06.909
+perfectly kept, right? Um, and there's also another
+
+00:15:07.250 --> 00:15:12.179
+disadvantage for this ECB mode. It's susceptible for
+
+00:15:12.179 --> 00:15:16.369
+to, um, it's susceptible to replay attacks,
+
+00:15:16.619 --> 00:15:20.200
+right? I've already explained it in my production recording,
+
+00:15:20.460 --> 00:15:24.479
+and if you can steal the whole message of those
+
+00:15:24.659 --> 00:15:29.640
+encrypted input message or which was encrypted message
+
+00:15:29.640 --> 00:15:33.229
+for your credential and password. And the whole,
+
+00:15:33.320 --> 00:15:36.000
+the whole message can be just a uh
+
+00:15:37.599 --> 00:15:42.280
+Stolen and then sent through to the system one more time and then so
+
+00:15:42.280 --> 00:15:47.000
+that's why we call that replay attack and the system doesn't recognize and just
+
+00:15:47.000 --> 00:15:51.020
+pass you to the system, right? So however,
+
+00:15:51.239 --> 00:15:55.719
+to, to defend against this replay attack we can either add a
+
+00:15:55.719 --> 00:16:00.349
+timestamp. So that next time when the system um got the same message,
+
+00:16:00.359 --> 00:16:05.039
+which is the correct ciphertext based on your identity and the credential
+
+00:16:05.039 --> 00:16:08.559
+password, and then the system would check the timestamp,
+
+00:16:08.799 --> 00:16:13.719
+OK, if the timestamp uh embedded into the message was not
+
+00:16:13.719 --> 00:16:15.400
+correct, then then the system wouldn't pass you.
+
+00:16:15.479 --> 00:16:19.669
+So the timestamp would be a way to defend against this replay attack
+
+00:16:20.010 --> 00:16:24.409
+or sometimes we have the Uh, two-way authentication
+
+00:16:24.739 --> 00:16:28.280
+because we want to have 16 digit time code,
+
+00:16:28.520 --> 00:16:33.429
+right, um, pop into your phone or your email and then you
+
+00:16:33.429 --> 00:16:37.869
+have to provide the right six digit code which is 22.
+
+00:16:38.780 --> 00:16:43.530
+Defend against this replay attack, OK? If someone has stolen the whole message,
+
+00:16:43.669 --> 00:16:46.820
+which was your encrypted identity information,
+
+00:16:47.390 --> 00:16:51.849
+but then it's not combined with the authentication code,
+
+00:16:52.109 --> 00:16:54.619
+and then you still can't get into the system.
+
+00:16:55.109 --> 00:16:59.770
+So that's the way to defend against this ECB replay attack.
+
+00:17:00.070 --> 00:17:04.979
+Um, however, before, I mean, apart from using that one,
+
+00:17:05.069 --> 00:17:09.770
+we have some other mode which can Um, be safer than ACB
+
+00:17:09.770 --> 00:17:14.439
+mode, OK. So, so this mode. Which we call that
+
+00:17:14.439 --> 00:17:18.529
+cipher block chaining mode which is actually The
+
+00:17:18.529 --> 00:17:22.968
+fundamental technology blockchain is using right
+
+00:17:22.968 --> 00:17:25.649
+nowadays. The blockchain is so popular nowadays,
+
+00:17:25.688 --> 00:17:28.229
+but essentially it's a very simple idea.
+
+00:17:28.448 --> 00:17:32.879
+It's like this, OK. So now I'll show you how this EC
+
+00:17:32.879 --> 00:17:37.589
+CBC mode is working. Um, initially, we have to
+
+00:17:37.589 --> 00:17:41.050
+have some initialization vector. We call that IV,
+
+00:17:41.270 --> 00:17:45.900
+OK? To start for the first block. OK, and
+
+00:17:45.900 --> 00:17:50.689
+then, In this CBC mode, the repeated plaintex does not lead to the
+
+00:17:50.689 --> 00:17:52.709
+repeated ciphertext. You understand why,
+
+00:17:52.939 --> 00:17:57.869
+because we have all this, OK, line, and which makes
+
+00:17:57.869 --> 00:18:02.589
+the same. PlainText won't have the same ciphertext
+
+00:18:02.589 --> 00:18:07.010
+output. And it can only be. Encrypted in
+
+00:18:07.010 --> 00:18:12.010
+serial, in serial. So now let's look at why it can
+
+00:18:12.010 --> 00:18:15.209
+only be encrypted in serial, not like ECB mode.
+
+00:18:15.329 --> 00:18:19.969
+ECB mode can be done, OK, chopped into blocks and do
+
+00:18:19.969 --> 00:18:23.250
+XOR in one go, and the ciphertext is ready,
+
+00:18:23.449 --> 00:18:27.130
+right? But for CBC mode it's not working like that,
+
+00:18:27.449 --> 00:18:31.560
+OK. So it is working like. The plaintext,
+
+00:18:31.640 --> 00:18:36.569
+the first block. Will be activated with IV
+
+00:18:36.979 --> 00:18:40.400
+number. And then there's a key to be used here,
+
+00:18:40.660 --> 00:18:44.329
+so the ciphertext is obtained for the first block.
+
+00:18:44.750 --> 00:18:49.550
+And then the output of this first block will be given to the next
+
+00:18:49.550 --> 00:18:54.430
+block. And then XOR with your second block of
+
+00:18:54.430 --> 00:18:59.430
+text, and then the output will be given to the key and the key was
+
+00:18:59.430 --> 00:19:03.910
+applied and the 2nd output ciphertext is here
+
+00:19:04.270 --> 00:19:07.770
+and this output was given to the 3rd block.
+
+00:19:08.630 --> 00:19:13.560
+To do XLR with the plaintext, and then the key
+
+00:19:13.560 --> 00:19:18.160
+is used and you got the 3rd output and then the 3rd output is given to the
+
+00:19:18.160 --> 00:19:22.900
+4th block. So now you can see why it's in serial.
+
+00:19:23.199 --> 00:19:27.800
+You always have to wait until your last block to finish its
+
+00:19:27.800 --> 00:19:32.719
+encryption and then have the output and then to feed in
+
+00:19:32.719 --> 00:19:37.680
+to the next round, right? So which is why it can only be done in
+
+00:19:37.680 --> 00:19:42.599
+serial, the encryption. And then the speed is
+
+00:19:42.599 --> 00:19:47.520
+much slower than ACB mode. ECB mode is a mode that we
+
+00:19:47.520 --> 00:19:51.560
+discussed before, right? So, it can't be done in parallel.
+
+00:19:51.760 --> 00:19:56.339
+You have to wait until each block to be done to do the next block.
+
+00:19:56.439 --> 00:20:01.380
+And then if you have very long message and you have to encrypt block by block,
+
+00:20:01.599 --> 00:20:04.420
+and then the speed is very slow here for,
+
+00:20:04.479 --> 00:20:08.819
+for a CBC mode compared with ECB mode. However,
+
+00:20:09.130 --> 00:20:13.560
+the good part is the repeated plaintext does not,
+
+00:20:14.010 --> 00:20:16.589
+does not lead to the repeated ciphertext.
+
+00:20:16.849 --> 00:20:21.689
+You can see this plaintext or that plaintext if they are the
+
+00:20:21.689 --> 00:20:26.489
+same, but which doesn't mean this feed in from last
+
+00:20:26.489 --> 00:20:30.640
+round will be the same, right? So the output ciphertext,
+
+00:20:30.829 --> 00:20:33.089
+this one and that one wouldn't be the same.
+
+00:20:33.540 --> 00:20:38.040
+Right, so which makes sure those patterns won't be
+
+00:20:38.219 --> 00:20:42.109
+leaked. So which is why when you use the CPC mode,
+
+00:20:42.260 --> 00:20:46.239
+when you encrypt those identity blocks
+
+00:20:46.780 --> 00:20:51.339
+having very different ciphertext and which does
+
+00:20:51.339 --> 00:20:55.719
+not give any pattern disclosed in this CBC mode,
+
+00:20:56.180 --> 00:21:00.099
+right? OK, I'm sorry. So,
+
+00:21:00.599 --> 00:21:05.479
+um, this is how it works. I'll just use a very simple example to
+
+00:21:05.479 --> 00:21:08.739
+show you how the CBC encryption is working.
+
+00:21:09.119 --> 00:21:13.239
+Um, and then we are now having only
+
+00:21:13.239 --> 00:21:17.319
+18 digit message, original message,
+
+00:21:17.760 --> 00:21:22.640
+and each message, um, was chopped into
+
+00:21:22.640 --> 00:21:26.140
+a two digit block. OK, there are 4 blocks,
+
+00:21:26.520 --> 00:21:31.270
+OK? And then there's a key. Key is a cipher
+
+00:21:31.270 --> 00:21:36.109
+table here, right, and then this is for encryption and we have IV
+
+00:21:36.109 --> 00:21:40.689
+number. I give you this IV number here which is
+
+00:21:40.689 --> 00:21:45.599
+10, OK, which is the IV number here, OK,
+
+00:21:46.089 --> 00:21:51.060
+so which is 10, 2 digits. OK, so how it works
+
+00:21:51.579 --> 00:21:56.339
+we firstly XOR original text with this IV number
+
+00:21:56.339 --> 00:22:01.119
+so 00 and 10. Now you remember that
+
+00:22:01.119 --> 00:22:05.260
+XR operation. So if you have 00 and
+
+00:22:05.260 --> 00:22:09.520
+10, we do XOR, right? So I just type like
+
+00:22:09.520 --> 00:22:14.390
+x here and then. The same digit
+
+00:22:14.390 --> 00:22:18.829
+will generate a 0, right. The different digit will generate a 1.
+
+00:22:19.140 --> 00:22:22.530
+Remember, so that's how XR is working, right?
+
+00:22:23.160 --> 00:22:26.739
+So that's why we have 10 as the output here,
+
+00:22:27.040 --> 00:22:31.369
+right? And then when you have the output from this XOR
+
+00:22:32.060 --> 00:22:34.630
+operation, you will do, OK.
+
+00:22:37.599 --> 00:22:42.540
+and you will do a key um ciphertext. So
+
+00:22:42.540 --> 00:22:47.270
+this key is a is a cipher table. When you
+
+00:22:47.270 --> 00:22:52.109
+have 10 as the input, you would check your
+
+00:22:52.109 --> 00:22:56.180
+cipher table. 10 will be encrypted into 11,
+
+00:22:56.390 --> 00:22:59.949
+OK, which is this third entry, a third entry here.
+
+00:23:00.729 --> 00:23:05.449
+So you can check this one, right? 10 will be
+
+00:23:05.449 --> 00:23:09.270
+encrypted into 11, which is why you get 11 here,
+
+00:23:09.729 --> 00:23:14.699
+right. And now you have this output. Remember the output will be given
+
+00:23:14.699 --> 00:23:19.579
+to the input for your next round, OK. So then
+
+00:23:19.920 --> 00:23:24.469
+you have this 11 XOR with 101.
+
+00:23:24.800 --> 00:23:29.599
+OK, 11 XR with the next round and next blocks plain
+
+00:23:29.599 --> 00:23:34.300
+text. So 01 XR is 11. Remember the same
+
+00:23:34.300 --> 00:23:39.099
+digit always output 0 and different digits will output a
+
+00:23:39.099 --> 00:23:42.579
+1, so which is why you got 10 at this time.
+
+00:23:42.729 --> 00:23:47.000
+So 11 and 01 you got 10
+
+00:23:47.400 --> 00:23:51.949
+because same digit gets a 0 and different digit gets a 1,
+
+00:23:52.219 --> 00:23:56.680
+right. So you've got 10 again, so you check with this cipher table,
+
+00:23:57.060 --> 00:24:01.760
+10 will be output 11 and 11 now is given
+
+00:24:01.760 --> 00:24:06.479
+to the next round. 11 and 10 XR,
+
+00:24:07.030 --> 00:24:11.520
+OK? If it's 11. Here
+
+00:24:11.520 --> 00:24:16.520
+and 10 x. Now remember the
+
+00:24:16.520 --> 00:24:20.400
+same digit gives 0 and different digit 10 gives 1.
+
+00:24:20.640 --> 00:24:25.479
+So which is why you have 01 here. So 01 you check the cipher
+
+00:24:25.479 --> 00:24:30.160
+table which is this line right 01 will be encrypted into
+
+00:24:30.160 --> 00:24:33.479
+10, which is why you have 10 here, right.
+
+00:24:33.670 --> 00:24:38.280
+So 10 will be given to the next round. And the 111 0
+
+00:24:38.280 --> 00:24:42.050
+XOR you got 01 OK, based on
+
+00:24:42.050 --> 00:24:46.229
+XOR's operation and then 01 you finally got
+
+00:24:46.449 --> 00:24:51.030
+10. OK, according to the cipher table, and then the
+
+00:24:51.030 --> 00:24:55.739
+cipher table, which is a reversed version of your cipher
+
+00:24:55.739 --> 00:25:00.540
+table which actually just show you, uh, when you got 00
+
+00:25:00.540 --> 00:25:03.750
+as output originally it should be a 11, right?
+
+00:25:04.030 --> 00:25:06.969
+When you got 00 as output originally it's,
+
+00:25:07.150 --> 00:25:11.849
+it comes from 11, right. 0011
+
+00:25:11.849 --> 00:25:16.770
+and 1100. So which is a reverse version of your cipher table.
+
+00:25:17.000 --> 00:25:21.180
+So that's the key here applied, OK, which is the cipher table
+
+00:25:21.760 --> 00:25:25.790
+and now you can also see the 01 originally it should be a 0
+
+00:25:25.790 --> 00:25:30.359
+001 it should be a 00. So which is this line it's a
+
+00:25:30.359 --> 00:25:34.849
+reversed one so it's got. 01 originally it should be
+
+00:25:34.849 --> 00:25:39.310
+00. OK, so decrypted into 00 because
+
+00:25:39.560 --> 00:25:44.209
+01 decrypted to be 00. OK, so which is just a reverse version,
+
+00:25:44.290 --> 00:25:49.170
+OK. Now how this decryption is working is
+
+00:25:49.170 --> 00:25:54.079
+we got to have the same IV again. Remember the same IV needs
+
+00:25:54.079 --> 00:25:58.930
+to be shared with the receiver. If the receiver doesn't have
+
+00:25:58.930 --> 00:26:01.810
+the same IV, the receiver can't do a proper decryption.
+
+00:26:02.510 --> 00:26:07.250
+So this is how it works. When you got the ciphertext
+
+00:26:07.469 --> 00:26:12.300
+transmitted to your receiver. And receiver
+
+00:26:12.300 --> 00:26:17.109
+again use. Firstly, use a key to
+
+00:26:17.109 --> 00:26:21.750
+do a decryption, right? When you got 11 as a
+
+00:26:21.750 --> 00:26:26.209
+ciphertext, you want to check the decipher table what's the original
+
+00:26:26.660 --> 00:26:30.989
+message for your 11. So 11 original should be
+
+00:26:30.989 --> 00:26:35.109
+10 according to this table again, 11 was
+
+00:26:35.109 --> 00:26:38.430
+from 10, that was from 10.
+
+00:26:40.630 --> 00:26:45.579
+So originally it should be 10 and then it will XOR here
+
+00:26:45.579 --> 00:26:50.479
+it will XOR with IV number. So XR with
+
+00:26:50.859 --> 00:26:55.420
+IV IV is 10 so that's 10 here. So that
+
+00:26:55.420 --> 00:26:59.640
+one when it XOR it generates
+
+00:27:00.020 --> 00:27:04.530
+00 OK, generates 00. And then remember
+
+00:27:04.920 --> 00:27:09.869
+when we do this decryption, we next, next block doesn't have
+
+00:27:09.869 --> 00:27:12.319
+to wait until the first block to finish.
+
+00:27:12.839 --> 00:27:17.660
+So it can do a decryption at the same time when you do this
+
+00:27:17.660 --> 00:27:21.800
+round of calculation. So because that 11
+
+00:27:22.079 --> 00:27:26.770
+here has already been given to the second round as the
+
+00:27:26.770 --> 00:27:31.099
+input here, so The second block
+
+00:27:31.439 --> 00:27:36.239
+starts starts with 11 and 11 here. When we check
+
+00:27:36.239 --> 00:27:41.140
+the table 11 is originally 10, so that's the same here,
+
+00:27:41.319 --> 00:27:45.010
+10, and you do XOR with the with the.
+
+00:27:45.699 --> 00:27:49.020
+Ciphertext of your previous block, right,
+
+00:27:49.380 --> 00:27:53.729
+so that's 11 xy with 10 and which gives a
+
+00:27:53.729 --> 00:27:58.540
+01, OK. And the third block, the same thing we have the third
+
+00:27:58.540 --> 00:28:03.099
+ciphertext which is 10 and we also according to
+
+00:28:03.099 --> 00:28:07.619
+10 deciphertex we check which is this line.
+
+00:28:08.020 --> 00:28:12.660
+10 original should be 01 and if you check 10 original should be the
+
+00:28:12.660 --> 00:28:16.020
+01 so there's a second line here in the cipher table.
+
+00:28:17.229 --> 00:28:22.020
+So original should be 01 and 01 XR with your your last
+
+00:28:22.020 --> 00:28:26.550
+block input which is 11 and you got 10 finally.
+
+00:28:26.819 --> 00:28:31.439
+So then you check all this deciphered or
+
+00:28:31.439 --> 00:28:35.770
+decrypted message which is exactly the same as your original message,
+
+00:28:36.910 --> 00:28:41.900
+right? So this is how decryption works and now I just want to
+
+00:28:41.900 --> 00:28:46.569
+um ask you one question. Do you see?
+
+00:28:47.680 --> 00:28:52.579
+And the decryption, can decryption be in parallel or
+
+00:28:52.579 --> 00:28:55.890
+in serial? Now you think about this question,
+
+00:28:56.170 --> 00:29:00.530
+right? So, does decryption has to be slow as
+
+00:29:00.530 --> 00:29:04.369
+encryption, or it can be done in parallel?
+
+00:29:06.500 --> 00:29:10.640
+The decryption process. So the
+
+00:29:10.640 --> 00:29:15.099
+decryption process actually can be done in parallel
+
+00:29:15.520 --> 00:29:19.520
+because we don't have to wait until the output
+
+00:29:20.079 --> 00:29:24.280
+to be given from your last round, right?
+
+00:29:24.599 --> 00:29:27.760
+So they can be done in parallel actually.
+
+00:29:28.000 --> 00:29:32.400
+So the decryption in CBC mode can be quick.
+
+00:29:32.640 --> 00:29:36.560
+However, the encryption has to be slow, right?
+
+00:29:36.800 --> 00:29:41.479
+So the CDC mode encryption is slow. Um, much slower than EB
+
+00:29:41.479 --> 00:29:46.260
+ECB mode, but Speed is A
+
+00:29:46.260 --> 00:29:51.219
+lot faster. Right? And another thing I want you
+
+00:29:51.219 --> 00:29:56.199
+to pay attention is the key, right? The key here must
+
+00:29:56.199 --> 00:30:01.079
+be shared securely, I mean secretly or safely.
+
+00:30:01.699 --> 00:30:06.260
+With the sender and receiver, right, the key must be the same,
+
+00:30:06.380 --> 00:30:09.900
+so it's two symmetric key encryption. When we talk about a symmetric key,
+
+00:30:09.979 --> 00:30:12.099
+we are talking about the key are the same,
+
+00:30:12.260 --> 00:30:14.859
+right? So the key is still the same, right?
+
+00:30:14.930 --> 00:30:19.260
+We've got to have the cipher table and decipher table which are the same,
+
+00:30:19.339 --> 00:30:24.180
+right? We know the same key is shared and for
+
+00:30:24.180 --> 00:30:28.500
+the CBC mode IV number needs to be.
+
+00:30:28.989 --> 00:30:33.550
+Known by the receiver as well. If the receiver doesn't have this
+
+00:30:33.550 --> 00:30:38.160
+IV number, and then the receiver wouldn't be able to
+
+00:30:38.160 --> 00:30:42.979
+decrypt the message properly. And now you can imagine how
+
+00:30:42.979 --> 00:30:47.670
+CBC is more secure than the ECB mode.
+
+00:30:47.869 --> 00:30:52.869
+Firstly, identical original message wouldn't have the identical
+
+00:30:52.869 --> 00:30:57.510
+output, right? That's for sure. And another thing is if we
+
+00:30:57.510 --> 00:31:01.989
+change IV number, OK, for the same message,
+
+00:31:02.300 --> 00:31:05.709
+the output will be totally different, right?
+
+00:31:05.910 --> 00:31:08.650
+So if you're using a different IV number.
+
+00:31:09.150 --> 00:31:13.959
+And the ciphertext will always be different compared
+
+00:31:13.959 --> 00:31:17.280
+with the different uh IV was used before,
+
+00:31:17.599 --> 00:31:21.660
+right? So, so this makes CBC mode
+
+00:31:22.160 --> 00:31:26.750
+um more secure, actually, because the IV
+
+00:31:26.750 --> 00:31:31.660
+number can um add some layer of security in those
+
+00:31:31.660 --> 00:31:35.689
+encryption. So changing the IV number. Um,
+
+00:31:35.709 --> 00:31:39.589
+and then we have made sure the encryption message won't be the same.
+
+00:31:39.869 --> 00:31:44.849
+No, so it. It, it itself um
+
+00:31:45.189 --> 00:31:49.579
+can prevent that replay attack, replay attack,
+
+00:31:49.829 --> 00:31:54.609
+right? So, um Of course, um,
+
+00:31:54.660 --> 00:31:57.699
+yeah, I mean, I mean, for, for this CBC mode.
+
+00:31:58.920 --> 00:32:03.079
+However, we have to guarantee the IV number has to be really,
+
+00:32:03.199 --> 00:32:07.880
+really, um, safely shared between the sender and
+
+00:32:07.880 --> 00:32:10.550
+receiver. Otherwise, the receiver won't,
+
+00:32:10.790 --> 00:32:13.550
+won't be able to, if he only has the key,
+
+00:32:13.599 --> 00:32:18.579
+he doesn't have the IV number, and then this receiver can't decrypt the message,
+
+00:32:19.079 --> 00:32:23.699
+right? So that's the CBC mode. So, that's
+
+00:32:23.699 --> 00:32:28.520
+why I, I just draw this one so to emphasize how important
+
+00:32:28.520 --> 00:32:33.339
+this IV number is, but also we have to guarantee there's a way to share
+
+00:32:33.339 --> 00:32:37.650
+this IV number very uh securely, OK, in
+
+00:32:37.650 --> 00:32:41.630
+reality, otherwise. It, it, it can't, it,
+
+00:32:41.800 --> 00:32:46.119
+the symmetric encryption can't, can't do any like
+
+00:32:46.119 --> 00:32:50.459
+confidentiality, um, sharing, right? OK,
+
+00:32:51.000 --> 00:32:54.439
+so there are different modes, and in my learning activity,
+
+00:32:54.479 --> 00:32:59.119
+I also put some output feedback mode and then they're just people are
+
+00:32:59.119 --> 00:33:03.959
+using a way to design this process so that they have different mode
+
+00:33:03.959 --> 00:33:08.520
+encryption and then decryption and then All of
+
+00:33:08.520 --> 00:33:13.040
+them works right, and all of them having different advantage and disadvantages.
+
+00:33:13.199 --> 00:33:16.130
+Some of them may be faster and some may be slower,
+
+00:33:16.400 --> 00:33:20.030
+but most of them are all based on bitwise operation,
+
+00:33:20.969 --> 00:33:24.849
+right, and combine this key cipher table and together,
+
+00:33:25.079 --> 00:33:30.060
+so they are all different modes. But then if we only do just the one
+
+00:33:30.060 --> 00:33:35.060
+time of this bitwise operation. If the IV number or
+
+00:33:35.060 --> 00:33:39.020
+the key, the single key and IV number were disclosed,
+
+00:33:39.089 --> 00:33:42.400
+and then this makes the symmetric encryption not safe at all,
+
+00:33:42.829 --> 00:33:46.900
+and there is no secrecy guaranteed by this mode.
+
+00:33:47.180 --> 00:33:52.099
+So that's why people actually design some standard which makes
+
+00:33:52.099 --> 00:33:57.030
+this bitwise based operation. A, uh, I mean,
+
+00:33:57.140 --> 00:34:00.609
+a very, very complicated process. So this is how they make,
+
+00:34:00.910 --> 00:34:05.250
+right? So this is a DEX and data encryption standard,
+
+00:34:05.760 --> 00:34:07.910
+which actually was designed, um, I mean,
+
+00:34:08.030 --> 00:34:12.399
+more than 50 years ago. And people found only to just do once,
+
+00:34:12.750 --> 00:34:17.489
+um, bid wise, which is not safe at all. Because the key can be
+
+00:34:17.489 --> 00:34:20.689
+easily probably cracked, and those IV number,
+
+00:34:20.810 --> 00:34:24.989
+which won't be very long and can be stolen in some sense,
+
+00:34:25.209 --> 00:34:27.790
+and that, that's why people are doing this,
+
+00:34:27.969 --> 00:34:32.129
+OK, standard to make it, to make the whole process very complicated.
+
+00:34:32.600 --> 00:34:37.120
+I just want to, uh, I, I don't want you to memorize anything of this,
+
+00:34:37.239 --> 00:34:40.310
+but just to understand how people make it complicated.
+
+00:34:40.610 --> 00:34:45.290
+You can see original input. Uh, long message was chopped into
+
+00:34:45.290 --> 00:34:49.590
+64 bits, OK, and then they will do a,
+
+00:34:50.149 --> 00:34:54.739
+um. Left 32 bits and right 32 bits
+
+00:34:55.079 --> 00:34:59.999
+and then left 32 bits will be output here directly but right
+
+00:34:59.999 --> 00:35:04.868
+32 bits will be applied by a key right and then by some function,
+
+00:35:04.878 --> 00:35:09.499
+the function can be some shifting, OK, to the left to some positions
+
+00:35:09.799 --> 00:35:14.678
+and then, and then applied by a key after shifting and then the output
+
+00:35:14.678 --> 00:35:19.260
+will be bitwise XOR. With left 32 bits
+
+00:35:19.639 --> 00:35:24.379
+and then this output will be given to the right and this right
+
+00:35:24.379 --> 00:35:29.000
+is given to the left and they swap the position and the right 32
+
+00:35:29.000 --> 00:35:33.760
+bits is doing the same um operation as
+
+00:35:33.760 --> 00:35:38.639
+we did before for the originally right position so that's uh
+
+00:35:38.639 --> 00:35:43.199
+from left, right. So that operation was done by a different
+
+00:35:43.199 --> 00:35:48.050
+key in um in this K2. And then that
+
+00:35:48.050 --> 00:35:52.770
+output is bitwise XOR with left again and
+
+00:35:52.770 --> 00:35:57.330
+then we swap, OK, we swap swap. So there are
+
+00:35:57.330 --> 00:36:02.290
+16 rounds of this swapping and XOR operation,
+
+00:36:02.570 --> 00:36:07.050
+right, 16 rounds, and in each round key is different,
+
+00:36:07.370 --> 00:36:12.179
+key is different. And then, so this is one single
+
+00:36:12.179 --> 00:36:15.060
+death, DES operation.
+
+00:36:16.739 --> 00:36:21.379
+Um, so the output. Of course, the people found that that is not
+
+00:36:21.379 --> 00:36:25.399
+safe anymore. And that's why people actually
+
+00:36:26.219 --> 00:36:31.139
+designed the triple decks. So which is to apply that 3
+
+00:36:31.139 --> 00:36:35.810
+times, 3 times in this picture. OK, so in this picture,
+
+00:36:35.959 --> 00:36:40.199
+each K1 here is a set of 16 keys. OK,
+
+00:36:40.600 --> 00:36:44.399
+16 keys in here and another 16 keys,
+
+00:36:45.520 --> 00:36:50.479
+another 16 keys, right? So this is a triple deck and
+
+00:36:50.479 --> 00:36:54.219
+now you can imagine with the de itself, it,
+
+00:36:54.399 --> 00:36:56.879
+it's quite complicated already, right? So it,
+
+00:36:56.959 --> 00:37:01.870
+it, it, it's not like very fast. Because we have
+
+00:37:01.870 --> 00:37:06.820
+to always do this, um, permutation and XLR
+
+00:37:06.820 --> 00:37:09.860
+in each round and we have to go through 16 rounds.
+
+00:37:10.229 --> 00:37:14.620
+And for triple death, we have to do 48 rounds,
+
+00:37:14.709 --> 00:37:18.100
+OK, if we do that, OK, the whole triple times together.
+
+00:37:19.149 --> 00:37:23.729
+So the time-wise, the speed wise, the triple death must be
+
+00:37:24.179 --> 00:37:28.010
+a lot slower than that because it has to do with that 3 times.
+
+00:37:28.719 --> 00:37:31.379
+And then people found, oh, it's too slow.
+
+00:37:31.719 --> 00:37:36.139
+Of course, it's a lot safer than death, and death has been corrected,
+
+00:37:36.169 --> 00:37:40.780
+but the triple deaths is um Yeah, it, it's
+
+00:37:40.780 --> 00:37:45.699
+still, it's still regarded as a relatively safe standard,
+
+00:37:45.820 --> 00:37:49.260
+but it also has the risk to be uh cracked,
+
+00:37:49.500 --> 00:37:52.739
+right? So which is why people developed AES,
+
+00:37:52.939 --> 00:37:57.120
+which is Advanced Encryption Standard, Advanced Encryption Standard,
+
+00:37:57.739 --> 00:38:00.219
+um, that was developed by this person. So it's,
+
+00:38:00.419 --> 00:38:05.310
+it also has another name, right? AES. Because people are not
+
+00:38:05.310 --> 00:38:07.989
+satisfied with the speed of that triple that,
+
+00:38:08.189 --> 00:38:11.419
+so people want a faster encryption standard.
+
+00:38:11.750 --> 00:38:16.629
+So that's why people designed this AES and also to make it
+
+00:38:16.629 --> 00:38:20.449
+stronger, make it more safe, right? Than that,
+
+00:38:20.570 --> 00:38:23.679
+than triple that and also make it faster,
+
+00:38:23.969 --> 00:38:28.429
+OK, do not just do this round, I mean, again and again,
+
+00:38:28.530 --> 00:38:33.489
+right? So they use uh another standard, so AES and
+
+00:38:33.489 --> 00:38:36.449
+so here is just a, a glance for, I mean,
+
+00:38:36.530 --> 00:38:41.449
+just a simple view, uh, which was from old Cisco encryption but which
+
+00:38:41.449 --> 00:38:46.449
+shows how Um, this AES and compared with DES and
+
+00:38:46.449 --> 00:38:51.169
+triple DES, a very simple view for you to see why people are moving from
+
+00:38:51.169 --> 00:38:54.590
+DES and to triple DES and, and then AES,
+
+00:38:55.090 --> 00:38:58.610
+right? So there are different key size and bits.
+
+00:38:58.889 --> 00:39:02.370
+Of course, the longer key, uh, make it stronger,
+
+00:39:02.719 --> 00:39:07.300
+hm, but you Of course, may, may affect the speed a bit,
+
+00:39:07.949 --> 00:39:12.760
+right? So, but of course this AES has been a lot quicker
+
+00:39:12.760 --> 00:39:17.500
+than that and triple that, right? So the time to crack,
+
+00:39:17.639 --> 00:39:22.439
+of course, this was based on an old computer and now it may not need that
+
+00:39:22.439 --> 00:39:25.270
+many years, especially with a quantum computer,
+
+00:39:25.600 --> 00:39:29.850
+right? It may. Um, be less time, but still relatively,
+
+00:39:29.959 --> 00:39:34.580
+people still use AES a lot and still consider that one is a
+
+00:39:35.000 --> 00:39:38.560
+quite safe standard in our, uh, community.
+
+00:39:38.879 --> 00:39:42.520
+So we still use that AES a lot. And of course,
+
+00:39:42.669 --> 00:39:47.479
+it outperforms triple DES in security-wise.
+
+00:39:47.879 --> 00:39:50.659
+So that's why when you look at your router,
+
+00:39:51.969 --> 00:39:56.100
+and their option for you to choose for the encryption algorithm and AES or triple DES,
+
+00:39:56.520 --> 00:40:01.310
+um, now you understand. There's no doubt if you have
+
+00:40:01.310 --> 00:40:06.159
+the option, you should choose AES rather than triple DES that give you the fastest
+
+00:40:06.159 --> 00:40:11.000
+speed and also give you better protection for your um communication
+
+00:40:11.000 --> 00:40:15.679
+online, right? OK. So that's a for comparison and
+
+00:40:15.679 --> 00:40:20.239
+you see the general um pre uh I mean
+
+00:40:20.239 --> 00:40:24.919
+invention time. And then you can see all of
+
+00:40:24.919 --> 00:40:29.679
+them are symmetric cipher, which means you have to find a way to share the
+
+00:40:29.679 --> 00:40:34.239
+key. And if IV number is used, then you have to share the IV number as
+
+00:40:34.239 --> 00:40:38.189
+well, and then the block size and, and how many rounds,
+
+00:40:38.300 --> 00:40:43.120
+and that's 16 and that's 48, right? And the speed which is slow and very
+
+00:40:43.120 --> 00:40:48.090
+slow and fast, and security wise, it has different uh option,
+
+00:40:48.560 --> 00:40:52.239
+uh property there. So these are the application.
+
+00:40:52.659 --> 00:40:55.770
+OK, we are using the symmetric crypto.
+
+00:40:57.070 --> 00:41:00.729
+Um, of course, people talk about asymmetric a lot,
+
+00:41:00.810 --> 00:41:05.550
+but which doesn't mean asymmetric can replace symmetric because symmetric
+
+00:41:05.810 --> 00:41:09.250
+still works very fast compared with asymmetric.
+
+00:41:10.570 --> 00:41:15.129
+The reason why symmetric crypto was based on bit-wise,
+
+00:41:15.290 --> 00:41:19.320
+OK, bit-wise calculation. Although there's a lot of rounds to go,
+
+00:41:19.570 --> 00:41:22.790
+but still based on bit-wise, but for asymmetric,
+
+00:41:23.020 --> 00:41:27.449
+you will learn next week, which was based on exponential calculation,
+
+00:41:27.729 --> 00:41:31.449
+OK, multiplication, right, multiple times and to the number of power,
+
+00:41:31.610 --> 00:41:34.870
+some power number. And which makes it slower,
+
+00:41:35.120 --> 00:41:39.810
+a lot slower than symmetric, which is why symmetric crypto
+
+00:41:39.810 --> 00:41:43.810
+algorithms are widely used in
+
+00:41:44.899 --> 00:41:48.989
+Keeping this confidentiality. You can see from the internet,
+
+00:41:49.139 --> 00:41:53.060
+secure communication, file encryption, decryption,
+
+00:41:53.389 --> 00:41:58.260
+and server data encryption, right? And when you
+
+00:41:58.260 --> 00:42:03.189
+go online, you want to browse something securely and fastly and
+
+00:42:03.189 --> 00:42:06.120
+all those symmetric crypto were used behind.
+
+00:42:06.459 --> 00:42:11.080
+And then the bank sector payment application and all this
+
+00:42:11.419 --> 00:42:16.050
+um protocol. They actually are using this symmetric a
+
+00:42:16.050 --> 00:42:18.350
+lot, right, so that's their application.
+
+00:42:19.250 --> 00:42:23.590
+However, with symmetric, it only guarantees confidentiality
+
+00:42:23.929 --> 00:42:28.639
+itself, OK, itself, but if you combine that symmetric with something else,
+
+00:42:28.689 --> 00:42:31.790
+you might have the other security goal achieved,
+
+00:42:32.169 --> 00:42:35.600
+right? And also you need to make sure the security key,
+
+00:42:35.659 --> 00:42:38.800
+OK, in symmetric crypto is securely exchanged.
+
+00:42:39.219 --> 00:42:43.209
+So if key got disclosed, and there's no secrecy at all,
+
+00:42:43.389 --> 00:42:48.179
+right? And for CBC mode, um, IV number also
+
+00:42:48.179 --> 00:42:51.100
+needs to be exchanged securely. And then,
+
+00:42:51.149 --> 00:42:56.030
+but there are some scenario as we as we explained at the
+
+00:42:56.030 --> 00:42:59.580
+beginning, and we want to have authenticity,
+
+00:42:59.790 --> 00:43:03.590
+we want to have the integrity, we want to have the non-repudiation,
+
+00:43:03.709 --> 00:43:08.479
+right? And what should we do, right? The symmetric
+
+00:43:08.479 --> 00:43:11.830
+itself doesn't solve any of this issue, OK?
+
+00:43:11.929 --> 00:43:14.699
+It doesn't get any of this goal achieved.
+
+00:43:15.080 --> 00:43:20.000
+So we got to find something else to be added to this symmetric so that
+
+00:43:20.000 --> 00:43:22.780
+we have some better protection for our system,
+
+00:43:23.320 --> 00:43:26.479
+right? And for symmetric key encryption,
+
+00:43:26.600 --> 00:43:30.500
+there is also an issue, which is key exhaustion.
+
+00:43:31.159 --> 00:43:35.840
+Here's what I mean here, right? So, if, for example,
+
+00:43:35.959 --> 00:43:40.199
+we want to, uh, we want to have this two party to
+
+00:43:40.199 --> 00:43:44.399
+secretly talk to each other, we got to make sure they have one key,
+
+00:43:44.600 --> 00:43:48.040
+right? And then if there's a third party,
+
+00:43:48.659 --> 00:43:51.959
+and the C and A, they want to discuss secretly,
+
+00:43:52.020 --> 00:43:57.020
+and B and C, they also want to have another secret conversation and then
+
+00:43:57.020 --> 00:44:00.179
+a different key, OK? There are 3 keys needed,
+
+00:44:00.340 --> 00:44:04.939
+right, by each two parties. If there are 44 parties
+
+00:44:04.939 --> 00:44:09.389
+here, right? And then so D and A needs to have
+
+00:44:09.389 --> 00:44:13.419
+one key, which is different from other keys.
+
+00:44:13.989 --> 00:44:17.830
+DB has to have one, DC has to have one, right?
+
+00:44:18.189 --> 00:44:22.659
+So, in total, there are 6 keys for 6, for,
+
+00:44:23.030 --> 00:44:27.590
+for 4 parties here, right? If there are 5
+
+00:44:27.590 --> 00:44:31.969
+parties and each 2 parties want to um
+
+00:44:32.570 --> 00:44:36.239
+I mean, have a secret conversation. How many keys do we need?
+
+00:44:36.610 --> 00:44:41.360
+We need 10 keys in total, which actually equals this
+
+00:44:41.360 --> 00:44:45.560
+number. Um, 5 parties times
+
+00:44:45.790 --> 00:44:50.389
+4 divided by 2, which is 10 in total. So
+
+00:44:50.850 --> 00:44:55.459
+that formula give us, give us when we have n parties,
+
+00:44:55.729 --> 00:45:00.250
+and in this N parties, we want every two parties to have a secret
+
+00:45:00.250 --> 00:45:04.899
+communication. Right, and then we need that number
+
+00:45:04.899 --> 00:45:08.379
+of keys. Right, we need that number of keys.
+
+00:45:08.689 --> 00:45:13.620
+So this makes this scenario not, um, the symmetric not scalable
+
+00:45:13.620 --> 00:45:18.620
+to this scenario, right? So you got to find that number of keys and
+
+00:45:18.620 --> 00:45:22.739
+also remember you got to find someone which can
+
+00:45:22.739 --> 00:45:27.560
+securely, um I'm sorry, securely. Share the
+
+00:45:27.560 --> 00:45:31.959
+key between each two parties and there must be some
+
+00:45:32.479 --> 00:45:36.870
+key distribution center right and there is some uh original
+
+00:45:37.600 --> 00:45:42.199
+architecture or protocol they actually apply the key distribution center but
+
+00:45:42.199 --> 00:45:45.250
+that's under the assumption there is one,
+
+00:45:45.530 --> 00:45:48.540
+right, but who can be that key distribution center.
+
+00:45:49.250 --> 00:45:53.620
+Right? And whether it's government or whether it's a
+
+00:45:53.620 --> 00:45:57.949
+trustworthy um party, big company,
+
+00:45:58.639 --> 00:46:03.280
+Anyway, we have to find the one, right, to oversee all parties'
+
+00:46:03.280 --> 00:46:05.949
+communication and distribute those keys.
+
+00:46:06.199 --> 00:46:10.419
+And what if that trustworthy um external party,
+
+00:46:10.899 --> 00:46:15.780
+um, has all the key and he can also hear all
+
+00:46:15.780 --> 00:46:19.060
+your conversation, right, clearly, because he has all the keys,
+
+00:46:19.139 --> 00:46:23.600
+right? Those are the symmetric key. Remember that the same key can be
+
+00:46:23.899 --> 00:46:27.500
+done for the encryption and can also be used for decryption,
+
+00:46:27.580 --> 00:46:32.090
+right? So there's another party which oversee all
+
+00:46:32.090 --> 00:46:36.459
+this conversation, right? So, so it's not
+
+00:46:36.459 --> 00:46:41.199
+applicable, right, in the reality. So why Why,
+
+00:46:42.209 --> 00:46:45.689
+yeah, we have, have probably run out of key,
+
+00:46:45.850 --> 00:46:50.840
+right? And then we also have to guarantee there is someone who can generate those keys to distribute
+
+00:46:50.840 --> 00:46:55.570
+to each party safely, right? So this makes this symmetric
+
+00:46:55.570 --> 00:46:59.969
+encryption, um, not applicable to many cases.
+
+00:47:01.300 --> 00:47:05.830
+And then you can also imagine we have eBay and Amazon nowadays,
+
+00:47:05.909 --> 00:47:10.310
+right? And in those um online shopping scenario,
+
+00:47:10.699 --> 00:47:15.550
+if we have millions of customers, and if Amazon wants to talk
+
+00:47:15.550 --> 00:47:20.360
+to each of his customers securely, secretly,
+
+00:47:20.510 --> 00:47:25.169
+right? Amazon has to generate one key for his customer,
+
+00:47:25.209 --> 00:47:28.979
+which where the key must be different from other customers.
+
+00:47:29.409 --> 00:47:33.830
+So that means Amazon has to maintain millions of millions of
+
+00:47:34.540 --> 00:47:37.750
+Encryption key and decryptate the, the symmetric key,
+
+00:47:37.830 --> 00:47:42.669
+right? So Amazon has to generate that millions of keys for
+
+00:47:42.669 --> 00:47:46.810
+his customer to use, right? So which makes that
+
+00:47:47.469 --> 00:47:51.870
+not um symmetric key encryption here, not
+
+00:47:51.870 --> 00:47:56.389
+scalable and not say, not, not, not
+
+00:47:56.389 --> 00:47:59.379
+actually um applicable to the cases here,
+
+00:47:59.709 --> 00:48:03.550
+right? And if we only have the symmetric key encryption.
+
+00:48:04.050 --> 00:48:07.919
+Uh, and then we probably won't have eBay or Amazon.
+
+00:48:08.989 --> 00:48:13.770
+Nowadays, right, so only after people have found a way to use
+
+00:48:13.770 --> 00:48:18.429
+asymmetric, asymmetric, which means encryption key and decryption key are
+
+00:48:18.429 --> 00:48:22.939
+different, and then people found um. Amazon
+
+00:48:22.939 --> 00:48:27.540
+and eBay, they are boosting. OK, they, they have been such a
+
+00:48:27.540 --> 00:48:31.679
+big company having millions of the customers,
+
+00:48:31.959 --> 00:48:36.840
+OK, because asymmetric key, asymmetric crypto has been
+
+00:48:36.840 --> 00:48:41.280
+developed. OK, uh, about 20 years ago. Otherwise,
+
+00:48:41.429 --> 00:48:46.419
+people found there's no way, right, to have the current nowadays,
+
+00:48:46.489 --> 00:48:51.360
+Amazon or eBay. So that's why, um, we will also focus
+
+00:48:51.360 --> 00:48:55.840
+on asymmetric next week and we'll talk about how asymmetric
+
+00:48:55.840 --> 00:49:00.750
+encryption and decryption is working. And I've already made a pre-lecture
+
+00:49:00.750 --> 00:49:05.479
+recording uh for RSA DDH algorithm available.
+
+00:49:05.600 --> 00:49:10.360
+So if you got time, please do watch them before my next lecture
+
+00:49:10.360 --> 00:49:13.780
+because in my next lecture, I'll focus on the application.
+
+00:49:14.000 --> 00:49:18.919
+I won't discuss how those algorithm works uh one more time in my lecture
+
+00:49:18.919 --> 00:49:23.159
+because we will run out of time. So that's about next week.
+
+00:49:23.560 --> 00:49:28.379
+And then you will now, you will then learn how those different um
+
+00:49:28.600 --> 00:49:33.159
+encryption way in asymmetric crypto can work
+
+00:49:33.159 --> 00:49:36.860
+better to keep the authenticity
+
+00:49:37.199 --> 00:49:41.699
+and um yeah, combined with some other algorithm integrating as well.
+
+00:49:41.989 --> 00:49:46.439
+And then also non-repudiation, OK? That's how asymmetric
+
+00:49:46.439 --> 00:49:50.639
+encryption can help, OK? These are all the
+
+00:49:51.080 --> 00:49:54.520
+algorithm which were based on Asymmetric.
+
+00:49:54.760 --> 00:49:59.479
+OK, so in asymmetric there is no key distribution center
+
+00:49:59.479 --> 00:50:02.989
+needed as what we need for symmetric, right,
+
+00:50:03.219 --> 00:50:08.040
+and scalable to any size of network, which is why we
+
+00:50:08.040 --> 00:50:11.040
+have eBay and Amazon in such a big scale,
+
+00:50:11.320 --> 00:50:14.239
+right? And the keys for encryption and decryption are different,
+
+00:50:14.429 --> 00:50:17.540
+OK, so that's what we will learn next week.
+
+00:50:18.620 --> 00:50:21.540
+OK. So that's all for today. Um, thank you.
+
+00:50:21.659 --> 00:50:26.580
+If you do have any other questions, you can stay in this room or if you pop up
+
+00:50:26.580 --> 00:50:29.800
+with some questions later, you can always use Teams to discuss.
+
+00:50:31.219 --> 00:50:34.229
+And we'll learn more, OK, in the workshop,
+
+00:50:34.290 --> 00:50:38.439
+you'll also get to practice all this uh encryption and decryption algorithm,
+
+00:50:38.979 --> 00:50:42.719
+OK. Uh, we do have a quiz this week, um,
+
+00:50:43.419 --> 00:50:48.310
+so the access code. It will be given in your workshop.
+
+00:50:48.429 --> 00:50:50.469
+If you didn't attend the workshop, I'll,
+
+00:50:50.629 --> 00:50:54.469
+I'll make an announcement with an access code online.
+
+00:50:54.629 --> 00:50:58.090
+So, and also attached to your actual quiz,
+
+00:50:58.189 --> 00:51:01.290
+so you can get the access code and you can do your quiz.
+
+00:51:01.790 --> 00:51:04.889
+But just some reminder, um, if you're not ready,
+
+00:51:05.229 --> 00:51:08.770
+do not open your quiz yet and try practice a bit more,
+
+00:51:08.870 --> 00:51:13.790
+um, with our workshop activity. And then you move to a quiz,
+
+00:51:13.909 --> 00:51:17.949
+you all have just one attempt, um, but each attempt,
+
+00:51:18.070 --> 00:51:22.050
+I mean, your, your attempt, your only attempt will have 3 hours.
+
+00:51:22.510 --> 00:51:25.830
+So you can go through it. It's the time wise it's more than enough.
+
+00:51:25.909 --> 00:51:29.229
+It's just a few questions in your quiz. But yeah,
+
+00:51:29.310 --> 00:51:33.989
+in those 3 hours, you, you better like do some practice and finish all
+
+00:51:33.989 --> 00:51:37.649
+those questions, OK, in one go, everyone just has 1 attempt.
+
+00:51:37.949 --> 00:51:39.310
+OK? Thank you.
+

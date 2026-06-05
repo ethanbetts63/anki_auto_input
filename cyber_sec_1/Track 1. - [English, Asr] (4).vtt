@@ -1,0 +1,2153 @@
+WEBVTT
+
+00:00:00.009 --> 00:00:04.940
+OK. So I think you can see my screen, right?
+
+00:00:05.260 --> 00:00:10.100
+And you can see this announcement. I've also put through the Canvas announcement and you
+
+00:00:10.100 --> 00:00:14.579
+should receive an email about this announcement and then which is about your
+
+00:00:14.579 --> 00:00:19.299
+Azure VM account. So if you haven't got your Azure VM account,
+
+00:00:19.420 --> 00:00:24.399
+please write to um Xiao Qing here and then
+
+00:00:24.399 --> 00:00:29.149
+with this subject so that we will collect all the late enrolled
+
+00:00:29.149 --> 00:00:34.099
+student information together, um. And then we can recreate another um
+
+00:00:35.099 --> 00:00:40.000
+bunch of accounts, OK. So, but, I think
+
+00:00:40.000 --> 00:00:44.150
+if you enroll before last Thursday, you should have um got the,
+
+00:00:44.209 --> 00:00:48.470
+um, got the invitation. So please just register your account,
+
+00:00:48.909 --> 00:00:53.880
+and then that should be OK, um, for you to start your
+
+00:00:53.880 --> 00:00:57.159
+week two workshop, OK, to do some practice.
+
+00:00:58.080 --> 00:01:00.659
+Now today we will talk about cyberattacks.
+
+00:01:01.569 --> 00:01:06.000
+Um, and our product recording, um, if you have watched,
+
+00:01:06.370 --> 00:01:10.949
+um, we have talked about software threats and network
+
+00:01:10.949 --> 00:01:15.800
+attacks, right? Um, but if you haven't watched for this week,
+
+00:01:15.849 --> 00:01:20.750
+it's OK, but I hope in the future weeks because the pre-lec recording,
+
+00:01:20.769 --> 00:01:23.489
+uh, meant to be watched before the lecture,
+
+00:01:23.800 --> 00:01:27.989
+because I may just introduce some, um, some
+
+00:01:29.169 --> 00:01:34.050
+Some, some applications based on those algorithms already included in
+
+00:01:34.050 --> 00:01:38.309
+my product recording. Otherwise, when you didn't watch your product recording,
+
+00:01:38.569 --> 00:01:41.889
+watch, or you, you come to my lecture directly,
+
+00:01:42.129 --> 00:01:45.750
+you may find, oh you, you, you, you, you get lost.
+
+00:01:46.010 --> 00:01:50.970
+OK. But for this week, it's OK because these are just parallel content and
+
+00:01:50.970 --> 00:01:55.769
+which doesn't really interconnect with um It
+
+00:01:55.769 --> 00:02:00.379
+has too much. So if you haven't watched and watched after this lecture.
+
+00:02:01.120 --> 00:02:04.190
+And we have talked about software threats and network attacks.
+
+00:02:04.480 --> 00:02:09.199
+And today we'll focus on web attacks and hardware threats.
+
+00:02:09.559 --> 00:02:14.479
+OK? So the objective for this week's study is to understand all
+
+00:02:14.479 --> 00:02:18.820
+different types of cyberattacks and understand how those happen.
+
+00:02:19.199 --> 00:02:23.880
+And, of course, some, some strategy to defend
+
+00:02:23.880 --> 00:02:28.210
+these attacks, OK? So this is about brief history,
+
+00:02:28.389 --> 00:02:33.330
+about all these cyber attacks. So the very early
+
+00:02:33.789 --> 00:02:38.410
+one is, yeah, can be that early. So that's a whistle.
+
+00:02:38.710 --> 00:02:43.429
+Um, the people use the high tone from the whistle to get long
+
+00:02:43.429 --> 00:02:48.050
+distance free call, OK, back to 1971.
+
+00:02:48.440 --> 00:02:53.110
+Um Of course, very special high tone, OK,
+
+00:02:53.229 --> 00:02:56.770
+from that whistle. So that's a very, very first,
+
+00:02:57.229 --> 00:03:01.830
+um, I mean, form of this cyberattack through this
+
+00:03:01.830 --> 00:03:06.830
+telecommunication network, right? And then the very
+
+00:03:06.830 --> 00:03:09.990
+well known one should be this Morris worm,
+
+00:03:10.190 --> 00:03:14.910
+Morris worm, which was created by a student in that time.
+
+00:03:15.389 --> 00:03:20.309
+And then now that very first piece of worm has been stored in the
+
+00:03:20.309 --> 00:03:25.190
+um museum in America, right? Um, and
+
+00:03:25.190 --> 00:03:29.470
+it has been, um, I think with that one, it has
+
+00:03:29.470 --> 00:03:34.309
+actually infected, um, 2000 Unix
+
+00:03:34.309 --> 00:03:38.330
+machine, OK, within 15 hours after it's launched.
+
+00:03:38.770 --> 00:03:43.649
+Right. So this is about that time and all these popular names you
+
+00:03:43.649 --> 00:03:48.520
+may have heard, and I myself actually was infected
+
+00:03:48.520 --> 00:03:52.869
+by this one, back to my university period.
+
+00:03:53.289 --> 00:03:58.289
+I've got this one infected in my computer and also some of
+
+00:03:58.289 --> 00:04:02.740
+my classmates also got that infection through this email,
+
+00:04:02.889 --> 00:04:06.199
+um, transmission. I mean, I mean, um.
+
+00:04:07.500 --> 00:04:11.550
+So email attachment, right? Um,
+
+00:04:12.210 --> 00:04:17.130
+And we probably will talk about the dirty cow at a later stage and how
+
+00:04:17.130 --> 00:04:21.320
+that happens and how bleed is relevant to some internet protocol,
+
+00:04:21.700 --> 00:04:24.230
+right? And then you can see those things,
+
+00:04:24.450 --> 00:04:28.929
+uh, while those things happens, right? And shellshock,
+
+00:04:29.140 --> 00:04:31.829
+yeah, again, it's very relevant to software,
+
+00:04:32.010 --> 00:04:36.230
+uh, malware type of thing, so it's just that because of some uh
+
+00:04:36.230 --> 00:04:41.149
+scripts which were not maintained very well and then that caused big issue,
+
+00:04:41.769 --> 00:04:46.320
+right? So which is why the software security itself um can
+
+00:04:46.320 --> 00:04:51.230
+be a course which is very heavily reliant on your programming
+
+00:04:51.230 --> 00:04:56.000
+uh skill. And then if you know how to sanitize your code and you
+
+00:04:56.000 --> 00:05:00.309
+will avoid all those problems. OK. But those attacks,
+
+00:05:00.390 --> 00:05:03.739
+OK, those malware actually were created because of the,
+
+00:05:04.359 --> 00:05:09.200
+some simple, um, scripts issue, OK. So this is
+
+00:05:09.200 --> 00:05:13.160
+a very popular. Um, different types of malware.
+
+00:05:13.359 --> 00:05:16.899
+Malware is actually short for malicious software,
+
+00:05:17.250 --> 00:05:21.779
+and then there are different types which are all relying on this,
+
+00:05:22.160 --> 00:05:26.739
+this software, um, code, code. And then,
+
+00:05:26.940 --> 00:05:31.630
+so we have the, these popular names and then we just simply
+
+00:05:31.630 --> 00:05:35.140
+go through all of them. Um, maybe you can have a read,
+
+00:05:35.320 --> 00:05:40.320
+maybe when you have time, um. Uh, yeah, I won't probably just
+
+00:05:40.320 --> 00:05:45.079
+read them, uh, out, and you can watch these words by yourself.
+
+00:05:45.200 --> 00:05:49.339
+And interestingly, we have talked about the Trojan horse in our,
+
+00:05:49.720 --> 00:05:52.950
+um, production recording, and spyware can be,
+
+00:05:53.200 --> 00:05:57.299
+um, a particular type and also otherware can be a particular type which,
+
+00:05:57.760 --> 00:06:00.640
+uh, belongs to this Trojan horse, right?
+
+00:06:00.970 --> 00:06:04.489
+And then the spyware, which is to spy on people,
+
+00:06:04.630 --> 00:06:09.390
+the people's behavior, and may spy on their keystroke,
+
+00:06:09.730 --> 00:06:13.880
+um, and other covert, covered, um, payloads.
+
+00:06:14.320 --> 00:06:18.589
+The other, otherware is especially targeted at some advertising.
+
+00:06:19.350 --> 00:06:23.100
+And track users' behavior so that they can do more
+
+00:06:23.700 --> 00:06:28.559
+targeted um analysis and advertising so that the person will
+
+00:06:28.559 --> 00:06:33.359
+always be tricked to do something because um this adware has already
+
+00:06:33.359 --> 00:06:37.920
+analyzed that person and know that person very well and know what kind
+
+00:06:37.920 --> 00:06:40.869
+of particular product he would be interested,
+
+00:06:41.190 --> 00:06:44.750
+right? So we call that adware. And then there's a keylogger,
+
+00:06:44.980 --> 00:06:47.880
+um, especially targeted at the keystroke,
+
+00:06:48.220 --> 00:06:50.920
+right, in the software. And then, then they can,
+
+00:06:51.579 --> 00:06:56.079
+once your computer is infected, your computer's key,
+
+00:06:56.489 --> 00:07:00.489
+um, behavior will all be recognized and remembered,
+
+00:07:00.779 --> 00:07:03.920
+and then your credit card and password information will be,
+
+00:07:04.220 --> 00:07:08.709
+um, stolen and by those keylogger uh malware.
+
+00:07:08.980 --> 00:07:13.470
+And botnet is a Is some software robot which
+
+00:07:13.470 --> 00:07:17.929
+can control a group of computers, uh, and then launch
+
+00:07:19.040 --> 00:07:23.589
+large payload so that to create burden to a particular
+
+00:07:23.589 --> 00:07:27.529
+computer. And then if that computer, computer is a server,
+
+00:07:28.029 --> 00:07:32.220
+which means that server will be kept. Super busy,
+
+00:07:32.230 --> 00:07:34.790
+and he can't respond to any other requests.
+
+00:07:35.109 --> 00:07:39.619
+So that's why the botnet um is trying to target at
+
+00:07:39.619 --> 00:07:44.410
+those big company server, right? OK, so
+
+00:07:44.410 --> 00:07:47.269
+that's all different popular name of this,
+
+00:07:47.609 --> 00:07:52.239
+um, Malware And then let's look at, by
+
+00:07:52.239 --> 00:07:56.950
+combining different types of malware, there might be blended threads,
+
+00:07:57.200 --> 00:08:00.190
+OK. The blended threads, here is one example,
+
+00:08:00.320 --> 00:08:03.519
+just show you one example. There are many different types of blended threads.
+
+00:08:03.720 --> 00:08:06.549
+So this is just one of them. So this one,
+
+00:08:07.760 --> 00:08:10.890
+why I chose this one because this one is quite popular,
+
+00:08:11.119 --> 00:08:15.880
+um, back in, uh, back to 2018, and it's still very
+
+00:08:15.880 --> 00:08:20.790
+popular nowadays, OK. Um, it will go around our Facebook
+
+00:08:20.790 --> 00:08:25.190
+and social media, uh, cycle, and sometimes you get some,
+
+00:08:25.410 --> 00:08:30.369
+uh, links, and pop up to your Facebook account from
+
+00:08:30.369 --> 00:08:35.280
+your friends, right? And you thought it's from your actual
+
+00:08:35.280 --> 00:08:38.929
+friend, OK, uh, sharing, but actually it's not,
+
+00:08:39.070 --> 00:08:43.210
+right? It's just some fake, um, link and
+
+00:08:44.109 --> 00:08:47.739
+I mean, illegal link sometimes and to your,
+
+00:08:48.000 --> 00:08:51.479
+to your site. And if you just, uh, I mean,
+
+00:08:51.719 --> 00:08:54.299
+without awareness and just accidentally click them,
+
+00:08:54.719 --> 00:08:57.260
+uh, what would happen would be very serious.
+
+00:08:57.559 --> 00:09:02.090
+OK. So this is what it will do um by
+
+00:09:02.090 --> 00:09:06.969
+this basic one, which is still nowadays very popular attacks in our
+
+00:09:06.969 --> 00:09:10.289
+cyberspace. And then, so you get some link,
+
+00:09:10.640 --> 00:09:15.270
+uh, some malicious link, um, was popped to your account,
+
+00:09:15.609 --> 00:09:19.989
+um, through Facebook Messenger. And if you click those links,
+
+00:09:20.320 --> 00:09:24.169
+and you will be, OK, it might be just some YouTube link,
+
+00:09:24.270 --> 00:09:28.229
+right? And it, of course, it's not legitimate YouTube link.
+
+00:09:28.849 --> 00:09:33.570
+And then, and then you will be redirected to a fake YouTube
+
+00:09:33.570 --> 00:09:37.229
+page. And then at the same time, there will be faceworm
+
+00:09:37.229 --> 00:09:41.559
+installed in your Google Chrome uh uh
+
+00:09:41.729 --> 00:09:45.750
+extension. Right. And then, um,
+
+00:09:46.859 --> 00:09:51.780
+After its installation, what happens in the back end is
+
+00:09:51.780 --> 00:09:56.280
+your phone or your computer um will
+
+00:09:56.419 --> 00:10:00.580
+communicate with a remote server. We call that
+
+00:10:01.099 --> 00:10:06.099
+um CNC server, CNC command and control, command and
+
+00:10:06.099 --> 00:10:11.049
+control server. So what it means is, the remote server will
+
+00:10:11.049 --> 00:10:15.109
+be able to send some commands to your computer.
+
+00:10:15.679 --> 00:10:18.630
+And then to do some control on your computer.
+
+00:10:18.940 --> 00:10:21.390
+So we call that command and control server,
+
+00:10:21.679 --> 00:10:24.900
+OK, which is remotely working, and then,
+
+00:10:25.640 --> 00:10:30.260
+And then your computer will be downloaded some malicious JavaScript.
+
+00:10:31.000 --> 00:10:35.159
+So this is what could happen with that command and control process.
+
+00:10:35.559 --> 00:10:40.119
+So some JavaScript, such as the crypto uh currency
+
+00:10:40.119 --> 00:10:44.659
+miner scripts will be launched to your computer and,
+
+00:10:45.039 --> 00:10:50.039
+um, and you may, you may be redacted to some scam web
+
+00:10:50.039 --> 00:10:54.659
+page and your credential may be stolen. And then some
+
+00:10:54.659 --> 00:10:59.169
+transaction you were not aware will be acted on behalf on your
+
+00:10:59.169 --> 00:11:03.280
+behalf, and then you will be reducted to some other
+
+00:11:03.280 --> 00:11:08.140
+um programs, right? So this is what may happen through this
+
+00:11:08.140 --> 00:11:13.130
+command and control um server and also
+
+00:11:13.130 --> 00:11:15.539
+your computer through those remote communication,
+
+00:11:15.809 --> 00:11:19.460
+OK, without your awareness. And then at the same time,
+
+00:11:20.700 --> 00:11:25.669
+What would that face worm do is to send
+
+00:11:25.859 --> 00:11:30.440
+malicious link to your friends, OK, your Facebook contact,
+
+00:11:30.890 --> 00:11:35.239
+OK? And then your friends, when they see.
+
+00:11:36.030 --> 00:11:40.890
+Uh, there's a link shared by you, and then they saw you just sharing some funny video,
+
+00:11:40.909 --> 00:11:43.729
+and then they will just click the link and then they,
+
+00:11:44.039 --> 00:11:48.789
+what you, what your friend's computer. I mean,
+
+00:11:48.989 --> 00:11:52.099
+would do is again the same cycle as this.
+
+00:11:52.469 --> 00:11:57.390
+So, this has been going around since 2018 and still
+
+00:11:57.390 --> 00:12:02.349
+going around nowadays, and it, it's a very effective uh worm,
+
+00:12:02.789 --> 00:12:07.450
+I mean, affecting, of course, it's called a worm because it has this self-propagation,
+
+00:12:07.820 --> 00:12:12.489
+um. Capability and which we, we always name that
+
+00:12:12.489 --> 00:12:17.309
+worm, right? But of course it has combined some other
+
+00:12:17.570 --> 00:12:22.169
+um virus such as some crypto miner. It can be a virus just
+
+00:12:22.169 --> 00:12:26.929
+launched to um your computer and then maybe only when you
+
+00:12:26.929 --> 00:12:30.130
+click something and then it will be, I mean,
+
+00:12:30.369 --> 00:12:34.809
+start infecting, right? Um, like this link and put
+
+00:12:34.809 --> 00:12:38.280
+somewhere. And then, yeah, some, some virus,
+
+00:12:38.450 --> 00:12:43.340
+OK, attached to those links, right? So, it's a blended threads.
+
+00:12:44.320 --> 00:12:49.229
+And also in this blended threads, you can see the social engineering has been done because
+
+00:12:49.770 --> 00:12:54.750
+when it says socially engineered, which means maybe not every,
+
+00:12:55.270 --> 00:12:59.909
+um, yeah. Your, your Facebook user
+
+00:12:59.909 --> 00:13:04.750
+or or contact will be popped up with this and sometimes it will
+
+00:13:04.750 --> 00:13:09.559
+be more targeted at those users who have crypto uh currency
+
+00:13:09.559 --> 00:13:13.609
+visiting behavior. So sometimes they just try to do,
+
+00:13:13.950 --> 00:13:18.950
+try to decide what to launch after they have done some analysis
+
+00:13:18.950 --> 00:13:23.510
+on you or on your friends, right? So. We,
+
+00:13:23.630 --> 00:13:26.429
+we would call that a blended thread. OK.
+
+00:13:26.590 --> 00:13:30.200
+There are many other types of blended threads nowadays,
+
+00:13:30.539 --> 00:13:33.570
+uh, which can launch more harmful malware,
+
+00:13:33.710 --> 00:13:37.090
+OK, through this blended threads. And then with this one,
+
+00:13:37.590 --> 00:13:40.659
+you can see the two main property, I mean,
+
+00:13:41.030 --> 00:13:44.729
+two characters here. One is targeted at cryptocurrency.
+
+00:13:44.869 --> 00:13:48.349
+Actually they tried to steal the cryptocurrency.
+
+00:13:48.729 --> 00:13:52.710
+And then the other one is just uh, it spreads through Facebook Messenger,
+
+00:13:52.890 --> 00:13:57.369
+right? And which is very popular nowadays as a social
+
+00:13:57.369 --> 00:14:01.950
+media um application, right? And then, also
+
+00:14:02.010 --> 00:14:07.010
+other thing I'd like to mention here is why these blended
+
+00:14:07.010 --> 00:14:11.330
+threads always pop up and every year, even every month,
+
+00:14:11.450 --> 00:14:15.849
+and then those malware, the new malware always get
+
+00:14:15.849 --> 00:14:19.289
+some um Like
+
+00:14:20.179 --> 00:14:23.780
+Benefit from these people or from the market,
+
+00:14:25.070 --> 00:14:29.750
+because there is a cycle actually for this malware to
+
+00:14:29.750 --> 00:14:34.739
+be created and then launched to the market and the
+
+00:14:35.099 --> 00:14:39.260
+It's very similar to the coronavirus, if you still remember,
+
+00:14:39.580 --> 00:14:44.260
+and those virus keep evolving itself and then will be
+
+00:14:44.260 --> 00:14:48.859
+more infectious, right, and can be more
+
+00:14:48.859 --> 00:14:53.380
+efficient when it try to affect other people,
+
+00:14:53.659 --> 00:14:58.219
+right? It is evolving itself, OK. The similar thing
+
+00:14:58.219 --> 00:15:02.890
+happens here with our malware. Because what
+
+00:15:02.890 --> 00:15:07.590
+happens with malware is for each single type of the malware,
+
+00:15:08.169 --> 00:15:12.250
+we have a signature, and sometimes we call that abstract
+
+00:15:12.250 --> 00:15:16.010
+representation. So it's a signature of that particular type of virus.
+
+00:15:16.049 --> 00:15:18.239
+It's like a a gene type of thing, right?
+
+00:15:18.559 --> 00:15:22.169
+So for every person it has a different gene and gene.
+
+00:15:22.450 --> 00:15:27.090
+And then for the virus we use that represent abstract
+
+00:15:27.090 --> 00:15:31.349
+representation or we sometimes call signature of that particular virus type.
+
+00:15:32.070 --> 00:15:36.780
+And then And this, this database has
+
+00:15:36.780 --> 00:15:41.130
+all that different type of signature or abstracts in its
+
+00:15:41.130 --> 00:15:46.109
+database. And then those database has been kept by those new
+
+00:15:46.109 --> 00:15:51.039
+malware um generation cycle in place. It can be,
+
+00:15:51.090 --> 00:15:55.820
+you can imagine that some um big company in the black market,
+
+00:15:55.960 --> 00:15:59.390
+and then they're trying to generate new malware every month.
+
+00:16:00.320 --> 00:16:05.039
+And what they do with their database is they use genetic
+
+00:16:05.039 --> 00:16:09.909
+algorithm module to do those genes mutation,
+
+00:16:10.080 --> 00:16:13.140
+OK, signature mutation, the crossover mutation.
+
+00:16:13.520 --> 00:16:17.219
+They try to create a new type of signature,
+
+00:16:17.400 --> 00:16:20.820
+right? And with this different type of signature,
+
+00:16:21.270 --> 00:16:25.630
+with each one will be um Code, OK,
+
+00:16:25.869 --> 00:16:30.789
+attached to those signatures and then these are the generation module and then
+
+00:16:30.789 --> 00:16:34.200
+they are generating this code, that malware code,
+
+00:16:34.510 --> 00:16:38.750
+and then they will output the malware to those
+
+00:16:38.750 --> 00:16:43.090
+popular powerful different types of Uh,
+
+00:16:43.099 --> 00:16:48.030
+antivirus software, OK. They will actually test all
+
+00:16:48.030 --> 00:16:52.590
+those modules here, right, using this like
+
+00:16:52.590 --> 00:16:57.349
+Capay or uh McAfee and different types. So they actually
+
+00:16:57.349 --> 00:17:01.929
+pass through their malware to all these com companies
+
+00:17:02.150 --> 00:17:06.489
+antivirus software and to test whether this
+
+00:17:06.839 --> 00:17:11.729
+big antivirus software can detect. Those
+
+00:17:11.729 --> 00:17:15.649
+malware or not. If not, they will launch to the market.
+
+00:17:16.098 --> 00:17:21.048
+If yes, they will come back to the first mutation again
+
+00:17:21.229 --> 00:17:25.749
+and then try to create a new type. So there's an evolving
+
+00:17:25.749 --> 00:17:30.300
+and testing cycle for those malware. Uh,
+
+00:17:30.310 --> 00:17:35.199
+manufacturer, right? So they try to manufacture this malware in this
+
+00:17:35.199 --> 00:17:40.079
+cycle, only when it can't be tested or detected by
+
+00:17:40.079 --> 00:17:44.219
+this antivirus software, and then they will be launched to the market.
+
+00:17:45.209 --> 00:17:49.770
+Which is why this antivirus software, they
+
+00:17:49.770 --> 00:17:54.689
+actually keep, uh, they will also keep a database of all these
+
+00:17:54.689 --> 00:17:59.449
+signature in itself, OK, in its company's database.
+
+00:17:59.969 --> 00:18:04.489
+And then every time when they, when they have something uh in their
+
+00:18:04.489 --> 00:18:09.109
+database, and then they actually keep updating them,
+
+00:18:09.300 --> 00:18:12.400
+right, every month, even every day or every week,
+
+00:18:12.489 --> 00:18:16.979
+right? And then they have to guarantee they have found
+
+00:18:16.979 --> 00:18:21.380
+something new in the market, and then they try to analyze what's the abstract
+
+00:18:21.380 --> 00:18:24.479
+presentation, and then keep them in their database.
+
+00:18:24.829 --> 00:18:27.800
+And the next time when your computer has a capacity,
+
+00:18:28.140 --> 00:18:31.380
+antivirus software in your computer, and your computer,
+
+00:18:31.459 --> 00:18:36.435
+OK. Because at this date, it has been updated and it
+
+00:18:36.435 --> 00:18:40.035
+has a newer type of malware, it can detect them.
+
+00:18:40.354 --> 00:18:43.574
+If you don't update your antivirus software,
+
+00:18:43.844 --> 00:18:48.734
+which means you don't contain your, your soft and soft software,
+
+00:18:48.795 --> 00:18:53.680
+don't contain those new type of Uh, malware signature.
+
+00:18:53.979 --> 00:18:58.479
+And then your antivirus software won't be able to detect them
+
+00:18:58.900 --> 00:19:02.979
+or delete them, right? So that's why, I mean,
+
+00:19:03.060 --> 00:19:07.859
+we pay sometimes um monthly fee for those
+
+00:19:07.859 --> 00:19:12.619
+capacity, for those not free uh antivirus software,
+
+00:19:12.829 --> 00:19:17.699
+right? And then they can always give you more protection because
+
+00:19:17.699 --> 00:19:21.900
+they update their database, um. Regularly,
+
+00:19:22.119 --> 00:19:24.369
+and then you get better protection. And,
+
+00:19:24.479 --> 00:19:28.099
+but of course, it also means if you have the,
+
+00:19:28.400 --> 00:19:31.329
+the software and virus software installed in your computer,
+
+00:19:31.599 --> 00:19:36.439
+but if you don't update them, And when there's an
+
+00:19:36.439 --> 00:19:38.900
+update prompt, OK, you don't update them,
+
+00:19:39.079 --> 00:19:43.560
+which actually place your computer at risk because there are new,
+
+00:19:43.839 --> 00:19:48.719
+newer database, newer type of malware detected by
+
+00:19:48.719 --> 00:19:51.800
+those software, by those underware software,
+
+00:19:51.839 --> 00:19:55.359
+and you should keep updating them. Once there's a push,
+
+00:19:55.650 --> 00:19:58.160
+OK, you should update, and then you should update,
+
+00:19:58.280 --> 00:20:02.739
+right? So, that's why, um, There's a cycle there
+
+00:20:03.079 --> 00:20:06.300
+and always newer type of malware being created,
+
+00:20:06.640 --> 00:20:11.390
+but our antivirus software company and then they also try to capture them,
+
+00:20:11.599 --> 00:20:14.839
+right? Um, but yeah, maybe one step late,
+
+00:20:14.920 --> 00:20:19.390
+but they will, they will update, right? And then your computer as a user,
+
+00:20:19.439 --> 00:20:22.339
+you should always keep your antivirus software updated,
+
+00:20:22.719 --> 00:20:27.180
+OK. So, that's all for our software attack part.
+
+00:20:27.270 --> 00:20:30.229
+And now, let's look at this web attack. OK.
+
+00:20:30.349 --> 00:20:33.689
+There are 3 types of popular web attack.
+
+00:20:34.109 --> 00:20:38.930
+So the very first one is a CSRF. So in step wise,
+
+00:20:39.050 --> 00:20:44.030
+it looks like this. So you can imagine you are the victim here,
+
+00:20:44.500 --> 00:20:48.949
+and there's a bank site, and you can sign on to your bank site.
+
+00:20:49.329 --> 00:20:53.140
+Um, and then, during the time of your login,
+
+00:20:53.400 --> 00:20:58.290
+and you receive an email or you found another website which is interesting,
+
+00:20:58.449 --> 00:21:02.530
+so you just visit that website and you click on something in that website,
+
+00:21:03.010 --> 00:21:07.569
+that website, Uh, would probably steal your cookie
+
+00:21:07.849 --> 00:21:12.329
+and do some transaction on your behalf and send those cross-site requests,
+
+00:21:12.569 --> 00:21:16.729
+forge the request to this bank on your behalf.
+
+00:21:17.050 --> 00:21:21.969
+And the bank thought the request is a legitimate request from you
+
+00:21:21.969 --> 00:21:26.000
+because that website, when they send this transaction request,
+
+00:21:26.369 --> 00:21:30.170
+which actually contains your authentication cookie.
+
+00:21:30.930 --> 00:21:35.609
+So authentic authentication cooking means it has your ID
+
+00:21:35.609 --> 00:21:40.489
+encrypted, and it has your session visiting ID um probably
+
+00:21:40.489 --> 00:21:44.589
+also encrypted. Um, and then maybe, and then,
+
+00:21:45.209 --> 00:21:48.810
+because you logged in, and the bank won't log you out immediately.
+
+00:21:48.890 --> 00:21:52.319
+Normally, it happens after 5 minutes if you don't do anything,
+
+00:21:52.369 --> 00:21:54.930
+right, in your, in the, in this bank site.
+
+00:21:55.449 --> 00:21:58.050
+So during that 5 minutes, this is what happened.
+
+00:21:58.209 --> 00:22:02.060
+You visit another website, another website has some scripts,
+
+00:22:02.500 --> 00:22:06.449
+uh, which can do something harmful, and then launch a
+
+00:22:06.449 --> 00:22:10.430
+cross-site request, forge the request to this bank.
+
+00:22:10.770 --> 00:22:15.650
+And then, so that get to tran probably transfer some money out of your account to
+
+00:22:15.650 --> 00:22:19.709
+their account. So this can be the particular example
+
+00:22:20.209 --> 00:22:24.910
+um in these steps. So now, the first step is to
+
+00:22:25.369 --> 00:22:27.540
+Uh, authenticate yourself to the bank site.
+
+00:22:27.859 --> 00:22:32.180
+So you have logged into your bank, you receive a session cookie for your
+
+00:22:32.180 --> 00:22:36.540
+authentication. So you were in that website already,
+
+00:22:36.880 --> 00:22:40.449
+right? And then at the same time, attacker attack,
+
+00:22:40.550 --> 00:22:43.250
+uh, creates some malicious website this month,
+
+00:22:43.339 --> 00:22:47.079
+and you just, uh, um, without awareness,
+
+00:22:47.219 --> 00:22:50.930
+you during your login time. And you log into,
+
+00:22:50.979 --> 00:22:53.939
+uh, not log in, but you just visit another website,
+
+00:22:54.060 --> 00:22:57.729
+which is a tax website. And then there was a button,
+
+00:22:57.739 --> 00:23:02.739
+which might be some advertisement or might be some just a lottery
+
+00:23:02.739 --> 00:23:07.699
+running, clicking button there, and you just click that button,
+
+00:23:08.109 --> 00:23:12.780
+and then behind the button. Which contains this
+
+00:23:12.780 --> 00:23:16.719
+HTML language, which is a website, OK, language,
+
+00:23:17.060 --> 00:23:20.319
+and it says this action would be done, right?
+
+00:23:20.979 --> 00:23:24.469
+So those buttons, OK, behind the button which is this.
+
+00:23:25.060 --> 00:23:29.359
+So transfer um some money to
+
+00:23:30.469 --> 00:23:35.280
+To the attacker's account. And this is how much money will be transferred,
+
+00:23:35.349 --> 00:23:39.810
+$1000 and input in the submit. So there's a
+
+00:23:39.810 --> 00:23:44.469
+button, um, OK, you clicked, right? You
+
+00:23:44.469 --> 00:23:49.430
+clicked and which allows this attacker's website to
+
+00:23:49.430 --> 00:23:53.910
+utilize your cookie and then lodge
+
+00:23:53.910 --> 00:23:58.260
+that forged request to this bank, OK?
+
+00:23:58.630 --> 00:24:03.569
+So, That will send a request to transfer $1000 to a
+
+00:24:03.569 --> 00:24:07.790
+tax account. And then the bank see that request
+
+00:24:08.229 --> 00:24:10.989
+attached with your authentication cookie,
+
+00:24:11.290 --> 00:24:14.800
+so the bank thought that request is from you,
+
+00:24:15.020 --> 00:24:17.790
+right? So it will just, uh, yeah, I mean,
+
+00:24:17.810 --> 00:24:21.989
+process that request, OK. So this is how it happens,
+
+00:24:22.250 --> 00:24:26.459
+right, and then. All these CSRF request
+
+00:24:26.459 --> 00:24:31.260
+uh forgery, um, not necessary to happen to a
+
+00:24:31.260 --> 00:24:34.979
+bank site. It can happen to other type of site,
+
+00:24:35.339 --> 00:24:40.339
+OK? So, this is another example, which is a social media
+
+00:24:40.339 --> 00:24:45.329
+account. OK, and now you can imagine you visited your social media
+
+00:24:45.329 --> 00:24:50.180
+accounts such as your Facebook account. And then the Facebook won't log
+
+00:24:50.180 --> 00:24:53.130
+you out automatically, normally, right? So it,
+
+00:24:53.180 --> 00:24:58.020
+it has your session cookie, which contains your unique
+
+00:24:58.020 --> 00:25:01.930
+ID information, OK? So that it remembers you,
+
+00:25:02.260 --> 00:25:07.040
+remembers your browser, right? And it won't log you out automatically,
+
+00:25:07.180 --> 00:25:12.140
+normally. So then, At the same time, you
+
+00:25:12.140 --> 00:25:16.099
+found a malicious link, of course, you don't know it's malicious.
+
+00:25:16.180 --> 00:25:21.119
+You found a website, um, and then with an interesting clicking button,
+
+00:25:21.219 --> 00:25:26.010
+and you click them. And what happens behind is that social
+
+00:25:26.010 --> 00:25:30.640
+media account, um, it, it has this HTML language,
+
+00:25:30.819 --> 00:25:33.119
+a script, and then it says change email.
+
+00:25:33.910 --> 00:25:38.810
+It will change the email address to a new attacker's email address.
+
+00:25:39.560 --> 00:25:44.359
+And then because you click that button and your social media email
+
+00:25:44.359 --> 00:25:47.959
+account has been changed to the attacker's email account.
+
+00:25:48.579 --> 00:25:51.300
+And then, so you don't know that, right?
+
+00:25:51.380 --> 00:25:56.140
+You have, uh, there is a cross site forge request sent to
+
+00:25:56.140 --> 00:26:00.589
+Facebook, and Facebook thought, oh, the request was from you,
+
+00:26:00.939 --> 00:26:03.140
+and then they will just change your email.
+
+00:26:03.420 --> 00:26:08.300
+So what happens after could be, OK, next time you log into
+
+00:26:08.300 --> 00:26:12.939
+your Facebook account, you, you, you didn't know where your email address was changed,
+
+00:26:13.000 --> 00:26:16.709
+so you didn't receive your six digit. Um,
+
+00:26:16.790 --> 00:26:20.880
+authentication code and you are not able to log into a Facebook account,
+
+00:26:21.170 --> 00:26:26.099
+right, if you have enabled two-way, like you give the password
+
+00:26:26.099 --> 00:26:30.599
+to your, to your Facebook account you give like you ask the
+
+00:26:30.599 --> 00:26:33.670
+Facebook also requires you to give a six digit.
+
+00:26:34.459 --> 00:26:38.140
+Random code which was sent to your email address to log in,
+
+00:26:38.359 --> 00:26:43.280
+OK, and then you were not able to log into your Facebook account and that's how
+
+00:26:43.280 --> 00:26:47.880
+probably sometimes the people lost their social media account because of
+
+00:26:47.880 --> 00:26:52.060
+this behavior, right? And what this attacker could do
+
+00:26:52.280 --> 00:26:56.530
+is It crack your password, right?
+
+00:26:57.280 --> 00:27:01.770
+It may, because the password is easily to be corrected if your password is not
+
+00:27:01.770 --> 00:27:05.410
+very um secure, right, long enough, not long enough
+
+00:27:05.410 --> 00:27:10.050
+and also has simple combination, right? Attacker correct your
+
+00:27:10.050 --> 00:27:14.010
+password. Uh, and then the attacker has your,
+
+00:27:14.250 --> 00:27:17.959
+has the email authentication code sent to your email,
+
+00:27:18.199 --> 00:27:22.959
+sent to, sorry, this attacker's email. So attacker can log into your social
+
+00:27:22.959 --> 00:27:26.319
+media account on your behalf. Because that email,
+
+00:27:26.599 --> 00:27:29.599
+um, authentication six digit code has been sent to them.
+
+00:27:30.410 --> 00:27:34.979
+Right, so then they can steal your account and then they can get all your friend contact list and there are
+
+00:27:37.329 --> 00:27:40.150
+other information such as the market space,
+
+00:27:40.890 --> 00:27:43.589
+credit card information if they are there,
+
+00:27:43.849 --> 00:27:46.209
+and then the attacker can steal off them,
+
+00:27:46.270 --> 00:27:49.260
+right, and can, can do some transaction as well,
+
+00:27:50.449 --> 00:27:53.469
+right? And you can also imagine this bank.
+
+00:27:53.829 --> 00:27:58.619
+Uh, site or social media site is an online shopping
+
+00:27:58.619 --> 00:28:03.180
+site such as Amazon, eBay, They all possible,
+
+00:28:03.280 --> 00:28:06.540
+right? And when you log in to Amazon or eBay,
+
+00:28:07.000 --> 00:28:10.739
+and also at the same time, you probably won't log out,
+
+00:28:10.880 --> 00:28:15.099
+um. I mean right after you have done your shopping,
+
+00:28:15.280 --> 00:28:20.239
+and you probably keep, keep the login and at the same time you receive an email and
+
+00:28:20.239 --> 00:28:24.599
+there was an interesting link and you just click the link and you are redirected to the
+
+00:28:24.599 --> 00:28:28.979
+attacker's um website and that website you just uh
+
+00:28:29.349 --> 00:28:32.239
+browsing something and you click something,
+
+00:28:33.000 --> 00:28:36.739
+sometimes accidentally, right, and then your cookie,
+
+00:28:36.839 --> 00:28:39.680
+your login, and you recognize the browser.
+
+00:28:40.209 --> 00:28:44.939
+OK, it's still here, right? You didn't log out from your Amazon and Amazon
+
+00:28:44.939 --> 00:28:49.540
+could, OK, um, believe there was some request
+
+00:28:49.540 --> 00:28:53.170
+from attacker, but Amazon thought it's you,
+
+00:28:53.540 --> 00:28:58.339
+right? And he will do probably some transaction on your behalf,
+
+00:28:58.660 --> 00:29:03.359
+right? And they probably purchase some, some um valued
+
+00:29:03.359 --> 00:29:07.859
+uh product for to this attacker without your
+
+00:29:07.859 --> 00:29:12.699
+awareness, right? So. This is what happened with this cross-site
+
+00:29:12.699 --> 00:29:15.900
+request forgery. Remember when we, um, in week one,
+
+00:29:15.979 --> 00:29:20.540
+we look at one website which talked about all um different types of
+
+00:29:20.540 --> 00:29:23.709
+vulnerability, and then vulnerability, there are some type,
+
+00:29:24.099 --> 00:29:29.020
+I mean, which were CSRF if you go back to the website and
+
+00:29:29.020 --> 00:29:32.540
+to see how many different types of vulnerability were CSRF,
+
+00:29:32.859 --> 00:29:37.589
+which is a very main critical type of vulnerability.
+
+00:29:38.699 --> 00:29:42.079
+Happening nowadays, right, almost every year,
+
+00:29:42.319 --> 00:29:47.290
+right? So. So, of course, you can also think,
+
+00:29:47.310 --> 00:29:52.189
+uh, if you log out right after you have done your shopping or
+
+00:29:52.189 --> 00:29:57.010
+your online banking, and this cross site request forgery will be
+
+00:29:57.699 --> 00:30:02.619
+Um, like, prevent it, right? You don't do anything when you log into
+
+00:30:02.619 --> 00:30:06.989
+your bank. You, you do a transaction, then log out immediately after.
+
+00:30:07.369 --> 00:30:12.160
+You don't do any other clicking or suspicious email checking and click,
+
+00:30:12.670 --> 00:30:17.540
+uh, link clicking during that period and that cross-site record forgery
+
+00:30:17.540 --> 00:30:22.270
+will be prevented. OK. So that's why we should always be aware of this type
+
+00:30:22.270 --> 00:30:27.180
+of. Um, vulnerability, we shouldn't allow something
+
+00:30:27.439 --> 00:30:30.339
+happening without our awareness, and we should always,
+
+00:30:30.640 --> 00:30:35.400
+um, have good habits, right? And log out something if you don't
+
+00:30:35.400 --> 00:30:40.319
+need them, and don't always keep that logged in because your session cookie can be
+
+00:30:40.319 --> 00:30:44.640
+stolen and that can be exploited by your
+
+00:30:45.439 --> 00:30:48.630
+Um, careless visiting or browsing on the web,
+
+00:30:48.689 --> 00:30:51.670
+on other websites, you never know what's.
+
+00:30:52.540 --> 00:30:56.739
+What will happen in that other website if you um,
+
+00:30:57.520 --> 00:31:01.030
+Because even if sometimes very legitimate websites,
+
+00:31:01.510 --> 00:31:06.050
+they also have vulnerability in that website itself,
+
+00:31:06.319 --> 00:31:11.280
+and then the bad people could exploit those vulnerabilities and launch something
+
+00:31:11.280 --> 00:31:14.310
+in those websites. So you never know, right?
+
+00:31:14.640 --> 00:31:19.030
+So, and then, so this also gives us another type like this one,
+
+00:31:19.420 --> 00:31:24.199
+XSS cross site scripting. But for CSRF,
+
+00:31:24.400 --> 00:31:28.439
+right, for this one. As long as you make sure you log out,
+
+00:31:28.729 --> 00:31:32.109
+and you should be safe, OK? But of course,
+
+00:31:32.250 --> 00:31:37.229
+do a good um behavior when you do a browsing,
+
+00:31:37.250 --> 00:31:42.069
+and then, um, make sure, yeah, the website is
+
+00:31:42.449 --> 00:31:44.890
+probably, yeah, legitimate, at least, OK,
+
+00:31:45.010 --> 00:31:49.979
+do not visit some fake website, right? And then always check the
+
+00:31:49.979 --> 00:31:54.130
+URL. It's actual legitimate URL, um, but for this
+
+00:31:54.130 --> 00:31:56.930
+CRSRF to prevent this type of vulnerability,
+
+00:31:57.170 --> 00:32:00.680
+OK, always remember to log out. OK. But this
+
+00:32:00.680 --> 00:32:05.300
+XSS type of web attack, which is not
+
+00:32:05.300 --> 00:32:07.579
+something you always log out, you can prevent,
+
+00:32:07.859 --> 00:32:12.060
+OK? So the, what, what would happen with this
+
+00:32:12.060 --> 00:32:16.959
+XSS is attacker. They, initially,
+
+00:32:17.329 --> 00:32:21.560
+they would explore what vulnerability a website may have,
+
+00:32:21.810 --> 00:32:24.959
+right? And this, this is out of your control,
+
+00:32:25.250 --> 00:32:28.239
+right? You trust some website, but however,
+
+00:32:28.250 --> 00:32:33.089
+that website has been already launched to something in the
+
+00:32:33.089 --> 00:32:37.030
+very first step by attacker, OK? So they discover some,
+
+00:32:37.630 --> 00:32:41.349
+Secure hole and that website, which can be a bank site,
+
+00:32:41.650 --> 00:32:45.530
+OK, you never know, right? The bank site itself maybe,
+
+00:32:45.770 --> 00:32:50.670
+if not well maintained, also has this vulnerability and also
+
+00:32:50.810 --> 00:32:55.630
+may have some injected malicious JavaScript in those
+
+00:32:56.290 --> 00:33:00.189
+bank sites. OK, and then you don't know that,
+
+00:33:00.199 --> 00:33:03.160
+and you visit your website, your bank site,
+
+00:33:03.239 --> 00:33:07.920
+and you click the link and then you Accidentally
+
+00:33:07.920 --> 00:33:12.920
+executes those malicious scripts, OK? And those scripts may
+
+00:33:12.920 --> 00:33:17.520
+run on your computer and then may um send your
+
+00:33:17.520 --> 00:33:22.420
+cookie to the attacker, and then this attacker may just be using
+
+00:33:22.420 --> 00:33:26.270
+your credential and log in to this site,
+
+00:33:26.599 --> 00:33:30.160
+OK. So this is what happened in
+
+00:33:30.250 --> 00:33:35.119
+XSS, which is why we call that cross-site scripting attack,
+
+00:33:35.459 --> 00:33:40.000
+OK? So it is launching this cross-site scripting attack and,
+
+00:33:40.300 --> 00:33:45.130
+and to the site. OK, so this
+
+00:33:45.130 --> 00:33:50.010
+is one example, uh we just show you the bank site
+
+00:33:50.010 --> 00:33:53.849
+itself has the vulnerability in its webpage.
+
+00:33:54.130 --> 00:33:57.530
+The scripts can steal a user's session cookie,
+
+00:33:57.790 --> 00:34:00.050
+and then this user without knowing that,
+
+00:34:00.329 --> 00:34:04.280
+and click the link and the cookie session is stolen,
+
+00:34:04.609 --> 00:34:09.290
+and then this, this attacker can use that stolen
+
+00:34:09.290 --> 00:34:13.958
+session cookie. And then the attacker can now impersonate the
+
+00:34:13.958 --> 00:34:18.779
+victim on this bank site, right, and then it can.
+
+00:34:20.289 --> 00:34:25.289
+can then transfer funds or change account detail or perform
+
+00:34:25.289 --> 00:34:28.329
+other malicious action on this user's behalf,
+
+00:34:28.448 --> 00:34:32.479
+on this victim's behalf. OK, so that's what happens in the last step.
+
+00:34:33.509 --> 00:34:36.608
+And now let's look at these two. So what's the difference,
+
+00:34:37.108 --> 00:34:42.030
+uh, for these two? The CSRF actually, you
+
+00:34:42.030 --> 00:34:46.938
+can imagine. The Cross site
+
+00:34:46.938 --> 00:34:51.398
+forged request sent to the browser, and the browser
+
+00:34:51.729 --> 00:34:56.479
+actually trust that request, that forged the request was from
+
+00:34:56.779 --> 00:35:01.698
+his actual user, right? So this one is actually exploiting
+
+00:35:01.698 --> 00:35:06.628
+the trust a site has in its users, OK.
+
+00:35:06.779 --> 00:35:10.569
+It believes that request was from that user,
+
+00:35:10.908 --> 00:35:15.889
+OK, so it is exploiting that trust. Uh, however,
+
+00:35:15.969 --> 00:35:20.969
+with access as exploiting the trust a user has for
+
+00:35:20.969 --> 00:35:25.110
+a particular site. So now you can see at the very beginning,
+
+00:35:25.409 --> 00:35:29.889
+this user, there was some, some scripts prompt,
+
+00:35:30.010 --> 00:35:33.989
+right, and uh or injected in this bank site.
+
+00:35:34.370 --> 00:35:39.169
+And it is exploiting that victim's trust in that bank
+
+00:35:39.169 --> 00:35:44.139
+site. OK, so it is exploiting that, but in the
+
+00:35:44.149 --> 00:35:47.590
+cross-site um request forgery.
+
+00:35:48.989 --> 00:35:53.389
+It is exploiting the trust that the bank has in its
+
+00:35:53.389 --> 00:35:58.219
+user. It always trusts all the requests were from the users.
+
+00:35:58.469 --> 00:36:01.949
+However, there's a forged the request, uh,
+
+00:36:01.959 --> 00:36:05.090
+cross-site request, and that the bank wasn't aware,
+
+00:36:05.439 --> 00:36:09.550
+he still trusts the request was from his user.
+
+00:36:09.709 --> 00:36:13.270
+So the trust, so in these two different types.
+
+00:36:13.729 --> 00:36:16.590
+And then they are actually exploiting the trust,
+
+00:36:16.889 --> 00:36:21.689
+um, one way or another, right? And then these are more
+
+00:36:21.689 --> 00:36:25.850
+difference, um, for this XSS and the
+
+00:36:25.850 --> 00:36:30.239
+CSRF, OK, different type. Uh, CSRF
+
+00:36:30.379 --> 00:36:34.879
+is, it is causing Um, a malicious
+
+00:36:34.879 --> 00:36:39.669
+site cause a user's browser to perform unwanted action on
+
+00:36:39.669 --> 00:36:44.560
+the trusted website, right? And with access the malicious website
+
+00:36:44.560 --> 00:36:49.280
+leverage bugs in a trusted website to cause unwanted action on user's
+
+00:36:49.280 --> 00:36:53.879
+browser, right, so these are the difference and you can see the
+
+00:36:53.879 --> 00:36:58.239
+example can all be like transfer some money or get some
+
+00:36:58.239 --> 00:37:02.959
+authentication information and yeah, so there will be uh a
+
+00:37:04.520 --> 00:37:09.479
+Probably at the end some money will be stolen or the credential can be
+
+00:37:09.479 --> 00:37:14.439
+stolen, but in it's different, uh, detailed um
+
+00:37:14.439 --> 00:37:18.000
+exploitation which is different, OK.
+
+00:37:19.149 --> 00:37:23.040
+Um, and then another type of the web attack,
+
+00:37:23.399 --> 00:37:26.659
+very popular one, is SQL injection attack.
+
+00:37:27.000 --> 00:37:31.879
+OK? We call that SQL injection because SQL is a structured
+
+00:37:31.879 --> 00:37:36.780
+query language, uh, which we use to talk to a database.
+
+00:37:37.120 --> 00:37:41.840
+So it's very much like we, the attacker put an injection to
+
+00:37:41.840 --> 00:37:46.199
+the SQL so that they get more information out of the
+
+00:37:46.199 --> 00:37:50.989
+database, right? So, There's some example here I'd like to
+
+00:37:50.989 --> 00:37:55.080
+show. Um, but before the example, I want to,
+
+00:37:55.580 --> 00:37:59.080
+um, show some basic knowledge of the SQL language.
+
+00:37:59.699 --> 00:38:04.649
+Um, The main thing for here is the SQL language has this
+
+00:38:04.649 --> 00:38:08.459
+double dash, and when there's a double dash,
+
+00:38:08.629 --> 00:38:12.320
+which means behind, OK, this double dash,
+
+00:38:12.699 --> 00:38:15.739
+all the code will be recognized as a comment,
+
+00:38:16.020 --> 00:38:19.469
+so which won't be, which will won't be, um,
+
+00:38:19.590 --> 00:38:24.459
+won't be executed, OK? So all words behind the double dash
+
+00:38:24.459 --> 00:38:28.510
+won't be executed. OK, so that's the um The
+
+00:38:28.510 --> 00:38:32.810
+SQL language itself, right, has this, has this,
+
+00:38:33.189 --> 00:38:36.969
+um, thing, double dash, OK, it's a, it's a common indicator.
+
+00:38:38.010 --> 00:38:42.060
+OK, now let's see, this is a simple SQL language.
+
+00:38:42.219 --> 00:38:45.020
+So the language itself is very simple, OK,
+
+00:38:45.340 --> 00:38:48.580
+um, very much like humans logic language,
+
+00:38:48.659 --> 00:38:51.959
+right, so you just select something from a database,
+
+00:38:52.340 --> 00:38:55.139
+uh, when there is a condition satisfied.
+
+00:38:55.340 --> 00:38:59.510
+So these are the conditions, OK. So normally when we visit websites,
+
+00:38:59.550 --> 00:39:04.300
+for example, you visit Amazon, you want to buy some gifts for your friends,
+
+00:39:04.580 --> 00:39:08.620
+and then. Normally you would probably in a search button,
+
+00:39:08.679 --> 00:39:12.320
+you just search gifts, right? You, you can probably,
+
+00:39:12.360 --> 00:39:15.479
+or you can search for another type of uh category.
+
+00:39:16.429 --> 00:39:20.810
+Right. When we say the gifts, so what behind that
+
+00:39:21.030 --> 00:39:25.020
+clicking, OK, uh, a search clicking, um,
+
+00:39:25.030 --> 00:39:29.570
+is this SQL language talking to, uh, Amazon's database.
+
+00:39:29.949 --> 00:39:34.449
+So which is to, OK, you print out all the products
+
+00:39:34.790 --> 00:39:39.725
+when the category is gifts. And the release number is
+
+00:39:39.725 --> 00:39:44.445
+one. So when the, when the product is released or is in stock,
+
+00:39:45.034 --> 00:39:48.705
+or release equals to one means maybe you have them in stock,
+
+00:39:49.125 --> 00:39:51.715
+or it has been released and ready for sale,
+
+00:39:52.004 --> 00:39:56.235
+right? So release is one and then category is gifts,
+
+00:39:56.445 --> 00:40:01.284
+OK, you just print out all those products and then the user can,
+
+00:40:01.524 --> 00:40:04.274
+can browse all the products and then pick one,
+
+00:40:04.524 --> 00:40:09.310
+right. However, If A user
+
+00:40:09.310 --> 00:40:12.939
+or the attacker wants to get more out of this gifts,
+
+00:40:13.030 --> 00:40:16.979
+what they can do is they just put something like this,
+
+00:40:17.110 --> 00:40:21.850
+OK, in their, in their, um, Searching,
+
+00:40:21.949 --> 00:40:26.840
+OK, what they can do is they just put a gift and single comma and double dash
+
+00:40:27.239 --> 00:40:31.600
+behind. So they just put this text in those text search box,
+
+00:40:31.959 --> 00:40:36.479
+OK. Then it will change the logic for this language for the
+
+00:40:36.479 --> 00:40:41.169
+SQL line code. OK, what it will be changed to
+
+00:40:41.169 --> 00:40:46.080
+is select something from products where this condition
+
+00:40:46.080 --> 00:40:50.129
+are satisfied, right, so the condition is category is gifts,
+
+00:40:50.419 --> 00:40:53.899
+right, and then this single comma and double commas.
+
+00:40:54.060 --> 00:40:58.909
+So then this condition. Does not matter anymore.
+
+00:40:59.350 --> 00:41:02.590
+So that means this condition is not needed.
+
+00:41:03.010 --> 00:41:05.610
+So it will be just recognized as a comment,
+
+00:41:05.889 --> 00:41:10.330
+OK. So, it won't be executed, right? So then that
+
+00:41:10.330 --> 00:41:14.590
+language original here has become this one,
+
+00:41:14.770 --> 00:41:18.649
+OK, up to here. So that means the category is gifted,
+
+00:41:18.729 --> 00:41:23.439
+you just print them all out, OK, no matter if it's
+
+00:41:23.439 --> 00:41:28.020
+released or not. So even if it's not
+
+00:41:28.020 --> 00:41:31.060
+released, all gifts will be printed out.
+
+00:41:31.379 --> 00:41:36.080
+OK, you can see all the database, uh, as long as the category is gifts,
+
+00:41:36.260 --> 00:41:39.239
+no matter it's released or not released.
+
+00:41:39.860 --> 00:41:44.340
+So that double, um double dash has come
+
+00:41:44.340 --> 00:41:49.139
+out this condition. OK? So what you can even do
+
+00:41:49.139 --> 00:41:54.000
+more is you change some logic. Um, yeah,
+
+00:41:54.169 --> 00:41:59.169
+you, you, you actually can do some union and you can do something
+
+00:41:59.169 --> 00:42:02.750
+else. So now this is another example, OK.
+
+00:42:03.810 --> 00:42:08.570
+There's some login system, OK, and then there's the email address or
+
+00:42:08.570 --> 00:42:12.669
+username, a username, um, which is administrator,
+
+00:42:12.929 --> 00:42:15.629
+and a password, you just give a password.
+
+00:42:16.050 --> 00:42:20.959
+So what normally The, the conditions
+
+00:42:20.959 --> 00:42:25.889
+should be you give the right username, you give the right password,
+
+00:42:26.159 --> 00:42:29.889
+OK, the username should be administrator and the password is a secret,
+
+00:42:30.239 --> 00:42:32.429
+and then click log in and then you can log in,
+
+00:42:32.600 --> 00:42:36.399
+right? So that's how it should work, OK,
+
+00:42:36.600 --> 00:42:40.699
+if everything is properly designed. However,
+
+00:42:41.020 --> 00:42:45.439
+because you know there's a security hole and you know
+
+00:42:45.820 --> 00:42:50.800
+this one, OK, will all be taken by the SQL language
+
+00:42:51.219 --> 00:42:54.489
+and then so you just put a single comma,
+
+00:42:54.540 --> 00:42:59.300
+double dash and then now you can see you select something from
+
+00:42:59.300 --> 00:43:03.649
+user where username is administrator and then all the
+
+00:43:03.649 --> 00:43:08.350
+behind, OK, behind this were commented
+
+00:43:08.350 --> 00:43:12.969
+out. So it doesn't matter the password is given or not
+
+00:43:13.590 --> 00:43:18.459
+correctly or not, and as long as you put an administrator you can bypass the
+
+00:43:18.459 --> 00:43:21.500
+system. You can log into the system, right?
+
+00:43:21.949 --> 00:43:26.830
+So that allows this condition to be satisfied and you can go to
+
+00:43:26.830 --> 00:43:31.500
+the system, right? So. That's one example with
+
+00:43:31.500 --> 00:43:36.479
+this double dash. So now you can see the problem
+
+00:43:36.719 --> 00:43:40.139
+is with this system's um developer, right?
+
+00:43:40.419 --> 00:43:45.139
+And then they allowed all this string to be recognized to
+
+00:43:45.139 --> 00:43:49.750
+be input as a valid input, right, as a valid uh
+
+00:43:49.750 --> 00:43:54.739
+text. So, um, How do we prevent,
+
+00:43:54.919 --> 00:43:57.939
+at least this one can be prevented by using.
+
+00:43:58.699 --> 00:44:03.459
+Parameterized the query, OK, you can use the prepared
+
+00:44:03.459 --> 00:44:07.760
+statements, uh, instead of string concatenation within the
+
+00:44:08.159 --> 00:44:12.060
+queries, you don't allow those strings to be recognized.
+
+00:44:12.219 --> 00:44:14.899
+You don't, you do more sanitization, right?
+
+00:44:15.260 --> 00:44:20.149
+You, you, you, or you just, uh, um, allow drop down box,
+
+00:44:20.379 --> 00:44:23.280
+OK, for example, that gifts, you don't allow them,
+
+00:44:23.500 --> 00:44:27.459
+uh, users to input something extra and you don't recognize them.
+
+00:44:27.790 --> 00:44:32.429
+And then you just allow um Parameterize the
+
+00:44:32.429 --> 00:44:35.360
+query and you only allow like gifts, OK,
+
+00:44:35.709 --> 00:44:40.429
+um, appliance or certain type of, uh, drop down
+
+00:44:40.429 --> 00:44:45.429
+box, OK. Only allow those to be input to this box and
+
+00:44:45.429 --> 00:44:49.830
+then, and then user has no way to, to add something or
+
+00:44:49.830 --> 00:44:54.570
+even change other logic like put some or condition,
+
+00:44:54.830 --> 00:44:59.669
+um. Yeah, so that it get, can get more information out of the
+
+00:44:59.669 --> 00:45:03.330
+database. So this is a SQL injection attack.
+
+00:45:03.669 --> 00:45:07.590
+OK. So now, let's see.
+
+00:45:09.199 --> 00:45:12.979
+More, OK, uh, hardware threats. So web attacks,
+
+00:45:12.989 --> 00:45:17.600
+mainly these three types. I hope now you have an idea what each type is.
+
+00:45:17.989 --> 00:45:22.830
+Um, in, in my week one, website, I think you've
+
+00:45:22.830 --> 00:45:25.310
+seen those different types of vulnerability,
+
+00:45:25.429 --> 00:45:28.750
+and all those three types of vulnerability are actually meant.
+
+00:45:29.540 --> 00:45:34.050
+Type OK, among all of those increasing vulnerability each year.
+
+00:45:35.310 --> 00:45:40.110
+And then the hardware threats, there are 4 types of hardware and there's 3 categories
+
+00:45:40.110 --> 00:45:44.909
+of threats. And now I think all the information here are quite obvious
+
+00:45:45.189 --> 00:45:49.300
+and straightforward. So there are environmental threats,
+
+00:45:49.590 --> 00:45:54.459
+technical threats. Um, and also human
+
+00:45:54.459 --> 00:45:59.110
+caused threats, right? And human cause threats
+
+00:45:59.110 --> 00:46:03.179
+can include those um different types of,
+
+00:46:03.389 --> 00:46:08.250
+yeah, reason, OK. So, these are all about
+
+00:46:08.250 --> 00:46:11.159
+hardware. And then what are emergent threats?
+
+00:46:11.250 --> 00:46:15.800
+Emergence threats can happen to those IOT devices
+
+00:46:16.290 --> 00:46:21.280
+and can have those botnets leveraging IOT and
+
+00:46:21.280 --> 00:46:25.159
+which can be a distributed service attack,
+
+00:46:25.570 --> 00:46:28.840
+right? And, um, better malware, and you know,
+
+00:46:29.080 --> 00:46:31.860
+now know why we always have better malware.
+
+00:46:32.239 --> 00:46:34.600
+Um, but of course, antivirus software, uh,
+
+00:46:34.959 --> 00:46:39.120
+those companies also are working very hard to update their database,
+
+00:46:39.320 --> 00:46:43.830
+right? To capture those better malware. And then there are also state
+
+00:46:43.830 --> 00:46:48.469
+sponsored threats, um, and some new
+
+00:46:48.469 --> 00:46:53.290
+devices, uh, or connected, exposing
+
+00:46:53.510 --> 00:46:58.449
+the risks and most of them, I mean, the firmware are not
+
+00:46:58.669 --> 00:47:03.080
+like updated very well. And no more corporate
+
+00:47:03.639 --> 00:47:06.419
+network means our environment changed recently,
+
+00:47:06.719 --> 00:47:08.719
+in, especially in these five years, right?
+
+00:47:09.199 --> 00:47:11.879
+Most small businesses, they just choose cloud service,
+
+00:47:11.949 --> 00:47:16.199
+they don't maintain their own server. And most of this,
+
+00:47:16.439 --> 00:47:19.379
+I mean, different type of like university,
+
+00:47:19.550 --> 00:47:22.620
+institution, they just allow you to bring your own device,
+
+00:47:22.879 --> 00:47:27.340
+BYOD bring your own device, which actually pose
+
+00:47:27.600 --> 00:47:32.399
+extra risk to this company network or the university
+
+00:47:32.399 --> 00:47:35.439
+network. Like Griffiths allows you to bring your own laptop,
+
+00:47:35.919 --> 00:47:40.679
+then that also actually puts the Griffiths at risk because your laptop,
+
+00:47:40.760 --> 00:47:43.500
+if not maintained very well, can infect.
+
+00:47:44.000 --> 00:47:48.919
+The computers within the same subnet as your computer.
+
+00:47:50.020 --> 00:47:55.020
+OK, um, And which, yeah, which, um,
+
+00:47:55.030 --> 00:47:58.500
+gives more flexibility, but, however, uh,
+
+00:47:58.510 --> 00:48:03.439
+gives more threats to our cyberspace. And how to prevent.
+
+00:48:03.800 --> 00:48:08.570
+Um, I think you've already had some idea when you get to know those
+
+00:48:08.570 --> 00:48:13.469
+different types of attacks, but these are more Um,
+
+00:48:13.909 --> 00:48:18.300
+OK, tips here. Um, use clean software apps,
+
+00:48:18.600 --> 00:48:22.850
+uh, whether those software are clean or
+
+00:48:23.389 --> 00:48:27.550
+not, and there's a way to check. And whether,
+
+00:48:27.629 --> 00:48:30.989
+um, antivirus software is reputable or not,
+
+00:48:31.389 --> 00:48:36.100
+and actually you can. Uh, use some websites to judge whether
+
+00:48:36.100 --> 00:48:39.620
+it's reputable or not. Um, actually, this one,
+
+00:48:40.100 --> 00:48:42.729
+we will actually do that some practice, I think,
+
+00:48:42.739 --> 00:48:46.760
+in, um, the following weeks, and you can check whether
+
+00:48:47.679 --> 00:48:52.060
+Uh, software is clean or not, OK, through those websites.
+
+00:48:52.479 --> 00:48:56.479
+And you can also check if there's a malware.
+
+00:48:57.370 --> 00:49:01.969
+And you give the signature or hash value to the to
+
+00:49:01.969 --> 00:49:06.770
+the website. And then some antivirus software can detect
+
+00:49:06.770 --> 00:49:10.439
+them, but some of them don't. OK? Then you can judge,
+
+00:49:10.469 --> 00:49:15.250
+oh, which one is more reputable. Because some existing
+
+00:49:15.250 --> 00:49:20.209
+signature, OK, those big company and maybe they can detect
+
+00:49:20.209 --> 00:49:23.149
+them, but those free antivirus software cannot,
+
+00:49:23.729 --> 00:49:28.340
+right? And then you better not use those not reputable antivirus
+
+00:49:28.340 --> 00:49:32.780
+software, because we, we've seen those results from the website.
+
+00:49:33.219 --> 00:49:36.459
+You get a chance to practice this, OK, during your workshop.
+
+00:49:38.560 --> 00:49:42.959
+Um, so this is an example. I give you some hash and for you to
+
+00:49:42.959 --> 00:49:46.919
+examine whether that hash, OK, that can be recognized,
+
+00:49:47.199 --> 00:49:50.959
+I mean, understood as a signature of, of,
+
+00:49:51.120 --> 00:49:55.010
+of a virus, and then, And then you give to the website,
+
+00:49:55.169 --> 00:50:00.050
+ask the website to analyze for you, and then you can see at least all different types
+
+00:50:00.050 --> 00:50:04.750
+of um antivirus software whether they have been able to
+
+00:50:05.129 --> 00:50:09.399
+detect that malware or not. Right? And then you know,
+
+00:50:09.530 --> 00:50:12.699
+OK, which antivirus software may be better than others,
+
+00:50:13.100 --> 00:50:16.290
+OK? So we will, we will detect them, we,
+
+00:50:16.409 --> 00:50:18.629
+uh, we will try to practice them in our,
+
+00:50:18.639 --> 00:50:23.250
+uh, workshop. OK, of course, there are some more
+
+00:50:23.250 --> 00:50:26.399
+tips, which maybe you know most of them.
+
+00:50:26.500 --> 00:50:31.060
+And um as we go through the course, we will probably
+
+00:50:31.060 --> 00:50:35.780
+also show you how to secure your home router and which encryption algorithm
+
+00:50:35.780 --> 00:50:40.040
+is better than other, right? And then when you learn the
+
+00:50:40.239 --> 00:50:44.419
+cryptography, cryptography in next week and the week after,
+
+00:50:44.540 --> 00:50:49.379
+we have 2 weeks to learn cryptography, and you understand how Uh,
+
+00:50:49.459 --> 00:50:52.610
+which is a better encryption algorithm. OK,
+
+00:50:52.889 --> 00:50:57.810
+so, um, that's all the email tips. I
+
+00:50:57.810 --> 00:51:00.770
+won't read them out, you can read them by yourself,
+
+00:51:01.129 --> 00:51:05.330
+right? Um, but I think many of them probably you know,
+
+00:51:05.580 --> 00:51:10.550
+but there are also some, some items may be uh worthwhile to read through,
+
+00:51:10.889 --> 00:51:15.679
+and um, yeah. To get better uh habit when we
+
+00:51:15.679 --> 00:51:20.530
+use email. And then, so this is about arrangement for
+
+00:51:20.530 --> 00:51:24.060
+this week and next week, and we have workshop in this week.
+
+00:51:24.209 --> 00:51:29.209
+Um, so I'm expecting you have received that as
+
+00:51:29.209 --> 00:51:33.889
+your invitation link, OK, for you to register an
+
+00:51:33.889 --> 00:51:38.550
+account, right? And if not, please contact your
+
+00:51:38.550 --> 00:51:42.590
+tutor, uh, in your workshop, if you have issue when you register,
+
+00:51:42.610 --> 00:51:46.889
+and we will try to, um, try to help you in our workshop.
+
+00:51:47.449 --> 00:51:52.340
+And if you enrolled late to the course, please do reach out to
+
+00:51:52.340 --> 00:51:57.139
+the tutor according to the, uh, I mean, the,
+
+00:51:57.560 --> 00:51:59.520
+the, the announcement I've already made,
+
+00:52:00.060 --> 00:52:03.340
+OK, this morning. OK, so that's all for today.
+
+00:52:03.820 --> 00:52:08.709
+Thanks for your attention and we'll do more in your workshop,
+
+00:52:09.060 --> 00:52:12.540
+OK. Thank you. Any question?
+
+00:52:16.600 --> 00:52:21.219
+No question. OK, for now, yeah. So if you
+
+00:52:21.219 --> 00:52:24.340
+have questions, please um ask us through Teams,
+
+00:52:24.540 --> 00:52:26.199
+OK? Thanks.
+

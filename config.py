@@ -1,5 +1,5 @@
 # Edit these to match your setup. (e.g. DECK_NAME = "computer systems")
-DECK_NAME = "computer systems"
+DECK_NAME = "computers systems 2.0"
 
 # Path to your live Anki SQLite database. Anki must be CLOSED when running these scripts.
 # Windows: C:\Users\<YourName>\AppData\Roaming\Anki2\<ProfileName>\collection.anki2

@@ -1,8 +1,0 @@
-{"front": "Why is data in use a potential attack vector?", "back": "It may need to be decrypted while being processed."}
-{"front": "At the database encryption level, when might the whole database be encrypted?", "back": "When the database is closed."}
-{"front": "What does it mean to mount a drive?", "back": "Make the drive accessible to the system."}
-{"front": "What does it mean to unmount a drive?", "back": "Make the drive no longer accessible to the system."}
-{"front": "Besides encryption keys, what can a KMS manage?", "back": "Digital certificates and other confidential info"}
-{"front": "What must a KMS track for old encrypted backups?", "back": "Multiple timestamped key versions."}
-{"front": "Why timestamp old key versions?", "back": "To know which key applies to data from a specific time period."}
-{"front": "What does the NICE Cybersecurity Workforce Framework describe?", "back": "Cybersecurity work roles and the skills needed for them."}

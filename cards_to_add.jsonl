@@ -1,7 +1,12 @@
-{"front": "Who proposed the 6 Principles of Persuasion (2007)?", "back": "Dr. Robert B. Cialdini"}
-{"front": "Cialdini principle: desire to give back when you receive a gift/favor", "back": "Reciprocity"}
-{"front": "Cialdini principle: staying consistent with things you've already said or done", "back": "Commitment"}
-{"front": "Cialdini principle: following the actions of similar others", "back": "Social proof"}
-{"front": "Cialdini principle: agreeing more with people you like or share interests with", "back": "Liking"}
-{"front": "Cialdini principle: trusting/obeying perceived experts or figures with status", "back": "Authority"}
-{"front": "Cialdini principle: valuing things more when limited, rare, or hard to obtain", "back": "Scarcity"}
+{"front": "Why is data in use a potential attack vector?", "back": "It may need to be decrypted while being processed"}
+{"front": "At the database encryption level, when might the whole database be encrypted?", "back": "When the database is closed"}
+{"front": "What does it mean to mount a drive?", "back": "Make the drive accessible to the system"}
+{"front": "What is the term for making a drive accessible to the system?", "back": "Mount"}
+{"front": "What does it mean to unmount a drive?", "back": "Make the drive no longer accessible to the system"}
+{"front": "What is the term for making a drive no longer accessible to the system?", "back": "Unmount"}
+{"front": "What does KMS stand for?", "back": "Key Management System"}
+{"front": "What is the acronym for Key Management System?", "back": "KMS"}
+{"front": "Besides encryption keys, what can a KMS manage?", "back": "Digital certificates and other confidential info"}
+{"front": "What must a KMS track for old encrypted backups?", "back": "Multiple timestamped key versions"}
+{"front": "Why timestamp old key versions?", "back": "To know which key applies to data from a specific time period"}
+{"front": "What does the NICE Cybersecurity Workforce Framework describe?", "back": "Cybersecurity work roles and the skills needed for them"}

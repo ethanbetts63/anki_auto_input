@@ -1,0 +1,2162 @@
+WEBVTT
+
+00:00:02.650 --> 00:00:06.050
+OK. I hope you can hear me clearly, right?
+
+00:00:06.820 --> 00:00:09.770
+Or do you need me to move a little bit? Yes,
+
+00:00:09.899 --> 00:00:14.539
+OK. OK, great. So, we are now
+
+00:00:14.539 --> 00:00:18.090
+um in the 2nd week learning this cryptography,
+
+00:00:18.559 --> 00:00:20.959
+and we're still in this quarter here.
+
+00:00:23.010 --> 00:00:27.110
+So I hope you have watched my product recording for
+
+00:00:27.370 --> 00:00:31.090
+RSA and DH uh algorithm, different Hellman.
+
+00:00:31.250 --> 00:00:35.610
+So these two algorithms are the um basics
+
+00:00:35.610 --> 00:00:39.369
+we, we discuss all these applications, right?
+
+00:00:39.490 --> 00:00:44.369
+So, so, so only by knowing them, um, and then you probably can understand
+
+00:00:44.369 --> 00:00:47.479
+better how this works. And now if you haven't watched them,
+
+00:00:47.520 --> 00:00:52.319
+you just now imagine you know there there are some algorithms
+
+00:00:52.319 --> 00:00:57.040
+which can help generating um one public key and a
+
+00:00:57.040 --> 00:01:01.520
+private key pair. OK, so one public key and one private key.
+
+00:01:01.799 --> 00:01:06.629
+So this key can be used in all this scenario now,
+
+00:01:06.760 --> 00:01:09.000
+right? So the encryption key and decryption,
+
+00:01:09.160 --> 00:01:14.029
+they must be different. Right. So we will focus on the
+
+00:01:14.029 --> 00:01:18.900
+case study. And in those cases we discussed in last week,
+
+00:01:19.110 --> 00:01:23.330
+which requires authenticity, non reputation,
+
+00:01:23.470 --> 00:01:28.309
+and or sometimes integrated, integrate integrity together,
+
+00:01:28.629 --> 00:01:33.349
+right? So we will discuss how this asymmetric crypto algorithm
+
+00:01:33.349 --> 00:01:37.319
+can help in achieving those security goals,
+
+00:01:37.669 --> 00:01:42.389
+OK? So then we will mainly talk about different
+
+00:01:43.120 --> 00:01:47.989
+application scenario and see how we can use them and how we can combine different
+
+00:01:47.989 --> 00:01:52.860
+algorithms. To guarantee they have different security goals
+
+00:01:52.860 --> 00:01:55.800
+achieved, right? So what we were talking about.
+
+00:01:56.870 --> 00:02:01.400
+Combining DS, triple, or AES and some hash
+
+00:02:01.400 --> 00:02:06.360
+algorithm, and they can guarantee the confidentiality and
+
+00:02:06.360 --> 00:02:09.990
+integrity together, right? So in your uh workshop,
+
+00:02:10.080 --> 00:02:14.029
+I think you try to use some MD5 hash, right,
+
+00:02:14.240 --> 00:02:18.919
+to create a signature so that you can check whether original
+
+00:02:18.919 --> 00:02:23.759
+code was modified or not, right? So that integrated can be checked.
+
+00:02:24.119 --> 00:02:29.039
+And then they can be combined together so that we can have the integrated and
+
+00:02:29.039 --> 00:02:33.759
+confidentiality together. And today we'll talk about how do we use this
+
+00:02:33.759 --> 00:02:38.000
+different algorithm. Combine them to guarantee
+
+00:02:38.000 --> 00:02:41.160
+authenticity and non-repudiation, OK.
+
+00:02:42.949 --> 00:02:47.229
+So, remember in a symmetric, while we have asymmetric,
+
+00:02:47.389 --> 00:02:51.190
+we were discussing some scenario cases, right?
+
+00:02:51.559 --> 00:02:56.059
+Uh, one is that e-commerce case, and millions of customers,
+
+00:02:56.110 --> 00:02:58.210
+they need to communicate with the server.
+
+00:02:58.520 --> 00:03:03.270
+Of course, the server doesn't want to generate a symmetric key
+
+00:03:03.270 --> 00:03:06.929
+for each of his customers. And in that case,
+
+00:03:07.009 --> 00:03:10.970
+the cus the server has to generate millions of key,
+
+00:03:11.320 --> 00:03:15.089
+right, symmetric keys, which are different for each customer,
+
+00:03:15.710 --> 00:03:20.250
+right, that's not scalable, right? And uh by using
+
+00:03:20.250 --> 00:03:23.889
+symmetric, uh, which is why we need a symmetric.
+
+00:03:24.050 --> 00:03:26.580
+And for online conferencing, the same thing.
+
+00:03:26.809 --> 00:03:31.660
+If we want to keep each two. Party in that online
+
+00:03:31.660 --> 00:03:36.490
+conferencing to be able to securely exchange messages.
+
+00:03:37.020 --> 00:03:41.699
+And then we got to have N times N minus 1
+
+00:03:41.699 --> 00:03:46.520
+divided by 2, that many keys to guarantee each two parties in this
+
+00:03:48.580 --> 00:03:53.419
+online conferencing um scenario to be able to talk to each
+
+00:03:53.419 --> 00:03:58.220
+other secretly, right? So, and also there's a
+
+00:03:58.800 --> 00:04:02.589
+Issue for who will distribute these keys,
+
+00:04:02.720 --> 00:04:07.339
+right, who will generate these keys, and who will oversee all the um
+
+00:04:07.339 --> 00:04:12.279
+communication, right, um, key pair exchanging and
+
+00:04:12.279 --> 00:04:15.160
+maybe expiry date and all that kind of stuff,
+
+00:04:15.320 --> 00:04:20.279
+right? So there's no key distribution, so we want to
+
+00:04:20.279 --> 00:04:25.250
+solve that issue as well. And then, and then also we want to
+
+00:04:25.260 --> 00:04:27.609
+ensure the right party are communicating,
+
+00:04:27.970 --> 00:04:32.459
+which means, how can we, how can we authenticate?
+
+00:04:32.730 --> 00:04:35.529
+We're talking to the right right party. By,
+
+00:04:35.540 --> 00:04:39.790
+by, by symmetric, there's no way uh we can
+
+00:04:39.790 --> 00:04:43.929
+authenticate another party, right? So, we got to make sure,
+
+00:04:44.170 --> 00:04:48.720
+remember, in symmetric, we just want to share a key with our receiver
+
+00:04:48.720 --> 00:04:53.579
+and. And however, if we share the key to a wrong person,
+
+00:04:53.859 --> 00:04:55.899
+and then the big issue will happen, right?
+
+00:04:56.140 --> 00:05:00.559
+So the wrong person will be able to access to all the secret data you
+
+00:05:00.940 --> 00:05:05.420
+want to share with him, right? So we've got to make sure the key can be shared to the
+
+00:05:05.420 --> 00:05:10.149
+right right party. So we have to have
+
+00:05:10.149 --> 00:05:15.149
+authenticity, OK. So then that's what a symmetric
+
+00:05:15.149 --> 00:05:19.989
+can do. OK, can solve all these issues. And then you can see with
+
+00:05:19.989 --> 00:05:24.410
+asymmetric and symmetric when we compare um the security
+
+00:05:24.790 --> 00:05:29.399
+service provided by Each different type.
+
+00:05:29.709 --> 00:05:33.339
+And of course, they both need to uh combine,
+
+00:05:33.549 --> 00:05:35.589
+need to be combined with hash algorithm,
+
+00:05:35.709 --> 00:05:40.619
+right? And with symmetric, we can at most guarantee these two features,
+
+00:05:40.950 --> 00:05:44.809
+but with asymmetric, we can guarantee all these four features,
+
+00:05:45.119 --> 00:05:48.899
+right? Availability is not a goal here. So we have,
+
+00:05:48.910 --> 00:05:52.410
+we only have the other four goals can be achieved by either,
+
+00:05:52.630 --> 00:05:56.730
+um, yeah, by this asymmetric, but symmetric can only achieve these two goals,
+
+00:05:56.910 --> 00:06:01.809
+OK? So now here is the first scenario. And we
+
+00:06:01.809 --> 00:06:06.549
+want to use SMS. Encryption and decryption
+
+00:06:06.549 --> 00:06:11.250
+to achieve confidentiality. So, um, the
+
+00:06:11.250 --> 00:06:15.809
+case here is, now let's imagine based on RSA
+
+00:06:15.809 --> 00:06:20.529
+algorithm, OK, in my preductory coding. There is a key,
+
+00:06:20.649 --> 00:06:24.470
+a public key and a private key pair generated for,
+
+00:06:25.049 --> 00:06:29.420
+for all these people, right, so everyone can have his own
+
+00:06:29.420 --> 00:06:34.049
+private key and public key pair. Right, so a key pair is
+
+00:06:34.049 --> 00:06:37.029
+generated for Alice and key pair is generated for Bob.
+
+00:06:37.850 --> 00:06:42.809
+And then if we now want to uh have the key
+
+00:06:42.809 --> 00:06:47.350
+exchanging, right? So, Alice wants to get Bob's public key,
+
+00:06:47.570 --> 00:06:51.209
+and Bob will share that public key. Right?
+
+00:06:51.470 --> 00:06:56.390
+And what happens here is, if we, we can imagine that Bob,
+
+00:06:56.670 --> 00:06:59.820
+that Bob is Amazon and Alice is customer here.
+
+00:07:00.230 --> 00:07:05.160
+So, customer wants to get Bob's Amazon's public uh
+
+00:07:05.160 --> 00:07:10.029
+public key. And then later, this customer can encrypt his
+
+00:07:10.029 --> 00:07:13.390
+credit card information by using Amazon's public key.
+
+00:07:14.059 --> 00:07:18.570
+OK, so, um, the customer wants to buy
+
+00:07:18.570 --> 00:07:22.089
+something from Amazon. Of course, most of the service online,
+
+00:07:22.170 --> 00:07:27.070
+right? So the customer is encrypting his own credit card information by using
+
+00:07:27.489 --> 00:07:30.670
+a third party, for example, PayPal, Alipay,
+
+00:07:30.869 --> 00:07:34.070
+right, by those online payment companies,
+
+00:07:34.130 --> 00:07:38.779
+um, publicly, but We just, uh, by simplify this
+
+00:07:38.779 --> 00:07:42.420
+procedure, we just assume the customer can directly talk to Amazon.
+
+00:07:42.700 --> 00:07:45.890
+Amazon can directly charge this customer's credit card,
+
+00:07:46.190 --> 00:07:50.899
+and then, and then Amazon is the only one who can see this
+
+00:07:50.899 --> 00:07:55.350
+customer's credit card information, OK. Um,
+
+00:07:56.420 --> 00:08:00.170
+Yeah So let's assume that's the case here,
+
+00:08:00.309 --> 00:08:05.209
+right? So the customer is talking to has got Amazon's
+
+00:08:05.209 --> 00:08:09.809
+public key and customer can use Amazon's public key to do an
+
+00:08:09.809 --> 00:08:13.809
+encryption. So now I just uh pay attention to this color.
+
+00:08:14.010 --> 00:08:18.649
+I use a different color. It's orange color and then belongs
+
+00:08:18.649 --> 00:08:23.130
+to Bob, OK? Amazon site. So what Amazon,
+
+00:08:23.489 --> 00:08:28.399
+what Alice, the customer would do here is to To an
+
+00:08:28.399 --> 00:08:31.049
+encryption by using
+
+00:08:32.890 --> 00:08:37.780
+Amazon's public key, and then The Amazon will
+
+00:08:38.119 --> 00:08:43.000
+use this Amazon's private key to do a decryption so
+
+00:08:43.000 --> 00:08:47.000
+that Amazon can read that credit card information and charge credit card,
+
+00:08:47.359 --> 00:08:51.479
+right? So encryption and decryption must be a different key,
+
+00:08:51.679 --> 00:08:56.650
+right? Must be different. So now you can also imagine you all in this
+
+00:08:56.650 --> 00:09:01.489
+room are the customer um um of Amazon.
+
+00:09:01.729 --> 00:09:04.969
+And you all want to buy something from Amazon.
+
+00:09:05.250 --> 00:09:08.750
+And by assuming you all know Amazon's public key,
+
+00:09:08.969 --> 00:09:13.700
+right? And then You can then encrypt your credit card information
+
+00:09:13.700 --> 00:09:17.000
+by Amazon's public key and you send to Amazon,
+
+00:09:17.280 --> 00:09:21.320
+right? If anyone else in the room also get that message,
+
+00:09:21.650 --> 00:09:26.239
+you got this encrypted message by using Amazon's public key and you also know
+
+00:09:26.239 --> 00:09:30.840
+Amazon's public key, right? If you wish to use Amazon's public key to do a
+
+00:09:30.840 --> 00:09:35.750
+decryption, that's, there's no way. So, So because that
+
+00:09:35.750 --> 00:09:40.590
+RS algorithm guarantees only the associated
+
+00:09:40.989 --> 00:09:45.210
+private key can be used for decryption. So if we know
+
+00:09:45.590 --> 00:09:48.590
+Amazon's private key, of course we can do a decryption.
+
+00:09:48.630 --> 00:09:52.349
+We can all read this customer's credit card information.
+
+00:09:52.640 --> 00:09:57.140
+However, Amazon's private key is only kept by Amazon,
+
+00:09:57.309 --> 00:10:02.150
+OK, by himself. So Amazon is the only one who can read your
+
+00:10:02.150 --> 00:10:07.039
+credit card information. So this is how the confidentiality can be
+
+00:10:07.039 --> 00:10:09.760
+kept, OK, achieved in this procedure.
+
+00:10:11.250 --> 00:10:15.289
+Um, OK, so I just want to stop a little bit here.
+
+00:10:15.409 --> 00:10:19.450
+I saw Joyce's, Joyce's question. Um, it the,
+
+00:10:19.690 --> 00:10:24.330
+um, symmetric encryption can only guarantee confidentiality as it's a
+
+00:10:24.330 --> 00:10:26.530
+separate hash that guarantees integrity.
+
+00:10:27.049 --> 00:10:31.010
+And this new slide is that can guarantee and integrate.
+
+00:10:31.400 --> 00:10:35.880
+So, um, sorry, yeah, there was a bit confusing here.
+
+00:10:35.960 --> 00:10:39.859
+I added integrity and also added integrity here,
+
+00:10:41.419 --> 00:10:45.919
+which all have to, um, this algorithm has to combine with
+
+00:10:46.440 --> 00:10:51.380
+the Hash algorithm to guarantee both OK by
+
+00:10:51.380 --> 00:10:54.739
+itself it only has in confidentiality. You're right.
+
+00:10:55.099 --> 00:10:59.659
+And again for the asymmetric integrity was added here is because we
+
+00:10:59.659 --> 00:11:04.479
+also consider the case we will, um, combine asymmetric and
+
+00:11:04.479 --> 00:11:09.380
+hash. OK, when we combine the hash together here so the symmetric
+
+00:11:09.380 --> 00:11:13.780
+can guarantee this both and the asymmetric and guarantee integrated here as well.
+
+00:11:14.099 --> 00:11:18.880
+So we got to borrow the hash, OK. Um, in both
+
+00:11:18.880 --> 00:11:22.789
+cases. OK. So,
+
+00:11:23.299 --> 00:11:28.140
+now, um, you, you'll see how hash can be embedded and so that
+
+00:11:28.140 --> 00:11:30.460
+these different features can be guaranteed.
+
+00:11:31.130 --> 00:11:36.010
+OK, so here is how, how the customer is using
+
+00:11:36.010 --> 00:11:40.590
+that. Orange, uh, belong to this Amazon
+
+00:11:40.590 --> 00:11:45.500
+to do an encryption. And then the encrypted credit card
+
+00:11:45.500 --> 00:11:47.460
+information, when Amazon received that one,
+
+00:11:47.580 --> 00:11:52.539
+Amazon will use his own orange private key to
+
+00:11:52.539 --> 00:11:55.799
+do a decryption and then he can read that text.
+
+00:11:56.210 --> 00:12:00.039
+So that encrypted text, although it's shared online,
+
+00:12:00.380 --> 00:12:03.380
+And if we don't have Amazon's private key,
+
+00:12:03.390 --> 00:12:08.190
+which was kept by her, by himself, and then there's no way to
+
+00:12:08.190 --> 00:12:13.000
+decrypt this encrypted text. So this is why we would say
+
+00:12:13.190 --> 00:12:17.750
+the public key was used for encryption and the private key was used.
+
+00:12:18.380 --> 00:12:23.200
+In decryption, and confidentiality can be kept,
+
+00:12:23.500 --> 00:12:27.640
+OK? Confidentiality. So public key plus private key equals to
+
+00:12:27.640 --> 00:12:30.590
+confidentiality. However, in my next slide,
+
+00:12:31.020 --> 00:12:33.960
+remember the order of this public and private key,
+
+00:12:34.380 --> 00:12:38.320
+which would be different when we want to keep the authenticity,
+
+00:12:38.700 --> 00:12:43.409
+the private key and the public key. So private key is in the
+
+00:12:43.409 --> 00:12:46.109
+1st place and public key was in the 2nd place,
+
+00:12:46.450 --> 00:12:51.330
+which means we would use private key for encryption and the public key
+
+00:12:51.330 --> 00:12:55.570
+for decryption. And then that can help to guarantee
+
+00:12:55.570 --> 00:13:00.390
+authenticity. OK, so, Um,
+
+00:13:00.650 --> 00:13:04.650
+again, there's a key exchanging system, but in this case,
+
+00:13:04.809 --> 00:13:09.609
+we would imagine the customer is Bob and Alice is Amazon in this
+
+00:13:09.609 --> 00:13:14.489
+site. You can now imagine, we want, a customer want to guarantee the
+
+00:13:14.489 --> 00:13:18.960
+message is truly from Amazon. So how Amazon can prove
+
+00:13:19.250 --> 00:13:23.520
+his own message is actually uh from Amazon,
+
+00:13:23.809 --> 00:13:28.570
+not from someone else. So we want to have authenticity here in
+
+00:13:28.570 --> 00:13:33.309
+this application. So what Amazon has to do
+
+00:13:33.489 --> 00:13:38.010
+is to encrypt a message he wants to share
+
+00:13:38.250 --> 00:13:43.010
+by using his own private key, OK, which is this
+
+00:13:43.010 --> 00:13:47.650
+blue key. OK. So he will encrypt by using
+
+00:13:47.650 --> 00:13:52.549
+that blue, his own private key, and then he will share with
+
+00:13:52.549 --> 00:13:57.010
+this customer. And after this customer receives that message,
+
+00:13:57.510 --> 00:14:01.650
+because the customer has access to Amazon's public key,
+
+00:14:01.950 --> 00:14:06.809
+and then the customer can use Amazon's public key to do a decryption.
+
+00:14:07.270 --> 00:14:12.090
+When the customer can read the message and decrypt the message by using
+
+00:14:12.090 --> 00:14:16.690
+this. Amazon's public key and this customer has the
+
+00:14:16.690 --> 00:14:21.469
+confidence that message he received was actually from Amazon.
+
+00:14:21.849 --> 00:14:24.570
+So this is how private key for encryption,
+
+00:14:24.700 --> 00:14:28.809
+public key for decryption is to be used in keeping this
+
+00:14:28.809 --> 00:14:33.250
+authenticity. Right. So this is what,
+
+00:14:33.750 --> 00:14:37.570
+what, um, happens here. So,
+
+00:14:38.150 --> 00:14:41.729
+Amazon's private key was used for encryption,
+
+00:14:42.070 --> 00:14:44.510
+and Amazon, before sending that message,
+
+00:14:44.630 --> 00:14:49.010
+he will firstly encrypt his own message by using his private key.
+
+00:14:49.429 --> 00:14:54.349
+And then when customer receive, the customer will use Amazon's public key
+
+00:14:54.349 --> 00:14:59.219
+to do a decryption. When This customer saw that
+
+00:14:59.219 --> 00:15:02.340
+message can be decreed by using Amazon's publicly,
+
+00:15:02.419 --> 00:15:07.140
+so this customer knew. The original tax must have
+
+00:15:07.140 --> 00:15:10.020
+been increased by using Amazon's private key,
+
+00:15:10.080 --> 00:15:14.729
+which is only known by Amazon himself, not by anyone
+
+00:15:14.729 --> 00:15:19.570
+else. OK. Of course, this has assumed this customer has the right
+
+00:15:19.570 --> 00:15:23.739
+public key belonging to Amazon at the very first step.
+
+00:15:24.150 --> 00:15:28.159
+Now, sorry, let, let's imagine, um, maybe I,
+
+00:15:28.219 --> 00:15:31.780
+I, I know probably some, some of you would be confused in this case,
+
+00:15:31.900 --> 00:15:36.700
+right? So we are using the private key for encryption and public key for decryption,
+
+00:15:36.859 --> 00:15:39.950
+OK, in this uh keeping authenticity case.
+
+00:15:40.450 --> 00:15:42.700
+And let's now imagine in this classroom,
+
+00:15:42.820 --> 00:15:47.380
+virtual classroom, OK, now here we have 28 people in
+
+00:15:47.380 --> 00:15:52.380
+total, right? And then Remember, the public key is
+
+00:15:52.380 --> 00:15:56.900
+meant to be public, OK? And we can share them without any
+
+00:15:56.900 --> 00:16:01.650
+worry, right? So, the 28 people in this room
+
+00:16:01.650 --> 00:16:06.580
+can generate 28 key pair, OK. Each of us has the
+
+00:16:07.750 --> 00:16:12.659
+ability to run our essay algorithm, and we can all generate a public
+
+00:16:12.659 --> 00:16:14.880
+key and a private key which belongs to ourselves.
+
+00:16:15.429 --> 00:16:20.090
+OK, so there will be 28 key pairs belonging to different people.
+
+00:16:20.320 --> 00:16:25.200
+Of course, in each of these key pair that public key must be different from other
+
+00:16:25.200 --> 00:16:29.809
+people's public key, and private key pair private key is also different from other people.
+
+00:16:30.320 --> 00:16:34.890
+OK. So, now. Let's assume we
+
+00:16:34.890 --> 00:16:39.250
+all share our public key to other 27 people in this room.
+
+00:16:39.940 --> 00:16:43.909
+Then that means we all have a list, OK? We,
+
+00:16:44.049 --> 00:16:48.929
+we all have a list of 27 public key in our list,
+
+00:16:49.099 --> 00:16:53.619
+OK, I have. The 27 um public key
+
+00:16:53.880 --> 00:16:58.479
+belong to Joy, uh, belong to Asa, belong to all
+
+00:16:58.479 --> 00:17:01.909
+you here and Michael and yeah, Russfall.
+
+00:17:02.070 --> 00:17:04.810
+So we, we, we, I have all that public key at least,
+
+00:17:05.560 --> 00:17:09.369
+OK, belong to all different people. So because at the very beginning,
+
+00:17:09.380 --> 00:17:14.199
+we just share all that information. And we trust each other and
+
+00:17:14.199 --> 00:17:19.119
+we trust that the public key shared by Joe is actually Joy's public key and I put
+
+00:17:19.119 --> 00:17:22.680
+that one on my list. And I also trust all other people,
+
+00:17:22.800 --> 00:17:26.420
+so I have that clean public key list, OK,
+
+00:17:26.520 --> 00:17:31.069
+in my paper. So now I want to um
+
+00:17:31.790 --> 00:17:36.709
+OK, remember you also have the other 27 people's public key and you put on
+
+00:17:36.709 --> 00:17:41.459
+your paper, right? So now, I want to share
+
+00:17:41.459 --> 00:17:45.520
+an important message. OK. That important message is,
+
+00:17:45.650 --> 00:17:50.250
+OK, exam question are in these links, and you need to
+
+00:17:50.250 --> 00:17:53.790
+submit by what date, OK, so I put that message.
+
+00:17:54.770 --> 00:17:58.469
+To this room. However, when you receive that message,
+
+00:17:59.050 --> 00:18:03.689
+you can see that plain text and you will doubt whether that
+
+00:18:03.689 --> 00:18:08.229
+link is a good link or not, right? So you can't trust.
+
+00:18:08.750 --> 00:18:11.630
+This message is actually from Hui, right?
+
+00:18:11.790 --> 00:18:16.689
+So although that I put my name, I said I can't regards Hui in
+
+00:18:17.020 --> 00:18:19.589
+attached to that message, but you probably won't believe,
+
+00:18:19.880 --> 00:18:24.150
+right? So you, you think that plain text is forgeable very easily,
+
+00:18:24.310 --> 00:18:29.040
+right. So what I will do is I will add
+
+00:18:29.040 --> 00:18:33.819
+my authenticity to this message. So what I will
+
+00:18:33.819 --> 00:18:38.099
+do is I will encrypt by using
+
+00:18:38.359 --> 00:18:42.079
+my private key, OK, my here, right. So remember,
+
+00:18:42.160 --> 00:18:46.349
+encrypt by using public private key. So I encrypt my
+
+00:18:47.310 --> 00:18:51.839
+exam announcement message by using my private key.
+
+00:18:52.959 --> 00:18:57.900
+And then I will send to you, right? So
+
+00:18:57.900 --> 00:19:02.020
+after you receive that message, which is encrypted text,
+
+00:19:02.380 --> 00:19:05.979
+and you will check the list because you,
+
+00:19:06.180 --> 00:19:11.030
+you saw that message, um, claimed to be sent by Hui.
+
+00:19:11.569 --> 00:19:14.319
+So you check Hui's public key from your list.
+
+00:19:15.079 --> 00:19:19.250
+And then You will use Hu's publicly to do a
+
+00:19:19.250 --> 00:19:24.040
+decryption. Now here in this after decryption,
+
+00:19:24.079 --> 00:19:28.959
+you saw that message which has a link for all exam questions and
+
+00:19:28.959 --> 00:19:31.750
+you trust that message was actually from Hui because you can,
+
+00:19:32.439 --> 00:19:36.880
+you are able to use Hui's public key to do a
+
+00:19:36.880 --> 00:19:41.290
+decryption, right? So then you trust. Hui has
+
+00:19:41.290 --> 00:19:45.989
+initially put her own private key attached to the message
+
+00:19:46.489 --> 00:19:51.449
+or encrypted to the encrypted on the message and then that's why you can use Hui's
+
+00:19:51.449 --> 00:19:56.050
+public key to do a decryption so you believe that
+
+00:19:56.050 --> 00:20:00.569
+original text which was encrypted by Hui's private
+
+00:20:00.569 --> 00:20:05.520
+key and which can only be decrypted
+
+00:20:05.520 --> 00:20:10.430
+by his public key, not by. Robert's public
+
+00:20:10.430 --> 00:20:14.209
+key or Aus's public key or another person's public key,
+
+00:20:14.430 --> 00:20:18.800
+right? So you believe that text was
+
+00:20:19.030 --> 00:20:23.689
+attached with Identity which belongs to
+
+00:20:23.689 --> 00:20:28.410
+Hui herself. My private key is kind of identity in this
+
+00:20:28.410 --> 00:20:33.130
+case, right? So I have signed my message by using
+
+00:20:33.130 --> 00:20:37.469
+my own private key. Private key meant to be a private key,
+
+00:20:37.849 --> 00:20:40.729
+which I don't share with anyone else. The same.
+
+00:20:40.859 --> 00:20:45.670
+thing as your own private key. If you want to share a
+
+00:20:45.670 --> 00:20:50.589
+private message to someone else, you want to add your authenticity to that
+
+00:20:50.589 --> 00:20:53.599
+message, what you can do is the same thing.
+
+00:20:53.949 --> 00:20:58.010
+You encrypt your message by your own private key,
+
+00:20:58.229 --> 00:21:02.180
+and then you share with another. People,
+
+00:21:02.449 --> 00:21:05.660
+right. Other people, when they got this message,
+
+00:21:06.239 --> 00:21:10.989
+they want to verify whether that message was actually from you or
+
+00:21:10.989 --> 00:21:15.640
+from Hu, from Robert, and they would pick up your public key from the
+
+00:21:15.640 --> 00:21:19.479
+list and then they will use that public key to do a decryption.
+
+00:21:20.239 --> 00:21:25.119
+And then that's the um the case how we can
+
+00:21:25.119 --> 00:21:29.250
+add authenticity to our own message, right?
+
+00:21:29.800 --> 00:21:34.760
+So, so that's the, the case here, OK. So
+
+00:21:34.760 --> 00:21:39.520
+that's why also that's why we call that a signature text because that text has
+
+00:21:39.520 --> 00:21:44.180
+been signed by or has been encrypted by this Alice private key.
+
+00:21:44.359 --> 00:21:49.319
+And another person can use that associated public key to
+
+00:21:49.319 --> 00:21:54.239
+verify that. The message was actually from Alice or from
+
+00:21:54.699 --> 00:21:59.660
+Hui, right, because Hui is the only one who has her own private key.
+
+00:21:59.900 --> 00:22:04.780
+That's how we can verify how we can authenticate that person or that message was
+
+00:22:04.780 --> 00:22:07.260
+actually from Hui or from another person.
+
+00:22:08.030 --> 00:22:12.949
+OK. So This is the
+
+00:22:12.949 --> 00:22:17.430
+of course in this scenario we have assumed
+
+00:22:17.829 --> 00:22:20.839
+we all have a clean list, clean list, OK,
+
+00:22:21.150 --> 00:22:24.170
+of other people's public key. We all know,
+
+00:22:24.630 --> 00:22:29.550
+um, that public keys actually belong to Hui and that probably actually belong to Robert
+
+00:22:29.550 --> 00:22:34.430
+and there's no, uh, fake public key shared at the very first
+
+00:22:34.430 --> 00:22:38.060
+step, right? And also for my other slides,
+
+00:22:38.069 --> 00:22:42.900
+this, this place here. Um, here, right? So when a
+
+00:22:42.900 --> 00:22:47.560
+customer wants to encrypt his, uh, credit card information,
+
+00:22:48.180 --> 00:22:53.099
+this customer has made sure he's using Amazon's public key
+
+00:22:53.099 --> 00:22:58.020
+to do an encryption, and then Amazon can decrypt his credit card information because
+
+00:22:58.020 --> 00:23:00.640
+Amazon is the only one who has that private key,
+
+00:23:00.910 --> 00:23:05.380
+right? So we assume that public key in the first place is the true.
+
+00:23:06.109 --> 00:23:10.030
+Um, public key belong to Amazon, not to forge the key by some,
+
+00:23:10.180 --> 00:23:13.930
+uh, I mean, there's a way to share the public key at the very first step.
+
+00:23:14.650 --> 00:23:17.560
+The public key actually belongs to someone,
+
+00:23:17.849 --> 00:23:22.569
+but of course there's a case the public key can be breached or can be replaced by a
+
+00:23:22.569 --> 00:23:27.030
+hacker, right? So of course we've got to find a way later
+
+00:23:27.890 --> 00:23:32.569
+to check how we can make sure the public key exchanging at the very first step.
+
+00:23:33.560 --> 00:23:38.439
+Can be guaranteed and can be a um a step which has
+
+00:23:38.439 --> 00:23:42.920
+no problem, OK. So, So we have that
+
+00:23:42.920 --> 00:23:47.800
+authenticity and why this is why we use a private key
+
+00:23:47.800 --> 00:23:52.420
+plus public key equals to authenticity, but we can also use a public key
+
+00:23:52.420 --> 00:23:55.119
+plus private key to guarantee the confidentiality.
+
+00:23:55.400 --> 00:23:59.959
+So RSA can RSA can guarantee this confidentiality
+
+00:23:59.959 --> 00:24:02.880
+authenticity, OK, by using this RSA algorithm.
+
+00:24:03.689 --> 00:24:08.489
+OK. Um, so we have, we have, based on this RSA
+
+00:24:08.489 --> 00:24:11.359
+algorithm, we can also have the other, um,
+
+00:24:11.760 --> 00:24:15.219
+scenario. So before I talk about my next scenario,
+
+00:24:15.260 --> 00:24:18.500
+I want to answer Robert's question. Robert says,
+
+00:24:19.060 --> 00:24:23.239
+if both Amazon and the customer exchange the encrypted
+
+00:24:23.810 --> 00:24:28.689
+message, both Amazon and the customer need a public and a private key that needs
+
+00:24:28.689 --> 00:24:33.680
+to be generated and shared. Why is this largely easier than sharing
+
+00:24:33.939 --> 00:24:38.900
+symmetric keys? OK, so remember the private
+
+00:24:38.900 --> 00:24:41.780
+key not to be shared with anyone, right?
+
+00:24:41.959 --> 00:24:46.760
+Public key is public. OK. The public key,
+
+00:24:47.160 --> 00:24:51.380
+uh, you don't have to keep it secretly. We just announced that one,
+
+00:24:51.540 --> 00:24:56.520
+OK, through the air. So Amazon can announce his public key
+
+00:24:56.520 --> 00:25:00.849
+is something, and now you can imagine all customers,
+
+00:25:00.959 --> 00:25:03.640
+millions of customers all get that public key,
+
+00:25:03.729 --> 00:25:08.689
+OK? The millions of customers all get that public key and all this customers in this room
+
+00:25:08.689 --> 00:25:13.589
+can get that public key. And the private key though is kept by Amazon
+
+00:25:14.209 --> 00:25:18.130
+to, to himself. He doesn't share with any other people.
+
+00:25:18.680 --> 00:25:23.130
+And then when we as a customer, you remember there are millions of
+
+00:25:23.130 --> 00:25:27.170
+customers. We want to buy things from Amazon.
+
+00:25:27.560 --> 00:25:31.979
+What we will do is we will all use the single public key,
+
+00:25:32.239 --> 00:25:36.760
+OK. Issued by Amazon. And we all
+
+00:25:37.829 --> 00:25:42.530
+encrypt our credit card information by using that only public
+
+00:25:42.530 --> 00:25:47.050
+key shared by Amazon, right? And then we
+
+00:25:47.050 --> 00:25:50.540
+encrypt our credit card information and send it to the air.
+
+00:25:51.020 --> 00:25:55.930
+And then when another hacker can also get that encrypted credit card
+
+00:25:55.930 --> 00:26:00.510
+information, but another hacker, if he doesn't have that private key,
+
+00:26:00.660 --> 00:26:05.630
+which belongs to Amazon, he's not able to decrypt
+
+00:26:05.969 --> 00:26:09.739
+the credit card information. And only Amazon,
+
+00:26:09.750 --> 00:26:14.530
+who has that private key, which kept by her by himself,
+
+00:26:15.109 --> 00:26:20.050
+he can use that private key to do a decryption on those encrypted
+
+00:26:20.050 --> 00:26:24.869
+texts. So, Amazon would be the only one who can read our
+
+00:26:24.869 --> 00:26:27.910
+credit card information. So in this scenario,
+
+00:26:28.209 --> 00:26:32.930
+instead of keeping or generating millions of symmetric keys
+
+00:26:33.209 --> 00:26:36.170
+to be shared with millions of these customers,
+
+00:26:36.390 --> 00:26:39.280
+right, those symmetric keys must be different,
+
+00:26:39.709 --> 00:26:44.369
+remember, right? So only be different than this
+
+00:26:44.369 --> 00:26:48.369
+Amazon can do a secured decryption.
+
+00:26:48.939 --> 00:26:53.089
+However, this Amazon now has only one key pair,
+
+00:26:53.170 --> 00:26:55.089
+which is public key and private key pair.
+
+00:26:55.410 --> 00:27:00.209
+Public public key is shared by, OK, with millions of
+
+00:27:00.209 --> 00:27:04.430
+customers. And the private key is kept by Amazon himself,
+
+00:27:04.790 --> 00:27:08.489
+right? So by using that one key pair here.
+
+00:27:09.310 --> 00:27:14.109
+Each customer can encrypt his own credit card information
+
+00:27:14.109 --> 00:27:18.910
+very safely and shared with Amazon. And Amazon
+
+00:27:18.910 --> 00:27:23.609
+is the only one who can Decrypt that credit card information.
+
+00:27:23.810 --> 00:27:26.209
+Charge your credit card, and then that's it.
+
+00:27:26.489 --> 00:27:29.709
+So the online purchase can be finished in this way,
+
+00:27:30.089 --> 00:27:34.030
+right? So there's only one key pair needed in this case,
+
+00:27:34.569 --> 00:27:39.410
+OK. So which is different from this symmetric key,
+
+00:27:39.640 --> 00:27:43.969
+but in symmetric case, right, symmetric key case.
+
+00:27:44.959 --> 00:27:49.920
+Amazon has to generate millions of different symmetric keys for
+
+00:27:49.920 --> 00:27:54.680
+millions of customers. And each customer has his own symmetric key and
+
+00:27:54.680 --> 00:27:57.430
+encrypt his credit card information, shared with Amazon.
+
+00:27:57.719 --> 00:28:01.699
+And Amazon has to use that exact same key.
+
+00:28:03.160 --> 00:28:08.119
+Kept for this customer to decrypt his credit card information and for different customers he
+
+00:28:08.119 --> 00:28:11.780
+has to find a different key, right, to do a decryption.
+
+00:28:12.109 --> 00:28:16.920
+However, in this public and private key usage application.
+
+00:28:17.760 --> 00:28:22.739
+Amazon only needs to generate one key. One public key and one
+
+00:28:22.739 --> 00:28:27.540
+private key, right? And he can get charged for all
+
+00:28:27.540 --> 00:28:32.180
+his customers, right, all his customers will just use that public key
+
+00:28:32.180 --> 00:28:36.000
+to do an encryption and public key is not to be,
+
+00:28:36.430 --> 00:28:41.339
+uh, securely shared. It can be announced in the air and everyone can access to
+
+00:28:41.339 --> 00:28:45.400
+that public key. Right, so this is a much,
+
+00:28:45.599 --> 00:28:50.390
+much more efficient and no one needs to do a key
+
+00:28:50.390 --> 00:28:55.359
+distribution, distribution, and no one needs to generate millions of key pairs,
+
+00:28:55.719 --> 00:28:59.760
+right? So only Amazon needs to share that only key pair,
+
+00:28:59.920 --> 00:29:04.829
+OK. Um Yeah, and Raffle
+
+00:29:04.829 --> 00:29:07.910
+um said there will be a certificate from CA,
+
+00:29:08.229 --> 00:29:13.109
+which is of course my question there. We assumed that Amazon can
+
+00:29:13.109 --> 00:29:17.089
+share his public key with all his customers very securely,
+
+00:29:17.310 --> 00:29:21.800
+but how, right? How can we make sure a customer is
+
+00:29:22.020 --> 00:29:26.449
+is encrypting his credit card information by using Amazon public key,
+
+00:29:26.750 --> 00:29:31.599
+not an attacker's public key, right? And then this customer thought
+
+00:29:31.599 --> 00:29:34.400
+the attacker's public key belong belonged to Amazon.
+
+00:29:34.640 --> 00:29:39.219
+So how can we make sure that public key at the very first place is a
+
+00:29:39.560 --> 00:29:44.479
+legitimate public key? We've got to have a way to prove that one.
+
+00:29:44.699 --> 00:29:48.079
+So now let's just assume there's a way to share the public key safely
+
+00:29:49.160 --> 00:29:53.739
+and then to um have. Some proof that public key
+
+00:29:53.739 --> 00:29:56.189
+actually belongs to Amazon, actually belongs to Hu,
+
+00:29:56.349 --> 00:29:58.589
+actually belongs to everyone in this virtual room.
+
+00:29:58.829 --> 00:30:03.709
+So let's assume that public key share when we share and then that public key can be
+
+00:30:03.709 --> 00:30:07.060
+trusted, trustable, right. OK.
+
+00:30:09.770 --> 00:30:14.479
+Yeah, so, um, so Robert, and
+
+00:30:14.479 --> 00:30:19.359
+you have more questions about different ones for each kind that needs to be generated for data
+
+00:30:19.359 --> 00:30:24.239
+from Amazon to the customer. Of course we are talking about different scenario
+
+00:30:24.239 --> 00:30:29.119
+here, right? So when we talk about to keep confidentiality and we only have
+
+00:30:29.119 --> 00:30:34.010
+the case where um Each customer wants to include
+
+00:30:34.010 --> 00:30:36.170
+their own credit card and share with Amazon.
+
+00:30:36.290 --> 00:30:40.250
+So in that case, one key pair generated by Amazon is enough.
+
+00:30:40.530 --> 00:30:45.270
+But in another scenario, if we all want to authenticate ourselves,
+
+00:30:45.829 --> 00:30:50.550
+We, of course, we, each one in this room will generate a key pair
+
+00:30:50.729 --> 00:30:54.219
+and we want to add our identity, OK, in this digital space,
+
+00:30:55.630 --> 00:30:58.670
+and we all want to authenticate. But again,
+
+00:30:58.739 --> 00:31:02.540
+the public key is not to be shared securely,
+
+00:31:02.829 --> 00:31:07.589
+but in symmetric encryption, you need to guarantee the symmetric
+
+00:31:07.589 --> 00:31:12.229
+key is shared securely. But in public and
+
+00:31:12.229 --> 00:31:17.069
+private key case, The public key can be shared in the air
+
+00:31:17.069 --> 00:31:20.209
+without any encryption. OK, public key is public key.
+
+00:31:20.310 --> 00:31:25.260
+We just Put them out and then that you don't have
+
+00:31:25.260 --> 00:31:29.319
+to worry about how public key because public is meant to be public.
+
+00:31:29.979 --> 00:31:32.660
+We're not saying, oh, the symmetric key,
+
+00:31:32.739 --> 00:31:37.099
+you've got to find a way to very safely share the
+
+00:31:37.099 --> 00:31:40.569
+symmetric key between the sender and receiver,
+
+00:31:40.780 --> 00:31:45.739
+right? Remember, right, we've got to make sure that symmetric key can only be known by those two
+
+00:31:45.739 --> 00:31:49.219
+parties, but for public key. We don't care.
+
+00:31:49.640 --> 00:31:52.369
+The public key is public, OK, we just share them,
+
+00:31:52.619 --> 00:31:55.719
+right, no problem. So that's another difference here,
+
+00:31:56.260 --> 00:32:00.709
+OK. OK, so now let's come back to this
+
+00:32:00.709 --> 00:32:05.339
+document signing case study. So if there's a case where
+
+00:32:05.339 --> 00:32:10.280
+Alice wants to sign some message and then send to Bob
+
+00:32:10.739 --> 00:32:15.060
+a secret message, right, so Alice doesn't want to
+
+00:32:15.060 --> 00:32:19.880
+Avis would be able to change that message to like
+
+00:32:19.880 --> 00:32:23.574
+Alice owns Avis. $10 or Alice also wants,
+
+00:32:23.795 --> 00:32:28.435
+doesn't want. Bob can claim, OK, you don't owe me $10 you owe me
+
+00:32:28.435 --> 00:32:31.875
+$1000 right? So when Alice sends that message,
+
+00:32:32.025 --> 00:32:36.814
+Alice wants to make sure her message won't be modified
+
+00:32:36.814 --> 00:32:40.814
+by anyone, right? He, she also wants to,
+
+00:32:41.194 --> 00:32:46.074
+uh, let Bob believes the message was actually from Alice.
+
+00:32:46.224 --> 00:32:48.994
+Alice has put a signature to her message.
+
+00:32:49.234 --> 00:32:54.209
+So when Bob received it. Bob has the confidence that Alice sent that
+
+00:32:54.209 --> 00:32:58.939
+message and that's a true message was not that message was not modified
+
+00:32:58.939 --> 00:33:03.819
+by anyone in the middle, right? So, Alice wants to
+
+00:33:03.819 --> 00:33:07.760
+get some signature to put on on her message,
+
+00:33:08.060 --> 00:33:12.479
+right? So, Alice wants to make sure that signature is authentic,
+
+00:33:13.050 --> 00:33:16.760
+unalterable, not reusable, not
+
+00:33:17.300 --> 00:33:21.869
+repudiated, right? So, The solution here
+
+00:33:21.869 --> 00:33:26.339
+is What Alice could do is he
+
+00:33:27.069 --> 00:33:31.880
+Uh, she will use a hash function to create
+
+00:33:32.060 --> 00:33:35.819
+a signature, OK, or with a fingerprint here,
+
+00:33:36.219 --> 00:33:41.020
+right, to To generate hash and in your workshop you
+
+00:33:41.020 --> 00:33:45.979
+have used the like MD5 sum right just one simple command or
+
+00:33:45.979 --> 00:33:50.670
+to create a different type of hash you just change your command you can generate hash,
+
+00:33:50.739 --> 00:33:55.060
+right. So this is a hash to original uh
+
+00:33:55.060 --> 00:33:59.260
+message and then with this message with this hash.
+
+00:33:59.930 --> 00:34:04.670
+Alice wants to put her own authenticity to her message.
+
+00:34:04.989 --> 00:34:09.929
+So Alice will use her own private key to do
+
+00:34:09.929 --> 00:34:14.750
+encryption on this fingerprint. And
+
+00:34:14.750 --> 00:34:18.770
+then this is an encrypted fingerprint. You can't see any
+
+00:34:19.310 --> 00:34:24.270
+message inside, right? So because it has been encrypted by using Alice's
+
+00:34:24.270 --> 00:34:27.948
+private key. So in the receiver end,
+
+00:34:28.888 --> 00:34:33.789
+Receiver received this plain text from um shared
+
+00:34:33.789 --> 00:34:38.549
+by Alice maybe by email or by text. OK, so by another channel and
+
+00:34:38.549 --> 00:34:43.388
+then Bob received this message. Bob wants to verify whether that message is a
+
+00:34:43.388 --> 00:34:48.069
+true one or or a wrong one, right? Or maybe Alice sent
+
+00:34:48.069 --> 00:34:52.599
+by email and send this message and attach such a
+
+00:34:53.110 --> 00:34:57.550
+Um, hashed, OK, result to that message, OK,
+
+00:34:57.590 --> 00:35:01.969
+and sent together to Bob, right? Bob received this one and also this one.
+
+00:35:02.469 --> 00:35:07.429
+And now Bob wants to verify whether this message is a true message or not.
+
+00:35:07.989 --> 00:35:12.550
+So Bob will generate a signature, OK, um,
+
+00:35:12.639 --> 00:35:17.100
+by using a shot one function. And then Bob will
+
+00:35:17.100 --> 00:35:20.459
+also because there's a a red block received.
+
+00:35:21.659 --> 00:35:26.080
+So Bob knew that message was included by using
+
+00:35:26.610 --> 00:35:31.290
+Alice's private key. So because public key Bob has received,
+
+00:35:31.419 --> 00:35:34.780
+so Bob will use Alice's public key to do a decryption.
+
+00:35:36.239 --> 00:35:40.000
+So after using this Alice public key to do a decryption,
+
+00:35:40.120 --> 00:35:43.639
+Alice got, I'm sorry, Bob got this one, this signature.
+
+00:35:44.290 --> 00:35:48.770
+And then Bob will check the hash signature of original message
+
+00:35:49.129 --> 00:35:53.879
+and this and this decrypted message. When these two messages
+
+00:35:53.879 --> 00:35:58.209
+are exactly the same, so Bob knew there's no
+
+00:35:58.209 --> 00:36:03.209
+modification on that message here, and this
+
+00:36:03.209 --> 00:36:07.949
+message. Has been encrypted by using Alice private key,
+
+00:36:07.959 --> 00:36:11.679
+and Alice is the only one who can access that private key.
+
+00:36:11.989 --> 00:36:16.229
+So Bob knew that message has already been
+
+00:36:16.229 --> 00:36:20.530
+added that authenticity, right? Or sometimes we say
+
+00:36:20.949 --> 00:36:24.860
+that message has been attached Alice's
+
+00:36:25.389 --> 00:36:29.889
+identity because the private key here represents
+
+00:36:29.949 --> 00:36:34.419
+Alice's identity. In our virtual space, right?
+
+00:36:35.040 --> 00:36:39.659
+So We, because we are able to use Alice public key to do a
+
+00:36:39.659 --> 00:36:44.620
+decryption which means original message must have been encrypted by
+
+00:36:44.620 --> 00:36:49.290
+using Alice private key, so which is why we can
+
+00:36:49.290 --> 00:36:53.979
+believe this message Bob receives is a
+
+00:36:53.979 --> 00:36:58.879
+true message which was, um, which, which,
+
+00:36:58.939 --> 00:37:03.419
+um, has embedded. With Alice's
+
+00:37:03.739 --> 00:37:08.699
+private key or identity, OK. Authenticity is there and also a
+
+00:37:08.699 --> 00:37:13.060
+signature has been added, like, sorry, don't use signature here,
+
+00:37:13.139 --> 00:37:17.280
+fingerprint here, and the hash, um, result here
+
+00:37:17.699 --> 00:37:21.239
+proves that integrity of that message, right?
+
+00:37:21.610 --> 00:37:25.020
+And also in this message by receiving that one,
+
+00:37:25.100 --> 00:37:30.100
+OK, by Bob and Bob. Has the confidence that no
+
+00:37:30.100 --> 00:37:34.629
+repudiation has already has also been achieved right because
+
+00:37:34.629 --> 00:37:39.590
+Alice can't deny later she doesn't own Bob $10
+
+00:37:39.590 --> 00:37:43.850
+because Alice has sent that encrypted red box here.
+
+00:37:44.189 --> 00:37:48.719
+Which proves Alice has already encrypted.
+
+00:37:48.969 --> 00:37:52.120
+Only Alice can encrypt it by using Alice's private key.
+
+00:37:52.310 --> 00:37:56.639
+No one else can, right? So non-reputation has also been achieved here.
+
+00:37:56.879 --> 00:38:01.639
+So non-reputation, integrity, and also authenticity
+
+00:38:01.639 --> 00:38:06.580
+has all been achieved, right, which makes that signature,
+
+00:38:06.879 --> 00:38:11.360
+um, authentic, unalterable. Not
+
+00:38:11.360 --> 00:38:16.300
+reusable, cannot be repudiated. Right, so
+
+00:38:16.300 --> 00:38:20.370
+Alice has used this way to encrypt her message,
+
+00:38:20.830 --> 00:38:24.520
+OK, and then sent to Bob. So everything here has been,
+
+00:38:24.790 --> 00:38:29.379
+um, guaranteed. Now let's imagine, um, the same thing
+
+00:38:29.379 --> 00:38:32.419
+happened from Alice's side, but Alice, uh,
+
+00:38:32.560 --> 00:38:37.449
+but in Bob's side for some reason, and there's a message which
+
+00:38:37.449 --> 00:38:41.889
+is like this, and now you can imagine when you generate a hash.
+
+00:38:42.750 --> 00:38:46.149
+This hash will be different from this decrypted hash,
+
+00:38:46.389 --> 00:38:49.030
+right? So decrypted hash would be a different one.
+
+00:38:49.389 --> 00:38:53.229
+And then when Bob saw different message,
+
+00:38:53.510 --> 00:38:58.139
+different hash, and Bob knew this message was not true,
+
+00:38:58.510 --> 00:39:02.429
+OK, so there's no integrity there. This is how Bob knew.
+
+00:39:03.229 --> 00:39:07.639
+And then you can also see in those, um, code
+
+00:39:07.639 --> 00:39:12.290
+signing scenario. Um, when we want to make sure the code is authentic,
+
+00:39:12.750 --> 00:39:17.669
+actually sourced by the publisher, and has not been modified since it left the
+
+00:39:17.669 --> 00:39:22.219
+software's publisher, and the publisher cannot deny they published the code,
+
+00:39:22.429 --> 00:39:26.260
+and what they can do is with the code, they can also do the same thing.
+
+00:39:26.350 --> 00:39:31.030
+They add such a small red block, OK. And which also was
+
+00:39:31.030 --> 00:39:35.629
+encrypted by using the publisher's private key so the publisher can't deny
+
+00:39:35.629 --> 00:39:40.590
+later, right? The publisher has proved the integrity and also authenticity
+
+00:39:40.590 --> 00:39:44.750
+of their themselves, right? And another case which was
+
+00:39:44.750 --> 00:39:48.629
+used very similar is the digital certificate.
+
+00:39:49.560 --> 00:39:54.560
+Which is You can imagine there's a Cisco or another university,
+
+00:39:54.790 --> 00:39:59.639
+right, and then they want to issue a digital certificate if they're a student
+
+00:39:59.639 --> 00:40:03.899
+when a student graduates. So what they would do is they will firstly,
+
+00:40:04.659 --> 00:40:08.899
+Ask for your date of birth, your name, right,
+
+00:40:08.979 --> 00:40:13.979
+your graduation year, and then they will generate a hash based on all that information.
+
+00:40:14.219 --> 00:40:17.959
+So this hash will then be encrypted by using
+
+00:40:18.469 --> 00:40:23.149
+Cisco's private key. If Cisco wants to add his own.
+
+00:40:23.510 --> 00:40:28.340
+Um, authenticity there, right, because Cisco needs to prove he actually
+
+00:40:28.340 --> 00:40:33.199
+issued that certificate. So Cisco will then encrypt that whole
+
+00:40:33.199 --> 00:40:38.110
+hash by using Cisco's private key. And then they generate
+
+00:40:38.110 --> 00:40:42.800
+number. That number is a unique digital number
+
+00:40:43.040 --> 00:40:47.699
+attached to your certificate, right? And then so that number will
+
+00:40:47.699 --> 00:40:52.620
+be stored um or attached to your digital certificate and also stored
+
+00:40:52.620 --> 00:40:55.800
+in the cloud or database somewhere, right?
+
+00:40:56.139 --> 00:41:01.020
+And then remember that number. And then when you uh
+
+00:41:01.020 --> 00:41:04.370
+later get a job and then your HR officer,
+
+00:41:04.739 --> 00:41:08.330
+they will have to verify your digital certificate is it true or not,
+
+00:41:08.459 --> 00:41:13.389
+right? So, Then in that case, the HR
+
+00:41:13.389 --> 00:41:16.919
+officer will use the system and to check,
+
+00:41:17.010 --> 00:41:20.510
+to verify. So what that system is doing is,
+
+00:41:21.110 --> 00:41:25.129
+you will again, um, the system will ask you to provide your graduation year,
+
+00:41:25.209 --> 00:41:29.070
+your name, your ID information. Um, date of birth,
+
+00:41:29.110 --> 00:41:33.560
+all that kind of information, they will confirm that order and then they will generate hash,
+
+00:41:33.870 --> 00:41:38.850
+OK, so which is this hash at the same time because you provided
+
+00:41:39.620 --> 00:41:43.550
+them your digital certificate, right, so which is the number.
+
+00:41:44.330 --> 00:41:46.729
+Attached to a digital certificate, right?
+
+00:41:47.050 --> 00:41:52.030
+So then they know that number was certified by Cisco.
+
+00:41:52.280 --> 00:41:55.750
+So they will use Cisco's public key to verify,
+
+00:41:55.969 --> 00:42:00.320
+to do a decryption. Then when they decrypt that
+
+00:42:00.320 --> 00:42:05.280
+number and they can see this number and then
+
+00:42:05.280 --> 00:42:10.199
+they will verify these two numbers if they are the same and then they
+
+00:42:10.199 --> 00:42:15.040
+knew you actually got that certificate from Cisco.
+
+00:42:15.360 --> 00:42:19.330
+OK, that's a true certificate provided by you.
+
+00:42:19.709 --> 00:42:23.239
+Otherwise if they got a different reason,
+
+00:42:23.360 --> 00:42:26.379
+different results here, so they knew. Uh,
+
+00:42:26.500 --> 00:42:30.830
+either probably you accidentally provide the wrong information here or
+
+00:42:30.830 --> 00:42:34.699
+your digital signature is not correct. OK,
+
+00:42:34.899 --> 00:42:38.050
+you're here, right, your digital certificate is a fake one,
+
+00:42:38.419 --> 00:42:42.899
+right? So this is how, how the digital certificate was
+
+00:42:42.899 --> 00:42:46.820
+generated based on the similar like technique,
+
+00:42:47.070 --> 00:42:50.510
+right. And then the digital certificate can be authentic.
+
+00:42:50.669 --> 00:42:55.669
+OK, authenticity, integrity, non-repudiation are all embedded to
+
+00:42:55.669 --> 00:43:00.649
+this digital certificate. OK, so now to talk
+
+00:43:00.649 --> 00:43:03.209
+about the last scenario, right, right, OK,
+
+00:43:03.330 --> 00:43:06.340
+based on public and private key. Remember,
+
+00:43:06.350 --> 00:43:11.270
+in all above scenario I've discussed, we have assumed
+
+00:43:11.270 --> 00:43:15.060
+that public key is a true public key, right?
+
+00:43:15.350 --> 00:43:20.149
+So actually belong to Cisco. There's a way to access
+
+00:43:20.149 --> 00:43:24.199
+to a public key which actually belongs to Cisco.
+
+00:43:24.510 --> 00:43:29.370
+And remember when we as a customer using Amazon's public key to do an encryption
+
+00:43:29.370 --> 00:43:34.290
+on our credit card, also assumed. We have
+
+00:43:34.290 --> 00:43:38.310
+access to the right Amazon's public key,
+
+00:43:38.469 --> 00:43:42.949
+right? What if The public key
+
+00:43:43.159 --> 00:43:47.929
+is not actually belong to Amazon. So you can imagine in this
+
+00:43:47.929 --> 00:43:51.199
+case, Alice here is the Amazon site, right?
+
+00:43:51.449 --> 00:43:56.449
+Bob um wants to encrypt his credit card by
+
+00:43:56.449 --> 00:44:00.050
+using Amazon's public key, which should be this green key,
+
+00:44:00.209 --> 00:44:04.790
+right? So Bob should use this green key to do an
+
+00:44:04.790 --> 00:44:08.580
+encryption on his own credit card. However,
+
+00:44:08.810 --> 00:44:13.000
+for some reason, Avis Is the man in the middle,
+
+00:44:13.260 --> 00:44:16.100
+OK, so he launched this man in the middle attack.
+
+00:44:16.459 --> 00:44:21.340
+He replaced his red key. OK, to that
+
+00:44:21.340 --> 00:44:25.080
+green key. So that green key was replaced with this red key.
+
+00:44:25.510 --> 00:44:30.000
+And however, Bob doesn't know. Bob thought that red key
+
+00:44:30.000 --> 00:44:34.860
+is Amazon's public key, so Bob used red key to do an
+
+00:44:34.860 --> 00:44:39.739
+encryption on his own credit card information and then who can read
+
+00:44:39.739 --> 00:44:44.719
+that credit card? Is it Amazon, Alice, or is it Evis?
+
+00:44:46.469 --> 00:44:51.389
+It must be AIS, right, because the credit card was encrypted by
+
+00:44:51.389 --> 00:44:55.949
+using AIs public key. So only Avis now can read that credit
+
+00:44:55.949 --> 00:45:00.510
+card information, right? So how can we ensure
+
+00:45:00.790 --> 00:45:05.669
+at the very first step we get Amazon's public
+
+00:45:05.669 --> 00:45:10.500
+key, which is a true Amazon's public key rather than someone else,
+
+00:45:10.790 --> 00:45:15.179
+right? How can Amazon By um, like a provider,
+
+00:45:15.439 --> 00:45:19.379
+OK, this online shop private provider. How can he
+
+00:45:19.929 --> 00:45:24.840
+guarantee his public key is not forged by a man in the
+
+00:45:24.840 --> 00:45:29.429
+middle attacker and to replace his own public key to
+
+00:45:29.429 --> 00:45:33.239
+someone else, with someone else. Yes,
+
+00:45:33.610 --> 00:45:37.370
+certificate, right? So this is one certificate.
+
+00:45:38.139 --> 00:45:42.810
+Like, um, Which actually certified
+
+00:45:42.810 --> 00:45:47.489
+by global sign organization, OK, and which
+
+00:45:47.489 --> 00:45:52.330
+proved some public key belongs to Amazon or belongs
+
+00:45:52.330 --> 00:45:56.300
+to another company. If you go to your browser,
+
+00:45:56.649 --> 00:46:01.129
+you actually can see. OK, in your network setting,
+
+00:46:01.409 --> 00:46:05.830
+and this is my Chrome, right. So in your network setting,
+
+00:46:06.409 --> 00:46:09.550
+uh, and security place and you can check your own.
+
+00:46:09.969 --> 00:46:14.070
+And you can see a lot of certificate was um
+
+00:46:14.530 --> 00:46:19.320
+stored by my Chrome browser. So this is what my
+
+00:46:19.320 --> 00:46:24.169
+Chrome browser would do for me. So he will actually check whether Amazon's
+
+00:46:24.169 --> 00:46:27.149
+public key is a legitimate public key or not.
+
+00:46:27.530 --> 00:46:32.250
+If it's the right one, certified by another per another
+
+00:46:32.250 --> 00:46:37.149
+big company or a global association. And then this
+
+00:46:37.149 --> 00:46:41.909
+browser will trust this customer is actually visiting the legitimate
+
+00:46:41.909 --> 00:46:46.870
+Amazon and providing his credit card information to the right party rather than a fake
+
+00:46:46.870 --> 00:46:51.370
+party, right? So these are all means some
+
+00:46:52.110 --> 00:46:57.050
+certificate of authority which certified that public key
+
+00:46:57.229 --> 00:47:02.060
+actually belongs to someone. Right? So when a small business
+
+00:47:02.060 --> 00:47:05.580
+start a small business, right? So when you provide a website,
+
+00:47:05.949 --> 00:47:10.050
+what this small business also has to do is to
+
+00:47:10.469 --> 00:47:15.310
+probably pay some money to a big company or to some
+
+00:47:15.310 --> 00:47:19.570
+countries, um, association or organization,
+
+00:47:19.870 --> 00:47:24.760
+uh, who can certify. A public key actually belongs to them,
+
+00:47:25.120 --> 00:47:29.870
+right? So this is service this big company can
+
+00:47:29.870 --> 00:47:33.000
+provide which is called certificate signing request.
+
+00:47:33.389 --> 00:47:38.310
+So what does it mean? It will, it actually means they will
+
+00:47:38.310 --> 00:47:43.310
+certify Amazon's public key is something and they will
+
+00:47:43.310 --> 00:47:48.169
+add a hash and they will also sign by um certificate authority's
+
+00:47:48.169 --> 00:47:52.330
+private key. So which means the certificate of authority,
+
+00:47:52.340 --> 00:47:57.250
+you cannot imagine it's just the one company here it's a big reputable security company
+
+00:47:57.250 --> 00:48:02.050
+Semantic. OK, so he has one public key and a private key
+
+00:48:02.050 --> 00:48:06.500
+pair, right, this big company and that public key has been
+
+00:48:06.500 --> 00:48:10.639
+certified by a government, right, so known by everyone,
+
+00:48:10.979 --> 00:48:15.919
+right. So and then private key pair associated with that public key,
+
+00:48:16.770 --> 00:48:21.370
+OK, belongs to this semantic and now. This big
+
+00:48:21.370 --> 00:48:25.989
+company certifies that Amazon's public key is this,
+
+00:48:26.209 --> 00:48:30.510
+and also a hash was generated and then encrypted.
+
+00:48:31.010 --> 00:48:35.810
+The whole message was encrypted by the semantics private key.
+
+00:48:36.129 --> 00:48:40.429
+So that's a certificate. A given to Amazon.
+
+00:48:41.290 --> 00:48:45.929
+Right, so when you, you are visiting Amazon website,
+
+00:48:46.409 --> 00:48:50.870
+what your browser is doing behind the thing is
+
+00:48:51.360 --> 00:48:55.949
+your browser will seek semantics public key
+
+00:48:56.290 --> 00:49:00.229
+to do a decryption and then to
+
+00:49:00.810 --> 00:49:05.560
+sorry put here. OK, your, your, uh,
+
+00:49:05.570 --> 00:49:10.370
+browser would do because that has been signed by semantics private key,
+
+00:49:10.659 --> 00:49:12.949
+right? So the whole message, the certificate,
+
+00:49:13.370 --> 00:49:18.310
+your browser will use semantics public key to do a decryption
+
+00:49:18.840 --> 00:49:23.179
+and then get this clear message. So he got the decrypted
+
+00:49:23.179 --> 00:49:28.169
+message hash and he also can see that public key here.
+
+00:49:28.489 --> 00:49:32.010
+The public key he will do, he will generate.
+
+00:49:32.429 --> 00:49:37.419
+Uh hash. And then he will compare these two
+
+00:49:37.419 --> 00:49:41.300
+hash, right. So if these two hashs are the same,
+
+00:49:41.659 --> 00:49:46.260
+then your browser would believe, OK, that public key is the right one.
+
+00:49:46.379 --> 00:49:49.500
+Otherwise he wouldn't trust that public key,
+
+00:49:49.659 --> 00:49:54.459
+right? So this is how Amazon has requested some big
+
+00:49:54.459 --> 00:49:59.000
+company to sign on his own public key to give some proof.
+
+00:49:59.969 --> 00:50:04.780
+On that public key is something, right, and then Because we
+
+00:50:04.780 --> 00:50:09.459
+have all these different certificate authority to prove a
+
+00:50:09.459 --> 00:50:14.060
+public key is actually true, and then this browser
+
+00:50:14.060 --> 00:50:18.770
+or another party can believe that public key is the true one,
+
+00:50:19.010 --> 00:50:23.780
+right? Otherwise, we wouldn't have that confidence that public key is
+
+00:50:23.780 --> 00:50:27.979
+actually belongs to Amazon and then so that's the um
+
+00:50:29.679 --> 00:50:34.530
+That's the, the way, OK, what certificate authority is doing.
+
+00:50:35.250 --> 00:50:40.090
+So he's actually providing that service to a
+
+00:50:40.090 --> 00:50:44.870
+lot of small companies when they want to start a website and
+
+00:50:44.870 --> 00:50:49.500
+then when sometimes when your browser visits somewhere and then your browser
+
+00:50:49.500 --> 00:50:54.300
+would remind you or send out a warning that this certificate is
+
+00:50:54.300 --> 00:50:58.810
+not proved by a big company, which actually means.
+
+00:50:58.899 --> 00:51:03.580
+Their public key was not a re recognizable uh one and
+
+00:51:03.580 --> 00:51:06.820
+also not proved by another certificate authority,
+
+00:51:07.100 --> 00:51:11.270
+right? So that's why you will get some warning at that time.
+
+00:51:11.500 --> 00:51:15.530
+And um because that small business hasn't asked for this request to,
+
+00:51:15.580 --> 00:51:17.879
+to provide that confidence to the market.
+
+00:51:18.419 --> 00:51:22.860
+And then because they didn't pay or sometimes this also needs to be
+
+00:51:22.860 --> 00:51:25.639
+periodically issued with that certificate,
+
+00:51:25.860 --> 00:51:30.389
+and it has an expiry date. Right, so this is um
+
+00:51:30.719 --> 00:51:35.629
+about how do we prove that public key is true and so that the customer can use the right public
+
+00:51:35.629 --> 00:51:38.179
+key to, to send that encrypted message to,
+
+00:51:39.070 --> 00:51:43.800
+to the, um, Uh, right party. OK, so of
+
+00:51:43.800 --> 00:51:46.260
+course there are more cryptography algorithms,
+
+00:51:46.639 --> 00:51:50.310
+um, more or less, um, they're quite, uh,
+
+00:51:50.399 --> 00:51:54.179
+yeah, the, their purpose are all achieving,
+
+00:51:54.399 --> 00:51:58.330
+um, These 5 goals, but of course, not availability,
+
+00:51:58.550 --> 00:52:01.199
+but all other 4 goals and combining with different,
+
+00:52:01.429 --> 00:52:06.280
+and they have different properties, um, maybe a speed wise or
+
+00:52:06.870 --> 00:52:11.669
+basic operation wise, but now we, we only focus on seman semantics.
+
+00:52:11.905 --> 00:52:16.245
+I'm sorry, symmetric last time and then this time we talk about asymmetric.
+
+00:52:16.584 --> 00:52:19.895
+Now you understand all this um scenario,
+
+00:52:19.905 --> 00:52:24.675
+we actually will discuss um how to use this asymmetric in our
+
+00:52:24.675 --> 00:52:29.364
+workshop and then you can also see how asymmetric can help
+
+00:52:29.584 --> 00:52:33.415
+um in keeping these different security goals,
+
+00:52:33.784 --> 00:52:38.770
+right. OK. So there are a lot of applications
+
+00:52:38.770 --> 00:52:42.159
+and in week 5, next week, we'll talk about authentication,
+
+00:52:42.560 --> 00:52:45.830
+which again based on this public and private key,
+
+00:52:45.889 --> 00:52:50.330
+asymmetric um infrastructure. And then week
+
+00:52:50.330 --> 00:52:55.090
+78, we will talk about that SSL um secure
+
+00:52:55.090 --> 00:53:00.090
+layer. Protocol, uh, what are the, um,
+
+00:53:00.100 --> 00:53:03.580
+how this symmetric and asymmetric are combined,
+
+00:53:03.860 --> 00:53:08.739
+right, to guarantee, um, different security goals
+
+00:53:08.739 --> 00:53:12.959
+in these protocols. OK. So that's all for today.
+
+00:53:13.310 --> 00:53:16.620
+I hope if you haven't watched, um, the pre-lecture recording,
+
+00:53:16.780 --> 00:53:19.560
+please do make sure you watch them before your workshop,
+
+00:53:19.899 --> 00:53:24.459
+uh, and then otherwise, yeah, you probably feel you.
+
+00:53:25.010 --> 00:53:29.050
+Feel confused sometimes, OK? So we only focus
+
+00:53:29.050 --> 00:53:33.790
+on application in this week. I hope you understand
+
+00:53:33.790 --> 00:53:37.770
+them well, and if not, let's discuss more about teams.
+
+00:53:38.090 --> 00:53:41.750
+OK? Thank you, everyone. That's all for today.
+
