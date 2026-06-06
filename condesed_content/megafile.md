@@ -1,4 +1,4 @@
-##### CIA: confidentiality, integrity, availability. (expanded: authenticity, non-repudiation.)
+## CIA: confidentiality, integrity, availability. (expanded: authenticity, non-repudiation.)
 
 ## Asset Inventory - list hardware, software, applications, customer data.
 
@@ -38,11 +38,6 @@
 
 ## Security Services - symmetric gives confidentiality; asymmetric gives confidentiality/authenticity/non-repudiation; integrity needs hashes.
 
-
-# Malware and Software Threats
-
-## Software Threats:
-
 ## Worm - standalone malware; spreads automatically after initial execution.
 
 ## Virus - attached to executable file.
@@ -69,7 +64,7 @@
 
 ## Trojan Backdoor - hidden condition/password grants attacker later access.
 
-##### Spyware (/trojan) - monitors behavior, keystrokes, and sensitive activity.
+## Spyware (/trojan) - monitors behavior, keystrokes, and sensitive activity.
 
 ## Software Inspection Problem - users usually cannot inspect closed-source app code.
 
@@ -104,9 +99,6 @@
 ## Attack Prevention - clean software, reputable/updated AV, hash/signature checks, safe email/router practices.
 
 ## Malware Hash Checking - analysis sites show whether AV engines detect a sample.
-
-
-# Web Attacks
 
 ## Web Attacks - CSRF, XSS, SQL injection.
 
@@ -150,7 +142,7 @@
 
 ## Packet Sniffing - ISPs, governments, advertisers, attackers, admins.
 
-##### Wireshark - packet capture/analysis tool.
+## Wireshark - packet capture/analysis tool.
 
 ## Malicious Sniffing - steals emails, files, and sensitive traffic.
 
@@ -198,7 +190,7 @@
 
 ## Mitigations - firewalls, IDS, IPS, secure protocols on top of TCP/UDP.
 
-##### Classical Crypto - based on transposition (rearrange) and substitution (replace) for secret messages.
+## Classical Crypto - based on transposition (rearrange) and substitution (replace) for secret messages.
 
 ## Shift Substitution - shift letters by fixed key; receiver shifts back.
 
@@ -218,7 +210,7 @@
 
 ## Decryption Process - count frequencies (hard on small text), guess mappings (common pairs/triples: `THE`), substitute.
 
-##### Modern Cryptography - prevents eavesdropping.
+## Modern Cryptography - prevents eavesdropping.
 
 ## XOR Encryption - `M XOR K = C`.
 
@@ -242,8 +234,7 @@
 
 ## CBC Speed - encryption is serial and slower than ECB.
 
-##### CBC Example - 2-bit blocks with IV `10`; each ciphertext feeds the next plaintext block.
-##### CBC Example - ciphertext `11` reverses to `10`; `10 XOR IV 10 = plaintext 00`.
+## CBC Example - 2-bit blocks with IV `10`; each ciphertext feeds the next plaintext block.
 
 ## CBC Decryption Intro - reverse cipher table plus same IV recovers plaintext.
 
@@ -277,20 +268,15 @@
 
 ## Key Exchange Problem - secret key must be shared securely; CBC IV must match.
 
-##### Key Exhaustion - pairwise keys grow as `n x (n - 1) / 2`.
-##### Symmetric Conferencing Problem - pairwise keys required: `n x (n - 1) / 2`.
+## Key Exhaustion - pairwise keys grow as `n x (n - 1) / 2`.
 
 ## Key Count Examples - 2 parties need 1 key; 3 need 3; 4 need 6; 5 need 10.
 
-##### E-Commerce Scalability - millions of customers would require millions of symmetric keys.
-##### Symmetric E-Commerce Problem - one secret key per customer does not scale to millions.
+## E-Commerce Scalability - millions of customers would require millions of symmetric keys.
 
 ## KDC Problem - trusted center can generate/distribute keys but may read all conversations.
 
 ## Motivation for Asymmetric Crypto - scalable key model; different encryption/decryption keys; supports auth/integrity/non-repudiation with hashes.
-
-
-# Asymmetric Cryptography / RSA / Diffie-Hellman
 
 ## RSA - public-key cryptography for secure transmission, signatures, key exchange.
 
@@ -356,9 +342,6 @@
 
 ## RSA Confidentiality - encrypt with receiver public key; decrypt with receiver private key.
 
-##### Amazon Credit Card Example - customers encrypt with Amazon public key; only Amazon private key decrypts.
-##### Online Purchase Confidentiality - Amazon publishes public key; customers encrypt; only Amazon private key decrypts.
-
 ## Confidentiality Caveat - sender must have the receiver's real public key.
 
 ## RSA Authenticity - sign/encrypt with sender private key; verify/decrypt with sender public key.
@@ -404,8 +387,6 @@
 ## CA Role - provide market trust and prevent public-key substitution/MITM.
 
 ## Future Topics - PKI authentication, SSL/TLS, and symmetric/asymmetric combinations.
-
-# Hashing
 
 ## Hash Output - hash value/code/digital fingerprint, often hexadecimal must be Deterministic, Fixed Length, Pre-Image resistance, Collision Resistance, Avalanche Effect
 
@@ -547,9 +528,9 @@
 
 ## Passwordless / Public-Key Auth - RSA public/private-key protocols reduce dependence on passwords.
 
-##### DAC - owners/privileged users set permissions; traditional Unix/Linux.
+## DAC - owners/privileged users set permissions; traditional Unix/Linux.
 
-##### MAC - central authority enforces predefined policy. stronger security but complex + high admin overhead.
+## MAC - central authority enforces predefined policy. stronger security but complex + high admin overhead.
 
 ## RBAC - permissions assigned to roles; users assigned to roles. simpler management than per-user permissions. (CEO all resources; accountant financial database.)
 
@@ -559,10 +540,6 @@
 
 ## ABAC Attribute Growth - add rules while preserving existing rules.
 
-# Access Control in Operating Systems
-
-## OS Access Models - DAC, MAC, RBAC, rule/attribute-based access.
-
 ## Subjects / Objects - subjects: users/commands/programs; objects: files/pipes/sockets/resources.
 
 ## Permissions - read, write, execute for owner/group/others; `777` = full access for all.
@@ -571,7 +548,7 @@
 
 ## Malware Privilege - malware inherits current user privilege; admin/root login increases damage.
 
-##### Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
+## Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
 
 ## Two-Tier Approach - user calls privileged program that performs only restricted action.
 
@@ -589,7 +566,7 @@
 
 ## Delegation vs Service - SetUID grants temporary program privilege; daemon service performs privileged tasks.
 
-##### SetUID - program runs with owner privilege, not launcher privilege. `4755`; leading `4`; owner execute shows `s`; runs with owner/root EUID.
+## SetUID - program runs with owner privilege, not launcher privilege. `4755`; leading `4`; owner execute shows `s`; runs with owner/root EUID.
 
 ## Purpose - controlled privilege escalation for specific protected operations.
 
@@ -609,19 +586,19 @@
 
 ## Listing Format - first character file type; then owner/group/other triplets.
 
-##### SetUID Bit Display - owner execute becomes `s`, e.g. `rws`.
+## SetUID Bit Display - owner execute becomes `s`, e.g. `rws`.
 
-##### RUID / EUID - RUID = launcher; EUID = identity used for permissions.
+## RUID / EUID - RUID = launcher; EUID = identity used for permissions.
 
 ## Normal Execution - RUID = EUID = runner.
 
-##### SetUID RUID/EUID - RUID stays normal user; EUID becomes program owner.
+## SetUID RUID/EUID - RUID stays normal user; EUID becomes program owner.
 
 ## Root-Owned SetUID - program temporarily runs with root privilege.
 
-##### passwd - root-owned SetUID program updates only user's password field.
+## passwd - root-owned SetUID program updates only user's password field.
 
-##### Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
+## Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
 
 ## SetUID passwd Flow - normal user runs `passwd`; EUID root writes shadow file.
 
@@ -838,9 +815,7 @@
 
 ## Awareness Training - reduces human cyber risk.
 
-##### Social Engineering - psychological deception to make people click, disclose, grant access.
-
-## Phishing.
+## Social Engineering - psychological deception to make people click, disclose, grant access.
 
 ## Spear Phishing - targeted at specific people/roles.
 
