@@ -1,10 +1,3 @@
-# Cyberattacks: Malware, Blended Threats, and CSRF
-
-## Lecture Focus - cyberattacks: web attacks and hardware threats; understand attacks and defenses.
-
-## Cyberattack History - phone phreaking, Morris worm, email malware, Dirty COW, Heartbleed, Shellshock.
-
-## Malware - malicious software.
 
 ## Trojan Horse - disguised as legitimate/useful software.
 

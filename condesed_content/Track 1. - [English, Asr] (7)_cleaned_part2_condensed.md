@@ -1,5 +1,3 @@
-# Salting, Password Stretching, and Multi-Factor Authentication
-
 ## Rainbow Tables - precomputed password-to-hash maps; crack stolen hashes by lookup; weak/common passwords likely included.
 
 ## Salting Password Hashes - random value added before hashing; stored with hash; not secret.

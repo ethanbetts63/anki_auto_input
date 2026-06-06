@@ -18,20 +18,6 @@
 
 ## Modern Cryptography - symmetric and asymmetric; symmetric came first.
 
-## XOR - different bits output `1`; same bits output `0`.
-
-## XOR Encryption - `message XOR key = ciphertext`; `ciphertext XOR key = message`.
-
-## ECB - split plaintext into blocks; encrypt each block independently with same key.
-
-## ECB Weakness - identical plaintext blocks create identical ciphertext blocks; patterns leak.
-
-## ECB Penguin Example - encrypted image pattern remains recognizable.
-
-## ECB Benefits - fast, independent blocks, parallel encryption/decryption.
-
-## ECB Replay Risk - stolen ciphertext can be resent if accepted as valid.
-
 ## Replay Defenses - timestamps, two-way authentication, one-time codes.
 
 ## CBC - each block depends on previous ciphertext; repeated plaintext patterns are hidden.

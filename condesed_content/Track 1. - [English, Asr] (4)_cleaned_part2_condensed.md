@@ -4,7 +4,7 @@
 
 ## CSRF Shopping - active session cookie lets attacker trigger purchases/actions on Amazon/eBay-style sites.
 
-## CSRF Defense Habits - log out, avoid unrelated browsing while logged in, avoid suspicious links, verify URLs.
+## CSRF Defense Habits - log out, avoid suspicious links.
 
 ## CSRF Dependency - needs active authenticated browser session.
 
@@ -18,21 +18,13 @@
 
 ## SQL Injection - attacker-controlled input changes SQL query behavior.
 
-## SQL Basics - `WHERE` filters records; `--` comments out remaining query text.
-
-## SQLi Product Search - `gifts'--` removes release-status condition and exposes hidden products.
-
-## SQLi Login Bypass - `administrator'--` comments out password check.
-
-## SQLi Cause - unsanitized strings inserted directly into SQL.
+## SQL example  - `WHERE` filters records; `--` comments out remaining query text.
 
 ## SQLi Defenses - parameterized queries, prepared statements, input sanitization, avoid string concatenation.
 
 ## Controlled Inputs - dropdown/fixed choices reduce logic-changing characters like quotes, `--`, `OR`.
 
 ## Hardware Threats - environmental, technical, and human-caused threats.
-
-## Emerging Threats - IoT botnets, DDoS, advanced malware, state actors, connected devices, weak firmware.
 
 ## IoT/BYOD/Cloud Risks - unmanaged devices and cloud use expand attack surfaces.
 
@@ -41,5 +33,3 @@
 ## Attack Prevention - clean software, reputable/updated AV, hash/signature checks, safe email/router practices.
 
 ## Malware Hash Checking - analysis sites show whether AV engines detect a sample.
-
-## Course Logistics - workshops, Azure VM registration, Teams questions.
