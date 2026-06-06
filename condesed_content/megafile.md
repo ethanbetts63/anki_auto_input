@@ -86,9 +86,7 @@
 
 ## Faceworm Flow - trusted contact link -> fake YouTube -> extension -> C2 -> JavaScript payload -> spreads to contacts.
 
-## Faceworm Payloads - crypto mining, scam redirects, credential theft, transactions, more malware.
-
-## Faceworm Traits - self-propagating worm plus social engineering, mining, credential theft, targeted behavior.
+## Faceworm Payloads/Traits - self-propagating worm; social engineering entry; payloads: crypto mining, scam redirects, credential theft, transactions, more malware.
 
 ## Malware Signatures - abstract malware identifiers used by antivirus detection.
 
@@ -108,9 +106,7 @@
 
 ## Auth Cookies - encrypted user/session identifiers let sites recognize logged-in browsers.
 
-## CSRF Social Media Example - forged request changes account email to attacker email, enabling takeover.
-
-## CSRF Account Takeover - changed email sends auth codes to attacker; attacker can steal account/data.
+## CSRF Social Media Example - forged request changes account email to attacker's; auth codes now go to attacker, enabling account takeover and data theft.
 
 ## CSRF Shopping - active session cookie lets attacker trigger purchases/actions on Amazon/eBay-style sites.
 
@@ -152,9 +148,7 @@
 
 ## DNS Spoofing - legitimate URL resolves to attacker/false destination.
 
-## TCP/IP Attacks - attacks against protocol suite enabling modern networking.
-
-## DoS/DDoS.
+## TCP/IP Attacks - DoS/DDoS, spoofing, SYN floods; protocol designed for connectivity, not security.
 
 ## Spoofed DoS Flow - attacker spoofs victim IP; receivers reply to victim; victim overloaded.
 
@@ -192,9 +186,7 @@
 
 ## Classical Crypto - based on transposition (rearrange) and substitution (replace) for secret messages.
 
-## Shift Substitution - shift letters by fixed key; receiver shifts back.
-
-## Caesar Cipher - fixed-position letter shift.
+## Caesar / Shift Cipher - shift letters by fixed key (Caesar uses a fixed position); receiver shifts back.
 
 ## Variable Shift Key - key like `0351` shifts each position differently, then repeats/reverses.
 
@@ -410,17 +402,13 @@
 
 ## MD5 vs SHA - MD5 faster/smaller/weaker; SHA longer/more secure.
 
-## SSH - secure remote connection over unsecured networks.
-
-## SSH Protects - encryption against eavesdropping, leakage, tampering.
+## SSH - encrypted remote connection; protects against eavesdropping, leakage, tampering.
 
 ## SSH Uses - remote login, server management, file transfer, commands.
 
 ## SSH Auth Types - password-based and public-key authentication.
 
-## Public-Key Auth - RSA key pair proves identity without password weaknesses.
-
-## Public-Key Benefits - stronger identity proof, less password reliance, encrypted transmission.
+## Public-Key Auth - RSA key pair proves identity; stronger than passwords, less reliance on them, encrypted transmission.
 
 ## Setup Step 1 - client generates public/private key pair.
 
@@ -552,18 +540,6 @@
 
 ## Two-Tier Approach - user calls privileged program that performs only restricted action.
 
-##### SetUID - program runs with owner privilege, not launcher privilege.
-
-##### passwd - root-owned SetUID program updates only user's password field.
-
-##### RUID / EUID - RUID = launcher; EUID = identity used for permissions.
-
-##### SetUID RUID/EUID - RUID stays normal user; EUID becomes program owner.
-
-##### SetUID Display - `s` in owner execute position.
-
-##### SetUID Numeric - normal `0755`; SetUID `4755`; leading `4` = SetUID bit.
-
 ## Delegation vs Service - SetUID grants temporary program privilege; daemon service performs privileged tasks.
 
 ## SetUID - program runs with owner privilege, not launcher privilege. `4755`; leading `4`; owner execute shows `s`; runs with owner/root EUID.
@@ -598,8 +574,6 @@
 
 ## passwd - root-owned SetUID program updates only user's password field.
 
-## Shadow File Dilemma - users need password changes but cannot directly edit protected password file.
-
 ## SetUID passwd Flow - normal user runs `passwd`; EUID root writes shadow file.
 
 ## Enable SetUID Step 1 - change owner to root with `chown`.
@@ -608,8 +582,6 @@
 
 ## Numeric Permissions - `rwx = 111 = 7`; `r-x = 101 = 5`; `rwxr-xr-x = 755`.
 
-##### Special Leading Digit - `0` normal; `4` SetUID.
-##### `4755` - SetUID enabled plus `755` normal permissions.
 ##### SetUID Numeric - normal `0755`; SetUID `4755`; leading `4` = SetUID bit.
 
 ## Disable SetUID - `chmod 0755`.
@@ -757,9 +729,6 @@
 ## NAT - hides internal IPs through address translation.
 
 ## Takeaway - WPA2/AES, cautious public Wi-Fi, ARP awareness, anti-sniffing, routing/IP/ICMP defenses.
-
-
-# IDS, IPS, and Firewalls
 
 ## IDS/IPS - tools for malicious activity detection/prevention.
 
